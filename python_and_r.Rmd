@@ -1,6 +1,8 @@
 ---
-title: "R Notebook"
-output: html_notebook
+title: "R plot using Python variables"
+output:
+  pdf_document: default
+  html_notebook: default
 ---
 
 ```{r}

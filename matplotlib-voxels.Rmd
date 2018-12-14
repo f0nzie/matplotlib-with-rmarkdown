@@ -1,9 +1,19 @@
 ---
 title: "Voxels"
 output:
+  pdf_document: default
   html_document:
     df_print: paged
 ---
+
+```{r setup, include = FALSE, error=TRUE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      comment = NA,
+                      error = TRUE,
+                      warning = FALSE,
+                      message = FALSE,
+                      fig.align = 'center')
+```
 
 ```{r}
 library(reticulate)
@@ -64,8 +74,6 @@ ax.voxels(x, y, z, sphere,
           linewidth=0.5)
 
 plt.show()
-
-
 ```
 
 
