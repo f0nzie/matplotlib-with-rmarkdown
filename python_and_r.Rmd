@@ -1,0 +1,31 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(reticulate)
+reticulate::use_python("..\\..\\python-3.6.7.amd64\\python.exe")
+reticulate::py_config()
+reticulate::py_available()
+```
+
+
+```{r}
+#R
+autos = cars
+```
+
+
+```{python}
+#Python
+import pandas 
+autos_py = r.autos
+autos_py['time']=autos_py['dist']/autos_py['speed']
+```
+
+```{r}
+#R
+plot(py$autos_py)
+```
+
