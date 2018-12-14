@@ -34,3 +34,8 @@ without crashing RStudio.
     Python interpreter. In the notebook you will see a R chunk with
     `reticulate::use_python("..\\..\\python-3.6.7.amd64\\python.exe")`.
     This is key to make R use WinPython.
+
+## WinPython
+
+I downloaded WinPython 3.6 64-bit from
+[here](https://sourceforge.net/projects/winpython/files/WinPython_3.6/3.6.7.0/).
