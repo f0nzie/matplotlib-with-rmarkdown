@@ -1,9 +1,9 @@
 ---
 title: "Matplotlib simple test"
 output:
-  pdf_document: default
   html_document:
     df_print: paged
+  pdf_document: default
 ---
 
 ```{r setup, include = FALSE, error=TRUE, message=FALSE, warning=FALSE}
@@ -20,6 +20,8 @@ library(reticulate)
 reticulate::use_python("..\\..\\python-3.6.7.amd64\\python.exe")
 reticulate::py_config()
 ```
+
+## Short
 
 ```{python}
 import matplotlib.pyplot as plt
@@ -52,6 +54,9 @@ ax.clabel(cset, fontsize=9, inline=1)
 
 plt.show()
 ```
+
+
+## Middle
 
 ```{python}
 
@@ -284,7 +289,7 @@ fig.tight_layout()
 plt.show()
 ```
 
-
+## Step demo
 
 ```{python}
 # https://matplotlib.org/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py
