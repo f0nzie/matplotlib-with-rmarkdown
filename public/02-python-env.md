@@ -1,12 +1,6 @@
 # Python environment
 
 
-```r
-# library(reticulate)
-# reticulate::use_python("..\\..\\python-3.6.7.amd64\\python.exe")
-# reticulate::py_config()
-# reticulate::py_available()
-```
 
 
 ```r
@@ -56,7 +50,7 @@ ax.grid()
 plt.show()
 ```
 
-<img src="02-python-env_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="02-python-env_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -70,4 +64,12 @@ python_portable <- normalizePath(file.path(user_profile,     # Python location
                                 "WPy-3710zero/python-3.7.1.amd64/python.exe"))
 reticulate::use_python(python_portable, required = TRUE)
 reticulate::py_config()
+```
+
+
+```r
+# library(reticulate)
+# reticulate::use_python("..\\..\\python-3.6.7.amd64\\python.exe")
+# reticulate::py_config()
+# reticulate::py_available()
 ```

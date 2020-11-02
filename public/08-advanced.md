@@ -3,7 +3,7 @@
 
 ```r
 library(reticulate)
-reticulate::use_condaenv("r-torch")
+reticulate::use_condaenv("r-python")
 ```
 
 ## Adding labels
