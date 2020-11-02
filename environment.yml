@@ -1,0 +1,33 @@
+name: r-python
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7
+  - cpuonly=1.0
+  - cycler=0.10
+  - matplotlib=3.3
+  - ipython
+  - numpy=1.19
+  - pandas=1.1
+  - pillow=7.2
+  - pip=20.2
+  - pyqt=5.9
+  - pytorch=1.6
+  - pyamg
+  - requests
+  - qt=5.9
+  - scipy=1.5
+  - seaborn=0.11.0=py_0
+  - scikit-learn
+  - statsmodels
+  - sqlite=3.33
+  - tk=8.6
+  - torchvision=0.7
+  - urllib3
+  - pip:
+    - h5py
+    - plotnine
+    - plydata
+prefix: /home/msfz751/anaconda3/envs/r-python
