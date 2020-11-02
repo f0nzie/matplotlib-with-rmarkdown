@@ -1,17 +1,16 @@
+--- 
+title: "Matplotlib with Rmarkdown"
+author: "Alfonso R. Reyes"
+date: "2020-11-01"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
 ---
-output: github_document
----
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
-
-# r-test-matplotlib
+# Preface
 
 The goal of **r-test-matplotlib** is testing that Python `matplotlib` and `PyQt5` work seemlessly from within `RStudio 1.2-preview`.
 
@@ -42,7 +41,21 @@ The alternative is installing a minimum Python installing `WinPython64-3.6.7.0Ze
 
 
 
+## Bookdown
+
+This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
+
+The **bookdown** package can be installed from CRAN or Github:
 
 
+```r
+install.packages("bookdown")
+# or the development version
+# devtools::install_github("rstudio/bookdown")
+```
+
+Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
+
+To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>.
 
 
