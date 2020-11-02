@@ -35,18 +35,11 @@ plt.ylabel('Probability')
 plt.title('Histogram of IQ')
 plt.text(60, .025, r'$\mu=100,\ \sigma=15$')
 plt.axis([40, 160, 0, 0.03])
-```
-
-```
-## (40.0, 160.0, 0.0, 0.03)
-```
-
-```python
 plt.grid(True)
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -69,17 +62,10 @@ plt.imshow(np.random.random((100, 100)), cmap=plt.cm.BuPu_r)
 plt.subplots_adjust(bottom=0.1, right=0.8, top=0.9)
 cax = plt.axes([0.85, 0.1, 0.075, 0.8])
 plt.colorbar(cax=cax)
-```
-
-```
-## <matplotlib.colorbar.Colorbar object at 0x7fe6f6671790>
-```
-
-```python
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-3-1.png" width="672" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -107,7 +93,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-4-1.png" width="672" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -120,13 +106,6 @@ plt.figure(figsize=(9, 3))
 
 plt.subplot(131)
 plt.bar(names, values)
-```
-
-```
-## <BarContainer object of 3 artists>
-```
-
-```python
 plt.subplot(132)
 plt.scatter(names, values)
 plt.subplot(133)
@@ -135,7 +114,7 @@ plt.suptitle('Categorical Plotting')
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-5-1.png" width="864" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -154,13 +133,6 @@ F2 = 5 * np.sin(X)
 F3 = 0.3 * np.sin(X)
 axes_1 = plt.subplot(G[0, :])
 axes_1.plot(X, F1, 'r-', X, F2)
-```
-
-```
-## [<matplotlib.lines.Line2D object at 0x7fe6f6618a90>, <matplotlib.lines.Line2D object at 0x7fe6f442a710>]
-```
-
-```python
 axes_2 = plt.subplot(G[1, :-1])
 axes_2.plot(X, F3)
 axes_3 = plt.subplot(G[1:, -1])
@@ -173,7 +145,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-6-1.png" width="576" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -201,7 +173,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -257,5 +229,5 @@ plt.subplots_adjust(top=0.92, bottom=0.08, left=0.10, right=0.95, hspace=0.25,
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-8-1.png" width="672" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" />
 

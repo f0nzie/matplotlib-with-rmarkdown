@@ -34,22 +34,8 @@ plt.plot(x, y4, 'g:', label ='Degree 4')
 plt.legend() 
 plt.grid(True, linestyle =':') 
 plt.xlim([-6, 6]) 
-```
-
-```
-## (-6.0, 6.0)
-```
-
-```python
 plt.ylim([-4, 4]) 
   
-```
-
-```
-## (-4.0, 4.0)
-```
-
-```python
 plt.title('Taylor Polynomials of cos(x) at x = 0') 
 plt.xlabel('x-axis') 
 plt.ylabel('y-axis') 
@@ -58,7 +44,7 @@ plt.ylabel('y-axis')
 plt.show() 
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-2-1.png" width="1344" />
+<img src="04-math_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -82,13 +68,6 @@ plt.plot(x, y, 'r', linewidth=2)
 plt.ylim(ymin=0)
 
 # Make the shaded region
-```
-
-```
-## (0.0, 200.5)
-```
-
-```python
 ix = np.linspace(a, b)
 iy = func(ix)
 verts = [(a, 0)] + list(zip(ix, iy)) + [(b, 0)]
@@ -106,33 +85,12 @@ ax.spines['top'].set_visible(False)
 ax.xaxis.set_ticks_position('bottom')
 
 ax.set_xticks((a, b))
-```
-
-```
-## [<matplotlib.axis.XTick object at 0x7fd36191a550>, <matplotlib.axis.XTick object at 0x7fd36191d150>]
-```
-
-```python
 ax.set_xticklabels(('$a$', '$b$'))
-```
-
-```
-## [Text(2, 0, '$a$'), Text(9, 0, '$b$')]
-```
-
-```python
 ax.set_yticks([])
-```
-
-```
-## []
-```
-
-```python
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-3-1.png" width="672" />
+<img src="04-math_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -171,7 +129,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-4-1.png" width="768" />
+<img src="04-math_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -197,59 +155,17 @@ fig.subplots_adjust(hspace=0)
 # Plot each graph, and manually set the y tick values
 axs[0].plot(t, s1)
 axs[0].set_yticks(np.arange(-0.9, 1.0, 0.4))
-```
-
-```
-## [<matplotlib.axis.YTick object at 0x7fd362f28b10>, <matplotlib.axis.YTick object at 0x7fd363836510>, <matplotlib.axis.YTick object at 0x7fd362eb95d0>, <matplotlib.axis.YTick object at 0x7fd362e44e90>, <matplotlib.axis.YTick object at 0x7fd362e50290>]
-```
-
-```python
 axs[0].set_ylim(-1, 1)
-```
-
-```
-## (-1.0, 1.0)
-```
-
-```python
 axs[1].plot(t, s2)
 axs[1].set_yticks(np.arange(0.1, 1.0, 0.2))
-```
-
-```
-## [<matplotlib.axis.YTick object at 0x7fd362ef44d0>, <matplotlib.axis.YTick object at 0x7fd362ef1f90>, <matplotlib.axis.YTick object at 0x7fd362eeef50>, <matplotlib.axis.YTick object at 0x7fd362e58490>, <matplotlib.axis.YTick object at 0x7fd362e58ad0>]
-```
-
-```python
 axs[1].set_ylim(0, 1)
-```
-
-```
-## (0.0, 1.0)
-```
-
-```python
 axs[2].plot(t, s3)
 axs[2].set_yticks(np.arange(-0.9, 1.0, 0.4))
-```
-
-```
-## [<matplotlib.axis.YTick object at 0x7fd362ea14d0>, <matplotlib.axis.YTick object at 0x7fd362e9af90>, <matplotlib.axis.YTick object at 0x7fd362e98f50>, <matplotlib.axis.YTick object at 0x7fd363828e10>, <matplotlib.axis.YTick object at 0x7fd363828f90>]
-```
-
-```python
 axs[2].set_ylim(-1, 1)
-```
-
-```
-## (-1.0, 1.0)
-```
-
-```python
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-5-1.png" width="672" />
+<img src="04-math_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -278,17 +194,10 @@ ax.set_xlabel("X label")
 ax.set_ylabel("Y label")
 ax.set_zlabel("Z label")
 ax.set_zlim(0, 2)
-```
-
-```
-## (0.0, 2.0)
-```
-
-```python
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-6-1.png" width="672" />
+<img src="04-math_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -309,25 +218,11 @@ Z = np.sin(R)
 
 ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=plt.cm.hot)
 ax.contourf(X, Y, Z, zdir='z', offset=-2, cmap=plt.cm.hot)
-```
-
-```
-## <matplotlib.contour.QuadContourSet object at 0x7fd362cdc650>
-```
-
-```python
 ax.set_zlim(-2, 2)
-```
-
-```
-## (-2.0, 2.0)
-```
-
-```python
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+<img src="04-math_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 ```python
@@ -343,18 +238,11 @@ t1 = np.arange(0.0, 5.0, 0.1)
 t2 = np.arange(0.0, 5.0, 0.02)
 plt.subplot(212)
 plt.plot(t1, g(t1), 'ro', t2, f(t2), 'k')
-```
-
-```
-## [<matplotlib.lines.Line2D object at 0x7fd362b41850>, <matplotlib.lines.Line2D object at 0x7fd362b0a850>]
-```
-
-```python
 plt.grid(color='b', alpha=0.5, linestyle='dashed', linewidth=0.5)
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-8-1.png" width="672" />
+<img src="04-math_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -385,13 +273,6 @@ ax.plot_surface(X, Y, Z, cmap=plt.cm.YlGnBu_r)
 
 # Tweak the limits and add latex math labels.
 ax.set_zlim(0, 1)
-```
-
-```
-## (0.0, 1.0)
-```
-
-```python
 ax.set_xlabel(r'$\phi_\mathrm{real}$')
 ax.set_ylabel(r'$\phi_\mathrm{im}$')
 ax.set_zlabel(r'$V(\phi)$')
@@ -399,7 +280,7 @@ ax.set_zlabel(r'$V(\phi)$')
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-9-1.png" width="672" />
+<img src="04-math_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -426,7 +307,7 @@ ax.plot_wireframe(X, Y, Z, rstride=10, cstride=10)
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-10-1.png" width="672" />
+<img src="04-math_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -463,29 +344,8 @@ ax.scatter(x, y, zs=0, zdir='y', c=c_list, label='points in (x,z)')
 # Make legend, set axes limits and labels
 ax.legend()
 ax.set_xlim(0, 1)
-```
-
-```
-## (0.0, 1.0)
-```
-
-```python
 ax.set_ylim(0, 1)
-```
-
-```
-## (0.0, 1.0)
-```
-
-```python
 ax.set_zlim(0, 1)
-```
-
-```
-## (0.0, 1.0)
-```
-
-```python
 ax.set_xlabel('X')
 ax.set_ylabel('Y')
 ax.set_zlabel('Z')
@@ -497,7 +357,7 @@ ax.view_init(elev=20., azim=-35)
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-11-1.png" width="672" />
+<img src="04-math_files/figure-html/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -517,4 +377,4 @@ ax.clabel(cset, fontsize=9, inline=1)
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-12-1.png" width="672" />
+<img src="04-math_files/figure-html/unnamed-chunk-12-1.png" width="90%" style="display: block; margin: auto;" />

@@ -1,11 +1,6 @@
 preface
-motivation
-examples
-requisites
-winpython
-bookdown
 introduction
-short
+the-hello-world-plot
 python-environment
 sharing-data-objects
 math

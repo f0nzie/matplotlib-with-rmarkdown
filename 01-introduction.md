@@ -14,11 +14,10 @@ plt.ylabel('some numbers')
 plt.show()
 ```
 
-<img src="01-introduction_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+<img src="01-introduction_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" />
 
 
-
-## Short
+## The "hello world" plot
 
 
 ```python
@@ -37,7 +36,7 @@ plt.savefig("test.png")
 plt.show()
 ```
 
-<img src="01-introduction_files/figure-html/unnamed-chunk-3-1.png" width="672" />
+<img src="01-introduction_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -56,7 +55,7 @@ ax.clabel(cset, fontsize=9, inline=1)
 plt.show()
 ```
 
-<img src="01-introduction_files/figure-html/unnamed-chunk-4-1.png" width="672" />
+<img src="01-introduction_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -90,21 +89,9 @@ ax.yaxis.set_minor_locator(AutoMinorLocator(4))
 ax.xaxis.set_minor_formatter(FuncFormatter(minor_tick))
 
 ax.set_xlim(0, 4)
-```
-
-```
-## (0.0, 4.0)
-```
-
-```python
+#:> (0.0, 4.0)
 ax.set_ylim(0, 4)
-```
-
-```
-## (0.0, 4.0)
-```
-
-```python
+#:> (0.0, 4.0)
 ax.tick_params(which='major', width=1.0)
 ax.tick_params(which='major', length=10)
 ax.tick_params(which='minor', width=1.0, labelsize=10)
@@ -215,7 +202,7 @@ ax.text(4.0, -0.4, "Made with http://matplotlib.org",
 plt.show()
 ```
 
-<img src="01-introduction_files/figure-html/unnamed-chunk-5-1.png" width="768" />
+<img src="01-introduction_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -249,57 +236,22 @@ x = np.arange(5)
 y1, y2 = np.random.randint(1, 25, size=(2, 5))
 width = 0.25
 ax3.bar(x, y1, width)
-```
-
-```
-## <BarContainer object of 5 artists>
-```
-
-```python
 ax3.bar(x + width, y2, width,
         color=list(plt.rcParams['axes.prop_cycle'])[2]['color'])
-```
-
-```
-## <BarContainer object of 5 artists>
-```
-
-```python
 ax3.set_xticks(x + width)
-```
-
-```
-## [<matplotlib.axis.XTick object at 0x7f880f05f910>, <matplotlib.axis.XTick object at 0x7f880f064590>, <matplotlib.axis.XTick object at 0x7f880f064150>, <matplotlib.axis.XTick object at 0x7f880f000bd0>, <matplotlib.axis.XTick object at 0x7f880ef8f110>]
-```
-
-```python
 ax3.set_xticklabels(['a', 'b', 'c', 'd', 'e'])
 
 # circles with colors from default color cycle
-```
-
-```
-## [Text(0.25, 0, 'a'), Text(1.25, 0, 'b'), Text(2.25, 0, 'c'), Text(3.25, 0, 'd'), Text(4.25, 0, 'e')]
-```
-
-```python
 for i, color in enumerate(plt.rcParams['axes.prop_cycle']):
     xy = np.random.normal(size=2)
     ax4.add_patch(plt.Circle(xy, radius=0.3, color=color['color']))
 ax4.axis('equal')
-```
-
-```
-## (-2.0040122782194083, 2.4223339730723805, -1.620710222249518, 1.6046080772203275)
-```
-
-```python
 ax4.margins(0)
 
 plt.show()
 ```
 
-<img src="01-introduction_files/figure-html/unnamed-chunk-6-1.png" width="672" />
+<img src="01-introduction_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -322,21 +274,7 @@ s2 = np.sin(2 * np.pi * 10 * t) + nse2
 
 fig, axs = plt.subplots(2, 1)
 axs[0].plot(t, s1, t, s2)
-```
-
-```
-## [<matplotlib.lines.Line2D object at 0x7f880e722f10>, <matplotlib.lines.Line2D object at 0x7f880ef11710>]
-```
-
-```python
 axs[0].set_xlim(0, 2)
-```
-
-```
-## (0.0, 2.0)
-```
-
-```python
 axs[0].set_xlabel('time')
 axs[0].set_ylabel('s1 and s2')
 axs[0].grid(True)
@@ -348,5 +286,5 @@ fig.tight_layout()
 plt.show()
 ```
 
-<img src="01-introduction_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+<img src="01-introduction_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" />
 

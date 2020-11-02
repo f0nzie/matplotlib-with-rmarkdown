@@ -19,26 +19,11 @@ library(reticulate)
 getwd()
 ```
 
-```
-## [1] "/media/msfz751/2560x/remotes/github-oilgains/matplotlib-with-rmarkdown"
-```
-
 
 ```r
 library(reticulate)
 use_condaenv("r-python", required = TRUE)
 py_config()
-```
-
-```
-## python:         /home/msfz751/anaconda3/envs/r-python/bin/python
-## libpython:      /home/msfz751/anaconda3/envs/r-python/lib/libpython3.7m.so
-## pythonhome:     /home/msfz751/anaconda3/envs/r-python:/home/msfz751/anaconda3/envs/r-python
-## version:        3.7.9 (default, Aug 31 2020, 12:42:55)  [GCC 7.3.0]
-## numpy:          /home/msfz751/anaconda3/envs/r-python/lib/python3.7/site-packages/numpy
-## numpy_version:  1.19.1
-## 
-## NOTE: Python version was forced by use_python function
 ```
 
 
@@ -66,18 +51,23 @@ ax.plot(t, s)
 
 ax.set(xlabel='time (s)', ylabel='voltage (mV)',
        title='About as simple as it gets, folks')
-```
-
-```
-## [Text(0.5, 0, 'time (s)'), Text(0, 0.5, 'voltage (mV)'), Text(0.5, 1.0, 'About as simple as it gets, folks')]
-```
-
-```python
 ax.grid()
 
 plt.show()
 ```
 
-<img src="02-python-env_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+<img src="02-python-env_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" />
 
 
+
+```r
+# load the package that makes R and Python talk
+library(reticulate)
+
+# set the preferred Python to execute
+user_profile <- Sys.getenv("USERPROFILE")                    # user folder
+python_portable <- normalizePath(file.path(user_profile,     # Python location
+                                "WPy-3710zero/python-3.7.1.amd64/python.exe"))
+reticulate::use_python(python_portable, required = TRUE)
+reticulate::py_config()
+```

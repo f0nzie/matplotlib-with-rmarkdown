@@ -8,28 +8,6 @@ reticulate::use_condaenv("r-torch")
 reticulate::py_config()
 ```
 
-```
-## python:         /home/msfz751/anaconda3/envs/r-torch/bin/python
-## libpython:      /home/msfz751/anaconda3/envs/r-torch/lib/libpython3.7m.so
-## pythonhome:     /home/msfz751/anaconda3/envs/r-torch:/home/msfz751/anaconda3/envs/r-torch
-## version:        3.7.9 (default, Aug 31 2020, 12:42:55)  [GCC 7.3.0]
-## numpy:          /home/msfz751/anaconda3/envs/r-torch/lib/python3.7/site-packages/numpy
-## numpy_version:  1.19.1
-## 
-## python versions found: 
-##  /home/msfz751/anaconda3/envs/r-torch/bin/python
-##  /home/msfz751/anaconda3/envs/r-torch/bin/python3
-##  /usr/bin/python3
-##  /usr/bin/python
-##  /home/msfz751/anaconda3/bin/python
-##  /home/msfz751/anaconda3/envs/man_ccia/bin/python
-##  /home/msfz751/anaconda3/envs/porepy/bin/python
-##  /home/msfz751/anaconda3/envs/python_book/bin/python
-##  /home/msfz751/anaconda3/envs/r-python/bin/python
-##  /home/msfz751/anaconda3/envs/r-tensorflow/bin/python
-##  /home/msfz751/anaconda3/envs/r-toarchboard/bin/python
-```
-
 
 
 
@@ -82,7 +60,7 @@ ax.set_title("Lorenz Attractor")
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -116,7 +94,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-3-1.png" width="768" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -179,33 +157,12 @@ cset3 = axs[0].contour(X, Y, Z, (0,), colors='g', linewidths=2)
 axs[0].set_title('Filled contours')
 fig.colorbar(cset1, ax=axs[0])
 
-```
-
-```
-## <matplotlib.colorbar.Colorbar object at 0x7f27fdf58710>
-```
-
-```python
 axs[1].imshow(Z, extent=extent, cmap=cmap, norm=norm)
 axs[1].contour(Z, levels, colors='k', origin='upper', extent=extent)
-```
-
-```
-## <matplotlib.contour.QuadContourSet object at 0x7f27fdf252d0>
-```
-
-```python
 axs[1].set_title("Image, origin 'upper'")
 
 axs[2].imshow(Z, origin='lower', extent=extent, cmap=cmap, norm=norm)
 axs[2].contour(Z, levels, colors='k', origin='lower', extent=extent)
-```
-
-```
-## <matplotlib.contour.QuadContourSet object at 0x7f27fdec2d10>
-```
-
-```python
 axs[2].set_title("Image, origin 'lower'")
 
 # We will use the interpolation "nearest" here to show the actual
@@ -217,36 +174,15 @@ axs[2].set_title("Image, origin 'lower'")
 im = axs[3].imshow(Z, interpolation='nearest', extent=extent,
                 cmap=cmap, norm=norm)
 axs[3].contour(Z, levels, colors='k', origin='image', extent=extent)
-```
-
-```
-## <matplotlib.contour.QuadContourSet object at 0x7f27fdeec4d0>
-```
-
-```python
 ylim = axs[3].get_ylim()
 axs[3].set_ylim(ylim[::-1])
-```
-
-```
-## (3.0, -4.0)
-```
-
-```python
 axs[3].set_title("Origin from rc, reversed y-axis")
 fig.colorbar(im, ax=axs[3])
-```
-
-```
-## <matplotlib.colorbar.Colorbar object at 0x7f27fdf25a90>
-```
-
-```python
 fig.tight_layout()
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-4-1.png" width="672" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 ## weird
@@ -277,25 +213,11 @@ plt.step(x, y, label='masked (pre)')
 plt.legend()
 
 plt.xlim(0, 7)
-```
-
-```
-## (0.0, 7.0)
-```
-
-```python
 plt.ylim(-0.5, 4)
-```
-
-```
-## (-0.5, 4.0)
-```
-
-```python
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-5-1.png" width="672" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
 
 ## Middle
 
@@ -316,35 +238,14 @@ cset = ax.contourf(X, Y, Z, zdir='y', offset=40, cmap=cm.coolwarm)
 
 ax.set_xlabel('X')
 ax.set_xlim(-40, 40)
-```
-
-```
-## (-40.0, 40.0)
-```
-
-```python
 ax.set_ylabel('Y')
 ax.set_ylim(-40, 40)
-```
-
-```
-## (-40.0, 40.0)
-```
-
-```python
 ax.set_zlabel('Z')
 ax.set_zlim(-100, 100)
-```
-
-```
-## (-100.0, 100.0)
-```
-
-```python
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-6-1.png" width="672" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 ```python
@@ -395,7 +296,7 @@ ax.set_title("Lorenz Attractor")
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 ```python
@@ -428,7 +329,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-8-1.png" width="768" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -492,33 +393,12 @@ cset3 = axs[0].contour(X, Y, Z, (0,), colors='g', linewidths=2)
 axs[0].set_title('Filled contours')
 fig.colorbar(cset1, ax=axs[0])
 
-```
-
-```
-## <matplotlib.colorbar.Colorbar object at 0x7f27fda84cd0>
-```
-
-```python
 axs[1].imshow(Z, extent=extent, cmap=cmap, norm=norm)
 axs[1].contour(Z, levels, colors='k', origin='upper', extent=extent)
-```
-
-```
-## <matplotlib.contour.QuadContourSet object at 0x7f27fd953790>
-```
-
-```python
 axs[1].set_title("Image, origin 'upper'")
 
 axs[2].imshow(Z, origin='lower', extent=extent, cmap=cmap, norm=norm)
 axs[2].contour(Z, levels, colors='k', origin='lower', extent=extent)
-```
-
-```
-## <matplotlib.contour.QuadContourSet object at 0x7f27fdbb6910>
-```
-
-```python
 axs[2].set_title("Image, origin 'lower'")
 
 # We will use the interpolation "nearest" here to show the actual
@@ -530,36 +410,15 @@ axs[2].set_title("Image, origin 'lower'")
 im = axs[3].imshow(Z, interpolation='nearest', extent=extent,
                 cmap=cmap, norm=norm)
 axs[3].contour(Z, levels, colors='k', origin='image', extent=extent)
-```
-
-```
-## <matplotlib.contour.QuadContourSet object at 0x7f27fd90e390>
-```
-
-```python
 ylim = axs[3].get_ylim()
 axs[3].set_ylim(ylim[::-1])
-```
-
-```
-## (3.0, -4.0)
-```
-
-```python
 axs[3].set_title("Origin from rc, reversed y-axis")
 fig.colorbar(im, ax=axs[3])
-```
-
-```
-## <matplotlib.colorbar.Colorbar object at 0x7f27fdfd3990>
-```
-
-```python
 fig.tight_layout()
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-9-1.png" width="672" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -588,25 +447,11 @@ plt.step(x, y, label='masked (pre)')
 plt.legend()
 
 plt.xlim(0, 7)
-```
-
-```
-## (0.0, 7.0)
-```
-
-```python
 plt.ylim(-0.5, 4)
-```
-
-```
-## (-0.5, 4.0)
-```
-
-```python
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-10-1.png" width="672" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 ```python
@@ -628,21 +473,7 @@ s2 = np.sin(2 * np.pi * 10 * t) + nse2
 
 fig, axs = plt.subplots(2, 1)
 axs[0].plot(t, s1, t, s2)
-```
-
-```
-## [<matplotlib.lines.Line2D object at 0x7f27fddd06d0>, <matplotlib.lines.Line2D object at 0x7f27fd7fec10>]
-```
-
-```python
 axs[0].set_xlim(0, 2)
-```
-
-```
-## (0.0, 2.0)
-```
-
-```python
 axs[0].set_xlabel('time')
 axs[0].set_ylabel('s1 and s2')
 axs[0].grid(True)
@@ -654,7 +485,7 @@ fig.tight_layout()
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-11-1.png" width="672" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 ```python
@@ -697,32 +528,11 @@ zi = interpolator(Xi, Yi)
 
 
 ax1.contour(xi, yi, zi, 14, linewidths=0.5, colors='k')
-```
-
-```
-## <matplotlib.contour.QuadContourSet object at 0x7f27fdf7ef10>
-```
-
-```python
 cntr1 = ax1.contourf(xi, yi, zi, 14, cmap="RdBu_r")
 
 fig.colorbar(cntr1, ax=ax1)
-```
-
-```
-## <matplotlib.colorbar.Colorbar object at 0x7f27fdfee2d0>
-```
-
-```python
 ax1.plot(x, y, 'ko', ms=3)
 ax1.axis((-2, 2, -2, 2))
-```
-
-```
-## (-2.0, 2.0, -2.0, 2.0)
-```
-
-```python
 ax1.set_title('grid and contour (%d points, %d grid points)' %
               (npts, ngridx * ngridy))
 
@@ -734,39 +544,18 @@ ax1.set_title('grid and contour (%d points, %d grid points)' %
 # to tricontour.
 
 ax2.tricontour(x, y, z, 14, linewidths=0.5, colors='k')
-```
-
-```
-## <matplotlib.tri.tricontour.TriContourSet object at 0x7f2806b11150>
-```
-
-```python
 cntr2 = ax2.tricontourf(x, y, z, 14, cmap="RdBu_r")
 
 fig.colorbar(cntr2, ax=ax2)
-```
-
-```
-## <matplotlib.colorbar.Colorbar object at 0x7f27fdf9d190>
-```
-
-```python
 ax2.plot(x, y, 'ko', ms=3)
 ax2.axis((-2, 2, -2, 2))
-```
-
-```
-## (-2.0, 2.0, -2.0, 2.0)
-```
-
-```python
 ax2.set_title('tricontour (%d points)' % npts)
 
 plt.subplots_adjust(hspace=0.5)
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-12-1.png" width="672" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-12-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -871,13 +660,6 @@ ax.set_title("Filtering a Delaunay mesh\n" +
 ax.tricontour(tri_refi, z_test_refi, levels=levels, cmap=cmap,
                linewidths=[2.0, 0.5, 1.0, 0.5])
 # 2) plot of the expected (analytical) data contours (dashed):
-```
-
-```
-## <matplotlib.tri.tricontour.TriContourSet object at 0x7f27fdfc4ed0>
-```
-
-```python
 if plot_expected:
     ax.tricontour(tri_refi, z_expected, levels=levels, cmap=cmap,
                    linestyles='--')
@@ -888,26 +670,12 @@ if plot_refi_tri:
 if plot_tri:
     ax.triplot(tri, color='0.7')
 # 4) plot of the unvalidated triangles from naive Delaunay Triangulation:
-```
-
-```
-## [<matplotlib.lines.Line2D object at 0x7f27fd7feb10>, <matplotlib.lines.Line2D object at 0x7f28040860d0>]
-```
-
-```python
 if plot_masked_tri:
     ax.triplot(flat_tri, color='red')
-```
-
-```
-## [<matplotlib.lines.Line2D object at 0x7f2804086b50>, <matplotlib.lines.Line2D object at 0x7f2804223390>]
-```
-
-```python
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-13-1.png" width="672" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-13-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 ```python
@@ -943,109 +711,32 @@ axs = axs.flatten()
 
 # Plot the triangulation.
 axs[0].tricontourf(triang, z)
-```
-
-```
-## <matplotlib.tri.tricontour.TriContourSet object at 0x7f28040939d0>
-```
-
-```python
 axs[0].triplot(triang, 'ko-')
-```
-
-```
-## [<matplotlib.lines.Line2D object at 0x7f27fd8e4150>, <matplotlib.lines.Line2D object at 0x7f27fd76e410>]
-```
-
-```python
 axs[0].set_title('Triangular grid')
 
 # Plot linear interpolation to quad grid.
 axs[1].contourf(xi, yi, zi_lin)
-```
-
-```
-## <matplotlib.contour.QuadContourSet object at 0x7f27fd76ea50>
-```
-
-```python
 axs[1].plot(xi, yi, 'k-', lw=0.5, alpha=0.5)
-```
-
-```
-## [<matplotlib.lines.Line2D object at 0x7f27fdef0650>, <matplotlib.lines.Line2D object at 0x7f27fd76e790>, <matplotlib.lines.Line2D object at 0x7f28041a0b50>, <matplotlib.lines.Line2D object at 0x7f28041a0c10>, <matplotlib.lines.Line2D object at 0x7f28041a0cd0>, <matplotlib.lines.Line2D object at 0x7f28041a0d10>, <matplotlib.lines.Line2D object at 0x7f28041a0e90>, <matplotlib.lines.Line2D object at 0x7f28041a0f50>, <matplotlib.lines.Line2D object at 0x7f28041a0f90>, <matplotlib.lines.Line2D object at 0x7f28041a0d90>, <matplotlib.lines.Line2D object at 0x7f280418a190>, <matplotlib.lines.Line2D object at 0x7f280418a250>, <matplotlib.lines.Line2D object at 0x7f280418a310>, <matplotlib.lines.Line2D object at 0x7f280418a3d0>, <matplotlib.lines.Line2D object at 0x7f280418a490>, <matplotlib.lines.Line2D object at 0x7f280418a550>, <matplotlib.lines.Line2D object at 0x7f280418a610>, <matplotlib.lines.Line2D object at 0x7f280418a6d0>, <matplotlib.lines.Line2D object at 0x7f280418a790>, <matplotlib.lines.Line2D object at 0x7f280418a850>]
-```
-
-```python
 axs[1].plot(xi.T, yi.T, 'k-', lw=0.5, alpha=0.5)
-```
-
-```
-## [<matplotlib.lines.Line2D object at 0x7f280413c990>, <matplotlib.lines.Line2D object at 0x7f280418a950>, <matplotlib.lines.Line2D object at 0x7f280413cd50>, <matplotlib.lines.Line2D object at 0x7f280413ce10>, <matplotlib.lines.Line2D object at 0x7f280413ced0>, <matplotlib.lines.Line2D object at 0x7f280413cf10>, <matplotlib.lines.Line2D object at 0x7f280413cfd0>, <matplotlib.lines.Line2D object at 0x7f2804148190>, <matplotlib.lines.Line2D object at 0x7f2804148250>, <matplotlib.lines.Line2D object at 0x7f280413cf90>, <matplotlib.lines.Line2D object at 0x7f2804148390>, <matplotlib.lines.Line2D object at 0x7f2804148450>, <matplotlib.lines.Line2D object at 0x7f2804148510>, <matplotlib.lines.Line2D object at 0x7f28041485d0>, <matplotlib.lines.Line2D object at 0x7f2804148690>, <matplotlib.lines.Line2D object at 0x7f2804148750>, <matplotlib.lines.Line2D object at 0x7f2804148810>, <matplotlib.lines.Line2D object at 0x7f28041488d0>, <matplotlib.lines.Line2D object at 0x7f2804148990>, <matplotlib.lines.Line2D object at 0x7f2804148a50>]
-```
-
-```python
 axs[1].set_title("Linear interpolation")
 
 # Plot cubic interpolation to quad grid, kind=geom
 axs[2].contourf(xi, yi, zi_cubic_geom)
-```
-
-```
-## <matplotlib.contour.QuadContourSet object at 0x7f27fd6bbdd0>
-```
-
-```python
 axs[2].plot(xi, yi, 'k-', lw=0.5, alpha=0.5)
-```
-
-```
-## [<matplotlib.lines.Line2D object at 0x7f27fd76e490>, <matplotlib.lines.Line2D object at 0x7f27fd6d3e50>, <matplotlib.lines.Line2D object at 0x7f27fd6d3f50>, <matplotlib.lines.Line2D object at 0x7f27fd6d3f90>, <matplotlib.lines.Line2D object at 0x7f27fd6df110>, <matplotlib.lines.Line2D object at 0x7f27fd6df150>, <matplotlib.lines.Line2D object at 0x7f27fd6df2d0>, <matplotlib.lines.Line2D object at 0x7f27fd6df390>, <matplotlib.lines.Line2D object at 0x7f27fd6df450>, <matplotlib.lines.Line2D object at 0x7f27fd6df1d0>, <matplotlib.lines.Line2D object at 0x7f27fd6df590>, <matplotlib.lines.Line2D object at 0x7f27fd6df650>, <matplotlib.lines.Line2D object at 0x7f27fd6df710>, <matplotlib.lines.Line2D object at 0x7f27fd6df7d0>, <matplotlib.lines.Line2D object at 0x7f27fd6df890>, <matplotlib.lines.Line2D object at 0x7f27fd6df950>, <matplotlib.lines.Line2D object at 0x7f27fd6dfa10>, <matplotlib.lines.Line2D object at 0x7f27fd6dfad0>, <matplotlib.lines.Line2D object at 0x7f27fd6dfb90>, <matplotlib.lines.Line2D object at 0x7f27fd6dfc50>]
-```
-
-```python
 axs[2].plot(xi.T, yi.T, 'k-', lw=0.5, alpha=0.5)
-```
-
-```
-## [<matplotlib.lines.Line2D object at 0x7f27fd68ad90>, <matplotlib.lines.Line2D object at 0x7f27fd6dfd50>, <matplotlib.lines.Line2D object at 0x7f27fd695190>, <matplotlib.lines.Line2D object at 0x7f27fd695250>, <matplotlib.lines.Line2D object at 0x7f27fd695310>, <matplotlib.lines.Line2D object at 0x7f27fd695350>, <matplotlib.lines.Line2D object at 0x7f27fd6954d0>, <matplotlib.lines.Line2D object at 0x7f27fd695590>, <matplotlib.lines.Line2D object at 0x7f27fd695650>, <matplotlib.lines.Line2D object at 0x7f27fd6953d0>, <matplotlib.lines.Line2D object at 0x7f27fd695790>, <matplotlib.lines.Line2D object at 0x7f27fd695850>, <matplotlib.lines.Line2D object at 0x7f27fd695910>, <matplotlib.lines.Line2D object at 0x7f27fd6959d0>, <matplotlib.lines.Line2D object at 0x7f27fd695a90>, <matplotlib.lines.Line2D object at 0x7f27fd695b50>, <matplotlib.lines.Line2D object at 0x7f27fd695c10>, <matplotlib.lines.Line2D object at 0x7f27fd695cd0>, <matplotlib.lines.Line2D object at 0x7f27fd695d90>, <matplotlib.lines.Line2D object at 0x7f27fd695e50>]
-```
-
-```python
 axs[2].set_title("Cubic interpolation,\nkind='geom'")
 
 # Plot cubic interpolation to quad grid, kind=min_E
 axs[3].contourf(xi, yi, zi_cubic_min_E)
-```
-
-```
-## <matplotlib.contour.QuadContourSet object at 0x7f27fdb1aad0>
-```
-
-```python
 axs[3].plot(xi, yi, 'k-', lw=0.5, alpha=0.5)
-```
-
-```
-## [<matplotlib.lines.Line2D object at 0x7f27fdf7f890>, <matplotlib.lines.Line2D object at 0x7f27fd64cb90>, <matplotlib.lines.Line2D object at 0x7f27fd64cc90>, <matplotlib.lines.Line2D object at 0x7f27fd64cd50>, <matplotlib.lines.Line2D object at 0x7f27fd64ce10>, <matplotlib.lines.Line2D object at 0x7f27fd64ce50>, <matplotlib.lines.Line2D object at 0x7f27fd64cfd0>, <matplotlib.lines.Line2D object at 0x7f27fd6630d0>, <matplotlib.lines.Line2D object at 0x7f27fd663190>, <matplotlib.lines.Line2D object at 0x7f27fd64ced0>, <matplotlib.lines.Line2D object at 0x7f27fd6632d0>, <matplotlib.lines.Line2D object at 0x7f27fd663390>, <matplotlib.lines.Line2D object at 0x7f27fd663450>, <matplotlib.lines.Line2D object at 0x7f27fd663510>, <matplotlib.lines.Line2D object at 0x7f27fd6635d0>, <matplotlib.lines.Line2D object at 0x7f27fd663690>, <matplotlib.lines.Line2D object at 0x7f27fd663750>, <matplotlib.lines.Line2D object at 0x7f27fd663810>, <matplotlib.lines.Line2D object at 0x7f27fd6638d0>, <matplotlib.lines.Line2D object at 0x7f27fd663990>]
-```
-
-```python
 axs[3].plot(xi.T, yi.T, 'k-', lw=0.5, alpha=0.5)
-```
-
-```
-## [<matplotlib.lines.Line2D object at 0x7f27fd60fad0>, <matplotlib.lines.Line2D object at 0x7f27fd663a90>, <matplotlib.lines.Line2D object at 0x7f27fd60fe90>, <matplotlib.lines.Line2D object at 0x7f27fd60ff50>, <matplotlib.lines.Line2D object at 0x7f27fd60ff90>, <matplotlib.lines.Line2D object at 0x7f27fd618090>, <matplotlib.lines.Line2D object at 0x7f27fd618210>, <matplotlib.lines.Line2D object at 0x7f27fd6182d0>, <matplotlib.lines.Line2D object at 0x7f27fd618390>, <matplotlib.lines.Line2D object at 0x7f27fd618110>, <matplotlib.lines.Line2D object at 0x7f27fd6184d0>, <matplotlib.lines.Line2D object at 0x7f27fd618590>, <matplotlib.lines.Line2D object at 0x7f27fd618650>, <matplotlib.lines.Line2D object at 0x7f27fd618710>, <matplotlib.lines.Line2D object at 0x7f27fd6187d0>, <matplotlib.lines.Line2D object at 0x7f27fd618890>, <matplotlib.lines.Line2D object at 0x7f27fd618950>, <matplotlib.lines.Line2D object at 0x7f27fd618a10>, <matplotlib.lines.Line2D object at 0x7f27fd618ad0>, <matplotlib.lines.Line2D object at 0x7f27fd618b90>]
-```
-
-```python
 axs[3].set_title("Cubic interpolation,\nkind='min_E'")
 
 fig.tight_layout()
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-14-1.png" width="672" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-14-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 ```python
@@ -1078,17 +769,10 @@ plt.axhspan(0.25, 0.75, facecolor='0.5', alpha=0.5)
 plt.axvspan(1.25, 1.55, facecolor='#2ca02c', alpha=0.5)
 
 plt.axis([-1, 2, -1, 2])
-```
-
-```
-## (-1.0, 2.0, -1.0, 2.0)
-```
-
-```python
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-15-1.png" width="672" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-15-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -1110,17 +794,10 @@ plt.imshow(np.random.random((100, 100)), cmap=plt.cm.BuPu_r)
 plt.subplots_adjust(bottom=0.1, right=0.8, top=0.9)
 cax = plt.axes([0.85, 0.1, 0.075, 0.8])
 plt.colorbar(cax=cax)
-```
-
-```
-## <matplotlib.colorbar.Colorbar object at 0x7f28040868d0>
-```
-
-```python
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-16-1.png" width="672" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-16-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -1153,13 +830,6 @@ plt.subplot(313)
 plt.plot(x, np.sin(x / 3.0))
 plt.xscale('symlog')
 plt.yscale('symlog', linthreshy=0.015)
-```
-
-```
-## /home/msfz751/anaconda3/envs/r-torch/bin/python:1: MatplotlibDeprecationWarning: The 'linthreshy' parameter of __init__() has been renamed 'linthresh' since Matplotlib 3.3; support for the old name will be dropped two minor releases later.
-```
-
-```python
 plt.grid(True)
 plt.ylabel('symlog both')
 
@@ -1167,7 +837,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-17-1.png" width="672" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-17-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 ```python
@@ -1186,49 +856,14 @@ X,Y = np.meshgrid(x, y)
 plt.axes([0.025, 0.025, 0.95, 0.95])
 
 plt.contourf(X, Y, f(X, Y), 8, alpha=.75, cmap=plt.cm.hot)
-```
-
-```
-## <matplotlib.contour.QuadContourSet object at 0x7f27fdc29c90>
-```
-
-```python
 C = plt.contour(X, Y, f(X, Y), 8, colors='black', linewidth=.5)
-```
-
-```
-## /home/msfz751/anaconda3/envs/r-torch/bin/python:1: UserWarning: The following kwargs were not used by contour: 'linewidth'
-```
-
-```python
 plt.clabel(C, inline=1, fontsize=10)
-```
-
-```
-## <a list of 9 text.Text objects>
-```
-
-```python
 plt.xticks(())
-```
-
-```
-## ([], [])
-```
-
-```python
 plt.yticks(())
-```
-
-```
-## ([], [])
-```
-
-```python
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-18-1.png" width="672" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-18-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -1270,29 +905,8 @@ ax.scatter(x, y, zs=0, zdir='y', c=c_list, label='points in (x,z)')
 # Make legend, set axes limits and labels
 ax.legend()
 ax.set_xlim(0, 1)
-```
-
-```
-## (0.0, 1.0)
-```
-
-```python
 ax.set_ylim(0, 1)
-```
-
-```
-## (0.0, 1.0)
-```
-
-```python
 ax.set_zlim(0, 1)
-```
-
-```
-## (0.0, 1.0)
-```
-
-```python
 ax.set_xlabel('X')
 ax.set_ylabel('Y')
 ax.set_zlabel('Z')
@@ -1304,7 +918,7 @@ ax.view_init(elev=20., azim=-35)
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-19-1.png" width="672" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-19-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -1334,24 +948,10 @@ plt.step(x, y, label='masked (pre)')
 plt.legend()
 
 plt.xlim(0, 7)
-```
-
-```
-## (0.0, 7.0)
-```
-
-```python
 plt.ylim(-0.5, 4)
-```
-
-```
-## (-0.5, 4.0)
-```
-
-```python
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-20-1.png" width="672" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-20-1.png" width="90%" style="display: block; margin: auto;" />
 
 
