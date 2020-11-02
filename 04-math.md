@@ -3,8 +3,9 @@
 
 ```r
 library(reticulate)
-reticulate::use_condaenv("r-torch")
+reticulate::use_condaenv("r-python")
 ```
+
 
 
 
@@ -170,6 +171,53 @@ plt.show()
 
 
 
+```python
+# http://www.scipy-lectures.org/intro/matplotlib/auto_examples/plot_plot3d_ex.html
+
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+fig = plt.figure()
+ax = Axes3D(fig)
+X = np.arange(-4, 4, 0.25)
+Y = np.arange(-4, 4, 0.25)
+X, Y = np.meshgrid(X, Y)
+R = np.sqrt(X ** 2 + Y ** 2)
+Z = np.sin(R)
+
+ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=plt.cm.hot)
+ax.contourf(X, Y, Z, zdir='z', offset=-2, cmap=plt.cm.hot)
+ax.set_zlim(-2, 2)
+plt.show()
+```
+
+<img src="04-math_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
+
+
+```python
+# https://www.python-course.eu/matplotlib_multiple_figures.php
+
+import numpy as np
+import matplotlib.pyplot as plt
+def f(t):
+    return np.exp(-t) * np.cos(2*np.pi*t)
+def g(t):
+    return np.sin(t) * np.cos(1/(t+0.1))
+t1 = np.arange(0.0, 5.0, 0.1)
+t2 = np.arange(0.0, 5.0, 0.02)
+plt.subplot(212)
+plt.plot(t1, g(t1), 'ro', t2, f(t2), 'k')
+plt.grid(color='b', alpha=0.5, linestyle='dashed', linewidth=0.5)
+plt.show()
+```
+
+<img src="04-math_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" />
+
+
+## Surface functions
+
+
 
 
 ```python
@@ -197,52 +245,9 @@ ax.set_zlim(0, 2)
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
-
-
-
-```python
-# http://www.scipy-lectures.org/intro/matplotlib/auto_examples/plot_plot3d_ex.html
-
-import numpy as np
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-
-fig = plt.figure()
-ax = Axes3D(fig)
-X = np.arange(-4, 4, 0.25)
-Y = np.arange(-4, 4, 0.25)
-X, Y = np.meshgrid(X, Y)
-R = np.sqrt(X ** 2 + Y ** 2)
-Z = np.sin(R)
-
-ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=plt.cm.hot)
-ax.contourf(X, Y, Z, zdir='z', offset=-2, cmap=plt.cm.hot)
-ax.set_zlim(-2, 2)
-plt.show()
-```
-
-<img src="04-math_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" />
-
-
-```python
-# https://www.python-course.eu/matplotlib_multiple_figures.php
-
-import numpy as np
-import matplotlib.pyplot as plt
-def f(t):
-    return np.exp(-t) * np.cos(2*np.pi*t)
-def g(t):
-    return np.sin(t) * np.cos(1/(t+0.1))
-t1 = np.arange(0.0, 5.0, 0.1)
-t2 = np.arange(0.0, 5.0, 0.02)
-plt.subplot(212)
-plt.plot(t1, g(t1), 'ro', t2, f(t2), 'k')
-plt.grid(color='b', alpha=0.5, linestyle='dashed', linewidth=0.5)
-plt.show()
-```
-
 <img src="04-math_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" />
+
+
 
 
 
@@ -378,3 +383,44 @@ plt.show()
 ```
 
 <img src="04-math_files/figure-html/unnamed-chunk-12-1.png" width="90%" style="display: block; margin: auto;" />
+
+
+## Machine Learning
+
+
+
+```python
+import numpy as np
+from matplotlib import pyplot as plt
+from sklearn import neighbors, datasets
+from matplotlib.colors import ListedColormap
+
+# Create color maps for 3-class classification problem, as with iris
+cmap_light = ListedColormap(['#FFAAAA','#AAFFAA','#AAAAFF'])
+cmap_bold = ListedColormap(['#FF0000','#00FF00','#0000FF'])
+
+iris = datasets.load_iris()
+X = iris.data[:, :2]  # we only take the first two features. We could
+                      # avoid this ugly slicing by using a two-dim dataset
+y = iris.target
+knn = neighbors.KNeighborsClassifier(n_neighbors=1)
+knn.fit(X, y)
+x_min, x_max = X[:, 0].min() - .1, X[:, 0].max() + .1
+y_min, y_max = X[:, 1].min() - .1, X[:, 1].max() + .1
+xx, yy = np.meshgrid(np.linspace(x_min, x_max, 100), np.linspace(y_min, y_max, 100))
+
+Z = knn.predict(np.c_[xx.ravel(), yy.ravel()])
+
+Z = Z.reshape(xx.shape)
+plt.figure()
+plt.pcolormesh(xx, yy, Z, cmap=cmap_light)
+
+# Plot also the training points
+plt.scatter(X[:, 0], X[:, 1], c=y, cmap=cmap_bold)
+plt.xlabel('sepal length (cm)')
+plt.ylabel('sepal width (cm)')
+plt.axis('tight')
+plt.show()
+```
+
+<img src="04-math_files/figure-html/unnamed-chunk-13-1.png" width="90%" style="display: block; margin: auto;" />
