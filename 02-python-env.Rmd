@@ -50,3 +50,14 @@ plt.show()
 ```
 
 
+```{r eval=FALSE}
+# load the package that makes R and Python talk
+library(reticulate)
+
+# set the preferred Python to execute
+user_profile <- Sys.getenv("USERPROFILE")                    # user folder
+python_portable <- normalizePath(file.path(user_profile,     # Python location
+                                "WPy-3710zero/python-3.7.1.amd64/python.exe"))
+reticulate::use_python(python_portable, required = TRUE)
+reticulate::py_config()
+```

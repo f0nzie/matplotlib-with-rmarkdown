@@ -6,7 +6,6 @@
 ```{r}
 library(reticulate)
 use_condaenv("r-torch", required = TRUE)
-py_config()
 ```
 
 
@@ -23,7 +22,7 @@ autos = cars
 ```
 
 
-```{python}
+```{python, collapse = TRUE}
 #Python
 import numpy
 import pandas 

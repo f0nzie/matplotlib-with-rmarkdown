@@ -13,8 +13,7 @@ plt.show()
 ```
 
 
-
-## Short
+## The "hello world" plot
 
 ```{python}
 import matplotlib.pyplot as plt
@@ -49,7 +48,7 @@ plt.show()
 ```
 
 
-```{python}
+```{python, results = "hold", message=FALSE, collapse=TRUE}
 # https://matplotlib.org/gallery/showcase/anatomy.html#sphx-glr-gallery-showcase-anatomy-py
 
 import numpy as np
@@ -195,7 +194,7 @@ plt.show()
 
 
 
-```{python}
+```{python, collapse=TRUE}
 import numpy as np
 import matplotlib.pyplot as plt
 

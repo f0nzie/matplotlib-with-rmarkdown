@@ -4,7 +4,6 @@
 ```{r}
 library(reticulate)
 reticulate::use_condaenv("r-torch")
-reticulate::py_config()
 ```
 
 
@@ -26,22 +25,16 @@ reticulate::py_config()
 
 ```{python}
 # https://matplotlib.org/api/_as_gen/mpl_toolkits.mplot3d.axes3d.Axes3D.html
-
-
 #=======================================================
 #3D voxel / volumetric plot with cylindrical coordinates
 #=======================================================
-
 #Demonstrates using the ``x, y, z`` arguments of ``ax.voxels``.
-
-
 import matplotlib.pyplot as plt
 import matplotlib.colors
 import numpy as np
 
 # This import registers the 3D projection, but is otherwise unused.
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
-
 
 def midpoints(x):
     sl = ()
