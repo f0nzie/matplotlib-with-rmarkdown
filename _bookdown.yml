@@ -1,0 +1,7 @@
+book_filename: "matplotlib-with-rmarkdown"
+output_dir: public
+new_session: true
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Chapter "

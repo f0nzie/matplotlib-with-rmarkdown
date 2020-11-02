@@ -1,0 +1,55 @@
+# Seaborn
+
+
+```{r}
+library(reticulate)
+use_condaenv("r-python", required = TRUE)
+py_config()
+```
+
+```{r eval=FALSE}
+# load the package that makes R and Python talk
+library(reticulate)
+
+# set the preferred Python to execute
+user_profile <- Sys.getenv("USERPROFILE")                    # user folder
+python_portable <- normalizePath(file.path(user_profile,     # Python location
+                                "WPy-3710zero/python-3.7.1.amd64/python.exe"))
+reticulate::use_python(python_portable, required = TRUE)
+reticulate::py_config()
+```
+
+
+```{python}
+from __future__ import print_function, division
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+```
+
+```{python}
+x = np.linspace(0, 10, 1000)
+```
+
+
+```{python}
+plt.style.use('ggplot')
+
+plt.plot(x, np.sin(x), x, np.cos(x));
+plt.show()
+```
+
+
+
+```{python}
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+x = np.linspace(0, 10, 1000)
+sns.set()
+plt.plot(x, np.sin(x), x, np.cos(x));
+plt.show()
+```
+
