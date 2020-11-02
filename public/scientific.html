@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Scientific | Matplotlib with Rmarkdown</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Scientific | Matplotlib with Rmarkdown" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Scientific | Matplotlib with Rmarkdown" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Alfonso R. Reyes" />
+
+
+<meta name="date" content="2020-11-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="math.html"/>
+<link rel="next" href="voxels.html"/>
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Matplotlib with Rmarkdown</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction.html"><a href="introduction.html#the-hello-world-plot"><i class="fa fa-check"></i><b>2.1</b> The “hello world” plot</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="python-environment.html"><a href="python-environment.html"><i class="fa fa-check"></i><b>3</b> Python environment</a></li>
+<li class="chapter" data-level="4" data-path="sharing-data-objects.html"><a href="sharing-data-objects.html"><i class="fa fa-check"></i><b>4</b> Sharing data objects</a></li>
+<li class="chapter" data-level="5" data-path="math.html"><a href="math.html"><i class="fa fa-check"></i><b>5</b> Math</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="math.html"><a href="math.html#middle"><i class="fa fa-check"></i><b>5.1</b> Middle</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="scientific.html"><a href="scientific.html"><i class="fa fa-check"></i><b>6</b> Scientific</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="scientific.html"><a href="scientific.html#weird"><i class="fa fa-check"></i><b>6.1</b> weird</a></li>
+<li class="chapter" data-level="6.2" data-path="scientific.html"><a href="scientific.html#middle-1"><i class="fa fa-check"></i><b>6.2</b> Middle</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="voxels.html"><a href="voxels.html"><i class="fa fa-check"></i><b>7</b> Voxels</a></li>
+<li class="chapter" data-level="8" data-path="seaborn.html"><a href="seaborn.html"><i class="fa fa-check"></i><b>8</b> Seaborn</a></li>
+<li class="chapter" data-level="9" data-path="advanced.html"><a href="advanced.html"><i class="fa fa-check"></i><b>9</b> Advanced</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="advanced.html"><a href="advanced.html#adding-labels"><i class="fa fa-check"></i><b>9.1</b> Adding labels</a></li>
+<li class="chapter" data-level="9.2" data-path="advanced.html"><a href="advanced.html#change-of-axes"><i class="fa fa-check"></i><b>9.2</b> Change of axes</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Matplotlib with Rmarkdown</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="scientific" class="section level1" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Scientific</h1>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="scientific.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb33-2"><a href="scientific.html#cb33-2" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">use_condaenv</span>(<span class="st">&quot;r-torch&quot;</span>)</span>
+<span id="cb33-3"><a href="scientific.html#cb33-3" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">py_config</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="scientific.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot of the Lorenz Attractor based on Edward Lorenz&#39;s 1963 &quot;Deterministic</span></span>
+<span id="cb34-2"><a href="scientific.html#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Nonperiodic Flow&quot; publication.</span></span>
+<span id="cb34-3"><a href="scientific.html#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="co"># http://journals.ametsoc.org/doi/abs/10.1175/1520-0469%281963%29020%3C0130%3ADNF%3E2.0.CO%3B2</span></span>
+<span id="cb34-4"><a href="scientific.html#cb34-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-5"><a href="scientific.html#cb34-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-6"><a href="scientific.html#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb34-7"><a href="scientific.html#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb34-8"><a href="scientific.html#cb34-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
+<span id="cb34-9"><a href="scientific.html#cb34-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-10"><a href="scientific.html#cb34-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-11"><a href="scientific.html#cb34-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> lorenz(x, y, z, s<span class="op">=</span><span class="dv">10</span>, r<span class="op">=</span><span class="dv">28</span>, b<span class="op">=</span><span class="fl">2.667</span>):</span>
+<span id="cb34-12"><a href="scientific.html#cb34-12" aria-hidden="true" tabindex="-1"></a>    x_dot <span class="op">=</span> s<span class="op">*</span>(y <span class="op">-</span> x)</span>
+<span id="cb34-13"><a href="scientific.html#cb34-13" aria-hidden="true" tabindex="-1"></a>    y_dot <span class="op">=</span> r<span class="op">*</span>x <span class="op">-</span> y <span class="op">-</span> x<span class="op">*</span>z</span>
+<span id="cb34-14"><a href="scientific.html#cb34-14" aria-hidden="true" tabindex="-1"></a>    z_dot <span class="op">=</span> x<span class="op">*</span>y <span class="op">-</span> b<span class="op">*</span>z</span>
+<span id="cb34-15"><a href="scientific.html#cb34-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x_dot, y_dot, z_dot</span>
+<span id="cb34-16"><a href="scientific.html#cb34-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-17"><a href="scientific.html#cb34-17" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> <span class="fl">0.01</span></span>
+<span id="cb34-18"><a href="scientific.html#cb34-18" aria-hidden="true" tabindex="-1"></a>stepCnt <span class="op">=</span> <span class="dv">10000</span></span>
+<span id="cb34-19"><a href="scientific.html#cb34-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-20"><a href="scientific.html#cb34-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Need one more for the initial values</span></span>
+<span id="cb34-21"><a href="scientific.html#cb34-21" aria-hidden="true" tabindex="-1"></a>xs <span class="op">=</span> np.empty((stepCnt <span class="op">+</span> <span class="dv">1</span>,))</span>
+<span id="cb34-22"><a href="scientific.html#cb34-22" aria-hidden="true" tabindex="-1"></a>ys <span class="op">=</span> np.empty((stepCnt <span class="op">+</span> <span class="dv">1</span>,))</span>
+<span id="cb34-23"><a href="scientific.html#cb34-23" aria-hidden="true" tabindex="-1"></a>zs <span class="op">=</span> np.empty((stepCnt <span class="op">+</span> <span class="dv">1</span>,))</span>
+<span id="cb34-24"><a href="scientific.html#cb34-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-25"><a href="scientific.html#cb34-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Setting initial values</span></span>
+<span id="cb34-26"><a href="scientific.html#cb34-26" aria-hidden="true" tabindex="-1"></a>xs[<span class="dv">0</span>], ys[<span class="dv">0</span>], zs[<span class="dv">0</span>] <span class="op">=</span> (<span class="fl">0.</span>, <span class="fl">1.</span>, <span class="fl">1.05</span>)</span>
+<span id="cb34-27"><a href="scientific.html#cb34-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-28"><a href="scientific.html#cb34-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Stepping through &quot;time&quot;.</span></span>
+<span id="cb34-29"><a href="scientific.html#cb34-29" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(stepCnt):</span>
+<span id="cb34-30"><a href="scientific.html#cb34-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Derivatives of the X, Y, Z state</span></span>
+<span id="cb34-31"><a href="scientific.html#cb34-31" aria-hidden="true" tabindex="-1"></a>    x_dot, y_dot, z_dot <span class="op">=</span> lorenz(xs[i], ys[i], zs[i])</span>
+<span id="cb34-32"><a href="scientific.html#cb34-32" aria-hidden="true" tabindex="-1"></a>    xs[i <span class="op">+</span> <span class="dv">1</span>] <span class="op">=</span> xs[i] <span class="op">+</span> (x_dot <span class="op">*</span> dt)</span>
+<span id="cb34-33"><a href="scientific.html#cb34-33" aria-hidden="true" tabindex="-1"></a>    ys[i <span class="op">+</span> <span class="dv">1</span>] <span class="op">=</span> ys[i] <span class="op">+</span> (y_dot <span class="op">*</span> dt)</span>
+<span id="cb34-34"><a href="scientific.html#cb34-34" aria-hidden="true" tabindex="-1"></a>    zs[i <span class="op">+</span> <span class="dv">1</span>] <span class="op">=</span> zs[i] <span class="op">+</span> (z_dot <span class="op">*</span> dt)</span>
+<span id="cb34-35"><a href="scientific.html#cb34-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-36"><a href="scientific.html#cb34-36" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb34-37"><a href="scientific.html#cb34-37" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
+<span id="cb34-38"><a href="scientific.html#cb34-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-39"><a href="scientific.html#cb34-39" aria-hidden="true" tabindex="-1"></a>ax.plot(xs, ys, zs, lw<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb34-40"><a href="scientific.html#cb34-40" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">&quot;X Axis&quot;</span>)</span>
+<span id="cb34-41"><a href="scientific.html#cb34-41" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">&quot;Y Axis&quot;</span>)</span>
+<span id="cb34-42"><a href="scientific.html#cb34-42" aria-hidden="true" tabindex="-1"></a>ax.set_zlabel(<span class="st">&quot;Z Axis&quot;</span>)</span>
+<span id="cb34-43"><a href="scientific.html#cb34-43" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">&quot;Lorenz Attractor&quot;</span>)</span>
+<span id="cb34-44"><a href="scientific.html#cb34-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-45"><a href="scientific.html#cb34-45" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="05-scientific_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="scientific.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ===================================</span></span>
+<span id="cb35-2"><a href="scientific.html#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 3D wireframe plots in one direction</span></span>
+<span id="cb35-3"><a href="scientific.html#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ===================================</span></span>
+<span id="cb35-4"><a href="scientific.html#cb35-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-5"><a href="scientific.html#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Demonstrates that setting rstride or cstride to 0 causes wires to not be</span></span>
+<span id="cb35-6"><a href="scientific.html#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="co"># generated in the corresponding direction.</span></span>
+<span id="cb35-7"><a href="scientific.html#cb35-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-8"><a href="scientific.html#cb35-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-9"><a href="scientific.html#cb35-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> axes3d</span>
+<span id="cb35-10"><a href="scientific.html#cb35-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb35-11"><a href="scientific.html#cb35-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-12"><a href="scientific.html#cb35-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-13"><a href="scientific.html#cb35-13" aria-hidden="true" tabindex="-1"></a>fig, [ax1, ax2] <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">12</span>), subplot_kw<span class="op">=</span>{<span class="st">&#39;projection&#39;</span>: <span class="st">&#39;3d&#39;</span>})</span>
+<span id="cb35-14"><a href="scientific.html#cb35-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-15"><a href="scientific.html#cb35-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the test data</span></span>
+<span id="cb35-16"><a href="scientific.html#cb35-16" aria-hidden="true" tabindex="-1"></a>X, Y, Z <span class="op">=</span> axes3d.get_test_data(<span class="fl">0.05</span>)</span>
+<span id="cb35-17"><a href="scientific.html#cb35-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-18"><a href="scientific.html#cb35-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Give the first plot only wireframes of the type y = c</span></span>
+<span id="cb35-19"><a href="scientific.html#cb35-19" aria-hidden="true" tabindex="-1"></a>ax1.plot_wireframe(X, Y, Z, rstride<span class="op">=</span><span class="dv">10</span>, cstride<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb35-20"><a href="scientific.html#cb35-20" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">&quot;Column (x) stride set to 0&quot;</span>)</span>
+<span id="cb35-21"><a href="scientific.html#cb35-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-22"><a href="scientific.html#cb35-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Give the second plot only wireframes of the type x = c</span></span>
+<span id="cb35-23"><a href="scientific.html#cb35-23" aria-hidden="true" tabindex="-1"></a>ax2.plot_wireframe(X, Y, Z, rstride<span class="op">=</span><span class="dv">0</span>, cstride<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb35-24"><a href="scientific.html#cb35-24" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">&quot;Row (y) stride set to 0&quot;</span>)</span>
+<span id="cb35-25"><a href="scientific.html#cb35-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-26"><a href="scientific.html#cb35-26" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb35-27"><a href="scientific.html#cb35-27" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="05-scientific_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="scientific.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/images_contours_and_fields/contour_image.html#sphx-glr-gallery-images-contours-and-fields-contour-image-py</span></span>
+<span id="cb36-2"><a href="scientific.html#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="scientific.html#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb36-4"><a href="scientific.html#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb36-5"><a href="scientific.html#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> cm</span>
+<span id="cb36-6"><a href="scientific.html#cb36-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-7"><a href="scientific.html#cb36-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Default delta is large because that makes it fast, and it illustrates</span></span>
+<span id="cb36-8"><a href="scientific.html#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="co"># the correct registration between image and contours.</span></span>
+<span id="cb36-9"><a href="scientific.html#cb36-9" aria-hidden="true" tabindex="-1"></a>delta <span class="op">=</span> <span class="fl">0.5</span></span>
+<span id="cb36-10"><a href="scientific.html#cb36-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-11"><a href="scientific.html#cb36-11" aria-hidden="true" tabindex="-1"></a>extent <span class="op">=</span> (<span class="op">-</span><span class="dv">3</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">4</span>, <span class="dv">3</span>)</span>
+<span id="cb36-12"><a href="scientific.html#cb36-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-13"><a href="scientific.html#cb36-13" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="op">-</span><span class="fl">3.0</span>, <span class="fl">4.001</span>, delta)</span>
+<span id="cb36-14"><a href="scientific.html#cb36-14" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.arange(<span class="op">-</span><span class="fl">4.0</span>, <span class="fl">3.001</span>, delta)</span>
+<span id="cb36-15"><a href="scientific.html#cb36-15" aria-hidden="true" tabindex="-1"></a>X, Y <span class="op">=</span> np.meshgrid(x, y)</span>
+<span id="cb36-16"><a href="scientific.html#cb36-16" aria-hidden="true" tabindex="-1"></a>Z1 <span class="op">=</span> np.exp(<span class="op">-</span>X<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> Y<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb36-17"><a href="scientific.html#cb36-17" aria-hidden="true" tabindex="-1"></a>Z2 <span class="op">=</span> np.exp(<span class="op">-</span>(X <span class="op">-</span> <span class="dv">1</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> (Y <span class="op">-</span> <span class="dv">1</span>)<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb36-18"><a href="scientific.html#cb36-18" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> (Z1 <span class="op">-</span> Z2) <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb36-19"><a href="scientific.html#cb36-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-20"><a href="scientific.html#cb36-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Boost the upper limit to avoid truncation errors.</span></span>
+<span id="cb36-21"><a href="scientific.html#cb36-21" aria-hidden="true" tabindex="-1"></a>levels <span class="op">=</span> np.arange(<span class="op">-</span><span class="fl">2.0</span>, <span class="fl">1.601</span>, <span class="fl">0.4</span>)</span>
+<span id="cb36-22"><a href="scientific.html#cb36-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-23"><a href="scientific.html#cb36-23" aria-hidden="true" tabindex="-1"></a>norm <span class="op">=</span> cm.colors.Normalize(vmax<span class="op">=</span><span class="bu">abs</span>(Z).<span class="bu">max</span>(), vmin<span class="op">=-</span><span class="bu">abs</span>(Z).<span class="bu">max</span>())</span>
+<span id="cb36-24"><a href="scientific.html#cb36-24" aria-hidden="true" tabindex="-1"></a>cmap <span class="op">=</span> cm.PRGn</span>
+<span id="cb36-25"><a href="scientific.html#cb36-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-26"><a href="scientific.html#cb36-26" aria-hidden="true" tabindex="-1"></a>fig, _axs <span class="op">=</span> plt.subplots(nrows<span class="op">=</span><span class="dv">2</span>, ncols<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb36-27"><a href="scientific.html#cb36-27" aria-hidden="true" tabindex="-1"></a>fig.subplots_adjust(hspace<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb36-28"><a href="scientific.html#cb36-28" aria-hidden="true" tabindex="-1"></a>axs <span class="op">=</span> _axs.flatten()</span>
+<span id="cb36-29"><a href="scientific.html#cb36-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-30"><a href="scientific.html#cb36-30" aria-hidden="true" tabindex="-1"></a>cset1 <span class="op">=</span> axs[<span class="dv">0</span>].contourf(X, Y, Z, levels, norm<span class="op">=</span>norm,</span>
+<span id="cb36-31"><a href="scientific.html#cb36-31" aria-hidden="true" tabindex="-1"></a>                     cmap<span class="op">=</span>cm.get_cmap(cmap, <span class="bu">len</span>(levels) <span class="op">-</span> <span class="dv">1</span>))</span>
+<span id="cb36-32"><a href="scientific.html#cb36-32" aria-hidden="true" tabindex="-1"></a><span class="co"># It is not necessary, but for the colormap, we need only the</span></span>
+<span id="cb36-33"><a href="scientific.html#cb36-33" aria-hidden="true" tabindex="-1"></a><span class="co"># number of levels minus 1.  To avoid discretization error, use</span></span>
+<span id="cb36-34"><a href="scientific.html#cb36-34" aria-hidden="true" tabindex="-1"></a><span class="co"># either this number or a large number such as the default (256).</span></span>
+<span id="cb36-35"><a href="scientific.html#cb36-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-36"><a href="scientific.html#cb36-36" aria-hidden="true" tabindex="-1"></a><span class="co"># If we want lines as well as filled regions, we need to call</span></span>
+<span id="cb36-37"><a href="scientific.html#cb36-37" aria-hidden="true" tabindex="-1"></a><span class="co"># contour separately; don&#39;t try to change the edgecolor or edgewidth</span></span>
+<span id="cb36-38"><a href="scientific.html#cb36-38" aria-hidden="true" tabindex="-1"></a><span class="co"># of the polygons in the collections returned by contourf.</span></span>
+<span id="cb36-39"><a href="scientific.html#cb36-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Use levels output from previous call to guarantee they are the same.</span></span>
+<span id="cb36-40"><a href="scientific.html#cb36-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-41"><a href="scientific.html#cb36-41" aria-hidden="true" tabindex="-1"></a>cset2 <span class="op">=</span> axs[<span class="dv">0</span>].contour(X, Y, Z, cset1.levels, colors<span class="op">=</span><span class="st">&#39;k&#39;</span>)</span>
+<span id="cb36-42"><a href="scientific.html#cb36-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-43"><a href="scientific.html#cb36-43" aria-hidden="true" tabindex="-1"></a><span class="co"># We don&#39;t really need dashed contour lines to indicate negative</span></span>
+<span id="cb36-44"><a href="scientific.html#cb36-44" aria-hidden="true" tabindex="-1"></a><span class="co"># regions, so let&#39;s turn them off.</span></span>
+<span id="cb36-45"><a href="scientific.html#cb36-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-46"><a href="scientific.html#cb36-46" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> c <span class="kw">in</span> cset2.collections:</span>
+<span id="cb36-47"><a href="scientific.html#cb36-47" aria-hidden="true" tabindex="-1"></a>    c.set_linestyle(<span class="st">&#39;solid&#39;</span>)</span>
+<span id="cb36-48"><a href="scientific.html#cb36-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-49"><a href="scientific.html#cb36-49" aria-hidden="true" tabindex="-1"></a><span class="co"># It is easier here to make a separate call to contour than</span></span>
+<span id="cb36-50"><a href="scientific.html#cb36-50" aria-hidden="true" tabindex="-1"></a><span class="co"># to set up an array of colors and linewidths.</span></span>
+<span id="cb36-51"><a href="scientific.html#cb36-51" aria-hidden="true" tabindex="-1"></a><span class="co"># We are making a thick green line as a zero contour.</span></span>
+<span id="cb36-52"><a href="scientific.html#cb36-52" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify the zero level as a tuple with only 0 in it.</span></span>
+<span id="cb36-53"><a href="scientific.html#cb36-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-54"><a href="scientific.html#cb36-54" aria-hidden="true" tabindex="-1"></a>cset3 <span class="op">=</span> axs[<span class="dv">0</span>].contour(X, Y, Z, (<span class="dv">0</span>,), colors<span class="op">=</span><span class="st">&#39;g&#39;</span>, linewidths<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb36-55"><a href="scientific.html#cb36-55" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_title(<span class="st">&#39;Filled contours&#39;</span>)</span>
+<span id="cb36-56"><a href="scientific.html#cb36-56" aria-hidden="true" tabindex="-1"></a>fig.colorbar(cset1, ax<span class="op">=</span>axs[<span class="dv">0</span>])</span>
+<span id="cb36-57"><a href="scientific.html#cb36-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-58"><a href="scientific.html#cb36-58" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].imshow(Z, extent<span class="op">=</span>extent, cmap<span class="op">=</span>cmap, norm<span class="op">=</span>norm)</span>
+<span id="cb36-59"><a href="scientific.html#cb36-59" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].contour(Z, levels, colors<span class="op">=</span><span class="st">&#39;k&#39;</span>, origin<span class="op">=</span><span class="st">&#39;upper&#39;</span>, extent<span class="op">=</span>extent)</span>
+<span id="cb36-60"><a href="scientific.html#cb36-60" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_title(<span class="st">&quot;Image, origin &#39;upper&#39;&quot;</span>)</span>
+<span id="cb36-61"><a href="scientific.html#cb36-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-62"><a href="scientific.html#cb36-62" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">2</span>].imshow(Z, origin<span class="op">=</span><span class="st">&#39;lower&#39;</span>, extent<span class="op">=</span>extent, cmap<span class="op">=</span>cmap, norm<span class="op">=</span>norm)</span>
+<span id="cb36-63"><a href="scientific.html#cb36-63" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">2</span>].contour(Z, levels, colors<span class="op">=</span><span class="st">&#39;k&#39;</span>, origin<span class="op">=</span><span class="st">&#39;lower&#39;</span>, extent<span class="op">=</span>extent)</span>
+<span id="cb36-64"><a href="scientific.html#cb36-64" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">2</span>].set_title(<span class="st">&quot;Image, origin &#39;lower&#39;&quot;</span>)</span>
+<span id="cb36-65"><a href="scientific.html#cb36-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-66"><a href="scientific.html#cb36-66" aria-hidden="true" tabindex="-1"></a><span class="co"># We will use the interpolation &quot;nearest&quot; here to show the actual</span></span>
+<span id="cb36-67"><a href="scientific.html#cb36-67" aria-hidden="true" tabindex="-1"></a><span class="co"># image pixels.</span></span>
+<span id="cb36-68"><a href="scientific.html#cb36-68" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that the contour lines don&#39;t extend to the edge of the box.</span></span>
+<span id="cb36-69"><a href="scientific.html#cb36-69" aria-hidden="true" tabindex="-1"></a><span class="co"># This is intentional. The Z values are defined at the center of each</span></span>
+<span id="cb36-70"><a href="scientific.html#cb36-70" aria-hidden="true" tabindex="-1"></a><span class="co"># image pixel (each color block on the following subplot), so the</span></span>
+<span id="cb36-71"><a href="scientific.html#cb36-71" aria-hidden="true" tabindex="-1"></a><span class="co"># domain that is contoured does not extend beyond these pixel centers.</span></span>
+<span id="cb36-72"><a href="scientific.html#cb36-72" aria-hidden="true" tabindex="-1"></a>im <span class="op">=</span> axs[<span class="dv">3</span>].imshow(Z, interpolation<span class="op">=</span><span class="st">&#39;nearest&#39;</span>, extent<span class="op">=</span>extent,</span>
+<span id="cb36-73"><a href="scientific.html#cb36-73" aria-hidden="true" tabindex="-1"></a>                cmap<span class="op">=</span>cmap, norm<span class="op">=</span>norm)</span>
+<span id="cb36-74"><a href="scientific.html#cb36-74" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">3</span>].contour(Z, levels, colors<span class="op">=</span><span class="st">&#39;k&#39;</span>, origin<span class="op">=</span><span class="st">&#39;image&#39;</span>, extent<span class="op">=</span>extent)</span>
+<span id="cb36-75"><a href="scientific.html#cb36-75" aria-hidden="true" tabindex="-1"></a>ylim <span class="op">=</span> axs[<span class="dv">3</span>].get_ylim()</span>
+<span id="cb36-76"><a href="scientific.html#cb36-76" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">3</span>].set_ylim(ylim[::<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb36-77"><a href="scientific.html#cb36-77" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">3</span>].set_title(<span class="st">&quot;Origin from rc, reversed y-axis&quot;</span>)</span>
+<span id="cb36-78"><a href="scientific.html#cb36-78" aria-hidden="true" tabindex="-1"></a>fig.colorbar(im, ax<span class="op">=</span>axs[<span class="dv">3</span>])</span>
+<span id="cb36-79"><a href="scientific.html#cb36-79" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb36-80"><a href="scientific.html#cb36-80" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="05-scientific_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div id="weird" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> weird</h2>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="scientific.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># step demo</span></span>
+<span id="cb37-2"><a href="scientific.html#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py</span></span>
+<span id="cb37-3"><a href="scientific.html#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-4"><a href="scientific.html#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb37-5"><a href="scientific.html#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy <span class="im">import</span> ma</span>
+<span id="cb37-6"><a href="scientific.html#cb37-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb37-7"><a href="scientific.html#cb37-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-8"><a href="scientific.html#cb37-8" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">1</span>, <span class="dv">7</span>, <span class="fl">0.4</span>)</span>
+<span id="cb37-9"><a href="scientific.html#cb37-9" aria-hidden="true" tabindex="-1"></a>y0 <span class="op">=</span> np.sin(x)</span>
+<span id="cb37-10"><a href="scientific.html#cb37-10" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> y0.copy() <span class="op">+</span> <span class="fl">2.5</span></span>
+<span id="cb37-11"><a href="scientific.html#cb37-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-12"><a href="scientific.html#cb37-12" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, label<span class="op">=</span><span class="st">&#39;pre (default)&#39;</span>)</span>
+<span id="cb37-13"><a href="scientific.html#cb37-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-14"><a href="scientific.html#cb37-14" aria-hidden="true" tabindex="-1"></a>y <span class="op">-=</span> <span class="fl">0.5</span></span>
+<span id="cb37-15"><a href="scientific.html#cb37-15" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, where<span class="op">=</span><span class="st">&#39;mid&#39;</span>, label<span class="op">=</span><span class="st">&#39;mid&#39;</span>)</span>
+<span id="cb37-16"><a href="scientific.html#cb37-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-17"><a href="scientific.html#cb37-17" aria-hidden="true" tabindex="-1"></a>y <span class="op">-=</span> <span class="fl">0.5</span></span>
+<span id="cb37-18"><a href="scientific.html#cb37-18" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, where<span class="op">=</span><span class="st">&#39;post&#39;</span>, label<span class="op">=</span><span class="st">&#39;post&#39;</span>)</span>
+<span id="cb37-19"><a href="scientific.html#cb37-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-20"><a href="scientific.html#cb37-20" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> ma.masked_where((y0 <span class="op">&gt;</span> <span class="op">-</span><span class="fl">0.15</span>) <span class="op">&amp;</span> (y0 <span class="op">&lt;</span> <span class="fl">0.15</span>), y <span class="op">-</span> <span class="fl">0.5</span>)</span>
+<span id="cb37-21"><a href="scientific.html#cb37-21" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, label<span class="op">=</span><span class="st">&#39;masked (pre)&#39;</span>)</span>
+<span id="cb37-22"><a href="scientific.html#cb37-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-23"><a href="scientific.html#cb37-23" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb37-24"><a href="scientific.html#cb37-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-25"><a href="scientific.html#cb37-25" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="dv">0</span>, <span class="dv">7</span>)</span>
+<span id="cb37-26"><a href="scientific.html#cb37-26" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="op">-</span><span class="fl">0.5</span>, <span class="dv">4</span>)</span>
+<span id="cb37-27"><a href="scientific.html#cb37-27" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="05-scientific_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="middle-1" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Middle</h2>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="scientific.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> axes3d</span>
+<span id="cb38-2"><a href="scientific.html#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb38-3"><a href="scientific.html#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> cm</span>
+<span id="cb38-4"><a href="scientific.html#cb38-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-5"><a href="scientific.html#cb38-5" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb38-6"><a href="scientific.html#cb38-6" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
+<span id="cb38-7"><a href="scientific.html#cb38-7" aria-hidden="true" tabindex="-1"></a>X, Y, Z <span class="op">=</span> axes3d.get_test_data(<span class="fl">0.05</span>)</span>
+<span id="cb38-8"><a href="scientific.html#cb38-8" aria-hidden="true" tabindex="-1"></a>ax.plot_surface(X, Y, Z, rstride<span class="op">=</span><span class="dv">8</span>, cstride<span class="op">=</span><span class="dv">8</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb38-9"><a href="scientific.html#cb38-9" aria-hidden="true" tabindex="-1"></a>cset <span class="op">=</span> ax.contourf(X, Y, Z, zdir<span class="op">=</span><span class="st">&#39;z&#39;</span>, offset<span class="op">=-</span><span class="dv">100</span>, cmap<span class="op">=</span>cm.coolwarm)</span>
+<span id="cb38-10"><a href="scientific.html#cb38-10" aria-hidden="true" tabindex="-1"></a>cset <span class="op">=</span> ax.contourf(X, Y, Z, zdir<span class="op">=</span><span class="st">&#39;x&#39;</span>, offset<span class="op">=-</span><span class="dv">40</span>, cmap<span class="op">=</span>cm.coolwarm)</span>
+<span id="cb38-11"><a href="scientific.html#cb38-11" aria-hidden="true" tabindex="-1"></a>cset <span class="op">=</span> ax.contourf(X, Y, Z, zdir<span class="op">=</span><span class="st">&#39;y&#39;</span>, offset<span class="op">=</span><span class="dv">40</span>, cmap<span class="op">=</span>cm.coolwarm)</span>
+<span id="cb38-12"><a href="scientific.html#cb38-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-13"><a href="scientific.html#cb38-13" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">&#39;X&#39;</span>)</span>
+<span id="cb38-14"><a href="scientific.html#cb38-14" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="dv">40</span>, <span class="dv">40</span>)</span>
+<span id="cb38-15"><a href="scientific.html#cb38-15" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">&#39;Y&#39;</span>)</span>
+<span id="cb38-16"><a href="scientific.html#cb38-16" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="dv">40</span>, <span class="dv">40</span>)</span>
+<span id="cb38-17"><a href="scientific.html#cb38-17" aria-hidden="true" tabindex="-1"></a>ax.set_zlabel(<span class="st">&#39;Z&#39;</span>)</span>
+<span id="cb38-18"><a href="scientific.html#cb38-18" aria-hidden="true" tabindex="-1"></a>ax.set_zlim(<span class="op">-</span><span class="dv">100</span>, <span class="dv">100</span>)</span>
+<span id="cb38-19"><a href="scientific.html#cb38-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="05-scientific_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="scientific.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot of the Lorenz Attractor based on Edward Lorenz&#39;s 1963 &quot;Deterministic</span></span>
+<span id="cb39-2"><a href="scientific.html#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Nonperiodic Flow&quot; publication.</span></span>
+<span id="cb39-3"><a href="scientific.html#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="co"># http://journals.ametsoc.org/doi/abs/10.1175/1520-0469%281963%29020%3C0130%3ADNF%3E2.0.CO%3B2</span></span>
+<span id="cb39-4"><a href="scientific.html#cb39-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-5"><a href="scientific.html#cb39-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-6"><a href="scientific.html#cb39-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb39-7"><a href="scientific.html#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb39-8"><a href="scientific.html#cb39-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
+<span id="cb39-9"><a href="scientific.html#cb39-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-10"><a href="scientific.html#cb39-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-11"><a href="scientific.html#cb39-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> lorenz(x, y, z, s<span class="op">=</span><span class="dv">10</span>, r<span class="op">=</span><span class="dv">28</span>, b<span class="op">=</span><span class="fl">2.667</span>):</span>
+<span id="cb39-12"><a href="scientific.html#cb39-12" aria-hidden="true" tabindex="-1"></a>    x_dot <span class="op">=</span> s<span class="op">*</span>(y <span class="op">-</span> x)</span>
+<span id="cb39-13"><a href="scientific.html#cb39-13" aria-hidden="true" tabindex="-1"></a>    y_dot <span class="op">=</span> r<span class="op">*</span>x <span class="op">-</span> y <span class="op">-</span> x<span class="op">*</span>z</span>
+<span id="cb39-14"><a href="scientific.html#cb39-14" aria-hidden="true" tabindex="-1"></a>    z_dot <span class="op">=</span> x<span class="op">*</span>y <span class="op">-</span> b<span class="op">*</span>z</span>
+<span id="cb39-15"><a href="scientific.html#cb39-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x_dot, y_dot, z_dot</span>
+<span id="cb39-16"><a href="scientific.html#cb39-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-17"><a href="scientific.html#cb39-17" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> <span class="fl">0.01</span></span>
+<span id="cb39-18"><a href="scientific.html#cb39-18" aria-hidden="true" tabindex="-1"></a>stepCnt <span class="op">=</span> <span class="dv">10000</span></span>
+<span id="cb39-19"><a href="scientific.html#cb39-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-20"><a href="scientific.html#cb39-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Need one more for the initial values</span></span>
+<span id="cb39-21"><a href="scientific.html#cb39-21" aria-hidden="true" tabindex="-1"></a>xs <span class="op">=</span> np.empty((stepCnt <span class="op">+</span> <span class="dv">1</span>,))</span>
+<span id="cb39-22"><a href="scientific.html#cb39-22" aria-hidden="true" tabindex="-1"></a>ys <span class="op">=</span> np.empty((stepCnt <span class="op">+</span> <span class="dv">1</span>,))</span>
+<span id="cb39-23"><a href="scientific.html#cb39-23" aria-hidden="true" tabindex="-1"></a>zs <span class="op">=</span> np.empty((stepCnt <span class="op">+</span> <span class="dv">1</span>,))</span>
+<span id="cb39-24"><a href="scientific.html#cb39-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-25"><a href="scientific.html#cb39-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Setting initial values</span></span>
+<span id="cb39-26"><a href="scientific.html#cb39-26" aria-hidden="true" tabindex="-1"></a>xs[<span class="dv">0</span>], ys[<span class="dv">0</span>], zs[<span class="dv">0</span>] <span class="op">=</span> (<span class="fl">0.</span>, <span class="fl">1.</span>, <span class="fl">1.05</span>)</span>
+<span id="cb39-27"><a href="scientific.html#cb39-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-28"><a href="scientific.html#cb39-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Stepping through &quot;time&quot;.</span></span>
+<span id="cb39-29"><a href="scientific.html#cb39-29" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(stepCnt):</span>
+<span id="cb39-30"><a href="scientific.html#cb39-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Derivatives of the X, Y, Z state</span></span>
+<span id="cb39-31"><a href="scientific.html#cb39-31" aria-hidden="true" tabindex="-1"></a>    x_dot, y_dot, z_dot <span class="op">=</span> lorenz(xs[i], ys[i], zs[i])</span>
+<span id="cb39-32"><a href="scientific.html#cb39-32" aria-hidden="true" tabindex="-1"></a>    xs[i <span class="op">+</span> <span class="dv">1</span>] <span class="op">=</span> xs[i] <span class="op">+</span> (x_dot <span class="op">*</span> dt)</span>
+<span id="cb39-33"><a href="scientific.html#cb39-33" aria-hidden="true" tabindex="-1"></a>    ys[i <span class="op">+</span> <span class="dv">1</span>] <span class="op">=</span> ys[i] <span class="op">+</span> (y_dot <span class="op">*</span> dt)</span>
+<span id="cb39-34"><a href="scientific.html#cb39-34" aria-hidden="true" tabindex="-1"></a>    zs[i <span class="op">+</span> <span class="dv">1</span>] <span class="op">=</span> zs[i] <span class="op">+</span> (z_dot <span class="op">*</span> dt)</span>
+<span id="cb39-35"><a href="scientific.html#cb39-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-36"><a href="scientific.html#cb39-36" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb39-37"><a href="scientific.html#cb39-37" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
+<span id="cb39-38"><a href="scientific.html#cb39-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-39"><a href="scientific.html#cb39-39" aria-hidden="true" tabindex="-1"></a>ax.plot(xs, ys, zs, lw<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb39-40"><a href="scientific.html#cb39-40" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">&quot;X Axis&quot;</span>)</span>
+<span id="cb39-41"><a href="scientific.html#cb39-41" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">&quot;Y Axis&quot;</span>)</span>
+<span id="cb39-42"><a href="scientific.html#cb39-42" aria-hidden="true" tabindex="-1"></a>ax.set_zlabel(<span class="st">&quot;Z Axis&quot;</span>)</span>
+<span id="cb39-43"><a href="scientific.html#cb39-43" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">&quot;Lorenz Attractor&quot;</span>)</span>
+<span id="cb39-44"><a href="scientific.html#cb39-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-45"><a href="scientific.html#cb39-45" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="05-scientific_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="scientific.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ===================================</span></span>
+<span id="cb40-2"><a href="scientific.html#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 3D wireframe plots in one direction</span></span>
+<span id="cb40-3"><a href="scientific.html#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ===================================</span></span>
+<span id="cb40-4"><a href="scientific.html#cb40-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-5"><a href="scientific.html#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Demonstrates that setting rstride or cstride to 0 causes wires to not be</span></span>
+<span id="cb40-6"><a href="scientific.html#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="co"># generated in the corresponding direction.</span></span>
+<span id="cb40-7"><a href="scientific.html#cb40-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-8"><a href="scientific.html#cb40-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-9"><a href="scientific.html#cb40-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> axes3d</span>
+<span id="cb40-10"><a href="scientific.html#cb40-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb40-11"><a href="scientific.html#cb40-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-12"><a href="scientific.html#cb40-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-13"><a href="scientific.html#cb40-13" aria-hidden="true" tabindex="-1"></a>fig, [ax1, ax2] <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">12</span>), subplot_kw<span class="op">=</span>{<span class="st">&#39;projection&#39;</span>: <span class="st">&#39;3d&#39;</span>})</span>
+<span id="cb40-14"><a href="scientific.html#cb40-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-15"><a href="scientific.html#cb40-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the test data</span></span>
+<span id="cb40-16"><a href="scientific.html#cb40-16" aria-hidden="true" tabindex="-1"></a>X, Y, Z <span class="op">=</span> axes3d.get_test_data(<span class="fl">0.05</span>)</span>
+<span id="cb40-17"><a href="scientific.html#cb40-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-18"><a href="scientific.html#cb40-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Give the first plot only wireframes of the type y = c</span></span>
+<span id="cb40-19"><a href="scientific.html#cb40-19" aria-hidden="true" tabindex="-1"></a>ax1.plot_wireframe(X, Y, Z, rstride<span class="op">=</span><span class="dv">10</span>, cstride<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb40-20"><a href="scientific.html#cb40-20" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">&quot;Column (x) stride set to 0&quot;</span>)</span>
+<span id="cb40-21"><a href="scientific.html#cb40-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-22"><a href="scientific.html#cb40-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Give the second plot only wireframes of the type x = c</span></span>
+<span id="cb40-23"><a href="scientific.html#cb40-23" aria-hidden="true" tabindex="-1"></a>ax2.plot_wireframe(X, Y, Z, rstride<span class="op">=</span><span class="dv">0</span>, cstride<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb40-24"><a href="scientific.html#cb40-24" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">&quot;Row (y) stride set to 0&quot;</span>)</span>
+<span id="cb40-25"><a href="scientific.html#cb40-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-26"><a href="scientific.html#cb40-26" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb40-27"><a href="scientific.html#cb40-27" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="05-scientific_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="scientific.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/images_contours_and_fields/contour_image.html#sphx-glr-gallery-images-contours-and-fields-contour-image-py</span></span>
+<span id="cb41-2"><a href="scientific.html#cb41-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-3"><a href="scientific.html#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb41-4"><a href="scientific.html#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb41-5"><a href="scientific.html#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> cm</span>
+<span id="cb41-6"><a href="scientific.html#cb41-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-7"><a href="scientific.html#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Default delta is large because that makes it fast, and it illustrates</span></span>
+<span id="cb41-8"><a href="scientific.html#cb41-8" aria-hidden="true" tabindex="-1"></a><span class="co"># the correct registration between image and contours.</span></span>
+<span id="cb41-9"><a href="scientific.html#cb41-9" aria-hidden="true" tabindex="-1"></a>delta <span class="op">=</span> <span class="fl">0.5</span></span>
+<span id="cb41-10"><a href="scientific.html#cb41-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-11"><a href="scientific.html#cb41-11" aria-hidden="true" tabindex="-1"></a>extent <span class="op">=</span> (<span class="op">-</span><span class="dv">3</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">4</span>, <span class="dv">3</span>)</span>
+<span id="cb41-12"><a href="scientific.html#cb41-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-13"><a href="scientific.html#cb41-13" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="op">-</span><span class="fl">3.0</span>, <span class="fl">4.001</span>, delta)</span>
+<span id="cb41-14"><a href="scientific.html#cb41-14" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.arange(<span class="op">-</span><span class="fl">4.0</span>, <span class="fl">3.001</span>, delta)</span>
+<span id="cb41-15"><a href="scientific.html#cb41-15" aria-hidden="true" tabindex="-1"></a>X, Y <span class="op">=</span> np.meshgrid(x, y)</span>
+<span id="cb41-16"><a href="scientific.html#cb41-16" aria-hidden="true" tabindex="-1"></a>Z1 <span class="op">=</span> np.exp(<span class="op">-</span>X<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> Y<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb41-17"><a href="scientific.html#cb41-17" aria-hidden="true" tabindex="-1"></a>Z2 <span class="op">=</span> np.exp(<span class="op">-</span>(X <span class="op">-</span> <span class="dv">1</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> (Y <span class="op">-</span> <span class="dv">1</span>)<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb41-18"><a href="scientific.html#cb41-18" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> (Z1 <span class="op">-</span> Z2) <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb41-19"><a href="scientific.html#cb41-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-20"><a href="scientific.html#cb41-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Boost the upper limit to avoid truncation errors.</span></span>
+<span id="cb41-21"><a href="scientific.html#cb41-21" aria-hidden="true" tabindex="-1"></a>levels <span class="op">=</span> np.arange(<span class="op">-</span><span class="fl">2.0</span>, <span class="fl">1.601</span>, <span class="fl">0.4</span>)</span>
+<span id="cb41-22"><a href="scientific.html#cb41-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-23"><a href="scientific.html#cb41-23" aria-hidden="true" tabindex="-1"></a>norm <span class="op">=</span> cm.colors.Normalize(vmax<span class="op">=</span><span class="bu">abs</span>(Z).<span class="bu">max</span>(), vmin<span class="op">=-</span><span class="bu">abs</span>(Z).<span class="bu">max</span>())</span>
+<span id="cb41-24"><a href="scientific.html#cb41-24" aria-hidden="true" tabindex="-1"></a>cmap <span class="op">=</span> cm.PRGn</span>
+<span id="cb41-25"><a href="scientific.html#cb41-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-26"><a href="scientific.html#cb41-26" aria-hidden="true" tabindex="-1"></a>fig, _axs <span class="op">=</span> plt.subplots(nrows<span class="op">=</span><span class="dv">2</span>, ncols<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb41-27"><a href="scientific.html#cb41-27" aria-hidden="true" tabindex="-1"></a>fig.subplots_adjust(hspace<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb41-28"><a href="scientific.html#cb41-28" aria-hidden="true" tabindex="-1"></a>axs <span class="op">=</span> _axs.flatten()</span>
+<span id="cb41-29"><a href="scientific.html#cb41-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-30"><a href="scientific.html#cb41-30" aria-hidden="true" tabindex="-1"></a>cset1 <span class="op">=</span> axs[<span class="dv">0</span>].contourf(X, Y, Z, levels, norm<span class="op">=</span>norm,</span>
+<span id="cb41-31"><a href="scientific.html#cb41-31" aria-hidden="true" tabindex="-1"></a>                     cmap<span class="op">=</span>cm.get_cmap(cmap, <span class="bu">len</span>(levels) <span class="op">-</span> <span class="dv">1</span>))</span>
+<span id="cb41-32"><a href="scientific.html#cb41-32" aria-hidden="true" tabindex="-1"></a><span class="co"># It is not necessary, but for the colormap, we need only the</span></span>
+<span id="cb41-33"><a href="scientific.html#cb41-33" aria-hidden="true" tabindex="-1"></a><span class="co"># number of levels minus 1.  To avoid discretization error, use</span></span>
+<span id="cb41-34"><a href="scientific.html#cb41-34" aria-hidden="true" tabindex="-1"></a><span class="co"># either this number or a large number such as the default (256).</span></span>
+<span id="cb41-35"><a href="scientific.html#cb41-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-36"><a href="scientific.html#cb41-36" aria-hidden="true" tabindex="-1"></a><span class="co"># If we want lines as well as filled regions, we need to call</span></span>
+<span id="cb41-37"><a href="scientific.html#cb41-37" aria-hidden="true" tabindex="-1"></a><span class="co"># contour separately; don&#39;t try to change the edgecolor or edgewidth</span></span>
+<span id="cb41-38"><a href="scientific.html#cb41-38" aria-hidden="true" tabindex="-1"></a><span class="co"># of the polygons in the collections returned by contourf.</span></span>
+<span id="cb41-39"><a href="scientific.html#cb41-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Use levels output from previous call to guarantee they are the same.</span></span>
+<span id="cb41-40"><a href="scientific.html#cb41-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-41"><a href="scientific.html#cb41-41" aria-hidden="true" tabindex="-1"></a>cset2 <span class="op">=</span> axs[<span class="dv">0</span>].contour(X, Y, Z, cset1.levels, colors<span class="op">=</span><span class="st">&#39;k&#39;</span>)</span>
+<span id="cb41-42"><a href="scientific.html#cb41-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-43"><a href="scientific.html#cb41-43" aria-hidden="true" tabindex="-1"></a><span class="co"># We don&#39;t really need dashed contour lines to indicate negative</span></span>
+<span id="cb41-44"><a href="scientific.html#cb41-44" aria-hidden="true" tabindex="-1"></a><span class="co"># regions, so let&#39;s turn them off.</span></span>
+<span id="cb41-45"><a href="scientific.html#cb41-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-46"><a href="scientific.html#cb41-46" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> c <span class="kw">in</span> cset2.collections:</span>
+<span id="cb41-47"><a href="scientific.html#cb41-47" aria-hidden="true" tabindex="-1"></a>    c.set_linestyle(<span class="st">&#39;solid&#39;</span>)</span>
+<span id="cb41-48"><a href="scientific.html#cb41-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-49"><a href="scientific.html#cb41-49" aria-hidden="true" tabindex="-1"></a><span class="co"># It is easier here to make a separate call to contour than</span></span>
+<span id="cb41-50"><a href="scientific.html#cb41-50" aria-hidden="true" tabindex="-1"></a><span class="co"># to set up an array of colors and linewidths.</span></span>
+<span id="cb41-51"><a href="scientific.html#cb41-51" aria-hidden="true" tabindex="-1"></a><span class="co"># We are making a thick green line as a zero contour.</span></span>
+<span id="cb41-52"><a href="scientific.html#cb41-52" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify the zero level as a tuple with only 0 in it.</span></span>
+<span id="cb41-53"><a href="scientific.html#cb41-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-54"><a href="scientific.html#cb41-54" aria-hidden="true" tabindex="-1"></a>cset3 <span class="op">=</span> axs[<span class="dv">0</span>].contour(X, Y, Z, (<span class="dv">0</span>,), colors<span class="op">=</span><span class="st">&#39;g&#39;</span>, linewidths<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb41-55"><a href="scientific.html#cb41-55" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_title(<span class="st">&#39;Filled contours&#39;</span>)</span>
+<span id="cb41-56"><a href="scientific.html#cb41-56" aria-hidden="true" tabindex="-1"></a>fig.colorbar(cset1, ax<span class="op">=</span>axs[<span class="dv">0</span>])</span>
+<span id="cb41-57"><a href="scientific.html#cb41-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-58"><a href="scientific.html#cb41-58" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].imshow(Z, extent<span class="op">=</span>extent, cmap<span class="op">=</span>cmap, norm<span class="op">=</span>norm)</span>
+<span id="cb41-59"><a href="scientific.html#cb41-59" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].contour(Z, levels, colors<span class="op">=</span><span class="st">&#39;k&#39;</span>, origin<span class="op">=</span><span class="st">&#39;upper&#39;</span>, extent<span class="op">=</span>extent)</span>
+<span id="cb41-60"><a href="scientific.html#cb41-60" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_title(<span class="st">&quot;Image, origin &#39;upper&#39;&quot;</span>)</span>
+<span id="cb41-61"><a href="scientific.html#cb41-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-62"><a href="scientific.html#cb41-62" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">2</span>].imshow(Z, origin<span class="op">=</span><span class="st">&#39;lower&#39;</span>, extent<span class="op">=</span>extent, cmap<span class="op">=</span>cmap, norm<span class="op">=</span>norm)</span>
+<span id="cb41-63"><a href="scientific.html#cb41-63" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">2</span>].contour(Z, levels, colors<span class="op">=</span><span class="st">&#39;k&#39;</span>, origin<span class="op">=</span><span class="st">&#39;lower&#39;</span>, extent<span class="op">=</span>extent)</span>
+<span id="cb41-64"><a href="scientific.html#cb41-64" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">2</span>].set_title(<span class="st">&quot;Image, origin &#39;lower&#39;&quot;</span>)</span>
+<span id="cb41-65"><a href="scientific.html#cb41-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-66"><a href="scientific.html#cb41-66" aria-hidden="true" tabindex="-1"></a><span class="co"># We will use the interpolation &quot;nearest&quot; here to show the actual</span></span>
+<span id="cb41-67"><a href="scientific.html#cb41-67" aria-hidden="true" tabindex="-1"></a><span class="co"># image pixels.</span></span>
+<span id="cb41-68"><a href="scientific.html#cb41-68" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that the contour lines don&#39;t extend to the edge of the box.</span></span>
+<span id="cb41-69"><a href="scientific.html#cb41-69" aria-hidden="true" tabindex="-1"></a><span class="co"># This is intentional. The Z values are defined at the center of each</span></span>
+<span id="cb41-70"><a href="scientific.html#cb41-70" aria-hidden="true" tabindex="-1"></a><span class="co"># image pixel (each color block on the following subplot), so the</span></span>
+<span id="cb41-71"><a href="scientific.html#cb41-71" aria-hidden="true" tabindex="-1"></a><span class="co"># domain that is contoured does not extend beyond these pixel centers.</span></span>
+<span id="cb41-72"><a href="scientific.html#cb41-72" aria-hidden="true" tabindex="-1"></a>im <span class="op">=</span> axs[<span class="dv">3</span>].imshow(Z, interpolation<span class="op">=</span><span class="st">&#39;nearest&#39;</span>, extent<span class="op">=</span>extent,</span>
+<span id="cb41-73"><a href="scientific.html#cb41-73" aria-hidden="true" tabindex="-1"></a>                cmap<span class="op">=</span>cmap, norm<span class="op">=</span>norm)</span>
+<span id="cb41-74"><a href="scientific.html#cb41-74" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">3</span>].contour(Z, levels, colors<span class="op">=</span><span class="st">&#39;k&#39;</span>, origin<span class="op">=</span><span class="st">&#39;image&#39;</span>, extent<span class="op">=</span>extent)</span>
+<span id="cb41-75"><a href="scientific.html#cb41-75" aria-hidden="true" tabindex="-1"></a>ylim <span class="op">=</span> axs[<span class="dv">3</span>].get_ylim()</span>
+<span id="cb41-76"><a href="scientific.html#cb41-76" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">3</span>].set_ylim(ylim[::<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb41-77"><a href="scientific.html#cb41-77" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">3</span>].set_title(<span class="st">&quot;Origin from rc, reversed y-axis&quot;</span>)</span>
+<span id="cb41-78"><a href="scientific.html#cb41-78" aria-hidden="true" tabindex="-1"></a>fig.colorbar(im, ax<span class="op">=</span>axs[<span class="dv">3</span>])</span>
+<span id="cb41-79"><a href="scientific.html#cb41-79" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb41-80"><a href="scientific.html#cb41-80" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="05-scientific_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="scientific.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py</span></span>
+<span id="cb42-2"><a href="scientific.html#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb42-3"><a href="scientific.html#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy <span class="im">import</span> ma</span>
+<span id="cb42-4"><a href="scientific.html#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb42-5"><a href="scientific.html#cb42-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-6"><a href="scientific.html#cb42-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">1</span>, <span class="dv">7</span>, <span class="fl">0.4</span>)</span>
+<span id="cb42-7"><a href="scientific.html#cb42-7" aria-hidden="true" tabindex="-1"></a>y0 <span class="op">=</span> np.sin(x)</span>
+<span id="cb42-8"><a href="scientific.html#cb42-8" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> y0.copy() <span class="op">+</span> <span class="fl">2.5</span></span>
+<span id="cb42-9"><a href="scientific.html#cb42-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-10"><a href="scientific.html#cb42-10" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, label<span class="op">=</span><span class="st">&#39;pre (default)&#39;</span>)</span>
+<span id="cb42-11"><a href="scientific.html#cb42-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-12"><a href="scientific.html#cb42-12" aria-hidden="true" tabindex="-1"></a>y <span class="op">-=</span> <span class="fl">0.5</span></span>
+<span id="cb42-13"><a href="scientific.html#cb42-13" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, where<span class="op">=</span><span class="st">&#39;mid&#39;</span>, label<span class="op">=</span><span class="st">&#39;mid&#39;</span>)</span>
+<span id="cb42-14"><a href="scientific.html#cb42-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-15"><a href="scientific.html#cb42-15" aria-hidden="true" tabindex="-1"></a>y <span class="op">-=</span> <span class="fl">0.5</span></span>
+<span id="cb42-16"><a href="scientific.html#cb42-16" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, where<span class="op">=</span><span class="st">&#39;post&#39;</span>, label<span class="op">=</span><span class="st">&#39;post&#39;</span>)</span>
+<span id="cb42-17"><a href="scientific.html#cb42-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-18"><a href="scientific.html#cb42-18" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> ma.masked_where((y0 <span class="op">&gt;</span> <span class="op">-</span><span class="fl">0.15</span>) <span class="op">&amp;</span> (y0 <span class="op">&lt;</span> <span class="fl">0.15</span>), y <span class="op">-</span> <span class="fl">0.5</span>)</span>
+<span id="cb42-19"><a href="scientific.html#cb42-19" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, label<span class="op">=</span><span class="st">&#39;masked (pre)&#39;</span>)</span>
+<span id="cb42-20"><a href="scientific.html#cb42-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-21"><a href="scientific.html#cb42-21" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb42-22"><a href="scientific.html#cb42-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-23"><a href="scientific.html#cb42-23" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="dv">0</span>, <span class="dv">7</span>)</span>
+<span id="cb42-24"><a href="scientific.html#cb42-24" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="op">-</span><span class="fl">0.5</span>, <span class="dv">4</span>)</span>
+<span id="cb42-25"><a href="scientific.html#cb42-25" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="05-scientific_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="scientific.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/lines_bars_and_markers/cohere.html#sphx-glr-gallery-lines-bars-and-markers-cohere-py</span></span>
+<span id="cb43-2"><a href="scientific.html#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb43-3"><a href="scientific.html#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb43-4"><a href="scientific.html#cb43-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-5"><a href="scientific.html#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Fixing random state for reproducibility</span></span>
+<span id="cb43-6"><a href="scientific.html#cb43-6" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">19680801</span>)</span>
+<span id="cb43-7"><a href="scientific.html#cb43-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-8"><a href="scientific.html#cb43-8" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> <span class="fl">0.01</span></span>
+<span id="cb43-9"><a href="scientific.html#cb43-9" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">30</span>, dt)</span>
+<span id="cb43-10"><a href="scientific.html#cb43-10" aria-hidden="true" tabindex="-1"></a>nse1 <span class="op">=</span> np.random.randn(<span class="bu">len</span>(t))                 <span class="co"># white noise 1</span></span>
+<span id="cb43-11"><a href="scientific.html#cb43-11" aria-hidden="true" tabindex="-1"></a>nse2 <span class="op">=</span> np.random.randn(<span class="bu">len</span>(t))                 <span class="co"># white noise 2</span></span>
+<span id="cb43-12"><a href="scientific.html#cb43-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-13"><a href="scientific.html#cb43-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Two signals with a coherent part at 10Hz and a random part</span></span>
+<span id="cb43-14"><a href="scientific.html#cb43-14" aria-hidden="true" tabindex="-1"></a>s1 <span class="op">=</span> np.sin(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> <span class="dv">10</span> <span class="op">*</span> t) <span class="op">+</span> nse1</span>
+<span id="cb43-15"><a href="scientific.html#cb43-15" aria-hidden="true" tabindex="-1"></a>s2 <span class="op">=</span> np.sin(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> <span class="dv">10</span> <span class="op">*</span> t) <span class="op">+</span> nse2</span>
+<span id="cb43-16"><a href="scientific.html#cb43-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-17"><a href="scientific.html#cb43-17" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">1</span>)</span>
+<span id="cb43-18"><a href="scientific.html#cb43-18" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].plot(t, s1, t, s2)</span>
+<span id="cb43-19"><a href="scientific.html#cb43-19" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_xlim(<span class="dv">0</span>, <span class="dv">2</span>)</span>
+<span id="cb43-20"><a href="scientific.html#cb43-20" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_xlabel(<span class="st">&#39;time&#39;</span>)</span>
+<span id="cb43-21"><a href="scientific.html#cb43-21" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_ylabel(<span class="st">&#39;s1 and s2&#39;</span>)</span>
+<span id="cb43-22"><a href="scientific.html#cb43-22" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].grid(<span class="va">True</span>)</span>
+<span id="cb43-23"><a href="scientific.html#cb43-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-24"><a href="scientific.html#cb43-24" aria-hidden="true" tabindex="-1"></a>cxy, f <span class="op">=</span> axs[<span class="dv">1</span>].cohere(s1, s2, <span class="dv">256</span>, <span class="fl">1.</span> <span class="op">/</span> dt)</span>
+<span id="cb43-25"><a href="scientific.html#cb43-25" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_ylabel(<span class="st">&#39;coherence&#39;</span>)</span>
+<span id="cb43-26"><a href="scientific.html#cb43-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-27"><a href="scientific.html#cb43-27" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb43-28"><a href="scientific.html#cb43-28" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="05-scientific_files/figure-html/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="scientific.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/images_contours_and_fields/irregulardatagrid.html#sphx-glr-gallery-images-contours-and-fields-irregulardatagrid-py</span></span>
+<span id="cb44-2"><a href="scientific.html#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb44-3"><a href="scientific.html#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.tri <span class="im">as</span> tri</span>
+<span id="cb44-4"><a href="scientific.html#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb44-5"><a href="scientific.html#cb44-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-6"><a href="scientific.html#cb44-6" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">19680801</span>)</span>
+<span id="cb44-7"><a href="scientific.html#cb44-7" aria-hidden="true" tabindex="-1"></a>npts <span class="op">=</span> <span class="dv">200</span></span>
+<span id="cb44-8"><a href="scientific.html#cb44-8" aria-hidden="true" tabindex="-1"></a>ngridx <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb44-9"><a href="scientific.html#cb44-9" aria-hidden="true" tabindex="-1"></a>ngridy <span class="op">=</span> <span class="dv">200</span></span>
+<span id="cb44-10"><a href="scientific.html#cb44-10" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.uniform(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>, npts)</span>
+<span id="cb44-11"><a href="scientific.html#cb44-11" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.random.uniform(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>, npts)</span>
+<span id="cb44-12"><a href="scientific.html#cb44-12" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> x <span class="op">*</span> np.exp(<span class="op">-</span>x<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> y<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb44-13"><a href="scientific.html#cb44-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-14"><a href="scientific.html#cb44-14" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(nrows<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb44-15"><a href="scientific.html#cb44-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-16"><a href="scientific.html#cb44-16" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------</span></span>
+<span id="cb44-17"><a href="scientific.html#cb44-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Interpolation on a grid</span></span>
+<span id="cb44-18"><a href="scientific.html#cb44-18" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------</span></span>
+<span id="cb44-19"><a href="scientific.html#cb44-19" aria-hidden="true" tabindex="-1"></a><span class="co"># A contour plot of irregularly spaced data coordinates</span></span>
+<span id="cb44-20"><a href="scientific.html#cb44-20" aria-hidden="true" tabindex="-1"></a><span class="co"># via interpolation on a grid.</span></span>
+<span id="cb44-21"><a href="scientific.html#cb44-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-22"><a href="scientific.html#cb44-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Create grid values first.</span></span>
+<span id="cb44-23"><a href="scientific.html#cb44-23" aria-hidden="true" tabindex="-1"></a>xi <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">2.1</span>, <span class="fl">2.1</span>, ngridx)</span>
+<span id="cb44-24"><a href="scientific.html#cb44-24" aria-hidden="true" tabindex="-1"></a>yi <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">2.1</span>, <span class="fl">2.1</span>, ngridy)</span>
+<span id="cb44-25"><a href="scientific.html#cb44-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-26"><a href="scientific.html#cb44-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform linear interpolation of the data (x,y)</span></span>
+<span id="cb44-27"><a href="scientific.html#cb44-27" aria-hidden="true" tabindex="-1"></a><span class="co"># on a grid defined by (xi,yi)</span></span>
+<span id="cb44-28"><a href="scientific.html#cb44-28" aria-hidden="true" tabindex="-1"></a>triang <span class="op">=</span> tri.Triangulation(x, y)</span>
+<span id="cb44-29"><a href="scientific.html#cb44-29" aria-hidden="true" tabindex="-1"></a>interpolator <span class="op">=</span> tri.LinearTriInterpolator(triang, z)</span>
+<span id="cb44-30"><a href="scientific.html#cb44-30" aria-hidden="true" tabindex="-1"></a>Xi, Yi <span class="op">=</span> np.meshgrid(xi, yi)</span>
+<span id="cb44-31"><a href="scientific.html#cb44-31" aria-hidden="true" tabindex="-1"></a>zi <span class="op">=</span> interpolator(Xi, Yi)</span>
+<span id="cb44-32"><a href="scientific.html#cb44-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-33"><a href="scientific.html#cb44-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that scipy.interpolate provides means to interpolate data on a grid</span></span>
+<span id="cb44-34"><a href="scientific.html#cb44-34" aria-hidden="true" tabindex="-1"></a><span class="co"># as well. The following would be an alternative to the four lines above:</span></span>
+<span id="cb44-35"><a href="scientific.html#cb44-35" aria-hidden="true" tabindex="-1"></a><span class="co">#from scipy.interpolate import griddata</span></span>
+<span id="cb44-36"><a href="scientific.html#cb44-36" aria-hidden="true" tabindex="-1"></a><span class="co">#zi = griddata((x, y), z, (xi[None,:], yi[:,None]), method=&#39;linear&#39;)</span></span>
+<span id="cb44-37"><a href="scientific.html#cb44-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-38"><a href="scientific.html#cb44-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-39"><a href="scientific.html#cb44-39" aria-hidden="true" tabindex="-1"></a>ax1.contour(xi, yi, zi, <span class="dv">14</span>, linewidths<span class="op">=</span><span class="fl">0.5</span>, colors<span class="op">=</span><span class="st">&#39;k&#39;</span>)</span>
+<span id="cb44-40"><a href="scientific.html#cb44-40" aria-hidden="true" tabindex="-1"></a>cntr1 <span class="op">=</span> ax1.contourf(xi, yi, zi, <span class="dv">14</span>, cmap<span class="op">=</span><span class="st">&quot;RdBu_r&quot;</span>)</span>
+<span id="cb44-41"><a href="scientific.html#cb44-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-42"><a href="scientific.html#cb44-42" aria-hidden="true" tabindex="-1"></a>fig.colorbar(cntr1, ax<span class="op">=</span>ax1)</span>
+<span id="cb44-43"><a href="scientific.html#cb44-43" aria-hidden="true" tabindex="-1"></a>ax1.plot(x, y, <span class="st">&#39;ko&#39;</span>, ms<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb44-44"><a href="scientific.html#cb44-44" aria-hidden="true" tabindex="-1"></a>ax1.axis((<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>))</span>
+<span id="cb44-45"><a href="scientific.html#cb44-45" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">&#39;grid and contour (</span><span class="sc">%d</span><span class="st"> points, </span><span class="sc">%d</span><span class="st"> grid points)&#39;</span> <span class="op">%</span></span>
+<span id="cb44-46"><a href="scientific.html#cb44-46" aria-hidden="true" tabindex="-1"></a>              (npts, ngridx <span class="op">*</span> ngridy))</span>
+<span id="cb44-47"><a href="scientific.html#cb44-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-48"><a href="scientific.html#cb44-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-49"><a href="scientific.html#cb44-49" aria-hidden="true" tabindex="-1"></a><span class="co"># ----------</span></span>
+<span id="cb44-50"><a href="scientific.html#cb44-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Tricontour</span></span>
+<span id="cb44-51"><a href="scientific.html#cb44-51" aria-hidden="true" tabindex="-1"></a><span class="co"># ----------</span></span>
+<span id="cb44-52"><a href="scientific.html#cb44-52" aria-hidden="true" tabindex="-1"></a><span class="co"># Directly supply the unordered, irregularly spaced coordinates</span></span>
+<span id="cb44-53"><a href="scientific.html#cb44-53" aria-hidden="true" tabindex="-1"></a><span class="co"># to tricontour.</span></span>
+<span id="cb44-54"><a href="scientific.html#cb44-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-55"><a href="scientific.html#cb44-55" aria-hidden="true" tabindex="-1"></a>ax2.tricontour(x, y, z, <span class="dv">14</span>, linewidths<span class="op">=</span><span class="fl">0.5</span>, colors<span class="op">=</span><span class="st">&#39;k&#39;</span>)</span>
+<span id="cb44-56"><a href="scientific.html#cb44-56" aria-hidden="true" tabindex="-1"></a>cntr2 <span class="op">=</span> ax2.tricontourf(x, y, z, <span class="dv">14</span>, cmap<span class="op">=</span><span class="st">&quot;RdBu_r&quot;</span>)</span>
+<span id="cb44-57"><a href="scientific.html#cb44-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-58"><a href="scientific.html#cb44-58" aria-hidden="true" tabindex="-1"></a>fig.colorbar(cntr2, ax<span class="op">=</span>ax2)</span>
+<span id="cb44-59"><a href="scientific.html#cb44-59" aria-hidden="true" tabindex="-1"></a>ax2.plot(x, y, <span class="st">&#39;ko&#39;</span>, ms<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb44-60"><a href="scientific.html#cb44-60" aria-hidden="true" tabindex="-1"></a>ax2.axis((<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>))</span>
+<span id="cb44-61"><a href="scientific.html#cb44-61" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">&#39;tricontour (</span><span class="sc">%d</span><span class="st"> points)&#39;</span> <span class="op">%</span> npts)</span>
+<span id="cb44-62"><a href="scientific.html#cb44-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-63"><a href="scientific.html#cb44-63" aria-hidden="true" tabindex="-1"></a>plt.subplots_adjust(hspace<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb44-64"><a href="scientific.html#cb44-64" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="05-scientific_files/figure-html/unnamed-chunk-12-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="scientific.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.tri <span class="im">import</span> Triangulation, TriAnalyzer, UniformTriRefiner</span>
+<span id="cb45-2"><a href="scientific.html#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb45-3"><a href="scientific.html#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.cm <span class="im">as</span> cm</span>
+<span id="cb45-4"><a href="scientific.html#cb45-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb45-5"><a href="scientific.html#cb45-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-6"><a href="scientific.html#cb45-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-7"><a href="scientific.html#cb45-7" aria-hidden="true" tabindex="-1"></a><span class="co">#-----------------------------------------------------------------------------</span></span>
+<span id="cb45-8"><a href="scientific.html#cb45-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Analytical test function</span></span>
+<span id="cb45-9"><a href="scientific.html#cb45-9" aria-hidden="true" tabindex="-1"></a><span class="co">#-----------------------------------------------------------------------------</span></span>
+<span id="cb45-10"><a href="scientific.html#cb45-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> experiment_res(x, y):</span>
+<span id="cb45-11"><a href="scientific.html#cb45-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot; An analytic function representing experiment results &quot;&quot;&quot;</span></span>
+<span id="cb45-12"><a href="scientific.html#cb45-12" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="fl">2.</span> <span class="op">*</span> x</span>
+<span id="cb45-13"><a href="scientific.html#cb45-13" aria-hidden="true" tabindex="-1"></a>    r1 <span class="op">=</span> np.sqrt((<span class="fl">0.5</span> <span class="op">-</span> x)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (<span class="fl">0.5</span> <span class="op">-</span> y)<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb45-14"><a href="scientific.html#cb45-14" aria-hidden="true" tabindex="-1"></a>    theta1 <span class="op">=</span> np.arctan2(<span class="fl">0.5</span> <span class="op">-</span> x, <span class="fl">0.5</span> <span class="op">-</span> y)</span>
+<span id="cb45-15"><a href="scientific.html#cb45-15" aria-hidden="true" tabindex="-1"></a>    r2 <span class="op">=</span> np.sqrt((<span class="op">-</span>x <span class="op">-</span> <span class="fl">0.2</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (<span class="op">-</span>y <span class="op">-</span> <span class="fl">0.2</span>)<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb45-16"><a href="scientific.html#cb45-16" aria-hidden="true" tabindex="-1"></a>    theta2 <span class="op">=</span> np.arctan2(<span class="op">-</span>x <span class="op">-</span> <span class="fl">0.2</span>, <span class="op">-</span>y <span class="op">-</span> <span class="fl">0.2</span>)</span>
+<span id="cb45-17"><a href="scientific.html#cb45-17" aria-hidden="true" tabindex="-1"></a>    z <span class="op">=</span> (<span class="dv">4</span> <span class="op">*</span> (np.exp((r1 <span class="op">/</span> <span class="dv">10</span>)<span class="op">**</span><span class="dv">2</span>) <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> <span class="fl">30.</span> <span class="op">*</span> np.cos(<span class="dv">3</span> <span class="op">*</span> theta1) <span class="op">+</span></span>
+<span id="cb45-18"><a href="scientific.html#cb45-18" aria-hidden="true" tabindex="-1"></a>         (np.exp((r2 <span class="op">/</span> <span class="dv">10</span>)<span class="op">**</span><span class="dv">2</span>) <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> <span class="fl">30.</span> <span class="op">*</span> np.cos(<span class="dv">5</span> <span class="op">*</span> theta2) <span class="op">+</span></span>
+<span id="cb45-19"><a href="scientific.html#cb45-19" aria-hidden="true" tabindex="-1"></a>         <span class="dv">2</span> <span class="op">*</span> (x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>))</span>
+<span id="cb45-20"><a href="scientific.html#cb45-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (np.<span class="bu">max</span>(z) <span class="op">-</span> z) <span class="op">/</span> (np.<span class="bu">max</span>(z) <span class="op">-</span> np.<span class="bu">min</span>(z))</span>
+<span id="cb45-21"><a href="scientific.html#cb45-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-22"><a href="scientific.html#cb45-22" aria-hidden="true" tabindex="-1"></a><span class="co">#-----------------------------------------------------------------------------</span></span>
+<span id="cb45-23"><a href="scientific.html#cb45-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Generating the initial data test points and triangulation for the demo</span></span>
+<span id="cb45-24"><a href="scientific.html#cb45-24" aria-hidden="true" tabindex="-1"></a><span class="co">#-----------------------------------------------------------------------------</span></span>
+<span id="cb45-25"><a href="scientific.html#cb45-25" aria-hidden="true" tabindex="-1"></a><span class="co"># User parameters for data test points</span></span>
+<span id="cb45-26"><a href="scientific.html#cb45-26" aria-hidden="true" tabindex="-1"></a>n_test <span class="op">=</span> <span class="dv">200</span>  <span class="co"># Number of test data points, tested from 3 to 5000 for subdiv=3</span></span>
+<span id="cb45-27"><a href="scientific.html#cb45-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-28"><a href="scientific.html#cb45-28" aria-hidden="true" tabindex="-1"></a>subdiv <span class="op">=</span> <span class="dv">3</span>  <span class="co"># Number of recursive subdivisions of the initial mesh for smooth</span></span>
+<span id="cb45-29"><a href="scientific.html#cb45-29" aria-hidden="true" tabindex="-1"></a>            <span class="co"># plots. Values &gt;3 might result in a very high number of triangles</span></span>
+<span id="cb45-30"><a href="scientific.html#cb45-30" aria-hidden="true" tabindex="-1"></a>            <span class="co"># for the refine mesh: new triangles numbering = (4**subdiv)*ntri</span></span>
+<span id="cb45-31"><a href="scientific.html#cb45-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-32"><a href="scientific.html#cb45-32" aria-hidden="true" tabindex="-1"></a>init_mask_frac <span class="op">=</span> <span class="fl">0.0</span>    <span class="co"># Float &gt; 0. adjusting the proportion of</span></span>
+<span id="cb45-33"><a href="scientific.html#cb45-33" aria-hidden="true" tabindex="-1"></a>                        <span class="co"># (invalid) initial triangles which will be masked</span></span>
+<span id="cb45-34"><a href="scientific.html#cb45-34" aria-hidden="true" tabindex="-1"></a>                        <span class="co"># out. Enter 0 for no mask.</span></span>
+<span id="cb45-35"><a href="scientific.html#cb45-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-36"><a href="scientific.html#cb45-36" aria-hidden="true" tabindex="-1"></a>min_circle_ratio <span class="op">=</span> <span class="fl">.01</span>  <span class="co"># Minimum circle ratio - border triangles with circle</span></span>
+<span id="cb45-37"><a href="scientific.html#cb45-37" aria-hidden="true" tabindex="-1"></a>                        <span class="co"># ratio below this will be masked if they touch a</span></span>
+<span id="cb45-38"><a href="scientific.html#cb45-38" aria-hidden="true" tabindex="-1"></a>                        <span class="co"># border. Suggested value 0.01; use -1 to keep</span></span>
+<span id="cb45-39"><a href="scientific.html#cb45-39" aria-hidden="true" tabindex="-1"></a>                        <span class="co"># all triangles.</span></span>
+<span id="cb45-40"><a href="scientific.html#cb45-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-41"><a href="scientific.html#cb45-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Random points</span></span>
+<span id="cb45-42"><a href="scientific.html#cb45-42" aria-hidden="true" tabindex="-1"></a>random_gen <span class="op">=</span> np.random.RandomState(seed<span class="op">=</span><span class="dv">19680801</span>)</span>
+<span id="cb45-43"><a href="scientific.html#cb45-43" aria-hidden="true" tabindex="-1"></a>x_test <span class="op">=</span> random_gen.uniform(<span class="op">-</span><span class="fl">1.</span>, <span class="fl">1.</span>, size<span class="op">=</span>n_test)</span>
+<span id="cb45-44"><a href="scientific.html#cb45-44" aria-hidden="true" tabindex="-1"></a>y_test <span class="op">=</span> random_gen.uniform(<span class="op">-</span><span class="fl">1.</span>, <span class="fl">1.</span>, size<span class="op">=</span>n_test)</span>
+<span id="cb45-45"><a href="scientific.html#cb45-45" aria-hidden="true" tabindex="-1"></a>z_test <span class="op">=</span> experiment_res(x_test, y_test)</span>
+<span id="cb45-46"><a href="scientific.html#cb45-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-47"><a href="scientific.html#cb45-47" aria-hidden="true" tabindex="-1"></a><span class="co"># meshing with Delaunay triangulation</span></span>
+<span id="cb45-48"><a href="scientific.html#cb45-48" aria-hidden="true" tabindex="-1"></a>tri <span class="op">=</span> Triangulation(x_test, y_test)</span>
+<span id="cb45-49"><a href="scientific.html#cb45-49" aria-hidden="true" tabindex="-1"></a>ntri <span class="op">=</span> tri.triangles.shape[<span class="dv">0</span>]</span>
+<span id="cb45-50"><a href="scientific.html#cb45-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-51"><a href="scientific.html#cb45-51" aria-hidden="true" tabindex="-1"></a><span class="co"># Some invalid data are masked out</span></span>
+<span id="cb45-52"><a href="scientific.html#cb45-52" aria-hidden="true" tabindex="-1"></a>mask_init <span class="op">=</span> np.zeros(ntri, dtype<span class="op">=</span><span class="bu">bool</span>)</span>
+<span id="cb45-53"><a href="scientific.html#cb45-53" aria-hidden="true" tabindex="-1"></a>masked_tri <span class="op">=</span> random_gen.randint(<span class="dv">0</span>, ntri, <span class="bu">int</span>(ntri <span class="op">*</span> init_mask_frac))</span>
+<span id="cb45-54"><a href="scientific.html#cb45-54" aria-hidden="true" tabindex="-1"></a>mask_init[masked_tri] <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb45-55"><a href="scientific.html#cb45-55" aria-hidden="true" tabindex="-1"></a>tri.set_mask(mask_init)</span>
+<span id="cb45-56"><a href="scientific.html#cb45-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-57"><a href="scientific.html#cb45-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-58"><a href="scientific.html#cb45-58" aria-hidden="true" tabindex="-1"></a><span class="co">#-----------------------------------------------------------------------------</span></span>
+<span id="cb45-59"><a href="scientific.html#cb45-59" aria-hidden="true" tabindex="-1"></a><span class="co"># Improving the triangulation before high-res plots: removing flat triangles</span></span>
+<span id="cb45-60"><a href="scientific.html#cb45-60" aria-hidden="true" tabindex="-1"></a><span class="co">#-----------------------------------------------------------------------------</span></span>
+<span id="cb45-61"><a href="scientific.html#cb45-61" aria-hidden="true" tabindex="-1"></a><span class="co"># masking badly shaped triangles at the border of the triangular mesh.</span></span>
+<span id="cb45-62"><a href="scientific.html#cb45-62" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> TriAnalyzer(tri).get_flat_tri_mask(min_circle_ratio)</span>
+<span id="cb45-63"><a href="scientific.html#cb45-63" aria-hidden="true" tabindex="-1"></a>tri.set_mask(mask)</span>
+<span id="cb45-64"><a href="scientific.html#cb45-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-65"><a href="scientific.html#cb45-65" aria-hidden="true" tabindex="-1"></a><span class="co"># refining the data</span></span>
+<span id="cb45-66"><a href="scientific.html#cb45-66" aria-hidden="true" tabindex="-1"></a>refiner <span class="op">=</span> UniformTriRefiner(tri)</span>
+<span id="cb45-67"><a href="scientific.html#cb45-67" aria-hidden="true" tabindex="-1"></a>tri_refi, z_test_refi <span class="op">=</span> refiner.refine_field(z_test, subdiv<span class="op">=</span>subdiv)</span>
+<span id="cb45-68"><a href="scientific.html#cb45-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-69"><a href="scientific.html#cb45-69" aria-hidden="true" tabindex="-1"></a><span class="co"># analytical &#39;results&#39; for comparison</span></span>
+<span id="cb45-70"><a href="scientific.html#cb45-70" aria-hidden="true" tabindex="-1"></a>z_expected <span class="op">=</span> experiment_res(tri_refi.x, tri_refi.y)</span>
+<span id="cb45-71"><a href="scientific.html#cb45-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-72"><a href="scientific.html#cb45-72" aria-hidden="true" tabindex="-1"></a><span class="co"># for the demo: loading the &#39;flat&#39; triangles for plot</span></span>
+<span id="cb45-73"><a href="scientific.html#cb45-73" aria-hidden="true" tabindex="-1"></a>flat_tri <span class="op">=</span> Triangulation(x_test, y_test)</span>
+<span id="cb45-74"><a href="scientific.html#cb45-74" aria-hidden="true" tabindex="-1"></a>flat_tri.set_mask(<span class="op">~</span>mask)</span>
+<span id="cb45-75"><a href="scientific.html#cb45-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-76"><a href="scientific.html#cb45-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-77"><a href="scientific.html#cb45-77" aria-hidden="true" tabindex="-1"></a><span class="co">#-----------------------------------------------------------------------------</span></span>
+<span id="cb45-78"><a href="scientific.html#cb45-78" aria-hidden="true" tabindex="-1"></a><span class="co"># Now the plots</span></span>
+<span id="cb45-79"><a href="scientific.html#cb45-79" aria-hidden="true" tabindex="-1"></a><span class="co">#-----------------------------------------------------------------------------</span></span>
+<span id="cb45-80"><a href="scientific.html#cb45-80" aria-hidden="true" tabindex="-1"></a><span class="co"># User options for plots</span></span>
+<span id="cb45-81"><a href="scientific.html#cb45-81" aria-hidden="true" tabindex="-1"></a>plot_tri <span class="op">=</span> <span class="va">True</span>          <span class="co"># plot of base triangulation</span></span>
+<span id="cb45-82"><a href="scientific.html#cb45-82" aria-hidden="true" tabindex="-1"></a>plot_masked_tri <span class="op">=</span> <span class="va">True</span>   <span class="co"># plot of excessively flat excluded triangles</span></span>
+<span id="cb45-83"><a href="scientific.html#cb45-83" aria-hidden="true" tabindex="-1"></a>plot_refi_tri <span class="op">=</span> <span class="va">False</span>    <span class="co"># plot of refined triangulation</span></span>
+<span id="cb45-84"><a href="scientific.html#cb45-84" aria-hidden="true" tabindex="-1"></a>plot_expected <span class="op">=</span> <span class="va">False</span>    <span class="co"># plot of analytical function values for comparison</span></span>
+<span id="cb45-85"><a href="scientific.html#cb45-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-86"><a href="scientific.html#cb45-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-87"><a href="scientific.html#cb45-87" aria-hidden="true" tabindex="-1"></a><span class="co"># Graphical options for tricontouring</span></span>
+<span id="cb45-88"><a href="scientific.html#cb45-88" aria-hidden="true" tabindex="-1"></a>levels <span class="op">=</span> np.arange(<span class="fl">0.</span>, <span class="fl">1.</span>, <span class="fl">0.025</span>)</span>
+<span id="cb45-89"><a href="scientific.html#cb45-89" aria-hidden="true" tabindex="-1"></a>cmap <span class="op">=</span> cm.get_cmap(name<span class="op">=</span><span class="st">&#39;Blues&#39;</span>, lut<span class="op">=</span><span class="va">None</span>)</span>
+<span id="cb45-90"><a href="scientific.html#cb45-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-91"><a href="scientific.html#cb45-91" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb45-92"><a href="scientific.html#cb45-92" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">&#39;equal&#39;</span>)</span>
+<span id="cb45-93"><a href="scientific.html#cb45-93" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">&quot;Filtering a Delaunay mesh</span><span class="ch">\n</span><span class="st">&quot;</span> <span class="op">+</span></span>
+<span id="cb45-94"><a href="scientific.html#cb45-94" aria-hidden="true" tabindex="-1"></a>          <span class="st">&quot;(application to high-resolution tricontouring)&quot;</span>)</span>
+<span id="cb45-95"><a href="scientific.html#cb45-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-96"><a href="scientific.html#cb45-96" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) plot of the refined (computed) data contours:</span></span>
+<span id="cb45-97"><a href="scientific.html#cb45-97" aria-hidden="true" tabindex="-1"></a>ax.tricontour(tri_refi, z_test_refi, levels<span class="op">=</span>levels, cmap<span class="op">=</span>cmap,</span>
+<span id="cb45-98"><a href="scientific.html#cb45-98" aria-hidden="true" tabindex="-1"></a>               linewidths<span class="op">=</span>[<span class="fl">2.0</span>, <span class="fl">0.5</span>, <span class="fl">1.0</span>, <span class="fl">0.5</span>])</span>
+<span id="cb45-99"><a href="scientific.html#cb45-99" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) plot of the expected (analytical) data contours (dashed):</span></span>
+<span id="cb45-100"><a href="scientific.html#cb45-100" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> plot_expected:</span>
+<span id="cb45-101"><a href="scientific.html#cb45-101" aria-hidden="true" tabindex="-1"></a>    ax.tricontour(tri_refi, z_expected, levels<span class="op">=</span>levels, cmap<span class="op">=</span>cmap,</span>
+<span id="cb45-102"><a href="scientific.html#cb45-102" aria-hidden="true" tabindex="-1"></a>                   linestyles<span class="op">=</span><span class="st">&#39;--&#39;</span>)</span>
+<span id="cb45-103"><a href="scientific.html#cb45-103" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) plot of the fine mesh on which interpolation was done:</span></span>
+<span id="cb45-104"><a href="scientific.html#cb45-104" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> plot_refi_tri:</span>
+<span id="cb45-105"><a href="scientific.html#cb45-105" aria-hidden="true" tabindex="-1"></a>    ax.triplot(tri_refi, color<span class="op">=</span><span class="st">&#39;0.97&#39;</span>)</span>
+<span id="cb45-106"><a href="scientific.html#cb45-106" aria-hidden="true" tabindex="-1"></a><span class="co"># 4) plot of the initial &#39;coarse&#39; mesh:</span></span>
+<span id="cb45-107"><a href="scientific.html#cb45-107" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> plot_tri:</span>
+<span id="cb45-108"><a href="scientific.html#cb45-108" aria-hidden="true" tabindex="-1"></a>    ax.triplot(tri, color<span class="op">=</span><span class="st">&#39;0.7&#39;</span>)</span>
+<span id="cb45-109"><a href="scientific.html#cb45-109" aria-hidden="true" tabindex="-1"></a><span class="co"># 4) plot of the unvalidated triangles from naive Delaunay Triangulation:</span></span>
+<span id="cb45-110"><a href="scientific.html#cb45-110" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> plot_masked_tri:</span>
+<span id="cb45-111"><a href="scientific.html#cb45-111" aria-hidden="true" tabindex="-1"></a>    ax.triplot(flat_tri, color<span class="op">=</span><span class="st">&#39;red&#39;</span>)</span>
+<span id="cb45-112"><a href="scientific.html#cb45-112" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="05-scientific_files/figure-html/unnamed-chunk-13-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="scientific.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/images_contours_and_fields/triinterp_demo.html#sphx-glr-gallery-images-contours-and-fields-triinterp-demo-py</span></span>
+<span id="cb46-2"><a href="scientific.html#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-3"><a href="scientific.html#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb46-4"><a href="scientific.html#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.tri <span class="im">as</span> mtri</span>
+<span id="cb46-5"><a href="scientific.html#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb46-6"><a href="scientific.html#cb46-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-7"><a href="scientific.html#cb46-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create triangulation.</span></span>
+<span id="cb46-8"><a href="scientific.html#cb46-8" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.asarray([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="fl">0.5</span>, <span class="fl">1.5</span>, <span class="fl">2.5</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="fl">1.5</span>])</span>
+<span id="cb46-9"><a href="scientific.html#cb46-9" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.asarray([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="fl">3.0</span>])</span>
+<span id="cb46-10"><a href="scientific.html#cb46-10" aria-hidden="true" tabindex="-1"></a>triangles <span class="op">=</span> [[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">4</span>], [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">5</span>], [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">6</span>], [<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">4</span>], [<span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">5</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">7</span>],</span>
+<span id="cb46-11"><a href="scientific.html#cb46-11" aria-hidden="true" tabindex="-1"></a>             [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">8</span>], [<span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">7</span>], [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]]</span>
+<span id="cb46-12"><a href="scientific.html#cb46-12" aria-hidden="true" tabindex="-1"></a>triang <span class="op">=</span> mtri.Triangulation(x, y, triangles)</span>
+<span id="cb46-13"><a href="scientific.html#cb46-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-14"><a href="scientific.html#cb46-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Interpolate to regularly-spaced quad grid.</span></span>
+<span id="cb46-15"><a href="scientific.html#cb46-15" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> np.cos(<span class="fl">1.5</span> <span class="op">*</span> x) <span class="op">*</span> np.cos(<span class="fl">1.5</span> <span class="op">*</span> y)</span>
+<span id="cb46-16"><a href="scientific.html#cb46-16" aria-hidden="true" tabindex="-1"></a>xi, yi <span class="op">=</span> np.meshgrid(np.linspace(<span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">20</span>), np.linspace(<span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">20</span>))</span>
+<span id="cb46-17"><a href="scientific.html#cb46-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-18"><a href="scientific.html#cb46-18" aria-hidden="true" tabindex="-1"></a>interp_lin <span class="op">=</span> mtri.LinearTriInterpolator(triang, z)</span>
+<span id="cb46-19"><a href="scientific.html#cb46-19" aria-hidden="true" tabindex="-1"></a>zi_lin <span class="op">=</span> interp_lin(xi, yi)</span>
+<span id="cb46-20"><a href="scientific.html#cb46-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-21"><a href="scientific.html#cb46-21" aria-hidden="true" tabindex="-1"></a>interp_cubic_geom <span class="op">=</span> mtri.CubicTriInterpolator(triang, z, kind<span class="op">=</span><span class="st">&#39;geom&#39;</span>)</span>
+<span id="cb46-22"><a href="scientific.html#cb46-22" aria-hidden="true" tabindex="-1"></a>zi_cubic_geom <span class="op">=</span> interp_cubic_geom(xi, yi)</span>
+<span id="cb46-23"><a href="scientific.html#cb46-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-24"><a href="scientific.html#cb46-24" aria-hidden="true" tabindex="-1"></a>interp_cubic_min_E <span class="op">=</span> mtri.CubicTriInterpolator(triang, z, kind<span class="op">=</span><span class="st">&#39;min_E&#39;</span>)</span>
+<span id="cb46-25"><a href="scientific.html#cb46-25" aria-hidden="true" tabindex="-1"></a>zi_cubic_min_E <span class="op">=</span> interp_cubic_min_E(xi, yi)</span>
+<span id="cb46-26"><a href="scientific.html#cb46-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-27"><a href="scientific.html#cb46-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up the figure</span></span>
+<span id="cb46-28"><a href="scientific.html#cb46-28" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(nrows<span class="op">=</span><span class="dv">2</span>, ncols<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb46-29"><a href="scientific.html#cb46-29" aria-hidden="true" tabindex="-1"></a>axs <span class="op">=</span> axs.flatten()</span>
+<span id="cb46-30"><a href="scientific.html#cb46-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-31"><a href="scientific.html#cb46-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the triangulation.</span></span>
+<span id="cb46-32"><a href="scientific.html#cb46-32" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].tricontourf(triang, z)</span>
+<span id="cb46-33"><a href="scientific.html#cb46-33" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].triplot(triang, <span class="st">&#39;ko-&#39;</span>)</span>
+<span id="cb46-34"><a href="scientific.html#cb46-34" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_title(<span class="st">&#39;Triangular grid&#39;</span>)</span>
+<span id="cb46-35"><a href="scientific.html#cb46-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-36"><a href="scientific.html#cb46-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot linear interpolation to quad grid.</span></span>
+<span id="cb46-37"><a href="scientific.html#cb46-37" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].contourf(xi, yi, zi_lin)</span>
+<span id="cb46-38"><a href="scientific.html#cb46-38" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].plot(xi, yi, <span class="st">&#39;k-&#39;</span>, lw<span class="op">=</span><span class="fl">0.5</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb46-39"><a href="scientific.html#cb46-39" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].plot(xi.T, yi.T, <span class="st">&#39;k-&#39;</span>, lw<span class="op">=</span><span class="fl">0.5</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb46-40"><a href="scientific.html#cb46-40" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_title(<span class="st">&quot;Linear interpolation&quot;</span>)</span>
+<span id="cb46-41"><a href="scientific.html#cb46-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-42"><a href="scientific.html#cb46-42" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot cubic interpolation to quad grid, kind=geom</span></span>
+<span id="cb46-43"><a href="scientific.html#cb46-43" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">2</span>].contourf(xi, yi, zi_cubic_geom)</span>
+<span id="cb46-44"><a href="scientific.html#cb46-44" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">2</span>].plot(xi, yi, <span class="st">&#39;k-&#39;</span>, lw<span class="op">=</span><span class="fl">0.5</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb46-45"><a href="scientific.html#cb46-45" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">2</span>].plot(xi.T, yi.T, <span class="st">&#39;k-&#39;</span>, lw<span class="op">=</span><span class="fl">0.5</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb46-46"><a href="scientific.html#cb46-46" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">2</span>].set_title(<span class="st">&quot;Cubic interpolation,</span><span class="ch">\n</span><span class="st">kind=&#39;geom&#39;&quot;</span>)</span>
+<span id="cb46-47"><a href="scientific.html#cb46-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-48"><a href="scientific.html#cb46-48" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot cubic interpolation to quad grid, kind=min_E</span></span>
+<span id="cb46-49"><a href="scientific.html#cb46-49" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">3</span>].contourf(xi, yi, zi_cubic_min_E)</span>
+<span id="cb46-50"><a href="scientific.html#cb46-50" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">3</span>].plot(xi, yi, <span class="st">&#39;k-&#39;</span>, lw<span class="op">=</span><span class="fl">0.5</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb46-51"><a href="scientific.html#cb46-51" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">3</span>].plot(xi.T, yi.T, <span class="st">&#39;k-&#39;</span>, lw<span class="op">=</span><span class="fl">0.5</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb46-52"><a href="scientific.html#cb46-52" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">3</span>].set_title(<span class="st">&quot;Cubic interpolation,</span><span class="ch">\n</span><span class="st">kind=&#39;min_E&#39;&quot;</span>)</span>
+<span id="cb46-53"><a href="scientific.html#cb46-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-54"><a href="scientific.html#cb46-54" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb46-55"><a href="scientific.html#cb46-55" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="05-scientific_files/figure-html/unnamed-chunk-14-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="scientific.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/subplots_axes_and_figures/axhspan_demo.html#sphx-glr-gallery-subplots-axes-and-figures-axhspan-demo-py</span></span>
+<span id="cb47-2"><a href="scientific.html#cb47-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-3"><a href="scientific.html#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb47-4"><a href="scientific.html#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb47-5"><a href="scientific.html#cb47-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-6"><a href="scientific.html#cb47-6" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.arange(<span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="fl">.01</span>)</span>
+<span id="cb47-7"><a href="scientific.html#cb47-7" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> np.sin(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> t)</span>
+<span id="cb47-8"><a href="scientific.html#cb47-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-9"><a href="scientific.html#cb47-9" aria-hidden="true" tabindex="-1"></a>plt.plot(t, s)</span>
+<span id="cb47-10"><a href="scientific.html#cb47-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw a thick red hline at y=0 that spans the xrange</span></span>
+<span id="cb47-11"><a href="scientific.html#cb47-11" aria-hidden="true" tabindex="-1"></a>plt.axhline(linewidth<span class="op">=</span><span class="dv">8</span>, color<span class="op">=</span><span class="st">&#39;#d62728&#39;</span>)</span>
+<span id="cb47-12"><a href="scientific.html#cb47-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-13"><a href="scientific.html#cb47-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw a default hline at y=1 that spans the xrange</span></span>
+<span id="cb47-14"><a href="scientific.html#cb47-14" aria-hidden="true" tabindex="-1"></a>plt.axhline(y<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb47-15"><a href="scientific.html#cb47-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-16"><a href="scientific.html#cb47-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw a default vline at x=1 that spans the yrange</span></span>
+<span id="cb47-17"><a href="scientific.html#cb47-17" aria-hidden="true" tabindex="-1"></a>plt.axvline(x<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb47-18"><a href="scientific.html#cb47-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-19"><a href="scientific.html#cb47-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw a thick blue vline at x=0 that spans the upper quadrant of the yrange</span></span>
+<span id="cb47-20"><a href="scientific.html#cb47-20" aria-hidden="true" tabindex="-1"></a>plt.axvline(x<span class="op">=</span><span class="dv">0</span>, ymin<span class="op">=</span><span class="fl">0.75</span>, linewidth<span class="op">=</span><span class="dv">8</span>, color<span class="op">=</span><span class="st">&#39;#1f77b4&#39;</span>)</span>
+<span id="cb47-21"><a href="scientific.html#cb47-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-22"><a href="scientific.html#cb47-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw a default hline at y=.5 that spans the middle half of the axes</span></span>
+<span id="cb47-23"><a href="scientific.html#cb47-23" aria-hidden="true" tabindex="-1"></a>plt.axhline(y<span class="op">=</span><span class="fl">.5</span>, xmin<span class="op">=</span><span class="fl">0.25</span>, xmax<span class="op">=</span><span class="fl">0.75</span>)</span>
+<span id="cb47-24"><a href="scientific.html#cb47-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-25"><a href="scientific.html#cb47-25" aria-hidden="true" tabindex="-1"></a>plt.axhspan(<span class="fl">0.25</span>, <span class="fl">0.75</span>, facecolor<span class="op">=</span><span class="st">&#39;0.5&#39;</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb47-26"><a href="scientific.html#cb47-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-27"><a href="scientific.html#cb47-27" aria-hidden="true" tabindex="-1"></a>plt.axvspan(<span class="fl">1.25</span>, <span class="fl">1.55</span>, facecolor<span class="op">=</span><span class="st">&#39;#2ca02c&#39;</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb47-28"><a href="scientific.html#cb47-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-29"><a href="scientific.html#cb47-29" aria-hidden="true" tabindex="-1"></a>plt.axis([<span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>])</span>
+<span id="cb47-30"><a href="scientific.html#cb47-30" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="05-scientific_files/figure-html/unnamed-chunk-15-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="scientific.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/subplots_axes_and_figures/subplots_adjust.html#sphx-glr-gallery-subplots-axes-and-figures-subplots-adjust-py</span></span>
+<span id="cb48-2"><a href="scientific.html#cb48-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-3"><a href="scientific.html#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb48-4"><a href="scientific.html#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb48-5"><a href="scientific.html#cb48-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-6"><a href="scientific.html#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Fixing random state for reproducibility</span></span>
+<span id="cb48-7"><a href="scientific.html#cb48-7" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">19680801</span>)</span>
+<span id="cb48-8"><a href="scientific.html#cb48-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-9"><a href="scientific.html#cb48-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-10"><a href="scientific.html#cb48-10" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">211</span>)</span>
+<span id="cb48-11"><a href="scientific.html#cb48-11" aria-hidden="true" tabindex="-1"></a>plt.imshow(np.random.random((<span class="dv">100</span>, <span class="dv">100</span>)), cmap<span class="op">=</span>plt.cm.BuPu_r)</span>
+<span id="cb48-12"><a href="scientific.html#cb48-12" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">212</span>)</span>
+<span id="cb48-13"><a href="scientific.html#cb48-13" aria-hidden="true" tabindex="-1"></a>plt.imshow(np.random.random((<span class="dv">100</span>, <span class="dv">100</span>)), cmap<span class="op">=</span>plt.cm.BuPu_r)</span>
+<span id="cb48-14"><a href="scientific.html#cb48-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-15"><a href="scientific.html#cb48-15" aria-hidden="true" tabindex="-1"></a>plt.subplots_adjust(bottom<span class="op">=</span><span class="fl">0.1</span>, right<span class="op">=</span><span class="fl">0.8</span>, top<span class="op">=</span><span class="fl">0.9</span>)</span>
+<span id="cb48-16"><a href="scientific.html#cb48-16" aria-hidden="true" tabindex="-1"></a>cax <span class="op">=</span> plt.axes([<span class="fl">0.85</span>, <span class="fl">0.1</span>, <span class="fl">0.075</span>, <span class="fl">0.8</span>])</span>
+<span id="cb48-17"><a href="scientific.html#cb48-17" aria-hidden="true" tabindex="-1"></a>plt.colorbar(cax<span class="op">=</span>cax)</span>
+<span id="cb48-18"><a href="scientific.html#cb48-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="05-scientific_files/figure-html/unnamed-chunk-16-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="scientific.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/scales/symlog_demo.html#sphx-glr-gallery-scales-symlog-demo-py</span></span>
+<span id="cb49-2"><a href="scientific.html#cb49-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-3"><a href="scientific.html#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb49-4"><a href="scientific.html#cb49-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb49-5"><a href="scientific.html#cb49-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-6"><a href="scientific.html#cb49-6" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> <span class="fl">0.01</span></span>
+<span id="cb49-7"><a href="scientific.html#cb49-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="op">-</span><span class="fl">50.0</span>, <span class="fl">50.0</span>, dt)</span>
+<span id="cb49-8"><a href="scientific.html#cb49-8" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="fl">100.0</span>, dt)</span>
+<span id="cb49-9"><a href="scientific.html#cb49-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-10"><a href="scientific.html#cb49-10" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">311</span>)</span>
+<span id="cb49-11"><a href="scientific.html#cb49-11" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y)</span>
+<span id="cb49-12"><a href="scientific.html#cb49-12" aria-hidden="true" tabindex="-1"></a>plt.xscale(<span class="st">&#39;symlog&#39;</span>)</span>
+<span id="cb49-13"><a href="scientific.html#cb49-13" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;symlogx&#39;</span>)</span>
+<span id="cb49-14"><a href="scientific.html#cb49-14" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb49-15"><a href="scientific.html#cb49-15" aria-hidden="true" tabindex="-1"></a>plt.gca().xaxis.grid(<span class="va">True</span>, which<span class="op">=</span><span class="st">&#39;minor&#39;</span>)  <span class="co"># minor grid on too</span></span>
+<span id="cb49-16"><a href="scientific.html#cb49-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-17"><a href="scientific.html#cb49-17" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">312</span>)</span>
+<span id="cb49-18"><a href="scientific.html#cb49-18" aria-hidden="true" tabindex="-1"></a>plt.plot(y, x)</span>
+<span id="cb49-19"><a href="scientific.html#cb49-19" aria-hidden="true" tabindex="-1"></a>plt.yscale(<span class="st">&#39;symlog&#39;</span>)</span>
+<span id="cb49-20"><a href="scientific.html#cb49-20" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;symlogy&#39;</span>)</span>
+<span id="cb49-21"><a href="scientific.html#cb49-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-22"><a href="scientific.html#cb49-22" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">313</span>)</span>
+<span id="cb49-23"><a href="scientific.html#cb49-23" aria-hidden="true" tabindex="-1"></a>plt.plot(x, np.sin(x <span class="op">/</span> <span class="fl">3.0</span>))</span>
+<span id="cb49-24"><a href="scientific.html#cb49-24" aria-hidden="true" tabindex="-1"></a>plt.xscale(<span class="st">&#39;symlog&#39;</span>)</span>
+<span id="cb49-25"><a href="scientific.html#cb49-25" aria-hidden="true" tabindex="-1"></a>plt.yscale(<span class="st">&#39;symlog&#39;</span>, linthreshy<span class="op">=</span><span class="fl">0.015</span>)</span>
+<span id="cb49-26"><a href="scientific.html#cb49-26" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb49-27"><a href="scientific.html#cb49-27" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;symlog both&#39;</span>)</span>
+<span id="cb49-28"><a href="scientific.html#cb49-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-29"><a href="scientific.html#cb49-29" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb49-30"><a href="scientific.html#cb49-30" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="05-scientific_files/figure-html/unnamed-chunk-17-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="scientific.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb50-2"><a href="scientific.html#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb50-3"><a href="scientific.html#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="co"># http://www.scipy-lectures.org/intro/matplotlib/auto_examples/plot_contour_ex.html</span></span>
+<span id="cb50-4"><a href="scientific.html#cb50-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-5"><a href="scientific.html#cb50-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x, y):</span>
+<span id="cb50-6"><a href="scientific.html#cb50-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (<span class="dv">1</span> <span class="op">-</span> x <span class="op">/</span> <span class="dv">2</span> <span class="op">+</span> x <span class="op">**</span> <span class="dv">5</span> <span class="op">+</span> y <span class="op">**</span> <span class="dv">3</span>) <span class="op">*</span> np.exp(<span class="op">-</span>x <span class="op">**</span> <span class="dv">2</span> <span class="op">-</span>y <span class="op">**</span> <span class="dv">2</span>)</span>
+<span id="cb50-7"><a href="scientific.html#cb50-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-8"><a href="scientific.html#cb50-8" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">256</span></span>
+<span id="cb50-9"><a href="scientific.html#cb50-9" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, n)</span>
+<span id="cb50-10"><a href="scientific.html#cb50-10" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, n)</span>
+<span id="cb50-11"><a href="scientific.html#cb50-11" aria-hidden="true" tabindex="-1"></a>X,Y <span class="op">=</span> np.meshgrid(x, y)</span>
+<span id="cb50-12"><a href="scientific.html#cb50-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-13"><a href="scientific.html#cb50-13" aria-hidden="true" tabindex="-1"></a>plt.axes([<span class="fl">0.025</span>, <span class="fl">0.025</span>, <span class="fl">0.95</span>, <span class="fl">0.95</span>])</span>
+<span id="cb50-14"><a href="scientific.html#cb50-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-15"><a href="scientific.html#cb50-15" aria-hidden="true" tabindex="-1"></a>plt.contourf(X, Y, f(X, Y), <span class="dv">8</span>, alpha<span class="op">=</span><span class="fl">.75</span>, cmap<span class="op">=</span>plt.cm.hot)</span>
+<span id="cb50-16"><a href="scientific.html#cb50-16" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> plt.contour(X, Y, f(X, Y), <span class="dv">8</span>, colors<span class="op">=</span><span class="st">&#39;black&#39;</span>, linewidth<span class="op">=</span><span class="fl">.5</span>)</span>
+<span id="cb50-17"><a href="scientific.html#cb50-17" aria-hidden="true" tabindex="-1"></a>plt.clabel(C, inline<span class="op">=</span><span class="dv">1</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb50-18"><a href="scientific.html#cb50-18" aria-hidden="true" tabindex="-1"></a>plt.xticks(())</span>
+<span id="cb50-19"><a href="scientific.html#cb50-19" aria-hidden="true" tabindex="-1"></a>plt.yticks(())</span>
+<span id="cb50-20"><a href="scientific.html#cb50-20" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="05-scientific_files/figure-html/unnamed-chunk-18-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="scientific.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D  <span class="co"># noqa: F401 unused import</span></span>
+<span id="cb51-2"><a href="scientific.html#cb51-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-3"><a href="scientific.html#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb51-4"><a href="scientific.html#cb51-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb51-5"><a href="scientific.html#cb51-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-6"><a href="scientific.html#cb51-6" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb51-7"><a href="scientific.html#cb51-7" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
+<span id="cb51-8"><a href="scientific.html#cb51-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-9"><a href="scientific.html#cb51-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot a sin curve using the x and y axes.</span></span>
+<span id="cb51-10"><a href="scientific.html#cb51-10" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">100</span>)</span>
+<span id="cb51-11"><a href="scientific.html#cb51-11" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.sin(x <span class="op">*</span> <span class="dv">2</span> <span class="op">*</span> np.pi) <span class="op">/</span> <span class="dv">2</span> <span class="op">+</span> <span class="fl">0.5</span></span>
+<span id="cb51-12"><a href="scientific.html#cb51-12" aria-hidden="true" tabindex="-1"></a>ax.plot(x, y, zs<span class="op">=</span><span class="dv">0</span>, zdir<span class="op">=</span><span class="st">&#39;z&#39;</span>, label<span class="op">=</span><span class="st">&#39;curve in (x,y)&#39;</span>)</span>
+<span id="cb51-13"><a href="scientific.html#cb51-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-14"><a href="scientific.html#cb51-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot scatterplot data (20 2D points per colour) on the x and z axes.</span></span>
+<span id="cb51-15"><a href="scientific.html#cb51-15" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> (<span class="st">&#39;r&#39;</span>, <span class="st">&#39;g&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;k&#39;</span>)</span>
+<span id="cb51-16"><a href="scientific.html#cb51-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-17"><a href="scientific.html#cb51-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Fixing random state for reproducibility</span></span>
+<span id="cb51-18"><a href="scientific.html#cb51-18" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">19680801</span>)</span>
+<span id="cb51-19"><a href="scientific.html#cb51-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-20"><a href="scientific.html#cb51-20" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.sample(<span class="dv">20</span> <span class="op">*</span> <span class="bu">len</span>(colors))</span>
+<span id="cb51-21"><a href="scientific.html#cb51-21" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.random.sample(<span class="dv">20</span> <span class="op">*</span> <span class="bu">len</span>(colors))</span>
+<span id="cb51-22"><a href="scientific.html#cb51-22" aria-hidden="true" tabindex="-1"></a>c_list <span class="op">=</span> []</span>
+<span id="cb51-23"><a href="scientific.html#cb51-23" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> c <span class="kw">in</span> colors:</span>
+<span id="cb51-24"><a href="scientific.html#cb51-24" aria-hidden="true" tabindex="-1"></a>    c_list.extend([c] <span class="op">*</span> <span class="dv">20</span>)</span>
+<span id="cb51-25"><a href="scientific.html#cb51-25" aria-hidden="true" tabindex="-1"></a><span class="co"># By using zdir=&#39;y&#39;, the y value of these points is fixed to the zs value 0</span></span>
+<span id="cb51-26"><a href="scientific.html#cb51-26" aria-hidden="true" tabindex="-1"></a><span class="co"># and the (x,y) points are plotted on the x and z axes.</span></span>
+<span id="cb51-27"><a href="scientific.html#cb51-27" aria-hidden="true" tabindex="-1"></a>ax.scatter(x, y, zs<span class="op">=</span><span class="dv">0</span>, zdir<span class="op">=</span><span class="st">&#39;y&#39;</span>, c<span class="op">=</span>c_list, label<span class="op">=</span><span class="st">&#39;points in (x,z)&#39;</span>)</span>
+<span id="cb51-28"><a href="scientific.html#cb51-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-29"><a href="scientific.html#cb51-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Make legend, set axes limits and labels</span></span>
+<span id="cb51-30"><a href="scientific.html#cb51-30" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb51-31"><a href="scientific.html#cb51-31" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb51-32"><a href="scientific.html#cb51-32" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb51-33"><a href="scientific.html#cb51-33" aria-hidden="true" tabindex="-1"></a>ax.set_zlim(<span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb51-34"><a href="scientific.html#cb51-34" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">&#39;X&#39;</span>)</span>
+<span id="cb51-35"><a href="scientific.html#cb51-35" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">&#39;Y&#39;</span>)</span>
+<span id="cb51-36"><a href="scientific.html#cb51-36" aria-hidden="true" tabindex="-1"></a>ax.set_zlabel(<span class="st">&#39;Z&#39;</span>)</span>
+<span id="cb51-37"><a href="scientific.html#cb51-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-38"><a href="scientific.html#cb51-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Customize the view angle so it&#39;s easier to see that the scatter points lie</span></span>
+<span id="cb51-39"><a href="scientific.html#cb51-39" aria-hidden="true" tabindex="-1"></a><span class="co"># on the plane y=0</span></span>
+<span id="cb51-40"><a href="scientific.html#cb51-40" aria-hidden="true" tabindex="-1"></a>ax.view_init(elev<span class="op">=</span><span class="fl">20.</span>, azim<span class="op">=-</span><span class="dv">35</span>)</span>
+<span id="cb51-41"><a href="scientific.html#cb51-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-42"><a href="scientific.html#cb51-42" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="05-scientific_files/figure-html/unnamed-chunk-19-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="scientific.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># step demo</span></span>
+<span id="cb52-2"><a href="scientific.html#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py</span></span>
+<span id="cb52-3"><a href="scientific.html#cb52-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-4"><a href="scientific.html#cb52-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb52-5"><a href="scientific.html#cb52-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy <span class="im">import</span> ma</span>
+<span id="cb52-6"><a href="scientific.html#cb52-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb52-7"><a href="scientific.html#cb52-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-8"><a href="scientific.html#cb52-8" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">1</span>, <span class="dv">7</span>, <span class="fl">0.4</span>)</span>
+<span id="cb52-9"><a href="scientific.html#cb52-9" aria-hidden="true" tabindex="-1"></a>y0 <span class="op">=</span> np.sin(x)</span>
+<span id="cb52-10"><a href="scientific.html#cb52-10" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> y0.copy() <span class="op">+</span> <span class="fl">2.5</span></span>
+<span id="cb52-11"><a href="scientific.html#cb52-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-12"><a href="scientific.html#cb52-12" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, label<span class="op">=</span><span class="st">&#39;pre (default)&#39;</span>)</span>
+<span id="cb52-13"><a href="scientific.html#cb52-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-14"><a href="scientific.html#cb52-14" aria-hidden="true" tabindex="-1"></a>y <span class="op">-=</span> <span class="fl">0.5</span></span>
+<span id="cb52-15"><a href="scientific.html#cb52-15" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, where<span class="op">=</span><span class="st">&#39;mid&#39;</span>, label<span class="op">=</span><span class="st">&#39;mid&#39;</span>)</span>
+<span id="cb52-16"><a href="scientific.html#cb52-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-17"><a href="scientific.html#cb52-17" aria-hidden="true" tabindex="-1"></a>y <span class="op">-=</span> <span class="fl">0.5</span></span>
+<span id="cb52-18"><a href="scientific.html#cb52-18" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, where<span class="op">=</span><span class="st">&#39;post&#39;</span>, label<span class="op">=</span><span class="st">&#39;post&#39;</span>)</span>
+<span id="cb52-19"><a href="scientific.html#cb52-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-20"><a href="scientific.html#cb52-20" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> ma.masked_where((y0 <span class="op">&gt;</span> <span class="op">-</span><span class="fl">0.15</span>) <span class="op">&amp;</span> (y0 <span class="op">&lt;</span> <span class="fl">0.15</span>), y <span class="op">-</span> <span class="fl">0.5</span>)</span>
+<span id="cb52-21"><a href="scientific.html#cb52-21" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, label<span class="op">=</span><span class="st">&#39;masked (pre)&#39;</span>)</span>
+<span id="cb52-22"><a href="scientific.html#cb52-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-23"><a href="scientific.html#cb52-23" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb52-24"><a href="scientific.html#cb52-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-25"><a href="scientific.html#cb52-25" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="dv">0</span>, <span class="dv">7</span>)</span>
+<span id="cb52-26"><a href="scientific.html#cb52-26" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="op">-</span><span class="fl">0.5</span>, <span class="dv">4</span>)</span>
+<span id="cb52-27"><a href="scientific.html#cb52-27" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="05-scientific_files/figure-html/unnamed-chunk-20-1.png" width="90%" style="display: block; margin: auto;" /></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="math.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="voxels.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["matplotlib-with-rmarkdown.pdf", "matplotlib-with-rmarkdown.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

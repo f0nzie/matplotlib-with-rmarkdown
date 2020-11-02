@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Introduction | Matplotlib with Rmarkdown</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Introduction | Matplotlib with Rmarkdown" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Introduction | Matplotlib with Rmarkdown" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Alfonso R. Reyes" />
+
+
+<meta name="date" content="2020-11-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="python-environment.html"/>
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Matplotlib with Rmarkdown</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction.html"><a href="introduction.html#the-hello-world-plot"><i class="fa fa-check"></i><b>2.1</b> The “hello world” plot</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="python-environment.html"><a href="python-environment.html"><i class="fa fa-check"></i><b>3</b> Python environment</a></li>
+<li class="chapter" data-level="4" data-path="sharing-data-objects.html"><a href="sharing-data-objects.html"><i class="fa fa-check"></i><b>4</b> Sharing data objects</a></li>
+<li class="chapter" data-level="5" data-path="math.html"><a href="math.html"><i class="fa fa-check"></i><b>5</b> Math</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="math.html"><a href="math.html#middle"><i class="fa fa-check"></i><b>5.1</b> Middle</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="scientific.html"><a href="scientific.html"><i class="fa fa-check"></i><b>6</b> Scientific</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="scientific.html"><a href="scientific.html#weird"><i class="fa fa-check"></i><b>6.1</b> weird</a></li>
+<li class="chapter" data-level="6.2" data-path="scientific.html"><a href="scientific.html#middle-1"><i class="fa fa-check"></i><b>6.2</b> Middle</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="voxels.html"><a href="voxels.html"><i class="fa fa-check"></i><b>7</b> Voxels</a></li>
+<li class="chapter" data-level="8" data-path="seaborn.html"><a href="seaborn.html"><i class="fa fa-check"></i><b>8</b> Seaborn</a></li>
+<li class="chapter" data-level="9" data-path="advanced.html"><a href="advanced.html"><i class="fa fa-check"></i><b>9</b> Advanced</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="advanced.html"><a href="advanced.html#adding-labels"><i class="fa fa-check"></i><b>9.1</b> Adding labels</a></li>
+<li class="chapter" data-level="9.2" data-path="advanced.html"><a href="advanced.html#change-of-axes"><i class="fa fa-check"></i><b>9.2</b> Change of axes</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Matplotlib with Rmarkdown</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduction" class="section level1" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Introduction</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introduction.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb1-2"><a href="introduction.html#cb1-2" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">use_condaenv</span>(<span class="st">&quot;r-torch&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="introduction.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-2"><a href="introduction.html#cb2-2" aria-hidden="true" tabindex="-1"></a>plt.plot([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>])</span>
+<span id="cb2-3"><a href="introduction.html#cb2-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;some numbers&#39;</span>)</span>
+<span id="cb2-4"><a href="introduction.html#cb2-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="01-introduction_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div id="the-hello-world-plot" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> The “hello world” plot</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="introduction.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-2"><a href="introduction.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-3"><a href="introduction.html#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="introduction.html#cb3-4" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.arange(<span class="fl">0.0</span>, <span class="fl">2.0</span>, <span class="fl">0.01</span>)</span>
+<span id="cb3-5"><a href="introduction.html#cb3-5" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> np.sin(<span class="dv">2</span><span class="op">*</span>np.pi<span class="op">*</span>t)</span>
+<span id="cb3-6"><a href="introduction.html#cb3-6" aria-hidden="true" tabindex="-1"></a>plt.plot(t, s)</span>
+<span id="cb3-7"><a href="introduction.html#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="introduction.html#cb3-8" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;time (s)&#39;</span>)</span>
+<span id="cb3-9"><a href="introduction.html#cb3-9" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;voltage (mV)&#39;</span>)</span>
+<span id="cb3-10"><a href="introduction.html#cb3-10" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;About as simple as it gets, folks&#39;</span>)</span>
+<span id="cb3-11"><a href="introduction.html#cb3-11" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb3-12"><a href="introduction.html#cb3-12" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">&quot;test.png&quot;</span>)</span>
+<span id="cb3-13"><a href="introduction.html#cb3-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="01-introduction_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="introduction.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/2.0.2/examples/mplot3d/contour3d_demo.html</span></span>
+<span id="cb4-2"><a href="introduction.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> axes3d</span>
+<span id="cb4-3"><a href="introduction.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-4"><a href="introduction.html#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> cm</span>
+<span id="cb4-5"><a href="introduction.html#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="introduction.html#cb4-6" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb4-7"><a href="introduction.html#cb4-7" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>, projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
+<span id="cb4-8"><a href="introduction.html#cb4-8" aria-hidden="true" tabindex="-1"></a>X, Y, Z <span class="op">=</span> axes3d.get_test_data(<span class="fl">0.05</span>)</span>
+<span id="cb4-9"><a href="introduction.html#cb4-9" aria-hidden="true" tabindex="-1"></a>cset <span class="op">=</span> ax.contour(X, Y, Z, cmap<span class="op">=</span>cm.coolwarm)</span>
+<span id="cb4-10"><a href="introduction.html#cb4-10" aria-hidden="true" tabindex="-1"></a>ax.clabel(cset, fontsize<span class="op">=</span><span class="dv">9</span>, inline<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb4-11"><a href="introduction.html#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="introduction.html#cb4-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="01-introduction_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="introduction.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/showcase/anatomy.html#sphx-glr-gallery-showcase-anatomy-py</span></span>
+<span id="cb5-2"><a href="introduction.html#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="introduction.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-4"><a href="introduction.html#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-5"><a href="introduction.html#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.ticker <span class="im">import</span> AutoMinorLocator, MultipleLocator, FuncFormatter</span>
+<span id="cb5-6"><a href="introduction.html#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="introduction.html#cb5-7" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">19680801</span>)</span>
+<span id="cb5-8"><a href="introduction.html#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="introduction.html#cb5-9" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.linspace(<span class="fl">0.5</span>, <span class="fl">3.5</span>, <span class="dv">100</span>)</span>
+<span id="cb5-10"><a href="introduction.html#cb5-10" aria-hidden="true" tabindex="-1"></a>Y1 <span class="op">=</span> <span class="dv">3</span><span class="op">+</span>np.cos(X)</span>
+<span id="cb5-11"><a href="introduction.html#cb5-11" aria-hidden="true" tabindex="-1"></a>Y2 <span class="op">=</span> <span class="dv">1</span><span class="op">+</span>np.cos(<span class="dv">1</span><span class="op">+</span>X<span class="op">/</span><span class="fl">0.75</span>)<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb5-12"><a href="introduction.html#cb5-12" aria-hidden="true" tabindex="-1"></a>Y3 <span class="op">=</span> np.random.uniform(Y1, Y2, <span class="bu">len</span>(X))</span>
+<span id="cb5-13"><a href="introduction.html#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="introduction.html#cb5-14" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
+<span id="cb5-15"><a href="introduction.html#cb5-15" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, aspect<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb5-16"><a href="introduction.html#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="introduction.html#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="introduction.html#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> minor_tick(x, pos):</span>
+<span id="cb5-19"><a href="introduction.html#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> x <span class="op">%</span> <span class="fl">1.0</span>:</span>
+<span id="cb5-20"><a href="introduction.html#cb5-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb5-21"><a href="introduction.html#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&quot;</span><span class="sc">%.2f</span><span class="st">&quot;</span> <span class="op">%</span> x</span>
+<span id="cb5-22"><a href="introduction.html#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="introduction.html#cb5-23" aria-hidden="true" tabindex="-1"></a>ax.xaxis.set_major_locator(MultipleLocator(<span class="fl">1.000</span>))</span>
+<span id="cb5-24"><a href="introduction.html#cb5-24" aria-hidden="true" tabindex="-1"></a>ax.xaxis.set_minor_locator(AutoMinorLocator(<span class="dv">4</span>))</span>
+<span id="cb5-25"><a href="introduction.html#cb5-25" aria-hidden="true" tabindex="-1"></a>ax.yaxis.set_major_locator(MultipleLocator(<span class="fl">1.000</span>))</span>
+<span id="cb5-26"><a href="introduction.html#cb5-26" aria-hidden="true" tabindex="-1"></a>ax.yaxis.set_minor_locator(AutoMinorLocator(<span class="dv">4</span>))</span>
+<span id="cb5-27"><a href="introduction.html#cb5-27" aria-hidden="true" tabindex="-1"></a>ax.xaxis.set_minor_formatter(FuncFormatter(minor_tick))</span>
+<span id="cb5-28"><a href="introduction.html#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-29"><a href="introduction.html#cb5-29" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="dv">0</span>, <span class="dv">4</span>)</span>
+<span id="cb5-30"><a href="introduction.html#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="co">#:&gt; (0.0, 4.0)</span></span>
+<span id="cb5-31"><a href="introduction.html#cb5-31" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">0</span>, <span class="dv">4</span>)</span>
+<span id="cb5-32"><a href="introduction.html#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="co">#:&gt; (0.0, 4.0)</span></span>
+<span id="cb5-33"><a href="introduction.html#cb5-33" aria-hidden="true" tabindex="-1"></a>ax.tick_params(which<span class="op">=</span><span class="st">&#39;major&#39;</span>, width<span class="op">=</span><span class="fl">1.0</span>)</span>
+<span id="cb5-34"><a href="introduction.html#cb5-34" aria-hidden="true" tabindex="-1"></a>ax.tick_params(which<span class="op">=</span><span class="st">&#39;major&#39;</span>, length<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb5-35"><a href="introduction.html#cb5-35" aria-hidden="true" tabindex="-1"></a>ax.tick_params(which<span class="op">=</span><span class="st">&#39;minor&#39;</span>, width<span class="op">=</span><span class="fl">1.0</span>, labelsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb5-36"><a href="introduction.html#cb5-36" aria-hidden="true" tabindex="-1"></a>ax.tick_params(which<span class="op">=</span><span class="st">&#39;minor&#39;</span>, length<span class="op">=</span><span class="dv">5</span>, labelsize<span class="op">=</span><span class="dv">10</span>, labelcolor<span class="op">=</span><span class="st">&#39;0.25&#39;</span>)</span>
+<span id="cb5-37"><a href="introduction.html#cb5-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-38"><a href="introduction.html#cb5-38" aria-hidden="true" tabindex="-1"></a>ax.grid(linestyle<span class="op">=</span><span class="st">&quot;--&quot;</span>, linewidth<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="st">&#39;.25&#39;</span>, zorder<span class="op">=-</span><span class="dv">10</span>)</span>
+<span id="cb5-39"><a href="introduction.html#cb5-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-40"><a href="introduction.html#cb5-40" aria-hidden="true" tabindex="-1"></a>ax.plot(X, Y1, c<span class="op">=</span>(<span class="fl">0.25</span>, <span class="fl">0.25</span>, <span class="fl">1.00</span>), lw<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">&quot;Blue signal&quot;</span>, zorder<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb5-41"><a href="introduction.html#cb5-41" aria-hidden="true" tabindex="-1"></a>ax.plot(X, Y2, c<span class="op">=</span>(<span class="fl">1.00</span>, <span class="fl">0.25</span>, <span class="fl">0.25</span>), lw<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">&quot;Red signal&quot;</span>)</span>
+<span id="cb5-42"><a href="introduction.html#cb5-42" aria-hidden="true" tabindex="-1"></a>ax.plot(X, Y3, linewidth<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb5-43"><a href="introduction.html#cb5-43" aria-hidden="true" tabindex="-1"></a>        marker<span class="op">=</span><span class="st">&#39;o&#39;</span>, markerfacecolor<span class="op">=</span><span class="st">&#39;w&#39;</span>, markeredgecolor<span class="op">=</span><span class="st">&#39;k&#39;</span>)</span>
+<span id="cb5-44"><a href="introduction.html#cb5-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-45"><a href="introduction.html#cb5-45" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">&quot;Anatomy of a figure&quot;</span>, fontsize<span class="op">=</span><span class="dv">20</span>, verticalalignment<span class="op">=</span><span class="st">&#39;bottom&#39;</span>)</span>
+<span id="cb5-46"><a href="introduction.html#cb5-46" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">&quot;X axis label&quot;</span>)</span>
+<span id="cb5-47"><a href="introduction.html#cb5-47" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">&quot;Y axis label&quot;</span>)</span>
+<span id="cb5-48"><a href="introduction.html#cb5-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-49"><a href="introduction.html#cb5-49" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb5-50"><a href="introduction.html#cb5-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-51"><a href="introduction.html#cb5-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-52"><a href="introduction.html#cb5-52" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> circle(x, y, radius<span class="op">=</span><span class="fl">0.15</span>):</span>
+<span id="cb5-53"><a href="introduction.html#cb5-53" aria-hidden="true" tabindex="-1"></a>    <span class="im">from</span> matplotlib.patches <span class="im">import</span> Circle</span>
+<span id="cb5-54"><a href="introduction.html#cb5-54" aria-hidden="true" tabindex="-1"></a>    <span class="im">from</span> matplotlib.patheffects <span class="im">import</span> withStroke</span>
+<span id="cb5-55"><a href="introduction.html#cb5-55" aria-hidden="true" tabindex="-1"></a>    circle <span class="op">=</span> Circle((x, y), radius, clip_on<span class="op">=</span><span class="va">False</span>, zorder<span class="op">=</span><span class="dv">10</span>, linewidth<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb5-56"><a href="introduction.html#cb5-56" aria-hidden="true" tabindex="-1"></a>                    edgecolor<span class="op">=</span><span class="st">&#39;black&#39;</span>, facecolor<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">.0125</span>),</span>
+<span id="cb5-57"><a href="introduction.html#cb5-57" aria-hidden="true" tabindex="-1"></a>                    path_effects<span class="op">=</span>[withStroke(linewidth<span class="op">=</span><span class="dv">5</span>, foreground<span class="op">=</span><span class="st">&#39;w&#39;</span>)])</span>
+<span id="cb5-58"><a href="introduction.html#cb5-58" aria-hidden="true" tabindex="-1"></a>    ax.add_artist(circle)</span>
+<span id="cb5-59"><a href="introduction.html#cb5-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-60"><a href="introduction.html#cb5-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-61"><a href="introduction.html#cb5-61" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> text(x, y, text):</span>
+<span id="cb5-62"><a href="introduction.html#cb5-62" aria-hidden="true" tabindex="-1"></a>    ax.text(x, y, text, backgroundcolor<span class="op">=</span><span class="st">&quot;white&quot;</span>,</span>
+<span id="cb5-63"><a href="introduction.html#cb5-63" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">&#39;center&#39;</span>, va<span class="op">=</span><span class="st">&#39;top&#39;</span>, weight<span class="op">=</span><span class="st">&#39;bold&#39;</span>, color<span class="op">=</span><span class="st">&#39;blue&#39;</span>)</span>
+<span id="cb5-64"><a href="introduction.html#cb5-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-65"><a href="introduction.html#cb5-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-66"><a href="introduction.html#cb5-66" aria-hidden="true" tabindex="-1"></a><span class="co"># Minor tick</span></span>
+<span id="cb5-67"><a href="introduction.html#cb5-67" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">0.50</span>, <span class="op">-</span><span class="fl">0.10</span>)</span>
+<span id="cb5-68"><a href="introduction.html#cb5-68" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">0.50</span>, <span class="op">-</span><span class="fl">0.32</span>, <span class="st">&quot;Minor tick label&quot;</span>)</span>
+<span id="cb5-69"><a href="introduction.html#cb5-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-70"><a href="introduction.html#cb5-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Major tick</span></span>
+<span id="cb5-71"><a href="introduction.html#cb5-71" aria-hidden="true" tabindex="-1"></a>circle(<span class="op">-</span><span class="fl">0.03</span>, <span class="fl">4.00</span>)</span>
+<span id="cb5-72"><a href="introduction.html#cb5-72" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">0.03</span>, <span class="fl">3.80</span>, <span class="st">&quot;Major tick&quot;</span>)</span>
+<span id="cb5-73"><a href="introduction.html#cb5-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-74"><a href="introduction.html#cb5-74" aria-hidden="true" tabindex="-1"></a><span class="co"># Minor tick</span></span>
+<span id="cb5-75"><a href="introduction.html#cb5-75" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">0.00</span>, <span class="fl">3.50</span>)</span>
+<span id="cb5-76"><a href="introduction.html#cb5-76" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">0.00</span>, <span class="fl">3.30</span>, <span class="st">&quot;Minor tick&quot;</span>)</span>
+<span id="cb5-77"><a href="introduction.html#cb5-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-78"><a href="introduction.html#cb5-78" aria-hidden="true" tabindex="-1"></a><span class="co"># Major tick label</span></span>
+<span id="cb5-79"><a href="introduction.html#cb5-79" aria-hidden="true" tabindex="-1"></a>circle(<span class="op">-</span><span class="fl">0.15</span>, <span class="fl">3.00</span>)</span>
+<span id="cb5-80"><a href="introduction.html#cb5-80" aria-hidden="true" tabindex="-1"></a>text(<span class="op">-</span><span class="fl">0.15</span>, <span class="fl">2.80</span>, <span class="st">&quot;Major tick label&quot;</span>)</span>
+<span id="cb5-81"><a href="introduction.html#cb5-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-82"><a href="introduction.html#cb5-82" aria-hidden="true" tabindex="-1"></a><span class="co"># X Label</span></span>
+<span id="cb5-83"><a href="introduction.html#cb5-83" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">1.80</span>, <span class="op">-</span><span class="fl">0.27</span>)</span>
+<span id="cb5-84"><a href="introduction.html#cb5-84" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">1.80</span>, <span class="op">-</span><span class="fl">0.45</span>, <span class="st">&quot;X axis label&quot;</span>)</span>
+<span id="cb5-85"><a href="introduction.html#cb5-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-86"><a href="introduction.html#cb5-86" aria-hidden="true" tabindex="-1"></a><span class="co"># Y Label</span></span>
+<span id="cb5-87"><a href="introduction.html#cb5-87" aria-hidden="true" tabindex="-1"></a>circle(<span class="op">-</span><span class="fl">0.27</span>, <span class="fl">1.80</span>)</span>
+<span id="cb5-88"><a href="introduction.html#cb5-88" aria-hidden="true" tabindex="-1"></a>text(<span class="op">-</span><span class="fl">0.27</span>, <span class="fl">1.6</span>, <span class="st">&quot;Y axis label&quot;</span>)</span>
+<span id="cb5-89"><a href="introduction.html#cb5-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-90"><a href="introduction.html#cb5-90" aria-hidden="true" tabindex="-1"></a><span class="co"># Title</span></span>
+<span id="cb5-91"><a href="introduction.html#cb5-91" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">1.60</span>, <span class="fl">4.13</span>)</span>
+<span id="cb5-92"><a href="introduction.html#cb5-92" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">1.60</span>, <span class="fl">3.93</span>, <span class="st">&quot;Title&quot;</span>)</span>
+<span id="cb5-93"><a href="introduction.html#cb5-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-94"><a href="introduction.html#cb5-94" aria-hidden="true" tabindex="-1"></a><span class="co"># Blue plot</span></span>
+<span id="cb5-95"><a href="introduction.html#cb5-95" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">1.75</span>, <span class="fl">2.80</span>)</span>
+<span id="cb5-96"><a href="introduction.html#cb5-96" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">1.75</span>, <span class="fl">2.60</span>, <span class="st">&quot;Line</span><span class="ch">\n</span><span class="st">(line plot)&quot;</span>)</span>
+<span id="cb5-97"><a href="introduction.html#cb5-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-98"><a href="introduction.html#cb5-98" aria-hidden="true" tabindex="-1"></a><span class="co"># Red plot</span></span>
+<span id="cb5-99"><a href="introduction.html#cb5-99" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">1.20</span>, <span class="fl">0.60</span>)</span>
+<span id="cb5-100"><a href="introduction.html#cb5-100" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">1.20</span>, <span class="fl">0.40</span>, <span class="st">&quot;Line</span><span class="ch">\n</span><span class="st">(line plot)&quot;</span>)</span>
+<span id="cb5-101"><a href="introduction.html#cb5-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-102"><a href="introduction.html#cb5-102" aria-hidden="true" tabindex="-1"></a><span class="co"># Scatter plot</span></span>
+<span id="cb5-103"><a href="introduction.html#cb5-103" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">3.20</span>, <span class="fl">1.75</span>)</span>
+<span id="cb5-104"><a href="introduction.html#cb5-104" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">3.20</span>, <span class="fl">1.55</span>, <span class="st">&quot;Markers</span><span class="ch">\n</span><span class="st">(scatter plot)&quot;</span>)</span>
+<span id="cb5-105"><a href="introduction.html#cb5-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-106"><a href="introduction.html#cb5-106" aria-hidden="true" tabindex="-1"></a><span class="co"># Grid</span></span>
+<span id="cb5-107"><a href="introduction.html#cb5-107" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">3.00</span>, <span class="fl">3.00</span>)</span>
+<span id="cb5-108"><a href="introduction.html#cb5-108" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">3.00</span>, <span class="fl">2.80</span>, <span class="st">&quot;Grid&quot;</span>)</span>
+<span id="cb5-109"><a href="introduction.html#cb5-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-110"><a href="introduction.html#cb5-110" aria-hidden="true" tabindex="-1"></a><span class="co"># Legend</span></span>
+<span id="cb5-111"><a href="introduction.html#cb5-111" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">3.70</span>, <span class="fl">3.80</span>)</span>
+<span id="cb5-112"><a href="introduction.html#cb5-112" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">3.70</span>, <span class="fl">3.60</span>, <span class="st">&quot;Legend&quot;</span>)</span>
+<span id="cb5-113"><a href="introduction.html#cb5-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-114"><a href="introduction.html#cb5-114" aria-hidden="true" tabindex="-1"></a><span class="co"># Axes</span></span>
+<span id="cb5-115"><a href="introduction.html#cb5-115" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">0.5</span>, <span class="fl">0.5</span>)</span>
+<span id="cb5-116"><a href="introduction.html#cb5-116" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">0.5</span>, <span class="fl">0.3</span>, <span class="st">&quot;Axes&quot;</span>)</span>
+<span id="cb5-117"><a href="introduction.html#cb5-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-118"><a href="introduction.html#cb5-118" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure</span></span>
+<span id="cb5-119"><a href="introduction.html#cb5-119" aria-hidden="true" tabindex="-1"></a>circle(<span class="op">-</span><span class="fl">0.3</span>, <span class="fl">0.65</span>)</span>
+<span id="cb5-120"><a href="introduction.html#cb5-120" aria-hidden="true" tabindex="-1"></a>text(<span class="op">-</span><span class="fl">0.3</span>, <span class="fl">0.45</span>, <span class="st">&quot;Figure&quot;</span>)</span>
+<span id="cb5-121"><a href="introduction.html#cb5-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-122"><a href="introduction.html#cb5-122" aria-hidden="true" tabindex="-1"></a>color <span class="op">=</span> <span class="st">&#39;blue&#39;</span></span>
+<span id="cb5-123"><a href="introduction.html#cb5-123" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="st">&#39;Spines&#39;</span>, xy<span class="op">=</span>(<span class="fl">4.0</span>, <span class="fl">0.35</span>), xycoords<span class="op">=</span><span class="st">&#39;data&#39;</span>,</span>
+<span id="cb5-124"><a href="introduction.html#cb5-124" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(<span class="fl">3.3</span>, <span class="fl">0.5</span>), textcoords<span class="op">=</span><span class="st">&#39;data&#39;</span>,</span>
+<span id="cb5-125"><a href="introduction.html#cb5-125" aria-hidden="true" tabindex="-1"></a>            weight<span class="op">=</span><span class="st">&#39;bold&#39;</span>, color<span class="op">=</span>color,</span>
+<span id="cb5-126"><a href="introduction.html#cb5-126" aria-hidden="true" tabindex="-1"></a>            arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">&#39;-&gt;&#39;</span>,</span>
+<span id="cb5-127"><a href="introduction.html#cb5-127" aria-hidden="true" tabindex="-1"></a>                            connectionstyle<span class="op">=</span><span class="st">&quot;arc3&quot;</span>,</span>
+<span id="cb5-128"><a href="introduction.html#cb5-128" aria-hidden="true" tabindex="-1"></a>                            color<span class="op">=</span>color))</span>
+<span id="cb5-129"><a href="introduction.html#cb5-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-130"><a href="introduction.html#cb5-130" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="st">&#39;&#39;</span>, xy<span class="op">=</span>(<span class="fl">3.15</span>, <span class="fl">0.0</span>), xycoords<span class="op">=</span><span class="st">&#39;data&#39;</span>,</span>
+<span id="cb5-131"><a href="introduction.html#cb5-131" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(<span class="fl">3.45</span>, <span class="fl">0.45</span>), textcoords<span class="op">=</span><span class="st">&#39;data&#39;</span>,</span>
+<span id="cb5-132"><a href="introduction.html#cb5-132" aria-hidden="true" tabindex="-1"></a>            weight<span class="op">=</span><span class="st">&#39;bold&#39;</span>, color<span class="op">=</span>color,</span>
+<span id="cb5-133"><a href="introduction.html#cb5-133" aria-hidden="true" tabindex="-1"></a>            arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">&#39;-&gt;&#39;</span>,</span>
+<span id="cb5-134"><a href="introduction.html#cb5-134" aria-hidden="true" tabindex="-1"></a>                            connectionstyle<span class="op">=</span><span class="st">&quot;arc3&quot;</span>,</span>
+<span id="cb5-135"><a href="introduction.html#cb5-135" aria-hidden="true" tabindex="-1"></a>                            color<span class="op">=</span>color))</span>
+<span id="cb5-136"><a href="introduction.html#cb5-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-137"><a href="introduction.html#cb5-137" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">4.0</span>, <span class="op">-</span><span class="fl">0.4</span>, <span class="st">&quot;Made with http://matplotlib.org&quot;</span>,</span>
+<span id="cb5-138"><a href="introduction.html#cb5-138" aria-hidden="true" tabindex="-1"></a>        fontsize<span class="op">=</span><span class="dv">10</span>, ha<span class="op">=</span><span class="st">&quot;right&quot;</span>, color<span class="op">=</span><span class="st">&#39;.5&#39;</span>)</span>
+<span id="cb5-139"><a href="introduction.html#cb5-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-140"><a href="introduction.html#cb5-140" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="01-introduction_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="introduction.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb6-2"><a href="introduction.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb6-3"><a href="introduction.html#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="introduction.html#cb6-4" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">&#39;ggplot&#39;</span>)</span>
+<span id="cb6-5"><a href="introduction.html#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="introduction.html#cb6-6" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(ncols<span class="op">=</span><span class="dv">2</span>, nrows<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb6-7"><a href="introduction.html#cb6-7" aria-hidden="true" tabindex="-1"></a>ax1, ax2, ax3, ax4 <span class="op">=</span> axes.ravel()</span>
+<span id="cb6-8"><a href="introduction.html#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="introduction.html#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co"># scatter plot (Note: `plt.scatter` doesn&#39;t use default colors)</span></span>
+<span id="cb6-10"><a href="introduction.html#cb6-10" aria-hidden="true" tabindex="-1"></a>x, y <span class="op">=</span> np.random.normal(size<span class="op">=</span>(<span class="dv">2</span>, <span class="dv">200</span>))</span>
+<span id="cb6-11"><a href="introduction.html#cb6-11" aria-hidden="true" tabindex="-1"></a>ax1.plot(x, y, <span class="st">&#39;o&#39;</span>)</span>
+<span id="cb6-12"><a href="introduction.html#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="introduction.html#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co"># sinusoidal lines with colors from default color cycle</span></span>
+<span id="cb6-14"><a href="introduction.html#cb6-14" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>np.pi</span>
+<span id="cb6-15"><a href="introduction.html#cb6-15" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, L)</span>
+<span id="cb6-16"><a href="introduction.html#cb6-16" aria-hidden="true" tabindex="-1"></a>ncolors <span class="op">=</span> <span class="bu">len</span>(plt.rcParams[<span class="st">&#39;axes.prop_cycle&#39;</span>])</span>
+<span id="cb6-17"><a href="introduction.html#cb6-17" aria-hidden="true" tabindex="-1"></a>shift <span class="op">=</span> np.linspace(<span class="dv">0</span>, L, ncolors, endpoint<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb6-18"><a href="introduction.html#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> s <span class="kw">in</span> shift:</span>
+<span id="cb6-19"><a href="introduction.html#cb6-19" aria-hidden="true" tabindex="-1"></a>    ax2.plot(x, np.sin(x <span class="op">+</span> s), <span class="st">&#39;-&#39;</span>)</span>
+<span id="cb6-20"><a href="introduction.html#cb6-20" aria-hidden="true" tabindex="-1"></a>ax2.margins(<span class="dv">0</span>)</span>
+<span id="cb6-21"><a href="introduction.html#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-22"><a href="introduction.html#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="co"># bar graphs</span></span>
+<span id="cb6-23"><a href="introduction.html#cb6-23" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">5</span>)</span>
+<span id="cb6-24"><a href="introduction.html#cb6-24" aria-hidden="true" tabindex="-1"></a>y1, y2 <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">25</span>, size<span class="op">=</span>(<span class="dv">2</span>, <span class="dv">5</span>))</span>
+<span id="cb6-25"><a href="introduction.html#cb6-25" aria-hidden="true" tabindex="-1"></a>width <span class="op">=</span> <span class="fl">0.25</span></span>
+<span id="cb6-26"><a href="introduction.html#cb6-26" aria-hidden="true" tabindex="-1"></a>ax3.bar(x, y1, width)</span>
+<span id="cb6-27"><a href="introduction.html#cb6-27" aria-hidden="true" tabindex="-1"></a>ax3.bar(x <span class="op">+</span> width, y2, width,</span>
+<span id="cb6-28"><a href="introduction.html#cb6-28" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="bu">list</span>(plt.rcParams[<span class="st">&#39;axes.prop_cycle&#39;</span>])[<span class="dv">2</span>][<span class="st">&#39;color&#39;</span>])</span>
+<span id="cb6-29"><a href="introduction.html#cb6-29" aria-hidden="true" tabindex="-1"></a>ax3.set_xticks(x <span class="op">+</span> width)</span>
+<span id="cb6-30"><a href="introduction.html#cb6-30" aria-hidden="true" tabindex="-1"></a>ax3.set_xticklabels([<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;c&#39;</span>, <span class="st">&#39;d&#39;</span>, <span class="st">&#39;e&#39;</span>])</span>
+<span id="cb6-31"><a href="introduction.html#cb6-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-32"><a href="introduction.html#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="co"># circles with colors from default color cycle</span></span>
+<span id="cb6-33"><a href="introduction.html#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, color <span class="kw">in</span> <span class="bu">enumerate</span>(plt.rcParams[<span class="st">&#39;axes.prop_cycle&#39;</span>]):</span>
+<span id="cb6-34"><a href="introduction.html#cb6-34" aria-hidden="true" tabindex="-1"></a>    xy <span class="op">=</span> np.random.normal(size<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb6-35"><a href="introduction.html#cb6-35" aria-hidden="true" tabindex="-1"></a>    ax4.add_patch(plt.Circle(xy, radius<span class="op">=</span><span class="fl">0.3</span>, color<span class="op">=</span>color[<span class="st">&#39;color&#39;</span>]))</span>
+<span id="cb6-36"><a href="introduction.html#cb6-36" aria-hidden="true" tabindex="-1"></a>ax4.axis(<span class="st">&#39;equal&#39;</span>)</span>
+<span id="cb6-37"><a href="introduction.html#cb6-37" aria-hidden="true" tabindex="-1"></a>ax4.margins(<span class="dv">0</span>)</span>
+<span id="cb6-38"><a href="introduction.html#cb6-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-39"><a href="introduction.html#cb6-39" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="01-introduction_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="introduction.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/lines_bars_and_markers/cohere.html#sphx-glr-gallery-lines-bars-and-markers-cohere-py</span></span>
+<span id="cb7-2"><a href="introduction.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb7-3"><a href="introduction.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb7-4"><a href="introduction.html#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="introduction.html#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Fixing random state for reproducibility</span></span>
+<span id="cb7-6"><a href="introduction.html#cb7-6" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">19680801</span>)</span>
+<span id="cb7-7"><a href="introduction.html#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="introduction.html#cb7-8" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> <span class="fl">0.01</span></span>
+<span id="cb7-9"><a href="introduction.html#cb7-9" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">30</span>, dt)</span>
+<span id="cb7-10"><a href="introduction.html#cb7-10" aria-hidden="true" tabindex="-1"></a>nse1 <span class="op">=</span> np.random.randn(<span class="bu">len</span>(t))                 <span class="co"># white noise 1</span></span>
+<span id="cb7-11"><a href="introduction.html#cb7-11" aria-hidden="true" tabindex="-1"></a>nse2 <span class="op">=</span> np.random.randn(<span class="bu">len</span>(t))                 <span class="co"># white noise 2</span></span>
+<span id="cb7-12"><a href="introduction.html#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="introduction.html#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Two signals with a coherent part at 10Hz and a random part</span></span>
+<span id="cb7-14"><a href="introduction.html#cb7-14" aria-hidden="true" tabindex="-1"></a>s1 <span class="op">=</span> np.sin(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> <span class="dv">10</span> <span class="op">*</span> t) <span class="op">+</span> nse1</span>
+<span id="cb7-15"><a href="introduction.html#cb7-15" aria-hidden="true" tabindex="-1"></a>s2 <span class="op">=</span> np.sin(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> <span class="dv">10</span> <span class="op">*</span> t) <span class="op">+</span> nse2</span>
+<span id="cb7-16"><a href="introduction.html#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="introduction.html#cb7-17" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">1</span>)</span>
+<span id="cb7-18"><a href="introduction.html#cb7-18" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].plot(t, s1, t, s2)</span>
+<span id="cb7-19"><a href="introduction.html#cb7-19" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_xlim(<span class="dv">0</span>, <span class="dv">2</span>)</span>
+<span id="cb7-20"><a href="introduction.html#cb7-20" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_xlabel(<span class="st">&#39;time&#39;</span>)</span>
+<span id="cb7-21"><a href="introduction.html#cb7-21" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_ylabel(<span class="st">&#39;s1 and s2&#39;</span>)</span>
+<span id="cb7-22"><a href="introduction.html#cb7-22" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].grid(<span class="va">True</span>)</span>
+<span id="cb7-23"><a href="introduction.html#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-24"><a href="introduction.html#cb7-24" aria-hidden="true" tabindex="-1"></a>cxy, f <span class="op">=</span> axs[<span class="dv">1</span>].cohere(s1, s2, <span class="dv">256</span>, <span class="fl">1.</span> <span class="op">/</span> dt)</span>
+<span id="cb7-25"><a href="introduction.html#cb7-25" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_ylabel(<span class="st">&#39;coherence&#39;</span>)</span>
+<span id="cb7-26"><a href="introduction.html#cb7-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-27"><a href="introduction.html#cb7-27" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb7-28"><a href="introduction.html#cb7-28" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="01-introduction_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" /></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="python-environment.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["matplotlib-with-rmarkdown.pdf", "matplotlib-with-rmarkdown.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
