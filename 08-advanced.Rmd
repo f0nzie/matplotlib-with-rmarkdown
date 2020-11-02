@@ -245,7 +245,6 @@ plt.show()
 ```
 
 
-
 ```{python}
 # https://matplotlib.org/gallery/subplots_axes_and_figures/subplots_adjust.html#sphx-glr-gallery-subplots-axes-and-figures-subplots-adjust-py
 
