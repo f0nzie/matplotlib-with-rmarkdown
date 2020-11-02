@@ -1,4 +1,3 @@
-preface
 introduction
 the-hello-world-plot
 python-environment

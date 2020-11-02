@@ -5,4 +5,4 @@ delete_merged_file: true
 before_chapter_script: ["before-each-chapter.R"]
 language:
   ui:
-    chapter_name: "Chapter "
+    chapter_name: "Ch. "
