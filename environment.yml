@@ -15,7 +15,7 @@ dependencies:
   - pip=20.2
   - pyqt=5.9
   - pytorch=1.6
-  - pyamg
+  - pyamg=4.0
   - requests
   - qt=5.9
   - scipy=1.5
