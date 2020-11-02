@@ -6,7 +6,7 @@
 
 ```r
 library(reticulate)
-use_condaenv("r-torch", required = TRUE)
+use_condaenv("r-python", required = TRUE)
 ```
 
 
