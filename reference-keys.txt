@@ -16,4 +16,3 @@ seaborn
 advanced
 adding-labels
 change-of-axes
-math-symbols-printing

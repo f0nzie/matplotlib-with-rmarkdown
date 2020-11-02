@@ -161,7 +161,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="8.1" data-path="advanced.html"><a href="advanced.html#adding-labels"><i class="fa fa-check"></i><b>8.1</b> Adding labels</a></li>
 <li class="chapter" data-level="8.2" data-path="advanced.html"><a href="advanced.html#change-of-axes"><i class="fa fa-check"></i><b>8.2</b> Change of axes</a></li>
-<li class="chapter" data-level="8.3" data-path="advanced.html"><a href="advanced.html#math-symbols-printing"><i class="fa fa-check"></i><b>8.3</b> Math symbols printing</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -360,86 +359,53 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb79-44"><a href="advanced.html#cb79-44" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb79-45"><a href="advanced.html#cb79-45" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <p><img src="08-advanced_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="math-symbols-printing" class="section level2" number="8.3">
-<h2><span class="header-section-number">8.3</span> Math symbols printing</h2>
-<div class="sourceCode" id="cb80"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb80-1"><a href="advanced.html#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="co"># http://scipy-lectures.org/_downloads/ScipyLectures-simple.pdf</span></span>
+<div class="sourceCode" id="cb80"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb80-1"><a href="advanced.html#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/subplots_axes_and_figures/subplots_adjust.html#sphx-glr-gallery-subplots-axes-and-figures-subplots-adjust-py</span></span>
 <span id="cb80-2"><a href="advanced.html#cb80-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb80-3"><a href="advanced.html#cb80-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb80-4"><a href="advanced.html#cb80-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb80-3"><a href="advanced.html#cb80-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb80-4"><a href="advanced.html#cb80-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb80-5"><a href="advanced.html#cb80-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb80-6"><a href="advanced.html#cb80-6" aria-hidden="true" tabindex="-1"></a>eqs <span class="op">=</span> []</span>
-<span id="cb80-7"><a href="advanced.html#cb80-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb80-8"><a href="advanced.html#cb80-8" aria-hidden="true" tabindex="-1"></a>eqs.append((<span class="vs">r&quot;$W^{3\beta}_{\delta_1 \rho_1 \sigma_2} = U^{3\beta}_{\delta_1 \rho_1} + \frac</span><span class="sc">{1}</span><span class="vs"> {8 \pi 2} \int^{\alpha_2}_{\alpha_2} d \alpha^\prime_2 \left[\frac{ U^{2\beta}_{\delta_1 \rho_1} - \alpha^\prime_2U^{1\beta}_{\rho_1 \sigma_2} }{U^{0\beta}_{\rho_1 \sigma_2</span><span class="sc">}}</span><span class="vs">\right]$&quot;</span>))</span>
+<span id="cb80-6"><a href="advanced.html#cb80-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Fixing random state for reproducibility</span></span>
+<span id="cb80-7"><a href="advanced.html#cb80-7" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">19680801</span>)</span>
+<span id="cb80-8"><a href="advanced.html#cb80-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb80-9"><a href="advanced.html#cb80-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb80-10"><a href="advanced.html#cb80-10" aria-hidden="true" tabindex="-1"></a>eqs.append((<span class="vs">r&quot;$\frac{d\rho}{d t} + \rho \vec</span><span class="sc">{v}</span><span class="vs">\cdot\nabla\vec</span><span class="sc">{v}</span><span class="vs"> = -\nabla p + \mu\nabla^2\vec</span><span class="sc">{v}</span><span class="vs"> + \rho \vec</span><span class="sc">{g}</span><span class="vs">$&quot;</span>))</span>
-<span id="cb80-11"><a href="advanced.html#cb80-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb80-12"><a href="advanced.html#cb80-12" aria-hidden="true" tabindex="-1"></a>eqs.append((<span class="vs">r&quot;$\int_{-\infty}^\infty e^{-x^2}dx=\sqrt{\pi}$&quot;</span>))</span>
-<span id="cb80-13"><a href="advanced.html#cb80-13" aria-hidden="true" tabindex="-1"></a>eqs.append((<span class="vs">r&quot;$E = mc^2 = \sqrt</span><span class="sc">{{</span><span class="vs">m_0}^2c^4 + p^2c^2}$&quot;</span>))</span>
+<span id="cb80-10"><a href="advanced.html#cb80-10" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">211</span>)</span>
+<span id="cb80-11"><a href="advanced.html#cb80-11" aria-hidden="true" tabindex="-1"></a>plt.imshow(np.random.random((<span class="dv">100</span>, <span class="dv">100</span>)), cmap<span class="op">=</span>plt.cm.BuPu_r)</span>
+<span id="cb80-12"><a href="advanced.html#cb80-12" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">212</span>)</span>
+<span id="cb80-13"><a href="advanced.html#cb80-13" aria-hidden="true" tabindex="-1"></a>plt.imshow(np.random.random((<span class="dv">100</span>, <span class="dv">100</span>)), cmap<span class="op">=</span>plt.cm.BuPu_r)</span>
 <span id="cb80-14"><a href="advanced.html#cb80-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb80-15"><a href="advanced.html#cb80-15" aria-hidden="true" tabindex="-1"></a>eqs.append((<span class="vs">r&quot;$F_G = G\frac</span><span class="sc">{m_1m_2}</span><span class="vs">{r^2}$&quot;</span>))</span>
-<span id="cb80-16"><a href="advanced.html#cb80-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb80-17"><a href="advanced.html#cb80-17" aria-hidden="true" tabindex="-1"></a>plt.axes([<span class="fl">0.025</span>, <span class="fl">0.025</span>, <span class="fl">0.95</span>, <span class="fl">0.95</span>])</span>
-<span id="cb80-18"><a href="advanced.html#cb80-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb80-19"><a href="advanced.html#cb80-19" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">24</span>):</span>
-<span id="cb80-20"><a href="advanced.html#cb80-20" aria-hidden="true" tabindex="-1"></a>    index <span class="op">=</span> np.random.randint(<span class="dv">0</span>, <span class="bu">len</span>(eqs))</span>
-<span id="cb80-21"><a href="advanced.html#cb80-21" aria-hidden="true" tabindex="-1"></a>    eq <span class="op">=</span> eqs[index]</span>
-<span id="cb80-22"><a href="advanced.html#cb80-22" aria-hidden="true" tabindex="-1"></a>    size <span class="op">=</span> np.random.uniform(<span class="dv">12</span>, <span class="dv">32</span>)</span>
-<span id="cb80-23"><a href="advanced.html#cb80-23" aria-hidden="true" tabindex="-1"></a>    x,y <span class="op">=</span> np.random.uniform(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>)</span>
-<span id="cb80-24"><a href="advanced.html#cb80-24" aria-hidden="true" tabindex="-1"></a>    alpha <span class="op">=</span> np.random.uniform(<span class="fl">0.25</span>, <span class="fl">.75</span>)</span>
-<span id="cb80-25"><a href="advanced.html#cb80-25" aria-hidden="true" tabindex="-1"></a>    plt.text(x, y, eq, ha<span class="op">=</span><span class="st">&#39;center&#39;</span>, va<span class="op">=</span><span class="st">&#39;center&#39;</span>, color<span class="op">=</span><span class="st">&quot;#11557c&quot;</span>, alpha<span class="op">=</span>alpha,transform<span class="op">=</span>plt.gca().transAxes, fontsize<span class="op">=</span>size, clip_on<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb80-26"><a href="advanced.html#cb80-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb80-27"><a href="advanced.html#cb80-27" aria-hidden="true" tabindex="-1"></a>plt.xticks([])</span>
-<span id="cb80-28"><a href="advanced.html#cb80-28" aria-hidden="true" tabindex="-1"></a>plt.yticks([])</span>
-<span id="cb80-29"><a href="advanced.html#cb80-29" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<span id="cb80-15"><a href="advanced.html#cb80-15" aria-hidden="true" tabindex="-1"></a>plt.subplots_adjust(bottom<span class="op">=</span><span class="fl">0.1</span>, right<span class="op">=</span><span class="fl">0.8</span>, top<span class="op">=</span><span class="fl">0.9</span>)</span>
+<span id="cb80-16"><a href="advanced.html#cb80-16" aria-hidden="true" tabindex="-1"></a>cax <span class="op">=</span> plt.axes([<span class="fl">0.85</span>, <span class="fl">0.1</span>, <span class="fl">0.075</span>, <span class="fl">0.8</span>])</span>
+<span id="cb80-17"><a href="advanced.html#cb80-17" aria-hidden="true" tabindex="-1"></a>plt.colorbar(cax<span class="op">=</span>cax)</span>
+<span id="cb80-18"><a href="advanced.html#cb80-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <p><img src="08-advanced_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" /></p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb81-1"><a href="advanced.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/subplots_axes_and_figures/subplots_adjust.html#sphx-glr-gallery-subplots-axes-and-figures-subplots-adjust-py</span></span>
-<span id="cb81-2"><a href="advanced.html#cb81-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-3"><a href="advanced.html#cb81-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<div class="sourceCode" id="cb81"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb81-1"><a href="advanced.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="co"># step demo</span></span>
+<span id="cb81-2"><a href="advanced.html#cb81-2" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py</span></span>
+<span id="cb81-3"><a href="advanced.html#cb81-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-4"><a href="advanced.html#cb81-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb81-5"><a href="advanced.html#cb81-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-6"><a href="advanced.html#cb81-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Fixing random state for reproducibility</span></span>
-<span id="cb81-7"><a href="advanced.html#cb81-7" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">19680801</span>)</span>
-<span id="cb81-8"><a href="advanced.html#cb81-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-9"><a href="advanced.html#cb81-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-10"><a href="advanced.html#cb81-10" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">211</span>)</span>
-<span id="cb81-11"><a href="advanced.html#cb81-11" aria-hidden="true" tabindex="-1"></a>plt.imshow(np.random.random((<span class="dv">100</span>, <span class="dv">100</span>)), cmap<span class="op">=</span>plt.cm.BuPu_r)</span>
-<span id="cb81-12"><a href="advanced.html#cb81-12" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">212</span>)</span>
-<span id="cb81-13"><a href="advanced.html#cb81-13" aria-hidden="true" tabindex="-1"></a>plt.imshow(np.random.random((<span class="dv">100</span>, <span class="dv">100</span>)), cmap<span class="op">=</span>plt.cm.BuPu_r)</span>
-<span id="cb81-14"><a href="advanced.html#cb81-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-15"><a href="advanced.html#cb81-15" aria-hidden="true" tabindex="-1"></a>plt.subplots_adjust(bottom<span class="op">=</span><span class="fl">0.1</span>, right<span class="op">=</span><span class="fl">0.8</span>, top<span class="op">=</span><span class="fl">0.9</span>)</span>
-<span id="cb81-16"><a href="advanced.html#cb81-16" aria-hidden="true" tabindex="-1"></a>cax <span class="op">=</span> plt.axes([<span class="fl">0.85</span>, <span class="fl">0.1</span>, <span class="fl">0.075</span>, <span class="fl">0.8</span>])</span>
-<span id="cb81-17"><a href="advanced.html#cb81-17" aria-hidden="true" tabindex="-1"></a>plt.colorbar(cax<span class="op">=</span>cax)</span>
-<span id="cb81-18"><a href="advanced.html#cb81-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<span id="cb81-5"><a href="advanced.html#cb81-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy <span class="im">import</span> ma</span>
+<span id="cb81-6"><a href="advanced.html#cb81-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb81-7"><a href="advanced.html#cb81-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-8"><a href="advanced.html#cb81-8" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">1</span>, <span class="dv">7</span>, <span class="fl">0.4</span>)</span>
+<span id="cb81-9"><a href="advanced.html#cb81-9" aria-hidden="true" tabindex="-1"></a>y0 <span class="op">=</span> np.sin(x)</span>
+<span id="cb81-10"><a href="advanced.html#cb81-10" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> y0.copy() <span class="op">+</span> <span class="fl">2.5</span></span>
+<span id="cb81-11"><a href="advanced.html#cb81-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-12"><a href="advanced.html#cb81-12" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, label<span class="op">=</span><span class="st">&#39;pre (default)&#39;</span>)</span>
+<span id="cb81-13"><a href="advanced.html#cb81-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-14"><a href="advanced.html#cb81-14" aria-hidden="true" tabindex="-1"></a>y <span class="op">-=</span> <span class="fl">0.5</span></span>
+<span id="cb81-15"><a href="advanced.html#cb81-15" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, where<span class="op">=</span><span class="st">&#39;mid&#39;</span>, label<span class="op">=</span><span class="st">&#39;mid&#39;</span>)</span>
+<span id="cb81-16"><a href="advanced.html#cb81-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-17"><a href="advanced.html#cb81-17" aria-hidden="true" tabindex="-1"></a>y <span class="op">-=</span> <span class="fl">0.5</span></span>
+<span id="cb81-18"><a href="advanced.html#cb81-18" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, where<span class="op">=</span><span class="st">&#39;post&#39;</span>, label<span class="op">=</span><span class="st">&#39;post&#39;</span>)</span>
+<span id="cb81-19"><a href="advanced.html#cb81-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-20"><a href="advanced.html#cb81-20" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> ma.masked_where((y0 <span class="op">&gt;</span> <span class="op">-</span><span class="fl">0.15</span>) <span class="op">&amp;</span> (y0 <span class="op">&lt;</span> <span class="fl">0.15</span>), y <span class="op">-</span> <span class="fl">0.5</span>)</span>
+<span id="cb81-21"><a href="advanced.html#cb81-21" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, label<span class="op">=</span><span class="st">&#39;masked (pre)&#39;</span>)</span>
+<span id="cb81-22"><a href="advanced.html#cb81-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-23"><a href="advanced.html#cb81-23" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb81-24"><a href="advanced.html#cb81-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-25"><a href="advanced.html#cb81-25" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="dv">0</span>, <span class="dv">7</span>)</span>
+<span id="cb81-26"><a href="advanced.html#cb81-26" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="op">-</span><span class="fl">0.5</span>, <span class="dv">4</span>)</span>
+<span id="cb81-27"><a href="advanced.html#cb81-27" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <p><img src="08-advanced_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" /></p>
-<div class="sourceCode" id="cb82"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb82-1"><a href="advanced.html#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="co"># step demo</span></span>
-<span id="cb82-2"><a href="advanced.html#cb82-2" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py</span></span>
-<span id="cb82-3"><a href="advanced.html#cb82-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb82-4"><a href="advanced.html#cb82-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb82-5"><a href="advanced.html#cb82-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy <span class="im">import</span> ma</span>
-<span id="cb82-6"><a href="advanced.html#cb82-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb82-7"><a href="advanced.html#cb82-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb82-8"><a href="advanced.html#cb82-8" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">1</span>, <span class="dv">7</span>, <span class="fl">0.4</span>)</span>
-<span id="cb82-9"><a href="advanced.html#cb82-9" aria-hidden="true" tabindex="-1"></a>y0 <span class="op">=</span> np.sin(x)</span>
-<span id="cb82-10"><a href="advanced.html#cb82-10" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> y0.copy() <span class="op">+</span> <span class="fl">2.5</span></span>
-<span id="cb82-11"><a href="advanced.html#cb82-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb82-12"><a href="advanced.html#cb82-12" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, label<span class="op">=</span><span class="st">&#39;pre (default)&#39;</span>)</span>
-<span id="cb82-13"><a href="advanced.html#cb82-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb82-14"><a href="advanced.html#cb82-14" aria-hidden="true" tabindex="-1"></a>y <span class="op">-=</span> <span class="fl">0.5</span></span>
-<span id="cb82-15"><a href="advanced.html#cb82-15" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, where<span class="op">=</span><span class="st">&#39;mid&#39;</span>, label<span class="op">=</span><span class="st">&#39;mid&#39;</span>)</span>
-<span id="cb82-16"><a href="advanced.html#cb82-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb82-17"><a href="advanced.html#cb82-17" aria-hidden="true" tabindex="-1"></a>y <span class="op">-=</span> <span class="fl">0.5</span></span>
-<span id="cb82-18"><a href="advanced.html#cb82-18" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, where<span class="op">=</span><span class="st">&#39;post&#39;</span>, label<span class="op">=</span><span class="st">&#39;post&#39;</span>)</span>
-<span id="cb82-19"><a href="advanced.html#cb82-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb82-20"><a href="advanced.html#cb82-20" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> ma.masked_where((y0 <span class="op">&gt;</span> <span class="op">-</span><span class="fl">0.15</span>) <span class="op">&amp;</span> (y0 <span class="op">&lt;</span> <span class="fl">0.15</span>), y <span class="op">-</span> <span class="fl">0.5</span>)</span>
-<span id="cb82-21"><a href="advanced.html#cb82-21" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, label<span class="op">=</span><span class="st">&#39;masked (pre)&#39;</span>)</span>
-<span id="cb82-22"><a href="advanced.html#cb82-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb82-23"><a href="advanced.html#cb82-23" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb82-24"><a href="advanced.html#cb82-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb82-25"><a href="advanced.html#cb82-25" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="dv">0</span>, <span class="dv">7</span>)</span>
-<span id="cb82-26"><a href="advanced.html#cb82-26" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="op">-</span><span class="fl">0.5</span>, <span class="dv">4</span>)</span>
-<span id="cb82-27"><a href="advanced.html#cb82-27" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="08-advanced_files/figure-html/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" /></p>
 
 </div>
 </div>
