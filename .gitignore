@@ -17,3 +17,9 @@ bookdown/
 *.html
 
 *.png
+
+matplotlib-voxels.pdf
+
+matplotlib-simple.pdf
+
+*.pdf

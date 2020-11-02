@@ -1,12 +1,16 @@
----
-title: "R plot using Python variables"
-output:
-  pdf_document: default
-  html_notebook: default
----
+# Sharing data objects
+
+
+* Always load the Python environment you are sure has the packages
 
 ```{r}
 library(reticulate)
+use_condaenv("r-torch", required = TRUE)
+py_config()
+```
+
+
+```{r, eval=FALSE}
 reticulate::use_python("..\\..\\python-3.6.7.amd64\\python.exe")
 reticulate::py_config()
 reticulate::py_available()
@@ -21,7 +25,9 @@ autos = cars
 
 ```{python}
 #Python
+import numpy
 import pandas 
+
 autos_py = r.autos
 autos_py['time']=autos_py['dist']/autos_py['speed']
 ```

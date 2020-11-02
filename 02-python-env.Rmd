@@ -1,11 +1,14 @@
----
-title: "R Notebook"
-output: html_notebook
----
+# Python environment
+
+```{r}
+# library(reticulate)
+# reticulate::use_python("..\\..\\python-3.6.7.amd64\\python.exe")
+# reticulate::py_config()
+# reticulate::py_available()
+```
 
 ```{r}
 library(reticulate)
-# reticulate::conda_list()
 ```
 
 ```{r}
@@ -14,6 +17,12 @@ getwd()
 ```
 
 ```{r}
+library(reticulate)
+use_condaenv("r-python", required = TRUE)
+py_config()
+```
+
+```{r, eval=FALSE}
 reticulate::use_python("..\\..\\python-3.6.7.amd64\\python.exe")
 reticulate::py_config()
 reticulate::py_available()
@@ -24,8 +33,9 @@ reticulate::py_available()
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
+```
 
-
+```{python}
 t = np.arange(0.0, 2.0, 0.01)
 s = 1 + np.sin(2 * np.pi * t)
 

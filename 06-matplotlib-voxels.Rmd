@@ -1,25 +1,27 @@
----
-title: "Voxels"
-output:
-  html_document:
-    df_print: paged
-  pdf_document: default
----
+# Voxels
 
-```{r setup, include = FALSE, error=TRUE, message=FALSE, warning=FALSE}
-knitr::opts_chunk$set(echo = TRUE, 
-                      comment = NA,
-                      error = TRUE,
-                      warning = FALSE,
-                      message = FALSE,
-                      fig.align = 'center')
-```
 
 ```{r}
 library(reticulate)
-reticulate::use_python("..\\..\\python-3.6.7.amd64\\python.exe")
+reticulate::use_condaenv("r-torch")
 reticulate::py_config()
-reticulate::py_available()
+```
+
+
+
+```{r, eval=FALSE}
+# load the package that makes R and Python talk
+library(reticulate)
+
+# set the preferred Python to execute
+user_profile <- Sys.getenv("USERPROFILE")                    # user folder
+python_portable <- normalizePath(file.path(user_profile,     # Python location
+                                "WPy-3710zero/python-3.7.1.amd64/python.exe"))
+
+reticulate::use_python(python_portable, required = TRUE)
+ 
+# find out if it took it
+reticulate::py_config()
 ```
 
 ```{python}
@@ -355,7 +357,7 @@ plt.show()
 
 
 
-```{python}
+```{python, eval = FALSE}
 # https://stackoverflow.com/a/49281004/5270873
 
 from mpl_toolkits.mplot3d import Axes3D
