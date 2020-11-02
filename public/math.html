@@ -24,7 +24,7 @@
 <meta name="author" content="Alfonso R. Reyes" />
 
 
-<meta name="date" content="2020-11-01" />
+<meta name="date" content="2020-11-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -145,11 +145,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4" data-path="math.html"><a href="math.html"><i class="fa fa-check"></i><b>4</b> Math</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="math.html"><a href="math.html#middle"><i class="fa fa-check"></i><b>4.1</b> Middle</a></li>
+<li class="chapter" data-level="4.2" data-path="math.html"><a href="math.html#surface-functions"><i class="fa fa-check"></i><b>4.2</b> Surface functions</a></li>
+<li class="chapter" data-level="4.3" data-path="math.html"><a href="math.html#machine-learning"><i class="fa fa-check"></i><b>4.3</b> Machine Learning</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="scientific.html"><a href="scientific.html"><i class="fa fa-check"></i><b>5</b> Scientific</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="scientific.html"><a href="scientific.html#weird"><i class="fa fa-check"></i><b>5.1</b> weird</a></li>
-<li class="chapter" data-level="5.2" data-path="scientific.html"><a href="scientific.html#middle-1"><i class="fa fa-check"></i><b>5.2</b> Middle</a></li>
+<li class="chapter" data-level="5.1" data-path="scientific.html"><a href="scientific.html#solve-large-scale-eigenvalue-problems"><i class="fa fa-check"></i><b>5.1</b> Solve large scale eigenvalue problems</a></li>
+<li class="chapter" data-level="5.2" data-path="scientific.html"><a href="scientific.html#computational-physics"><i class="fa fa-check"></i><b>5.2</b> Computational Physics</a></li>
+<li class="chapter" data-level="5.3" data-path="scientific.html"><a href="scientific.html#contour-maps"><i class="fa fa-check"></i><b>5.3</b> Contour maps</a></li>
+<li class="chapter" data-level="5.4" data-path="scientific.html"><a href="scientific.html#real-time"><i class="fa fa-check"></i><b>5.4</b> Real time</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="voxels.html"><a href="voxels.html"><i class="fa fa-check"></i><b>6</b> Voxels</a></li>
 <li class="chapter" data-level="7" data-path="seaborn.html"><a href="seaborn.html"><i class="fa fa-check"></i><b>7</b> Seaborn</a></li>
@@ -157,6 +161,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="8.1" data-path="advanced.html"><a href="advanced.html#adding-labels"><i class="fa fa-check"></i><b>8.1</b> Adding labels</a></li>
 <li class="chapter" data-level="8.2" data-path="advanced.html"><a href="advanced.html#change-of-axes"><i class="fa fa-check"></i><b>8.2</b> Change of axes</a></li>
+<li class="chapter" data-level="8.3" data-path="advanced.html"><a href="advanced.html#math-symbols-printing"><i class="fa fa-check"></i><b>8.3</b> Math symbols printing</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -181,7 +186,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="math" class="section level1" number="4">
 <h1><span class="header-section-number">Ch. 4</span> Math</h1>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="math.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb21-2"><a href="math.html#cb21-2" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">use_condaenv</span>(<span class="st">&quot;r-torch&quot;</span>)</span></code></pre></div>
+<span id="cb21-2"><a href="math.html#cb21-2" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">use_condaenv</span>(<span class="st">&quot;r-python&quot;</span>)</span></code></pre></div>
 <div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="math.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://www.geeksforgeeks.org/plot-mathematical-expressions-in-python-using-matplotlib/</span></span>
 <span id="cb22-2"><a href="math.html#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Import libraries </span></span>
 <span id="cb22-3"><a href="math.html#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt </span>
@@ -310,62 +315,65 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb25-23"><a href="math.html#cb25-23" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">2</span>].set_ylim(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
 <span id="cb25-24"><a href="math.html#cb25-24" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <p><img src="04-math_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="math.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/mplot3d/offset.html#sphx-glr-gallery-mplot3d-offset-py</span></span>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="math.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># http://www.scipy-lectures.org/intro/matplotlib/auto_examples/plot_plot3d_ex.html</span></span>
 <span id="cb26-2"><a href="math.html#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-3"><a href="math.html#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co"># This import registers the 3D projection, but is otherwise unused.</span></span>
-<span id="cb26-4"><a href="math.html#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D  <span class="co"># noqa: F401 unused import</span></span>
-<span id="cb26-5"><a href="math.html#cb26-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-6"><a href="math.html#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb26-7"><a href="math.html#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb26-8"><a href="math.html#cb26-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-9"><a href="math.html#cb26-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-10"><a href="math.html#cb26-10" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
-<span id="cb26-11"><a href="math.html#cb26-11" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
-<span id="cb26-12"><a href="math.html#cb26-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-13"><a href="math.html#cb26-13" aria-hidden="true" tabindex="-1"></a>X, Y <span class="op">=</span> np.mgrid[<span class="dv">0</span>:<span class="dv">6</span><span class="op">*</span>np.pi:<span class="fl">0.25</span>, <span class="dv">0</span>:<span class="dv">4</span><span class="op">*</span>np.pi:<span class="fl">0.25</span>]</span>
-<span id="cb26-14"><a href="math.html#cb26-14" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> np.sqrt(np.<span class="bu">abs</span>(np.cos(X) <span class="op">+</span> np.cos(Y)))</span>
-<span id="cb26-15"><a href="math.html#cb26-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-16"><a href="math.html#cb26-16" aria-hidden="true" tabindex="-1"></a>ax.plot_surface(X <span class="op">+</span> <span class="fl">1e5</span>, Y <span class="op">+</span> <span class="fl">1e5</span>, Z, cmap<span class="op">=</span><span class="st">&#39;autumn&#39;</span>, cstride<span class="op">=</span><span class="dv">2</span>, rstride<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb26-17"><a href="math.html#cb26-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-18"><a href="math.html#cb26-18" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">&quot;X label&quot;</span>)</span>
-<span id="cb26-19"><a href="math.html#cb26-19" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">&quot;Y label&quot;</span>)</span>
-<span id="cb26-20"><a href="math.html#cb26-20" aria-hidden="true" tabindex="-1"></a>ax.set_zlabel(<span class="st">&quot;Z label&quot;</span>)</span>
-<span id="cb26-21"><a href="math.html#cb26-21" aria-hidden="true" tabindex="-1"></a>ax.set_zlim(<span class="dv">0</span>, <span class="dv">2</span>)</span>
-<span id="cb26-22"><a href="math.html#cb26-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<span id="cb26-3"><a href="math.html#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb26-4"><a href="math.html#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb26-5"><a href="math.html#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
+<span id="cb26-6"><a href="math.html#cb26-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-7"><a href="math.html#cb26-7" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb26-8"><a href="math.html#cb26-8" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> Axes3D(fig)</span>
+<span id="cb26-9"><a href="math.html#cb26-9" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.arange(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="fl">0.25</span>)</span>
+<span id="cb26-10"><a href="math.html#cb26-10" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> np.arange(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="fl">0.25</span>)</span>
+<span id="cb26-11"><a href="math.html#cb26-11" aria-hidden="true" tabindex="-1"></a>X, Y <span class="op">=</span> np.meshgrid(X, Y)</span>
+<span id="cb26-12"><a href="math.html#cb26-12" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> np.sqrt(X <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> Y <span class="op">**</span> <span class="dv">2</span>)</span>
+<span id="cb26-13"><a href="math.html#cb26-13" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> np.sin(R)</span>
+<span id="cb26-14"><a href="math.html#cb26-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-15"><a href="math.html#cb26-15" aria-hidden="true" tabindex="-1"></a>ax.plot_surface(X, Y, Z, rstride<span class="op">=</span><span class="dv">1</span>, cstride<span class="op">=</span><span class="dv">1</span>, cmap<span class="op">=</span>plt.cm.hot)</span>
+<span id="cb26-16"><a href="math.html#cb26-16" aria-hidden="true" tabindex="-1"></a>ax.contourf(X, Y, Z, zdir<span class="op">=</span><span class="st">&#39;z&#39;</span>, offset<span class="op">=-</span><span class="dv">2</span>, cmap<span class="op">=</span>plt.cm.hot)</span>
+<span id="cb26-17"><a href="math.html#cb26-17" aria-hidden="true" tabindex="-1"></a>ax.set_zlim(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb26-18"><a href="math.html#cb26-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <p><img src="04-math_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="math.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># http://www.scipy-lectures.org/intro/matplotlib/auto_examples/plot_plot3d_ex.html</span></span>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="math.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://www.python-course.eu/matplotlib_multiple_figures.php</span></span>
 <span id="cb27-2"><a href="math.html#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-3"><a href="math.html#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb27-4"><a href="math.html#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb27-5"><a href="math.html#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
-<span id="cb27-6"><a href="math.html#cb27-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-7"><a href="math.html#cb27-7" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
-<span id="cb27-8"><a href="math.html#cb27-8" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> Axes3D(fig)</span>
-<span id="cb27-9"><a href="math.html#cb27-9" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.arange(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="fl">0.25</span>)</span>
-<span id="cb27-10"><a href="math.html#cb27-10" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> np.arange(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="fl">0.25</span>)</span>
-<span id="cb27-11"><a href="math.html#cb27-11" aria-hidden="true" tabindex="-1"></a>X, Y <span class="op">=</span> np.meshgrid(X, Y)</span>
-<span id="cb27-12"><a href="math.html#cb27-12" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> np.sqrt(X <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> Y <span class="op">**</span> <span class="dv">2</span>)</span>
-<span id="cb27-13"><a href="math.html#cb27-13" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> np.sin(R)</span>
-<span id="cb27-14"><a href="math.html#cb27-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-15"><a href="math.html#cb27-15" aria-hidden="true" tabindex="-1"></a>ax.plot_surface(X, Y, Z, rstride<span class="op">=</span><span class="dv">1</span>, cstride<span class="op">=</span><span class="dv">1</span>, cmap<span class="op">=</span>plt.cm.hot)</span>
-<span id="cb27-16"><a href="math.html#cb27-16" aria-hidden="true" tabindex="-1"></a>ax.contourf(X, Y, Z, zdir<span class="op">=</span><span class="st">&#39;z&#39;</span>, offset<span class="op">=-</span><span class="dv">2</span>, cmap<span class="op">=</span>plt.cm.hot)</span>
-<span id="cb27-17"><a href="math.html#cb27-17" aria-hidden="true" tabindex="-1"></a>ax.set_zlim(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>)</span>
-<span id="cb27-18"><a href="math.html#cb27-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<span id="cb27-5"><a href="math.html#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(t):</span>
+<span id="cb27-6"><a href="math.html#cb27-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.exp(<span class="op">-</span>t) <span class="op">*</span> np.cos(<span class="dv">2</span><span class="op">*</span>np.pi<span class="op">*</span>t)</span>
+<span id="cb27-7"><a href="math.html#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> g(t):</span>
+<span id="cb27-8"><a href="math.html#cb27-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.sin(t) <span class="op">*</span> np.cos(<span class="dv">1</span><span class="op">/</span>(t<span class="op">+</span><span class="fl">0.1</span>))</span>
+<span id="cb27-9"><a href="math.html#cb27-9" aria-hidden="true" tabindex="-1"></a>t1 <span class="op">=</span> np.arange(<span class="fl">0.0</span>, <span class="fl">5.0</span>, <span class="fl">0.1</span>)</span>
+<span id="cb27-10"><a href="math.html#cb27-10" aria-hidden="true" tabindex="-1"></a>t2 <span class="op">=</span> np.arange(<span class="fl">0.0</span>, <span class="fl">5.0</span>, <span class="fl">0.02</span>)</span>
+<span id="cb27-11"><a href="math.html#cb27-11" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">212</span>)</span>
+<span id="cb27-12"><a href="math.html#cb27-12" aria-hidden="true" tabindex="-1"></a>plt.plot(t1, g(t1), <span class="st">&#39;ro&#39;</span>, t2, f(t2), <span class="st">&#39;k&#39;</span>)</span>
+<span id="cb27-13"><a href="math.html#cb27-13" aria-hidden="true" tabindex="-1"></a>plt.grid(color<span class="op">=</span><span class="st">&#39;b&#39;</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, linestyle<span class="op">=</span><span class="st">&#39;dashed&#39;</span>, linewidth<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb27-14"><a href="math.html#cb27-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <p><img src="04-math_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" /></p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="math.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://www.python-course.eu/matplotlib_multiple_figures.php</span></span>
+</div>
+<div id="surface-functions" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Surface functions</h2>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="math.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/mplot3d/offset.html#sphx-glr-gallery-mplot3d-offset-py</span></span>
 <span id="cb28-2"><a href="math.html#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-3"><a href="math.html#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb28-4"><a href="math.html#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb28-5"><a href="math.html#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(t):</span>
-<span id="cb28-6"><a href="math.html#cb28-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.exp(<span class="op">-</span>t) <span class="op">*</span> np.cos(<span class="dv">2</span><span class="op">*</span>np.pi<span class="op">*</span>t)</span>
-<span id="cb28-7"><a href="math.html#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> g(t):</span>
-<span id="cb28-8"><a href="math.html#cb28-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.sin(t) <span class="op">*</span> np.cos(<span class="dv">1</span><span class="op">/</span>(t<span class="op">+</span><span class="fl">0.1</span>))</span>
-<span id="cb28-9"><a href="math.html#cb28-9" aria-hidden="true" tabindex="-1"></a>t1 <span class="op">=</span> np.arange(<span class="fl">0.0</span>, <span class="fl">5.0</span>, <span class="fl">0.1</span>)</span>
-<span id="cb28-10"><a href="math.html#cb28-10" aria-hidden="true" tabindex="-1"></a>t2 <span class="op">=</span> np.arange(<span class="fl">0.0</span>, <span class="fl">5.0</span>, <span class="fl">0.02</span>)</span>
-<span id="cb28-11"><a href="math.html#cb28-11" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">212</span>)</span>
-<span id="cb28-12"><a href="math.html#cb28-12" aria-hidden="true" tabindex="-1"></a>plt.plot(t1, g(t1), <span class="st">&#39;ro&#39;</span>, t2, f(t2), <span class="st">&#39;k&#39;</span>)</span>
-<span id="cb28-13"><a href="math.html#cb28-13" aria-hidden="true" tabindex="-1"></a>plt.grid(color<span class="op">=</span><span class="st">&#39;b&#39;</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, linestyle<span class="op">=</span><span class="st">&#39;dashed&#39;</span>, linewidth<span class="op">=</span><span class="fl">0.5</span>)</span>
-<span id="cb28-14"><a href="math.html#cb28-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<span id="cb28-3"><a href="math.html#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="co"># This import registers the 3D projection, but is otherwise unused.</span></span>
+<span id="cb28-4"><a href="math.html#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D  <span class="co"># noqa: F401 unused import</span></span>
+<span id="cb28-5"><a href="math.html#cb28-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-6"><a href="math.html#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb28-7"><a href="math.html#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb28-8"><a href="math.html#cb28-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-9"><a href="math.html#cb28-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-10"><a href="math.html#cb28-10" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb28-11"><a href="math.html#cb28-11" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
+<span id="cb28-12"><a href="math.html#cb28-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-13"><a href="math.html#cb28-13" aria-hidden="true" tabindex="-1"></a>X, Y <span class="op">=</span> np.mgrid[<span class="dv">0</span>:<span class="dv">6</span><span class="op">*</span>np.pi:<span class="fl">0.25</span>, <span class="dv">0</span>:<span class="dv">4</span><span class="op">*</span>np.pi:<span class="fl">0.25</span>]</span>
+<span id="cb28-14"><a href="math.html#cb28-14" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> np.sqrt(np.<span class="bu">abs</span>(np.cos(X) <span class="op">+</span> np.cos(Y)))</span>
+<span id="cb28-15"><a href="math.html#cb28-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-16"><a href="math.html#cb28-16" aria-hidden="true" tabindex="-1"></a>ax.plot_surface(X <span class="op">+</span> <span class="fl">1e5</span>, Y <span class="op">+</span> <span class="fl">1e5</span>, Z, cmap<span class="op">=</span><span class="st">&#39;autumn&#39;</span>, cstride<span class="op">=</span><span class="dv">2</span>, rstride<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb28-17"><a href="math.html#cb28-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-18"><a href="math.html#cb28-18" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">&quot;X label&quot;</span>)</span>
+<span id="cb28-19"><a href="math.html#cb28-19" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">&quot;Y label&quot;</span>)</span>
+<span id="cb28-20"><a href="math.html#cb28-20" aria-hidden="true" tabindex="-1"></a>ax.set_zlabel(<span class="st">&quot;Z label&quot;</span>)</span>
+<span id="cb28-21"><a href="math.html#cb28-21" aria-hidden="true" tabindex="-1"></a>ax.set_zlim(<span class="dv">0</span>, <span class="dv">2</span>)</span>
+<span id="cb28-22"><a href="math.html#cb28-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <p><img src="04-math_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="math.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/surface3d_radial.py</span></span>
 <span id="cb29-2"><a href="math.html#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -471,6 +479,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb32-11"><a href="math.html#cb32-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb32-12"><a href="math.html#cb32-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <p><img src="04-math_files/figure-html/unnamed-chunk-12-1.png" width="90%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="machine-learning" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Machine Learning</h2>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="math.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb33-2"><a href="math.html#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
+<span id="cb33-3"><a href="math.html#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> neighbors, datasets</span>
+<span id="cb33-4"><a href="math.html#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.colors <span class="im">import</span> ListedColormap</span>
+<span id="cb33-5"><a href="math.html#cb33-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-6"><a href="math.html#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create color maps for 3-class classification problem, as with iris</span></span>
+<span id="cb33-7"><a href="math.html#cb33-7" aria-hidden="true" tabindex="-1"></a>cmap_light <span class="op">=</span> ListedColormap([<span class="st">&#39;#FFAAAA&#39;</span>,<span class="st">&#39;#AAFFAA&#39;</span>,<span class="st">&#39;#AAAAFF&#39;</span>])</span>
+<span id="cb33-8"><a href="math.html#cb33-8" aria-hidden="true" tabindex="-1"></a>cmap_bold <span class="op">=</span> ListedColormap([<span class="st">&#39;#FF0000&#39;</span>,<span class="st">&#39;#00FF00&#39;</span>,<span class="st">&#39;#0000FF&#39;</span>])</span>
+<span id="cb33-9"><a href="math.html#cb33-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-10"><a href="math.html#cb33-10" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> datasets.load_iris()</span>
+<span id="cb33-11"><a href="math.html#cb33-11" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> iris.data[:, :<span class="dv">2</span>]  <span class="co"># we only take the first two features. We could</span></span>
+<span id="cb33-12"><a href="math.html#cb33-12" aria-hidden="true" tabindex="-1"></a>                      <span class="co"># avoid this ugly slicing by using a two-dim dataset</span></span>
+<span id="cb33-13"><a href="math.html#cb33-13" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> iris.target</span>
+<span id="cb33-14"><a href="math.html#cb33-14" aria-hidden="true" tabindex="-1"></a>knn <span class="op">=</span> neighbors.KNeighborsClassifier(n_neighbors<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb33-15"><a href="math.html#cb33-15" aria-hidden="true" tabindex="-1"></a>knn.fit(X, y)</span>
+<span id="cb33-16"><a href="math.html#cb33-16" aria-hidden="true" tabindex="-1"></a>x_min, x_max <span class="op">=</span> X[:, <span class="dv">0</span>].<span class="bu">min</span>() <span class="op">-</span> <span class="fl">.1</span>, X[:, <span class="dv">0</span>].<span class="bu">max</span>() <span class="op">+</span> <span class="fl">.1</span></span>
+<span id="cb33-17"><a href="math.html#cb33-17" aria-hidden="true" tabindex="-1"></a>y_min, y_max <span class="op">=</span> X[:, <span class="dv">1</span>].<span class="bu">min</span>() <span class="op">-</span> <span class="fl">.1</span>, X[:, <span class="dv">1</span>].<span class="bu">max</span>() <span class="op">+</span> <span class="fl">.1</span></span>
+<span id="cb33-18"><a href="math.html#cb33-18" aria-hidden="true" tabindex="-1"></a>xx, yy <span class="op">=</span> np.meshgrid(np.linspace(x_min, x_max, <span class="dv">100</span>), np.linspace(y_min, y_max, <span class="dv">100</span>))</span>
+<span id="cb33-19"><a href="math.html#cb33-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-20"><a href="math.html#cb33-20" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> knn.predict(np.c_[xx.ravel(), yy.ravel()])</span>
+<span id="cb33-21"><a href="math.html#cb33-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-22"><a href="math.html#cb33-22" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> Z.reshape(xx.shape)</span>
+<span id="cb33-23"><a href="math.html#cb33-23" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
+<span id="cb33-24"><a href="math.html#cb33-24" aria-hidden="true" tabindex="-1"></a>plt.pcolormesh(xx, yy, Z, cmap<span class="op">=</span>cmap_light)</span>
+<span id="cb33-25"><a href="math.html#cb33-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-26"><a href="math.html#cb33-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot also the training points</span></span>
+<span id="cb33-27"><a href="math.html#cb33-27" aria-hidden="true" tabindex="-1"></a>plt.scatter(X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], c<span class="op">=</span>y, cmap<span class="op">=</span>cmap_bold)</span>
+<span id="cb33-28"><a href="math.html#cb33-28" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;sepal length (cm)&#39;</span>)</span>
+<span id="cb33-29"><a href="math.html#cb33-29" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;sepal width (cm)&#39;</span>)</span>
+<span id="cb33-30"><a href="math.html#cb33-30" aria-hidden="true" tabindex="-1"></a>plt.axis(<span class="st">&#39;tight&#39;</span>)</span>
+<span id="cb33-31"><a href="math.html#cb33-31" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="04-math_files/figure-html/unnamed-chunk-13-1.png" width="90%" style="display: block; margin: auto;" /></p>
 
 </div>
 </div>

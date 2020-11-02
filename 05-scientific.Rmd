@@ -3,12 +3,59 @@
 
 ```{r}
 library(reticulate)
-reticulate::use_condaenv("r-torch")
-reticulate::py_config()
+reticulate::use_condaenv("r-python")
 ```
 
+## Solve large scale eigenvalue problems
+    
+* `lobpcg` (Locally Optimal Block Preconditioned Conjugate Gradient Method) * works very well in combination with `PyAMG` (example by Nathan Bell)
+
+```{python}
+# http://scipy-lectures.org/_downloads/ScipyLectures-simple.pdf
+# Page 348
+
+# Compute eigenvectors and eigenvalues using a preconditioned eigensolver
+# ========================================================================
+# 
+# In this example Smoothed Aggregation (SA) is used to precondition
+# the LOBPCG eigensolver on a two-dimensional Poisson problem with
+# Dirichlet boundary conditions.
+
+import scipy
+from scipy.sparse.linalg import lobpcg
+import matplotlib.pyplot as plt
+from pyamg import smoothed_aggregation_solver
+from pyamg.gallery import poisson
+
+N = 100
+K = 9
+A = poisson((N,N), format='csr')
+
+# create the AMG hierarchy
+ml = smoothed_aggregation_solver(A)
+
+# initial approximation to the K eigenvectors
+X = scipy.rand(A.shape[0], K)
+
+# preconditioner based on ml
+M = ml.aspreconditioner()
+
+# compute eigenvalues and eigenvectors with LOBPCG
+W,V = lobpcg(A, X, M=M, tol=1e-8, largest=False)
 
 
+plt.figure(figsize=(9,9))
+
+for i in range(K):
+    plt.subplot(3, 3, i+1)
+    plt.title('Eigenvector%d'% i)
+    plt.pcolor(V[:,i].reshape(N,N))
+    plt.axis('equal')
+    plt.axis('off')
+plt.show()
+```
+
+## Computational Physics
 
 ```{python}
 # Plot of the Lorenz Attractor based on Edward Lorenz's 1963 "Deterministic
@@ -177,7 +224,6 @@ plt.show()
 ```
 
 
-## weird
 ```{python}
 # step demo
 # https://matplotlib.org/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py
@@ -209,31 +255,7 @@ plt.ylim(-0.5, 4)
 plt.show()
 ```
 
-## Middle
 
-
-```{python}
-from mpl_toolkits.mplot3d import axes3d
-import matplotlib.pyplot as plt
-from matplotlib import cm
-
-fig = plt.figure()
-ax = fig.gca(projection='3d')
-X, Y, Z = axes3d.get_test_data(0.05)
-ax.plot_surface(X, Y, Z, rstride=8, cstride=8, alpha=0.3)
-cset = ax.contourf(X, Y, Z, zdir='z', offset=-100, cmap=cm.coolwarm)
-cset = ax.contourf(X, Y, Z, zdir='x', offset=-40, cmap=cm.coolwarm)
-cset = ax.contourf(X, Y, Z, zdir='y', offset=40, cmap=cm.coolwarm)
-
-ax.set_xlabel('X')
-ax.set_xlim(-40, 40)
-ax.set_ylabel('Y')
-ax.set_ylim(-40, 40)
-ax.set_zlabel('Z')
-ax.set_zlim(-100, 100)
-
-plt.show()
-```
 
 ```{python}
 # Plot of the Lorenz Attractor based on Edward Lorenz's 1963 "Deterministic
@@ -432,36 +454,6 @@ plt.ylim(-0.5, 4)
 plt.show()
 ```
 
-```{python}
-# https://matplotlib.org/gallery/lines_bars_and_markers/cohere.html#sphx-glr-gallery-lines-bars-and-markers-cohere-py
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Fixing random state for reproducibility
-np.random.seed(19680801)
-
-dt = 0.01
-t = np.arange(0, 30, dt)
-nse1 = np.random.randn(len(t))                 # white noise 1
-nse2 = np.random.randn(len(t))                 # white noise 2
-
-# Two signals with a coherent part at 10Hz and a random part
-s1 = np.sin(2 * np.pi * 10 * t) + nse1
-s2 = np.sin(2 * np.pi * 10 * t) + nse2
-
-fig, axs = plt.subplots(2, 1)
-axs[0].plot(t, s1, t, s2)
-axs[0].set_xlim(0, 2)
-axs[0].set_xlabel('time')
-axs[0].set_ylabel('s1 and s2')
-axs[0].grid(True)
-
-cxy, f = axs[1].cohere(s1, s2, 256, 1. / dt)
-axs[1].set_ylabel('coherence')
-
-fig.tight_layout()
-plt.show()
-```
 
 ```{python}
 # https://matplotlib.org/gallery/images_contours_and_fields/irregulardatagrid.html#sphx-glr-gallery-images-contours-and-fields-irregulardatagrid-py
@@ -741,63 +733,11 @@ plt.show()
 ```
 
 
-```{python}
-# https://matplotlib.org/gallery/subplots_axes_and_figures/subplots_adjust.html#sphx-glr-gallery-subplots-axes-and-figures-subplots-adjust-py
-
-import matplotlib.pyplot as plt
-import numpy as np
-
-# Fixing random state for reproducibility
-np.random.seed(19680801)
 
 
-plt.subplot(211)
-plt.imshow(np.random.random((100, 100)), cmap=plt.cm.BuPu_r)
-plt.subplot(212)
-plt.imshow(np.random.random((100, 100)), cmap=plt.cm.BuPu_r)
-
-plt.subplots_adjust(bottom=0.1, right=0.8, top=0.9)
-cax = plt.axes([0.85, 0.1, 0.075, 0.8])
-plt.colorbar(cax=cax)
-plt.show()
-```
+## Contour maps
 
 
-
-
-
-```{python}
-# https://matplotlib.org/gallery/scales/symlog_demo.html#sphx-glr-gallery-scales-symlog-demo-py
-
-import matplotlib.pyplot as plt
-import numpy as np
-
-dt = 0.01
-x = np.arange(-50.0, 50.0, dt)
-y = np.arange(0, 100.0, dt)
-
-plt.subplot(311)
-plt.plot(x, y)
-plt.xscale('symlog')
-plt.ylabel('symlogx')
-plt.grid(True)
-plt.gca().xaxis.grid(True, which='minor')  # minor grid on too
-
-plt.subplot(312)
-plt.plot(y, x)
-plt.yscale('symlog')
-plt.ylabel('symlogy')
-
-plt.subplot(313)
-plt.plot(x, np.sin(x / 3.0))
-plt.xscale('symlog')
-plt.yscale('symlog', linthreshy=0.015)
-plt.grid(True)
-plt.ylabel('symlog both')
-
-plt.tight_layout()
-plt.show()
-```
 
 ```{python}
 import matplotlib.pyplot as plt
@@ -876,35 +816,99 @@ plt.show()
 ```
 
 
+
+
+
+
+
 ```{python}
-# step demo
-# https://matplotlib.org/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py
-
-import numpy as np
-from numpy import ma
+from mpl_toolkits.mplot3d import axes3d
 import matplotlib.pyplot as plt
+from matplotlib import cm
 
-x = np.arange(1, 7, 0.4)
-y0 = np.sin(x)
-y = y0.copy() + 2.5
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+X, Y, Z = axes3d.get_test_data(0.05)
+ax.plot_surface(X, Y, Z, rstride=8, cstride=8, alpha=0.3)
+cset = ax.contourf(X, Y, Z, zdir='z', offset=-100, cmap=cm.coolwarm)
+cset = ax.contourf(X, Y, Z, zdir='x', offset=-40, cmap=cm.coolwarm)
+cset = ax.contourf(X, Y, Z, zdir='y', offset=40, cmap=cm.coolwarm)
 
-plt.step(x, y, label='pre (default)')
-
-y -= 0.5
-plt.step(x, y, where='mid', label='mid')
-
-y -= 0.5
-plt.step(x, y, where='post', label='post')
-
-y = ma.masked_where((y0 > -0.15) & (y0 < 0.15), y - 0.5)
-plt.step(x, y, label='masked (pre)')
-
-plt.legend()
-
-plt.xlim(0, 7)
-plt.ylim(-0.5, 4)
+ax.set_xlabel('X')
+ax.set_xlim(-40, 40)
+ax.set_ylabel('Y')
+ax.set_ylim(-40, 40)
+ax.set_zlabel('Z')
+ax.set_zlim(-100, 100)
 
 plt.show()
 ```
 
+## Real time
 
+
+```{python}
+# https://matplotlib.org/gallery/lines_bars_and_markers/cohere.html#sphx-glr-gallery-lines-bars-and-markers-cohere-py
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Fixing random state for reproducibility
+np.random.seed(19680801)
+
+dt = 0.01
+t = np.arange(0, 30, dt)
+nse1 = np.random.randn(len(t))                 # white noise 1
+nse2 = np.random.randn(len(t))                 # white noise 2
+
+# Two signals with a coherent part at 10Hz and a random part
+s1 = np.sin(2 * np.pi * 10 * t) + nse1
+s2 = np.sin(2 * np.pi * 10 * t) + nse2
+
+fig, axs = plt.subplots(2, 1)
+axs[0].plot(t, s1, t, s2)
+axs[0].set_xlim(0, 2)
+axs[0].set_xlabel('time')
+axs[0].set_ylabel('s1 and s2')
+axs[0].grid(True)
+
+cxy, f = axs[1].cohere(s1, s2, 256, 1. / dt)
+axs[1].set_ylabel('coherence')
+
+fig.tight_layout()
+plt.show()
+```
+
+
+
+```{python}
+# https://matplotlib.org/gallery/scales/symlog_demo.html#sphx-glr-gallery-scales-symlog-demo-py
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+dt = 0.01
+x = np.arange(-50.0, 50.0, dt)
+y = np.arange(0, 100.0, dt)
+
+plt.subplot(311)
+plt.plot(x, y)
+plt.xscale('symlog')
+plt.ylabel('symlogx')
+plt.grid(True)
+plt.gca().xaxis.grid(True, which='minor')  # minor grid on too
+
+plt.subplot(312)
+plt.plot(y, x)
+plt.yscale('symlog')
+plt.ylabel('symlogy')
+
+plt.subplot(313)
+plt.plot(x, np.sin(x / 3.0))
+plt.xscale('symlog')
+plt.yscale('symlog', linthreshy=0.015)
+plt.grid(True)
+plt.ylabel('symlog both')
+
+plt.tight_layout()
+plt.show()
+```

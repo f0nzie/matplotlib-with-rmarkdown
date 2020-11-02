@@ -2,8 +2,9 @@
 
 ```{r}
 library(reticulate)
-reticulate::use_condaenv("r-torch")
+reticulate::use_condaenv("r-python")
 ```
+
 
 
 ```{python}
@@ -161,35 +162,6 @@ plt.show()
 
 
 
-
-
-```{python}
-# https://matplotlib.org/gallery/mplot3d/offset.html#sphx-glr-gallery-mplot3d-offset-py
-
-# This import registers the 3D projection, but is otherwise unused.
-from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
-
-import matplotlib.pyplot as plt
-import numpy as np
-
-
-fig = plt.figure()
-ax = fig.gca(projection='3d')
-
-X, Y = np.mgrid[0:6*np.pi:0.25, 0:4*np.pi:0.25]
-Z = np.sqrt(np.abs(np.cos(X) + np.cos(Y)))
-
-ax.plot_surface(X + 1e5, Y + 1e5, Z, cmap='autumn', cstride=2, rstride=2)
-
-ax.set_xlabel("X label")
-ax.set_ylabel("Y label")
-ax.set_zlabel("Z label")
-ax.set_zlim(0, 2)
-
-plt.show()
-```
-
-
 ```{python}
 # http://www.scipy-lectures.org/intro/matplotlib/auto_examples/plot_plot3d_ex.html
 
@@ -228,6 +200,39 @@ plt.plot(t1, g(t1), 'ro', t2, f(t2), 'k')
 plt.grid(color='b', alpha=0.5, linestyle='dashed', linewidth=0.5)
 plt.show()
 ```
+
+
+## Surface functions
+
+
+
+```{python}
+# https://matplotlib.org/gallery/mplot3d/offset.html#sphx-glr-gallery-mplot3d-offset-py
+
+# This import registers the 3D projection, but is otherwise unused.
+from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+
+X, Y = np.mgrid[0:6*np.pi:0.25, 0:4*np.pi:0.25]
+Z = np.sqrt(np.abs(np.cos(X) + np.cos(Y)))
+
+ax.plot_surface(X + 1e5, Y + 1e5, Z, cmap='autumn', cstride=2, rstride=2)
+
+ax.set_xlabel("X label")
+ax.set_ylabel("Y label")
+ax.set_zlabel("Z label")
+ax.set_zlim(0, 2)
+
+plt.show()
+```
+
+
 
 
 
@@ -349,5 +354,43 @@ X, Y, Z = axes3d.get_test_data(0.05)
 cset = ax.contour(X, Y, Z, cmap=cm.coolwarm)
 ax.clabel(cset, fontsize=9, inline=1)
 
+plt.show()
+```
+
+
+## Machine Learning
+
+
+```{python}
+import numpy as np
+from matplotlib import pyplot as plt
+from sklearn import neighbors, datasets
+from matplotlib.colors import ListedColormap
+
+# Create color maps for 3-class classification problem, as with iris
+cmap_light = ListedColormap(['#FFAAAA','#AAFFAA','#AAAAFF'])
+cmap_bold = ListedColormap(['#FF0000','#00FF00','#0000FF'])
+
+iris = datasets.load_iris()
+X = iris.data[:, :2]  # we only take the first two features. We could
+                      # avoid this ugly slicing by using a two-dim dataset
+y = iris.target
+knn = neighbors.KNeighborsClassifier(n_neighbors=1)
+knn.fit(X, y)
+x_min, x_max = X[:, 0].min() - .1, X[:, 0].max() + .1
+y_min, y_max = X[:, 1].min() - .1, X[:, 1].max() + .1
+xx, yy = np.meshgrid(np.linspace(x_min, x_max, 100), np.linspace(y_min, y_max, 100))
+
+Z = knn.predict(np.c_[xx.ravel(), yy.ravel()])
+
+Z = Z.reshape(xx.shape)
+plt.figure()
+plt.pcolormesh(xx, yy, Z, cmap=cmap_light)
+
+# Plot also the training points
+plt.scatter(X[:, 0], X[:, 1], c=y, cmap=cmap_bold)
+plt.xlabel('sepal length (cm)')
+plt.ylabel('sepal width (cm)')
+plt.axis('tight')
 plt.show()
 ```
