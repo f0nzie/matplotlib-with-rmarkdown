@@ -1,11 +1,14 @@
 # Voxels
 
 
+<div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i>  <b>R</b></span>
 
 ```r
 library(reticulate)
 reticulate::use_condaenv("r-python")
 ```
+
+</div></div>
 
 
 
@@ -25,6 +28,7 @@ reticulate::use_python(python_portable, required = TRUE)
 reticulate::py_config()
 ```
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://matplotlib.org/api/_as_gen/mpl_toolkits.mplot3d.axes3d.Axes3D.html
@@ -73,10 +77,11 @@ ax.voxels(x, y, z, sphere,
 plt.show()
 ```
 
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
 
 
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/voxels.py
@@ -112,7 +117,7 @@ ax.voxels(voxels, facecolors=colors, edgecolor='k')
 plt.show()
 ```
 
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
 
 
 ```python

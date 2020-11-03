@@ -1,10 +1,13 @@
 # Advanced
 
+<div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i>  <b>R</b></span>
 
 ```r
 library(reticulate)
 reticulate::use_condaenv("r-python")
 ```
+
+</div></div>
 
 ## Adding labels
 Math symbols printing
@@ -15,6 +18,7 @@ $\mathbb{blackboard}$
 
 
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 import matplotlib.pyplot as plt
@@ -36,10 +40,11 @@ plt.grid(True)
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
 
 
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # http://scipy-lectures.org/_downloads/ScipyLectures-simple.pdf
@@ -70,7 +75,7 @@ plt.yticks([])
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
 
 
 ## Subplots
