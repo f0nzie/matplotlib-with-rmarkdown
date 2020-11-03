@@ -1,29 +1,14 @@
 # Voxels
 
 
-```{r, deco=list(label="R", bc="#4C78DB", tc="#ffffff", icon=list(style="fab", name="r-project"))}
+```{r, decorate=TRUE}
 library(reticulate)
 reticulate::use_condaenv("r-python")
 ```
 
 
 
-```{r, eval=FALSE}
-# load the package that makes R and Python talk
-library(reticulate)
-
-# set the preferred Python to execute
-user_profile <- Sys.getenv("USERPROFILE")                    # user folder
-python_portable <- normalizePath(file.path(user_profile,     # Python location
-                                "WPy-3710zero/python-3.7.1.amd64/python.exe"))
-
-reticulate::use_python(python_portable, required = TRUE)
- 
-# find out if it took it
-reticulate::py_config()
-```
-
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # https://matplotlib.org/api/_as_gen/mpl_toolkits.mplot3d.axes3d.Axes3D.html
 #=======================================================
 #3D voxel / volumetric plot with cylindrical coordinates
@@ -73,7 +58,7 @@ plt.show()
 
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/voxels.py
 
 import matplotlib.pyplot as plt
@@ -108,7 +93,7 @@ ax.voxels(voxels, facecolors=colors, edgecolor='k')
 plt.show()
 ```
 
-```{python}
+```{python, decorate=TRUE}
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -152,7 +137,7 @@ ax.voxels(x, y, z, filled, facecolors=colors, edgecolors='gray')
 plt.show()
 ```
 
-```{python}
+```{python, decorate=TRUE}
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -177,7 +162,7 @@ ax.voxels(filled, edgecolors='gray')
 plt.show()
 ```
 
-```{python}
+```{python, decorate=TRUE}
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -203,7 +188,7 @@ plt.show()
 ```
 
 
-```{python}
+```{python, decorate=TRUE}
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -229,7 +214,7 @@ plt.show()
 ```
 
 
-```{python}
+```{python, decorate=TRUE}
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -257,7 +242,7 @@ plt.show()
 ```
 
 
-```{python}
+```{python, decorate=TRUE}
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -301,7 +286,7 @@ plt.show()
 
 
 
-```{python}
+```{python, decorate=TRUE}
 # https://matplotlib.org/gallery/mplot3d/voxels_numpy_logo.html
 
 import matplotlib.pyplot as plt
@@ -350,7 +335,7 @@ plt.show()
 
 
 
-```{python, eval = FALSE}
+```{python, eval = FALSE, decorate=TRUE}
 # https://stackoverflow.com/a/49281004/5270873
 
 from mpl_toolkits.mplot3d import Axes3D

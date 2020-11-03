@@ -1,6 +1,6 @@
 # Advanced
 
-```{r, deco=list(label="R", bc="#4C78DB", tc="#ffffff", icon=list(style="fab", name="r-project"))}
+```{r, decorate=TRUE}
 library(reticulate)
 reticulate::use_condaenv("r-python")
 ```
@@ -14,7 +14,7 @@ $\mathbb{blackboard}$
 
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -36,7 +36,7 @@ plt.show()
 
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # http://scipy-lectures.org/_downloads/ScipyLectures-simple.pdf
 
 import numpy as np
@@ -70,7 +70,7 @@ plt.show()
 ## Subplots
 
 
-```{python}
+```{python, decorate=TRUE}
 # https://matplotlib.org/gallery/subplots_axes_and_figures/subplots_adjust.html#sphx-glr-gallery-subplots-axes-and-figures-subplots-adjust-py
 
 import matplotlib.pyplot as plt
@@ -92,7 +92,7 @@ plt.show()
 ```
 
 
-```{python}
+```{python, decorate=TRUE}
 # https://matplotlib.org/gallery/text_labels_and_annotations/figlegend_demo.html#sphx-glr-gallery-text-labels-and-annotations-figlegend-demo-py
 
 import numpy as np
@@ -118,7 +118,7 @@ plt.show()
 
 
 
-```{python}
+```{python, decorate=TRUE}
 names = ['group_a', 'group_b', 'group_c']
 values = [1, 10, 100]
 
@@ -136,7 +136,7 @@ plt.show()
 ```
 
 
-```{python}
+```{python, decorate=TRUE}
 # https://www.python-course.eu/matplotlib_multiple_figures.php
 
 import matplotlib.gridspec as gridspec
@@ -164,7 +164,7 @@ plt.show()
 ```
 
 
-```{python}
+```{python, decorate=TRUE}
 # https://matplotlib.org/gallery/text_labels_and_annotations/figlegend_demo.html#sphx-glr-gallery-text-labels-and-annotations-figlegend-demo-py
 
 import numpy as np
@@ -191,7 +191,7 @@ plt.show()
 
 ## Change of axes
 
-```{python}
+```{python, decorate=TRUE}
 # Fixing random state for reproducibility
 np.random.seed(19680801)
 
@@ -243,7 +243,7 @@ plt.show()
 
 
 
-```{python}
+```{python, decorate=TRUE}
 # https://matplotlib.org/gallery/subplots_axes_and_figures/subplots_adjust.html#sphx-glr-gallery-subplots-axes-and-figures-subplots-adjust-py
 
 import matplotlib.pyplot as plt
@@ -265,7 +265,7 @@ plt.show()
 ```
 
 
-```{python}
+```{python, decorate=TRUE}
 # step demo
 # https://matplotlib.org/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py
 

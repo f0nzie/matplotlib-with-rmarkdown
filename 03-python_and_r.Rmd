@@ -3,19 +3,20 @@
 
 * Always load the Python environment you are sure has the packages
 
-```{r, deco=list(label="R", bc="#4C78DB", tc="#ffffff", icon=list(style="fab", name="r-project"))}
+```{r, decorate=TRUE}
+# , deco=list(label="R", bc="#4C78DB", tc="#ffffff", icon=list(style="fab", name="r-project"))
 library(reticulate)
 use_condaenv("r-python", required = TRUE)
 ```
 
 
-```{r}
+```{r, decorate=TRUE}
 #R
 autos = cars
 ```
 
 
-```{python, collapse = TRUE, deco=list()}
+```{python, collapse = TRUE, decorate=TRUE}
 #Python
 import numpy
 import pandas 
@@ -24,13 +25,13 @@ autos_py = r.autos
 autos_py['time']=autos_py['dist']/autos_py['speed']
 ```
 
-```{r}
+```{r, decorate=TRUE}
 #R
 plot(py$autos_py)
 ```
 
 
-```{r, eval=FALSE}
+```{r, eval=FALSE, decorate=TRUE}
 reticulate::use_python("..\\..\\python-3.6.7.amd64\\python.exe")
 reticulate::py_config()
 reticulate::py_available()

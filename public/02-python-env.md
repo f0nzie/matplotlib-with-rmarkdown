@@ -7,7 +7,7 @@
 library(reticulate)
 ```
 
-</div></div>
+</div><br></div>
 
 <div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i>  <b>R</b></span>
 
@@ -16,7 +16,7 @@ library(reticulate)
 getwd()
 ```
 
-</div></div>
+</div><br></div>
 
 <div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i>  <b>R</b></span>
 
@@ -26,11 +26,12 @@ use_condaenv("r-python", required = TRUE)
 py_config()
 ```
 
-</div></div>
+</div><br></div>
 
+<div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i>  <b>R</b></span>
+</div><br></div>
 
-
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # this chunk with matplotlib will only run if the PyQt plugin path has been specified
@@ -39,9 +40,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 ```
 
-</div></div>
+</div><br></div>
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 t = np.arange(0.0, 2.0, 0.01)
@@ -57,9 +58,10 @@ ax.grid()
 plt.show()
 ```
 
-<img src="02-python-env_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="02-python-env_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
+<div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i>  <b>R</b></span>
 
 ```r
 # load the package that makes R and Python talk
@@ -73,6 +75,8 @@ reticulate::use_python(python_portable, required = TRUE)
 reticulate::py_config()
 ```
 
+</div><br></div>
+
 
 ```r
 # library(reticulate)
@@ -80,3 +84,22 @@ reticulate::py_config()
 # reticulate::py_config()
 # reticulate::py_available()
 ```
+
+<div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i>  <b>R</b></span>
+
+```r
+# load the package that makes R and Python talk
+library(reticulate)
+
+# set the preferred Python to execute
+user_profile <- Sys.getenv("USERPROFILE")                    # user folder
+python_portable <- normalizePath(file.path(user_profile,     # Python location
+                                "WPy-3710zero/python-3.7.1.amd64/python.exe"))
+
+reticulate::use_python(python_portable, required = TRUE)
+ 
+# find out if it took it
+reticulate::py_config()
+```
+
+</div><br></div>

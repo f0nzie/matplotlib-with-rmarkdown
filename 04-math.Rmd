@@ -1,13 +1,13 @@
 # Math
 
-```{r, deco=list(label="R", bc="#4C78DB", tc="#ffffff", icon=list(style="fab", name="r-project"))}
+```{r, decorate=TRUE}
 library(reticulate)
 reticulate::use_condaenv("r-python")
 ```
 
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # https://www.geeksforgeeks.org/plot-mathematical-expressions-in-python-using-matplotlib/
 # Import libraries 
 import matplotlib.pyplot as plt 
@@ -46,7 +46,7 @@ plt.show()
 
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # https://www.kaggle.com/sskiing/matplotlib-showcase-examples
 
 import numpy as np
@@ -94,7 +94,7 @@ plt.show()
 ## Middle
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # ===================================
 # 3D wireframe plots in one direction
 # ===================================
@@ -130,7 +130,7 @@ plt.show()
 
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -162,7 +162,7 @@ plt.show()
 
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # http://www.scipy-lectures.org/intro/matplotlib/auto_examples/plot_plot3d_ex.html
 
 import numpy as np
@@ -184,7 +184,7 @@ ax.set_zlim(-2, 2)
 plt.show()
 ```
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # https://www.python-course.eu/matplotlib_multiple_figures.php
 
 import numpy as np
@@ -206,7 +206,7 @@ plt.show()
 
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # https://matplotlib.org/gallery/mplot3d/offset.html#sphx-glr-gallery-mplot3d-offset-py
 
 # This import registers the 3D projection, but is otherwise unused.
@@ -236,7 +236,7 @@ plt.show()
 
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/surface3d_radial.py
 
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
@@ -274,7 +274,7 @@ plt.show()
 
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/wire3d.py
 
 from mpl_toolkits.mplot3d import axes3d
@@ -295,7 +295,7 @@ plt.show()
 
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
 
 import numpy as np
@@ -342,7 +342,7 @@ plt.show()
 
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # https://matplotlib.org/2.0.2/examples/mplot3d/contour3d_demo.html
 from mpl_toolkits.mplot3d import axes3d
 import matplotlib.pyplot as plt
@@ -361,7 +361,7 @@ plt.show()
 ## Machine Learning
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 import numpy as np
 from matplotlib import pyplot as plt
 from sklearn import neighbors, datasets

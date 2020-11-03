@@ -1,7 +1,7 @@
 # Scientific
 
 
-```{r, deco=list(label="R", bc="#4C78DB", tc="#ffffff", icon=list(style="fab", name="r-project"))}
+```{r, decorate=TRUE}
 library(reticulate)
 reticulate::use_condaenv("r-python")
 ```
@@ -10,7 +10,7 @@ reticulate::use_condaenv("r-python")
     
 * `lobpcg` (Locally Optimal Block Preconditioned Conjugate Gradient Method) * works very well in combination with `PyAMG` (example by Nathan Bell)
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # http://scipy-lectures.org/_downloads/ScipyLectures-simple.pdf
 # Page 348
 
@@ -57,7 +57,7 @@ plt.show()
 
 ## Computational Physics
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # Plot of the Lorenz Attractor based on Edward Lorenz's 1963 "Deterministic
 # Nonperiodic Flow" publication.
 # http://journals.ametsoc.org/doi/abs/10.1175/1520-0469%281963%29020%3C0130%3ADNF%3E2.0.CO%3B2
@@ -106,7 +106,7 @@ plt.show()
 ```
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # ===================================
 # 3D wireframe plots in one direction
 # ===================================
@@ -138,7 +138,7 @@ plt.show()
 
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # https://matplotlib.org/gallery/images_contours_and_fields/contour_image.html#sphx-glr-gallery-images-contours-and-fields-contour-image-py
 
 import matplotlib.pyplot as plt
@@ -224,7 +224,7 @@ plt.show()
 ```
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # step demo
 # https://matplotlib.org/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py
 
@@ -257,7 +257,7 @@ plt.show()
 
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # Plot of the Lorenz Attractor based on Edward Lorenz's 1963 "Deterministic
 # Nonperiodic Flow" publication.
 # http://journals.ametsoc.org/doi/abs/10.1175/1520-0469%281963%29020%3C0130%3ADNF%3E2.0.CO%3B2
@@ -305,7 +305,7 @@ ax.set_title("Lorenz Attractor")
 plt.show()
 ```
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # ===================================
 # 3D wireframe plots in one direction
 # ===================================
@@ -338,7 +338,7 @@ plt.show()
 
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # https://matplotlib.org/gallery/images_contours_and_fields/contour_image.html#sphx-glr-gallery-images-contours-and-fields-contour-image-py
 
 import matplotlib.pyplot as plt
@@ -425,7 +425,7 @@ plt.show()
 
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # https://matplotlib.org/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py
 import numpy as np
 from numpy import ma
@@ -455,7 +455,7 @@ plt.show()
 ```
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # https://matplotlib.org/gallery/images_contours_and_fields/irregulardatagrid.html#sphx-glr-gallery-images-contours-and-fields-irregulardatagrid-py
 import matplotlib.pyplot as plt
 import matplotlib.tri as tri
@@ -524,7 +524,7 @@ plt.show()
 
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 from matplotlib.tri import Triangulation, TriAnalyzer, UniformTriRefiner
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
@@ -640,7 +640,7 @@ if plot_masked_tri:
 plt.show()
 ```
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # https://matplotlib.org/gallery/images_contours_and_fields/triinterp_demo.html#sphx-glr-gallery-images-contours-and-fields-triinterp-demo-py
 
 import matplotlib.pyplot as plt
@@ -698,7 +698,7 @@ fig.tight_layout()
 plt.show()
 ```
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # https://matplotlib.org/gallery/subplots_axes_and_figures/axhspan_demo.html#sphx-glr-gallery-subplots-axes-and-figures-axhspan-demo-py
 
 import numpy as np
@@ -733,13 +733,10 @@ plt.show()
 ```
 
 
-
-
 ## Contour maps
 
 
-
-```{python, deco=list()}
+```{python, decorate=TRUE}
 import matplotlib.pyplot as plt
 import numpy as np
 # http://www.scipy-lectures.org/intro/matplotlib/auto_examples/plot_contour_ex.html
@@ -770,7 +767,7 @@ plt.show()
 
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
 
 import numpy as np
@@ -817,11 +814,7 @@ plt.show()
 
 
 
-
-
-
-
-```{python, deco=list()}
+```{python, decorate=TRUE}
 from mpl_toolkits.mplot3d import axes3d
 import matplotlib.pyplot as plt
 from matplotlib import cm
@@ -847,7 +840,7 @@ plt.show()
 ## Real time
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # https://matplotlib.org/gallery/lines_bars_and_markers/cohere.html#sphx-glr-gallery-lines-bars-and-markers-cohere-py
 import numpy as np
 import matplotlib.pyplot as plt
@@ -880,7 +873,7 @@ plt.show()
 
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # https://matplotlib.org/gallery/scales/symlog_demo.html#sphx-glr-gallery-scales-symlog-demo-py
 
 import matplotlib.pyplot as plt

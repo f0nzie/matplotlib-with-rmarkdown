@@ -1,35 +1,35 @@
 # Python environment
 
 
-```{r, deco=list(label="R", bc="#4C78DB", tc="#ffffff", icon=list(style="fab", name="r-project"))}
+```{r, decorate=TRUE}
 library(reticulate)
 ```
 
-```{r, deco=list(label="R", bc="#4C78DB", tc="#ffffff", icon=list(style="fab", name="r-project"))}
+```{r, decorate=TRUE}
 # get the current folder of the notebook to set the relative path
 getwd()
 ```
 
-```{r, deco=list(label="R", bc="#4C78DB", tc="#ffffff", icon=list(style="fab", name="r-project"))}
+```{r, decorate=TRUE}
 library(reticulate)
 use_condaenv("r-python", required = TRUE)
 py_config()
 ```
 
-```{r, eval=FALSE, echo=FALSE}
+```{r, eval=FALSE, echo=FALSE, decorate=TRUE}
 reticulate::use_python("..\\..\\python-3.6.7.amd64\\python.exe")
 reticulate::py_config()
 reticulate::py_available()
 ```
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # this chunk with matplotlib will only run if the PyQt plugin path has been specified
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 ```
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 t = np.arange(0.0, 2.0, 0.01)
 s = 1 + np.sin(2 * np.pi * t)
 
@@ -44,7 +44,7 @@ plt.show()
 ```
 
 
-```{r eval=FALSE}
+```{r eval=FALSE, decorate=TRUE}
 # load the package that makes R and Python talk
 library(reticulate)
 
@@ -61,4 +61,19 @@ reticulate::py_config()
 # reticulate::use_python("..\\..\\python-3.6.7.amd64\\python.exe")
 # reticulate::py_config()
 # reticulate::py_available()
+```
+
+```{r, eval=FALSE, decorate=TRUE}
+# load the package that makes R and Python talk
+library(reticulate)
+
+# set the preferred Python to execute
+user_profile <- Sys.getenv("USERPROFILE")                    # user folder
+python_portable <- normalizePath(file.path(user_profile,     # Python location
+                                "WPy-3710zero/python-3.7.1.amd64/python.exe"))
+
+reticulate::use_python(python_portable, required = TRUE)
+ 
+# find out if it took it
+reticulate::py_config()
 ```

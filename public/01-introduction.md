@@ -7,9 +7,9 @@ library(reticulate)
 reticulate::use_condaenv("r-python")
 ```
 
-</div></div>
+</div><br></div>
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 import matplotlib.pyplot as plt
@@ -18,12 +18,12 @@ plt.ylabel('some numbers')
 plt.show()
 ```
 
-<img src="01-introduction_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="01-introduction_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 ## The "hello world" plot
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 import matplotlib.pyplot as plt
@@ -41,10 +41,10 @@ plt.savefig("test.png")
 plt.show()
 ```
 
-<img src="01-introduction_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="01-introduction_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://matplotlib.org/2.0.2/examples/mplot3d/contour3d_demo.html
@@ -61,10 +61,10 @@ ax.clabel(cset, fontsize=9, inline=1)
 plt.show()
 ```
 
-<img src="01-introduction_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="01-introduction_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://matplotlib.org/gallery/showcase/anatomy.html#sphx-glr-gallery-showcase-anatomy-py
@@ -209,13 +209,13 @@ ax.text(4.0, -0.4, "Made with http://matplotlib.org",
 plt.show()
 ```
 
-<img src="01-introduction_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="01-introduction_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
 
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 import numpy as np
@@ -259,10 +259,10 @@ ax4.margins(0)
 plt.show()
 ```
 
-<img src="01-introduction_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="01-introduction_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://matplotlib.org/gallery/lines_bars_and_markers/cohere.html#sphx-glr-gallery-lines-bars-and-markers-cohere-py
@@ -295,5 +295,5 @@ fig.tight_layout()
 plt.show()
 ```
 
-<img src="01-introduction_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="01-introduction_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 

@@ -1,12 +1,12 @@
 # Seaborn
 
 
-```{r, deco=list(label="R", bc="#4C78DB", tc="#ffffff", icon=list(style="fab", name="r-project"))}
+```{r, decorate=TRUE}
 library(reticulate)
 use_condaenv("r-python", required = TRUE)
 ```
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # https://seaborn.pydata.org/examples/errorband_lineplots.html
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -25,7 +25,7 @@ plt.show()
 ```
 
 
-```{python, deco=list()}
+```{python, decorate=TRUE}
 # https://seaborn.pydata.org/examples/horizontal_boxplot.html
 
 import seaborn as sns
@@ -58,7 +58,7 @@ plt.show()
 
 
 
-```{python}
+```{python, decorate=TRUE}
 # https://seaborn.pydata.org/examples/timeseries_facets.html
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -99,7 +99,7 @@ plt.show()
 
 
 
-```{python}
+```{python, decorate=TRUE}
 from __future__ import print_function, division
 
 import matplotlib.pyplot as plt
@@ -115,7 +115,7 @@ plt.show()
 
 
 
-```{python}
+```{python, decorate=TRUE}
 # https://seaborn.pydata.org/examples/scatterplot_matrix.html
 
 import matplotlib.pyplot as plt
@@ -131,7 +131,7 @@ plt.show()
 
 
 
-```{python}
+```{python, decorate=TRUE}
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt

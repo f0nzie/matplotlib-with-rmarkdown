@@ -24,7 +24,7 @@
 <meta name="author" content="Alfonso R. Reyes" />
 
 
-<meta name="date" content="2020-11-02" />
+<meta name="date" content="2020-11-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -193,6 +193,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i> <b>R</b></span></p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="python-environment.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span></code></pre></div>
 </div>
+<br>
 </div>
 <div class="decocode">
 <div style="background-color:#4C78DB">
@@ -200,6 +201,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="python-environment.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get the current folder of the notebook to set the relative path</span></span>
 <span id="cb9-2"><a href="python-environment.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
 </div>
+<br>
 </div>
 <div class="decocode">
 <div style="background-color:#4C78DB">
@@ -208,19 +210,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb10-2"><a href="python-environment.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">use_condaenv</span>(<span class="st">&quot;r-python&quot;</span>, <span class="at">required =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb10-3"><a href="python-environment.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">py_config</span>()</span></code></pre></div>
 </div>
+<br>
 </div>
 <div class="decocode">
-<div style="background-color:#366994">
-<p><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i> <b>Python</b></span></p>
+<div style="background-color:#4C78DB">
+<p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i> <b>R</b></span></p>
+</div>
+<br>
+</div>
+<div class="decocode">
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="python-environment.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this chunk with matplotlib will only run if the PyQt plugin path has been specified</span></span>
 <span id="cb11-2"><a href="python-environment.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib</span>
 <span id="cb11-3"><a href="python-environment.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb11-4"><a href="python-environment.html#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div>
 </div>
+<br>
 </div>
 <div class="decocode">
-<div style="background-color:#366994">
-<p><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i> <b>Python</b></span></p>
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="python-environment.html#cb12-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.arange(<span class="fl">0.0</span>, <span class="fl">2.0</span>, <span class="fl">0.01</span>)</span>
 <span id="cb12-2"><a href="python-environment.html#cb12-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> np.sin(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> t)</span>
 <span id="cb12-3"><a href="python-environment.html#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -234,7 +244,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb12-11"><a href="python-environment.html#cb12-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <img src="02-python-env_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
 </div>
+<br>
 </div>
+<div class="decocode">
+<div style="background-color:#4C78DB">
+<p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i> <b>R</b></span></p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="python-environment.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load the package that makes R and Python talk</span></span>
 <span id="cb13-2"><a href="python-environment.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
 <span id="cb13-3"><a href="python-environment.html#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -244,10 +258,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb13-7"><a href="python-environment.html#cb13-7" aria-hidden="true" tabindex="-1"></a>                                <span class="st">&quot;WPy-3710zero/python-3.7.1.amd64/python.exe&quot;</span>))</span>
 <span id="cb13-8"><a href="python-environment.html#cb13-8" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">use_python</span>(python_portable, <span class="at">required =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb13-9"><a href="python-environment.html#cb13-9" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">py_config</span>()</span></code></pre></div>
+</div>
+<br>
+</div>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="python-environment.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># library(reticulate)</span></span>
 <span id="cb14-2"><a href="python-environment.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># reticulate::use_python(&quot;..\\..\\python-3.6.7.amd64\\python.exe&quot;)</span></span>
 <span id="cb14-3"><a href="python-environment.html#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># reticulate::py_config()</span></span>
 <span id="cb14-4"><a href="python-environment.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># reticulate::py_available()</span></span></code></pre></div>
+<div class="decocode">
+<div style="background-color:#4C78DB">
+<p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i> <b>R</b></span></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="python-environment.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load the package that makes R and Python talk</span></span>
+<span id="cb15-2"><a href="python-environment.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb15-3"><a href="python-environment.html#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="python-environment.html#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># set the preferred Python to execute</span></span>
+<span id="cb15-5"><a href="python-environment.html#cb15-5" aria-hidden="true" tabindex="-1"></a>user_profile <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">&quot;USERPROFILE&quot;</span>)                    <span class="co"># user folder</span></span>
+<span id="cb15-6"><a href="python-environment.html#cb15-6" aria-hidden="true" tabindex="-1"></a>python_portable <span class="ot">&lt;-</span> <span class="fu">normalizePath</span>(<span class="fu">file.path</span>(user_profile,     <span class="co"># Python location</span></span>
+<span id="cb15-7"><a href="python-environment.html#cb15-7" aria-hidden="true" tabindex="-1"></a>                                <span class="st">&quot;WPy-3710zero/python-3.7.1.amd64/python.exe&quot;</span>))</span>
+<span id="cb15-8"><a href="python-environment.html#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-9"><a href="python-environment.html#cb15-9" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">use_python</span>(python_portable, <span class="at">required =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-10"><a href="python-environment.html#cb15-10" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb15-11"><a href="python-environment.html#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="co"># find out if it took it</span></span>
+<span id="cb15-12"><a href="python-environment.html#cb15-12" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">py_config</span>()</span></code></pre></div>
+</div>
+<br>
+</div>
 
 </div>
             </section>

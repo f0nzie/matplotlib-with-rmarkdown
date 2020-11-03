@@ -1,7 +1,8 @@
 
 # Test new
 
-```{r, deco=list(label="R", bc="#4C78DB", tc="#ffffff", icon=list(style="fab", name="r-project"))}
+```{r, decorate=TRUE}
+# , deco=list(label="R", bc="#4C78DB", tc="#ffffff", icon=list(style="fab", name="r-project"))
 library(reticulate)
 reticulate::use_condaenv("r-python")
 ```
