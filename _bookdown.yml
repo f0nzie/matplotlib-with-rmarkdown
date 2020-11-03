@@ -2,7 +2,7 @@ book_filename: "matplotlib-with-rmarkdown"
 output_dir: public
 new_session: true
 delete_merged_file: true
-before_chapter_script: ["before-each-chapter.R"]
+before_chapter_script: ["R/before-each-chapter.R"]
 language:
   ui:
     chapter_name: "Ch. "
