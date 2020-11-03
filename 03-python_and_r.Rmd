@@ -3,7 +3,7 @@
 
 * Always load the Python environment you are sure has the packages
 
-```{r}
+```{r, deco=list(label="R", bc="#4C78DB", tc="#ffffff", icon=list(style="fab", name="r-project"))}
 library(reticulate)
 use_condaenv("r-python", required = TRUE)
 ```
@@ -15,7 +15,7 @@ autos = cars
 ```
 
 
-```{python, collapse = TRUE}
+```{python, collapse = TRUE, deco=list()}
 #Python
 import numpy
 import pandas 

@@ -1,12 +1,12 @@
 # Seaborn
 
 
-```{r}
+```{r, deco=list(label="R", bc="#4C78DB", tc="#ffffff", icon=list(style="fab", name="r-project"))}
 library(reticulate)
 use_condaenv("r-python", required = TRUE)
 ```
 
-```{python}
+```{python, deco=list()}
 # https://seaborn.pydata.org/examples/errorband_lineplots.html
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -25,7 +25,7 @@ plt.show()
 ```
 
 
-```{python}
+```{python, deco=list()}
 # https://seaborn.pydata.org/examples/horizontal_boxplot.html
 
 import seaborn as sns

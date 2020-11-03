@@ -13,3 +13,5 @@ knitr::opts_chunk$set(
         collapse = TRUE,
         fig.show = "hold"
 )
+
+source("R/deco_hook.R")

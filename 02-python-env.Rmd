@@ -1,36 +1,35 @@
 # Python environment
 
 
-
-```{r}
+```{r, deco=list(label="R", bc="#4C78DB", tc="#ffffff", icon=list(style="fab", name="r-project"))}
 library(reticulate)
 ```
 
-```{r}
+```{r, deco=list(label="R", bc="#4C78DB", tc="#ffffff", icon=list(style="fab", name="r-project"))}
 # get the current folder of the notebook to set the relative path
 getwd()
 ```
 
-```{r}
+```{r, deco=list(label="R", bc="#4C78DB", tc="#ffffff", icon=list(style="fab", name="r-project"))}
 library(reticulate)
 use_condaenv("r-python", required = TRUE)
 py_config()
 ```
 
-```{r, eval=FALSE}
+```{r, eval=FALSE, echo=FALSE}
 reticulate::use_python("..\\..\\python-3.6.7.amd64\\python.exe")
 reticulate::py_config()
 reticulate::py_available()
 ```
 
-```{python}
+```{python, deco=list()}
 # this chunk with matplotlib will only run if the PyQt plugin path has been specified
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 ```
 
-```{python}
+```{python, deco=list()}
 t = np.arange(0.0, 2.0, 0.01)
 s = 1 + np.sin(2 * np.pi * t)
 

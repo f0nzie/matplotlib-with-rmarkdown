@@ -1,16 +1,20 @@
 # Scientific
 
 
+<div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i>  <b>R</b></span>
 
 ```r
 library(reticulate)
 reticulate::use_condaenv("r-python")
 ```
 
+</div></div>
+
 ## Solve large scale eigenvalue problems
     
 * `lobpcg` (Locally Optimal Block Preconditioned Conjugate Gradient Method) * works very well in combination with `PyAMG` (example by Nathan Bell)
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # http://scipy-lectures.org/_downloads/ScipyLectures-simple.pdf
@@ -57,10 +61,11 @@ for i in range(K):
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
 
 ## Computational Physics
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # Plot of the Lorenz Attractor based on Edward Lorenz's 1963 "Deterministic
@@ -110,9 +115,10 @@ ax.set_title("Lorenz Attractor")
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
 
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # ===================================
@@ -144,10 +150,11 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
 
 
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://matplotlib.org/gallery/images_contours_and_fields/contour_image.html#sphx-glr-gallery-images-contours-and-fields-contour-image-py
@@ -232,9 +239,10 @@ fig.tight_layout()
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
 
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # step demo
@@ -266,10 +274,11 @@ plt.ylim(-0.5, 4)
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
 
 
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # Plot of the Lorenz Attractor based on Edward Lorenz's 1963 "Deterministic
@@ -319,8 +328,9 @@ ax.set_title("Lorenz Attractor")
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # ===================================
@@ -352,11 +362,12 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
 
 
 
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://matplotlib.org/gallery/images_contours_and_fields/contour_image.html#sphx-glr-gallery-images-contours-and-fields-contour-image-py
@@ -441,10 +452,11 @@ fig.tight_layout()
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
 
 
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://matplotlib.org/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py
@@ -474,9 +486,10 @@ plt.ylim(-0.5, 4)
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
 
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://matplotlib.org/gallery/images_contours_and_fields/irregulardatagrid.html#sphx-glr-gallery-images-contours-and-fields-irregulardatagrid-py
@@ -545,10 +558,11 @@ plt.subplots_adjust(hspace=0.5)
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
 
 
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 from matplotlib.tri import Triangulation, TriAnalyzer, UniformTriRefiner
@@ -665,8 +679,9 @@ if plot_masked_tri:
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-12-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-12-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://matplotlib.org/gallery/images_contours_and_fields/triinterp_demo.html#sphx-glr-gallery-images-contours-and-fields-triinterp-demo-py
@@ -726,8 +741,9 @@ fig.tight_layout()
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-13-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-13-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://matplotlib.org/gallery/subplots_axes_and_figures/axhspan_demo.html#sphx-glr-gallery-subplots-axes-and-figures-axhspan-demo-py
@@ -762,7 +778,7 @@ plt.axis([-1, 2, -1, 2])
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-14-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-14-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
 
 
 
@@ -771,6 +787,7 @@ plt.show()
 
 
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 import matplotlib.pyplot as plt
@@ -795,7 +812,7 @@ plt.yticks(())
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-15-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-15-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
 
 
 
@@ -804,6 +821,7 @@ plt.show()
 
 
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
@@ -850,7 +868,7 @@ ax.view_init(elev=20., azim=-35)
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-16-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-16-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
 
 
 
@@ -858,6 +876,7 @@ plt.show()
 
 
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 from mpl_toolkits.mplot3d import axes3d
@@ -881,11 +900,12 @@ ax.set_zlim(-100, 100)
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-17-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-17-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
 
 ## Real time
 
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://matplotlib.org/gallery/lines_bars_and_markers/cohere.html#sphx-glr-gallery-lines-bars-and-markers-cohere-py
@@ -918,10 +938,11 @@ fig.tight_layout()
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-18-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-18-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
 
 
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://matplotlib.org/gallery/scales/symlog_demo.html#sphx-glr-gallery-scales-symlog-demo-py
@@ -956,4 +977,5 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-19-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="05-scientific_files/figure-html/unnamed-chunk-19-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+
