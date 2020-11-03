@@ -9,13 +9,6 @@ use_condaenv("r-python", required = TRUE)
 ```
 
 
-```{r, eval=FALSE}
-reticulate::use_python("..\\..\\python-3.6.7.amd64\\python.exe")
-reticulate::py_config()
-reticulate::py_available()
-```
-
-
 ```{r}
 #R
 autos = cars
@@ -36,3 +29,9 @@ autos_py['time']=autos_py['dist']/autos_py['speed']
 plot(py$autos_py)
 ```
 
+
+```{r, eval=FALSE}
+reticulate::use_python("..\\..\\python-3.6.7.amd64\\python.exe")
+reticulate::py_config()
+reticulate::py_available()
+```

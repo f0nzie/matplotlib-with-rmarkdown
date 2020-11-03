@@ -17,7 +17,4 @@ advanced
 adding-labels
 subplots
 change-of-axes
-<<<<<<< HEAD
-=======
 test-new
->>>>>>> 022d841... move fixed equations to ch 8
