@@ -7,7 +7,7 @@ reticulate::use_condaenv("r-python")
 ```
 
 ## Adding labels
-
+Math symbols printing
 
 $r's(t) = \mathcal{A}\/\sin(2 \omega t)'$
 
@@ -45,6 +45,42 @@ plt.show()
 
 
 ```python
+# http://scipy-lectures.org/_downloads/ScipyLectures-simple.pdf
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+eqs = []
+
+eqs.append((r"$W^{3\beta}_{\delta_1 \rho_1 \sigma_2} = U^{3\beta}_{\delta_1 \rho_1} + \frac{1} {8 \pi 2} \int^{\alpha_2}_{\alpha_2} d \alpha^\prime_2 \left[\frac{ U^{2\beta}_{\delta_1 \rho_1} - \alpha^\prime_2U^{1\beta}_{\rho_1 \sigma_2}}{U^{0\beta}_{\rho_1 \sigma_2}} \right]$"))    # eq1
+eqs.append((r"$\frac{d\rho}{d t} + \rho \vec{v}\cdot\nabla\vec{v} = -\nabla p + \mu\nabla^2 \vec{v} + \rho \vec{g}$"))   # eq2
+eqs.append((r"$\int_{-\infty}^\infty e^{-x^2}dx=\sqrt{\pi}$"))   # eq3
+eqs.append((r"$E = mc^2 = \sqrt{ {m_0}^2 c^4 + p^2 c^2}$"))      # eq4
+eqs.append((r"$F_G = G\frac{m_1m_2}{r^2}$"))                     # eq5
+
+plt.axes([0.025, 0.025, 0.95, 0.95])
+
+for i in range(24):
+    index = np.random.randint(0, len(eqs))
+    eq = eqs[index]
+    size = np.random.uniform(12, 32)
+    x,y = np.random.uniform(0, 1, 2)
+    alpha = np.random.uniform(0.25, .75)
+    plt.text(x, y, eq, ha='center', va='center', color="#11557c", alpha=alpha,transform=plt.gca().transAxes, fontsize=size, clip_on=True)
+
+plt.xticks([])
+plt.yticks([])
+plt.show()
+```
+
+<img src="08-advanced_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" />
+
+
+## Subplots
+
+
+
+```python
 # https://matplotlib.org/gallery/subplots_axes_and_figures/subplots_adjust.html#sphx-glr-gallery-subplots-axes-and-figures-subplots-adjust-py
 
 import matplotlib.pyplot as plt
@@ -65,7 +101,7 @@ plt.colorbar(cax=cax)
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -93,7 +129,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -114,7 +150,7 @@ plt.suptitle('Categorical Plotting')
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -145,7 +181,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -173,7 +209,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 ## Change of axes
@@ -227,6 +263,7 @@ plt.subplots_adjust(top=0.92, bottom=0.08, left=0.10, right=0.95, hspace=0.25,
 plt.show()
 ```
 
+<<<<<<< HEAD
 <img src="08-advanced_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" />
 
 
@@ -241,20 +278,12 @@ import numpy as np
 
 # Fixing random state for reproducibility
 np.random.seed(19680801)
-
-
-plt.subplot(211)
-plt.imshow(np.random.random((100, 100)), cmap=plt.cm.BuPu_r)
-plt.subplot(212)
-plt.imshow(np.random.random((100, 100)), cmap=plt.cm.BuPu_r)
-
-plt.subplots_adjust(bottom=0.1, right=0.8, top=0.9)
-cax = plt.axes([0.85, 0.1, 0.075, 0.8])
-plt.colorbar(cax=cax)
-plt.show()
-```
-
+=======
 <img src="08-advanced_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" />
+>>>>>>> 022d841... move fixed equations to ch 8
+
+
+
 
 
 
@@ -289,3 +318,4 @@ plt.show()
 ```
 
 <img src="08-advanced_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" />
+
