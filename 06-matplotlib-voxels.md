@@ -8,27 +8,11 @@ library(reticulate)
 reticulate::use_condaenv("r-python")
 ```
 
-</div></div>
+</div><br></div>
 
 
 
-
-```r
-# load the package that makes R and Python talk
-library(reticulate)
-
-# set the preferred Python to execute
-user_profile <- Sys.getenv("USERPROFILE")                    # user folder
-python_portable <- normalizePath(file.path(user_profile,     # Python location
-                                "WPy-3710zero/python-3.7.1.amd64/python.exe"))
-
-reticulate::use_python(python_portable, required = TRUE)
- 
-# find out if it took it
-reticulate::py_config()
-```
-
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://matplotlib.org/api/_as_gen/mpl_toolkits.mplot3d.axes3d.Axes3D.html
@@ -77,11 +61,11 @@ ax.voxels(x, y, z, sphere,
 plt.show()
 ```
 
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/voxels.py
@@ -117,8 +101,9 @@ ax.voxels(voxels, facecolors=colors, edgecolor='k')
 plt.show()
 ```
 
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 import numpy as np
@@ -164,8 +149,9 @@ ax.voxels(x, y, z, filled, facecolors=colors, edgecolors='gray')
 plt.show()
 ```
 
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 import numpy as np
@@ -192,8 +178,9 @@ ax.voxels(filled, edgecolors='gray')
 plt.show()
 ```
 
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 import numpy as np
@@ -220,9 +207,10 @@ ax.voxels(filled, facecolors='#1f77b430', edgecolors='gray')
 plt.show()
 ```
 
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 import numpy as np
@@ -249,9 +237,10 @@ ax.voxels(np.ones((3, 3, 3)), facecolors='#1f77b430', edgecolors='gray')
 plt.show()
 ```
 
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 import numpy as np
@@ -280,9 +269,10 @@ ax.voxels(np.ones((3, 3, 3)), facecolors=colors, edgecolor='gray')
 plt.show()
 ```
 
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 import matplotlib.pyplot as plt
@@ -325,10 +315,11 @@ ax.set(xlabel='r', ylabel='g', zlabel='b')
 plt.show()
 ```
 
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://matplotlib.org/gallery/mplot3d/voxels_numpy_logo.html
@@ -376,10 +367,11 @@ ax.voxels(x, y, z, filled_2, facecolors=fcolors_2, edgecolors=ecolors_2)
 plt.show()
 ```
 
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://stackoverflow.com/a/49281004/5270873
@@ -430,3 +422,5 @@ ax.set_zlim([-3,9])
 
 plt.show()
 ```
+
+</div><br></div>

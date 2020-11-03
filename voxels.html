@@ -24,7 +24,7 @@
 <meta name="author" content="Alfonso R. Reyes" />
 
 
-<meta name="date" content="2020-11-02" />
+<meta name="date" content="2020-11-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -191,25 +191,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="decocode">
 <div style="background-color:#4C78DB">
 <p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i> <b>R</b></span></p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="voxels.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb52-2"><a href="voxels.html#cb52-2" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">use_condaenv</span>(<span class="st">&quot;r-python&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="voxels.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb53-2"><a href="voxels.html#cb53-2" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">use_condaenv</span>(<span class="st">&quot;r-python&quot;</span>)</span></code></pre></div>
 </div>
+<br>
 </div>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="voxels.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load the package that makes R and Python talk</span></span>
-<span id="cb53-2"><a href="voxels.html#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb53-3"><a href="voxels.html#cb53-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-4"><a href="voxels.html#cb53-4" aria-hidden="true" tabindex="-1"></a><span class="co"># set the preferred Python to execute</span></span>
-<span id="cb53-5"><a href="voxels.html#cb53-5" aria-hidden="true" tabindex="-1"></a>user_profile <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">&quot;USERPROFILE&quot;</span>)                    <span class="co"># user folder</span></span>
-<span id="cb53-6"><a href="voxels.html#cb53-6" aria-hidden="true" tabindex="-1"></a>python_portable <span class="ot">&lt;-</span> <span class="fu">normalizePath</span>(<span class="fu">file.path</span>(user_profile,     <span class="co"># Python location</span></span>
-<span id="cb53-7"><a href="voxels.html#cb53-7" aria-hidden="true" tabindex="-1"></a>                                <span class="st">&quot;WPy-3710zero/python-3.7.1.amd64/python.exe&quot;</span>))</span>
-<span id="cb53-8"><a href="voxels.html#cb53-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-9"><a href="voxels.html#cb53-9" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">use_python</span>(python_portable, <span class="at">required =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb53-10"><a href="voxels.html#cb53-10" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb53-11"><a href="voxels.html#cb53-11" aria-hidden="true" tabindex="-1"></a><span class="co"># find out if it took it</span></span>
-<span id="cb53-12"><a href="voxels.html#cb53-12" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">py_config</span>()</span></code></pre></div>
 <div class="decocode">
-<div style="background-color:#366994">
-<p><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i> <b>Python</b></span></p>
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="voxels.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/api/_as_gen/mpl_toolkits.mplot3d.axes3d.Axes3D.html</span></span>
 <span id="cb54-2"><a href="voxels.html#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="co">#=======================================================</span></span>
 <span id="cb54-3"><a href="voxels.html#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="co">#3D voxel / volumetric plot with cylindrical coordinates</span></span>
@@ -254,12 +243,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb54-42"><a href="voxels.html#cb54-42" aria-hidden="true" tabindex="-1"></a>          edgecolors<span class="op">=</span>np.clip(<span class="dv">2</span><span class="op">*</span>colors <span class="op">-</span> <span class="fl">0.5</span>, <span class="dv">0</span>, <span class="dv">1</span>),  <span class="co"># brighter</span></span>
 <span id="cb54-43"><a href="voxels.html#cb54-43" aria-hidden="true" tabindex="-1"></a>          linewidth<span class="op">=</span><span class="fl">0.5</span>)</span>
 <span id="cb54-44"><a href="voxels.html#cb54-44" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" />
 </div>
+<br>
 </div>
 <div class="decocode">
-<div style="background-color:#366994">
-<p><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i> <b>Python</b></span></p>
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="voxels.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/voxels.py</span></span>
 <span id="cb55-2"><a href="voxels.html#cb55-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb55-3"><a href="voxels.html#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -291,9 +281,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb55-29"><a href="voxels.html#cb55-29" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
 <span id="cb55-30"><a href="voxels.html#cb55-30" aria-hidden="true" tabindex="-1"></a>ax.voxels(voxels, facecolors<span class="op">=</span>colors, edgecolor<span class="op">=</span><span class="st">&#39;k&#39;</span>)</span>
 <span id="cb55-31"><a href="voxels.html#cb55-31" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" />
 </div>
+<br>
 </div>
+<div class="decocode">
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="voxels.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb56-2"><a href="voxels.html#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb56-3"><a href="voxels.html#cb56-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
@@ -335,7 +329,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb56-39"><a href="voxels.html#cb56-39" aria-hidden="true" tabindex="-1"></a>x, y, z <span class="op">=</span> expand_coordinates(np.indices(np.array(filled.shape) <span class="op">+</span> <span class="dv">1</span>))</span>
 <span id="cb56-40"><a href="voxels.html#cb56-40" aria-hidden="true" tabindex="-1"></a>ax.voxels(x, y, z, filled, facecolors<span class="op">=</span>colors, edgecolors<span class="op">=</span><span class="st">&#39;gray&#39;</span>)</span>
 <span id="cb56-41"><a href="voxels.html#cb56-41" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" />
+</div>
+<br>
+</div>
+<div class="decocode">
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="voxels.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb57-2"><a href="voxels.html#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb57-3"><a href="voxels.html#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
@@ -358,7 +358,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb57-20"><a href="voxels.html#cb57-20" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> make_ax(<span class="va">True</span>)</span>
 <span id="cb57-21"><a href="voxels.html#cb57-21" aria-hidden="true" tabindex="-1"></a>ax.voxels(filled, edgecolors<span class="op">=</span><span class="st">&#39;gray&#39;</span>)</span>
 <span id="cb57-22"><a href="voxels.html#cb57-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
+</div>
+<br>
+</div>
+<div class="decocode">
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="voxels.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb58-2"><a href="voxels.html#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb58-3"><a href="voxels.html#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
@@ -381,7 +387,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb58-20"><a href="voxels.html#cb58-20" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> make_ax()</span>
 <span id="cb58-21"><a href="voxels.html#cb58-21" aria-hidden="true" tabindex="-1"></a>ax.voxels(filled, facecolors<span class="op">=</span><span class="st">&#39;#1f77b430&#39;</span>, edgecolors<span class="op">=</span><span class="st">&#39;gray&#39;</span>)</span>
 <span id="cb58-22"><a href="voxels.html#cb58-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
+</div>
+<br>
+</div>
+<div class="decocode">
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="voxels.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb59-2"><a href="voxels.html#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb59-3"><a href="voxels.html#cb59-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
@@ -404,7 +416,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb59-20"><a href="voxels.html#cb59-20" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> make_ax()</span>
 <span id="cb59-21"><a href="voxels.html#cb59-21" aria-hidden="true" tabindex="-1"></a>ax.voxels(np.ones((<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>)), facecolors<span class="op">=</span><span class="st">&#39;#1f77b430&#39;</span>, edgecolors<span class="op">=</span><span class="st">&#39;gray&#39;</span>)</span>
 <span id="cb59-22"><a href="voxels.html#cb59-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" />
+</div>
+<br>
+</div>
+<div class="decocode">
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="voxels.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb60-2"><a href="voxels.html#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb60-3"><a href="voxels.html#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
@@ -429,7 +447,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb60-22"><a href="voxels.html#cb60-22" aria-hidden="true" tabindex="-1"></a>colors[<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>] <span class="op">=</span> <span class="st">&#39;#ff0000ff&#39;</span></span>
 <span id="cb60-23"><a href="voxels.html#cb60-23" aria-hidden="true" tabindex="-1"></a>ax.voxels(np.ones((<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>)), facecolors<span class="op">=</span>colors, edgecolor<span class="op">=</span><span class="st">&#39;gray&#39;</span>)</span>
 <span id="cb60-24"><a href="voxels.html#cb60-24" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" />
+</div>
+<br>
+</div>
+<div class="decocode">
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="voxels.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb61-2"><a href="voxels.html#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb61-3"><a href="voxels.html#cb61-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -468,7 +492,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb61-36"><a href="voxels.html#cb61-36" aria-hidden="true" tabindex="-1"></a>          linewidth<span class="op">=</span><span class="fl">0.5</span>)</span>
 <span id="cb61-37"><a href="voxels.html#cb61-37" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(xlabel<span class="op">=</span><span class="st">&#39;r&#39;</span>, ylabel<span class="op">=</span><span class="st">&#39;g&#39;</span>, zlabel<span class="op">=</span><span class="st">&#39;b&#39;</span>)</span>
 <span id="cb61-38"><a href="voxels.html#cb61-38" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" />
+</div>
+<br>
+</div>
+<div class="decocode">
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb62"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb62-1"><a href="voxels.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/mplot3d/voxels_numpy_logo.html</span></span>
 <span id="cb62-2"><a href="voxels.html#cb62-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb62-3"><a href="voxels.html#cb62-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -512,7 +542,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb62-41"><a href="voxels.html#cb62-41" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
 <span id="cb62-42"><a href="voxels.html#cb62-42" aria-hidden="true" tabindex="-1"></a>ax.voxels(x, y, z, filled_2, facecolors<span class="op">=</span>fcolors_2, edgecolors<span class="op">=</span>ecolors_2)</span>
 <span id="cb62-43"><a href="voxels.html#cb62-43" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" />
+</div>
+<br>
+</div>
+<div class="decocode">
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="voxels.html#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://stackoverflow.com/a/49281004/5270873</span></span>
 <span id="cb63-2"><a href="voxels.html#cb63-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb63-3"><a href="voxels.html#cb63-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
@@ -560,6 +596,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb63-45"><a href="voxels.html#cb63-45" aria-hidden="true" tabindex="-1"></a>ax.set_zlim([<span class="op">-</span><span class="dv">3</span>,<span class="dv">9</span>])</span>
 <span id="cb63-46"><a href="voxels.html#cb63-46" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb63-47"><a href="voxels.html#cb63-47" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+</div>
+<br>
+</div>
 
 </div>
             </section>

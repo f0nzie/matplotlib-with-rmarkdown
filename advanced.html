@@ -24,7 +24,7 @@
 <meta name="author" content="Alfonso R. Reyes" />
 
 
-<meta name="date" content="2020-11-02" />
+<meta name="date" content="2020-11-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -194,6 +194,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="advanced.html#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
 <span id="cb71-2"><a href="advanced.html#cb71-2" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">use_condaenv</span>(<span class="st">&quot;r-python&quot;</span>)</span></code></pre></div>
 </div>
+<br>
 </div>
 <div id="adding-labels" class="section level2" number="8.1">
 <h2><span class="header-section-number">8.1</span> Adding labels</h2>
@@ -201,8 +202,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math inline">\(r&#39;s(t) = \mathcal{A}\/\sin(2 \omega t)&#39;\)</span></p>
 <p><span class="math inline">\(\mathbb{blackboard}\)</span></p>
 <div class="decocode">
-<div style="background-color:#366994">
-<p><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i> <b>Python</b></span></p>
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb72"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb72-1"><a href="advanced.html#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb72-2"><a href="advanced.html#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb72-3"><a href="advanced.html#cb72-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -222,10 +223,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb72-17"><a href="advanced.html#cb72-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <img src="08-advanced_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" />
 </div>
+<br>
 </div>
 <div class="decocode">
-<div style="background-color:#366994">
-<p><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i> <b>Python</b></span></p>
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb73"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb73-1"><a href="advanced.html#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="co"># http://scipy-lectures.org/_downloads/ScipyLectures-simple.pdf</span></span>
 <span id="cb73-2"><a href="advanced.html#cb73-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb73-3"><a href="advanced.html#cb73-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -254,10 +256,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb73-26"><a href="advanced.html#cb73-26" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <img src="08-advanced_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" />
 </div>
+<br>
 </div>
 </div>
 <div id="subplots" class="section level2" number="8.2">
 <h2><span class="header-section-number">8.2</span> Subplots</h2>
+<div class="decocode">
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb74"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb74-1"><a href="advanced.html#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/subplots_axes_and_figures/subplots_adjust.html#sphx-glr-gallery-subplots-axes-and-figures-subplots-adjust-py</span></span>
 <span id="cb74-2"><a href="advanced.html#cb74-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb74-3"><a href="advanced.html#cb74-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -276,7 +282,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb74-16"><a href="advanced.html#cb74-16" aria-hidden="true" tabindex="-1"></a>cax <span class="op">=</span> plt.axes([<span class="fl">0.85</span>, <span class="fl">0.1</span>, <span class="fl">0.075</span>, <span class="fl">0.8</span>])</span>
 <span id="cb74-17"><a href="advanced.html#cb74-17" aria-hidden="true" tabindex="-1"></a>plt.colorbar(cax<span class="op">=</span>cax)</span>
 <span id="cb74-18"><a href="advanced.html#cb74-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="08-advanced_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<img src="08-advanced_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" />
+</div>
+<br>
+</div>
+<div class="decocode">
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb75"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb75-1"><a href="advanced.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/text_labels_and_annotations/figlegend_demo.html#sphx-glr-gallery-text-labels-and-annotations-figlegend-demo-py</span></span>
 <span id="cb75-2"><a href="advanced.html#cb75-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb75-3"><a href="advanced.html#cb75-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -298,7 +310,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb75-19"><a href="advanced.html#cb75-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb75-20"><a href="advanced.html#cb75-20" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
 <span id="cb75-21"><a href="advanced.html#cb75-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="08-advanced_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<img src="08-advanced_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
+</div>
+<br>
+</div>
+<div class="decocode">
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb76"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb76-1"><a href="advanced.html#cb76-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">&#39;group_a&#39;</span>, <span class="st">&#39;group_b&#39;</span>, <span class="st">&#39;group_c&#39;</span>]</span>
 <span id="cb76-2"><a href="advanced.html#cb76-2" aria-hidden="true" tabindex="-1"></a>values <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">100</span>]</span>
 <span id="cb76-3"><a href="advanced.html#cb76-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -312,7 +330,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb76-11"><a href="advanced.html#cb76-11" aria-hidden="true" tabindex="-1"></a>plt.plot(names, values)</span>
 <span id="cb76-12"><a href="advanced.html#cb76-12" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="st">&#39;Categorical Plotting&#39;</span>)</span>
 <span id="cb76-13"><a href="advanced.html#cb76-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="08-advanced_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<img src="08-advanced_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
+</div>
+<br>
+</div>
+<div class="decocode">
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb77"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb77-1"><a href="advanced.html#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://www.python-course.eu/matplotlib_multiple_figures.php</span></span>
 <span id="cb77-2"><a href="advanced.html#cb77-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb77-3"><a href="advanced.html#cb77-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.gridspec <span class="im">as</span> gridspec</span>
@@ -337,7 +361,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb77-22"><a href="advanced.html#cb77-22" aria-hidden="true" tabindex="-1"></a>axes_5.plot([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>], [<span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="fl">3.8</span>])</span>
 <span id="cb77-23"><a href="advanced.html#cb77-23" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
 <span id="cb77-24"><a href="advanced.html#cb77-24" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="08-advanced_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<img src="08-advanced_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" />
+</div>
+<br>
+</div>
+<div class="decocode">
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb78"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb78-1"><a href="advanced.html#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/text_labels_and_annotations/figlegend_demo.html#sphx-glr-gallery-text-labels-and-annotations-figlegend-demo-py</span></span>
 <span id="cb78-2"><a href="advanced.html#cb78-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb78-3"><a href="advanced.html#cb78-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -359,10 +389,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb78-19"><a href="advanced.html#cb78-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb78-20"><a href="advanced.html#cb78-20" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
 <span id="cb78-21"><a href="advanced.html#cb78-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="08-advanced_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<img src="08-advanced_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" />
+</div>
+<br>
+</div>
 </div>
 <div id="change-of-axes" class="section level2" number="8.3">
 <h2><span class="header-section-number">8.3</span> Change of axes</h2>
+<div class="decocode">
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb79"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb79-1"><a href="advanced.html#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fixing random state for reproducibility</span></span>
 <span id="cb79-2"><a href="advanced.html#cb79-2" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">19680801</span>)</span>
 <span id="cb79-3"><a href="advanced.html#cb79-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -408,7 +444,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb79-43"><a href="advanced.html#cb79-43" aria-hidden="true" tabindex="-1"></a>                    wspace<span class="op">=</span><span class="fl">0.35</span>)</span>
 <span id="cb79-44"><a href="advanced.html#cb79-44" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb79-45"><a href="advanced.html#cb79-45" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="08-advanced_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<img src="08-advanced_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" />
+</div>
+<br>
+</div>
+<div class="decocode">
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb80"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb80-1"><a href="advanced.html#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/subplots_axes_and_figures/subplots_adjust.html#sphx-glr-gallery-subplots-axes-and-figures-subplots-adjust-py</span></span>
 <span id="cb80-2"><a href="advanced.html#cb80-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb80-3"><a href="advanced.html#cb80-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -427,7 +469,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb80-16"><a href="advanced.html#cb80-16" aria-hidden="true" tabindex="-1"></a>cax <span class="op">=</span> plt.axes([<span class="fl">0.85</span>, <span class="fl">0.1</span>, <span class="fl">0.075</span>, <span class="fl">0.8</span>])</span>
 <span id="cb80-17"><a href="advanced.html#cb80-17" aria-hidden="true" tabindex="-1"></a>plt.colorbar(cax<span class="op">=</span>cax)</span>
 <span id="cb80-18"><a href="advanced.html#cb80-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="08-advanced_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<img src="08-advanced_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" />
+</div>
+<br>
+</div>
+<div class="decocode">
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
 <div class="sourceCode" id="cb81"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb81-1"><a href="advanced.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="co"># step demo</span></span>
 <span id="cb81-2"><a href="advanced.html#cb81-2" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py</span></span>
 <span id="cb81-3"><a href="advanced.html#cb81-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -455,7 +503,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb81-25"><a href="advanced.html#cb81-25" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="dv">0</span>, <span class="dv">7</span>)</span>
 <span id="cb81-26"><a href="advanced.html#cb81-26" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="op">-</span><span class="fl">0.5</span>, <span class="dv">4</span>)</span>
 <span id="cb81-27"><a href="advanced.html#cb81-27" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="08-advanced_files/figure-html/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<img src="08-advanced_files/figure-html/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" />
+</div>
+<br>
+</div>
 
 </div>
 </div>

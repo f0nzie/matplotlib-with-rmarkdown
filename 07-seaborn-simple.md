@@ -8,9 +8,9 @@ library(reticulate)
 use_condaenv("r-python", required = TRUE)
 ```
 
-</div></div>
+</div><br></div>
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://seaborn.pydata.org/examples/errorband_lineplots.html
@@ -30,10 +30,10 @@ sns.lineplot(x="timepoint", y="signal",
 plt.show()
 ```
 
-<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://seaborn.pydata.org/examples/horizontal_boxplot.html
@@ -66,10 +66,11 @@ sns.despine(trim=True, left=True)
 plt.show()
 ```
 
-<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://seaborn.pydata.org/examples/timeseries_facets.html
@@ -110,10 +111,11 @@ g.tight_layout()
 plt.show()
 ```
 
-<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 from __future__ import print_function, division
@@ -128,11 +130,12 @@ plt.plot(x, np.sin(x), x, np.cos(x));
 plt.show()
 ```
 
-<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://seaborn.pydata.org/examples/scatterplot_matrix.html
@@ -147,10 +150,11 @@ sns.pairplot(df, hue="species")
 plt.show()
 ```
 
-<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 import numpy as np
@@ -171,5 +175,5 @@ sns.relplot(x="timepoint", y="signal", hue="event", style="event",
 plt.show()
 ```
 
-<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 

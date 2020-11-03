@@ -7,11 +7,11 @@ library(reticulate)
 reticulate::use_condaenv("r-python")
 ```
 
-</div></div>
+</div><br></div>
 
 
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://www.geeksforgeeks.org/plot-mathematical-expressions-in-python-using-matplotlib/
@@ -49,11 +49,11 @@ plt.ylabel('y-axis')
 plt.show() 
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="04-math_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://www.kaggle.com/sskiing/matplotlib-showcase-examples
@@ -96,7 +96,7 @@ ax.set_yticks([])
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="04-math_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
@@ -104,7 +104,7 @@ plt.show()
 ## Middle
 
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # ===================================
@@ -136,7 +136,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="04-math_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
@@ -144,7 +144,7 @@ plt.show()
 
 
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 import matplotlib.pyplot as plt
@@ -173,11 +173,11 @@ axs[2].set_ylim(-1, 1)
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="04-math_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # http://www.scipy-lectures.org/intro/matplotlib/auto_examples/plot_plot3d_ex.html
@@ -200,9 +200,9 @@ ax.set_zlim(-2, 2)
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="04-math_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://www.python-course.eu/matplotlib_multiple_figures.php
@@ -221,14 +221,14 @@ plt.grid(color='b', alpha=0.5, linestyle='dashed', linewidth=0.5)
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="04-math_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 ## Surface functions
 
 
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://matplotlib.org/gallery/mplot3d/offset.html#sphx-glr-gallery-mplot3d-offset-py
@@ -255,13 +255,13 @@ ax.set_zlim(0, 2)
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="04-math_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
 
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/surface3d_radial.py
@@ -296,14 +296,14 @@ ax.set_zlabel(r'$V(\phi)$')
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="04-math_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
 
 
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/wire3d.py
@@ -324,11 +324,11 @@ ax.plot_wireframe(X, Y, Z, rstride=10, cstride=10)
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="04-math_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
@@ -375,11 +375,11 @@ ax.view_init(elev=20., azim=-35)
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="04-math_files/figure-html/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://matplotlib.org/2.0.2/examples/mplot3d/contour3d_demo.html
@@ -396,13 +396,13 @@ ax.clabel(cset, fontsize=9, inline=1)
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-12-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="04-math_files/figure-html/unnamed-chunk-12-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 ## Machine Learning
 
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 import numpy as np
@@ -438,4 +438,4 @@ plt.axis('tight')
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-13-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="04-math_files/figure-html/unnamed-chunk-13-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>

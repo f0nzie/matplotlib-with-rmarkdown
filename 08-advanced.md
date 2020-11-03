@@ -7,7 +7,7 @@ library(reticulate)
 reticulate::use_condaenv("r-python")
 ```
 
-</div></div>
+</div><br></div>
 
 ## Adding labels
 Math symbols printing
@@ -18,7 +18,7 @@ $\mathbb{blackboard}$
 
 
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 import matplotlib.pyplot as plt
@@ -40,11 +40,11 @@ plt.grid(True)
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="08-advanced_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
-<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # http://scipy-lectures.org/_downloads/ScipyLectures-simple.pdf
@@ -75,12 +75,13 @@ plt.yticks([])
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></div></div>
+<img src="08-advanced_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 ## Subplots
 
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://matplotlib.org/gallery/subplots_axes_and_figures/subplots_adjust.html#sphx-glr-gallery-subplots-axes-and-figures-subplots-adjust-py
@@ -103,9 +104,10 @@ plt.colorbar(cax=cax)
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://matplotlib.org/gallery/text_labels_and_annotations/figlegend_demo.html#sphx-glr-gallery-text-labels-and-annotations-figlegend-demo-py
@@ -131,10 +133,11 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 names = ['group_a', 'group_b', 'group_c']
@@ -152,9 +155,10 @@ plt.suptitle('Categorical Plotting')
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://www.python-course.eu/matplotlib_multiple_figures.php
@@ -183,9 +187,10 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://matplotlib.org/gallery/text_labels_and_annotations/figlegend_demo.html#sphx-glr-gallery-text-labels-and-annotations-figlegend-demo-py
@@ -211,11 +216,12 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 ## Change of axes
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # Fixing random state for reproducibility
@@ -265,11 +271,12 @@ plt.subplots_adjust(top=0.92, bottom=0.08, left=0.10, right=0.95, hspace=0.25,
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://matplotlib.org/gallery/subplots_axes_and_figures/subplots_adjust.html#sphx-glr-gallery-subplots-axes-and-figures-subplots-adjust-py
@@ -292,9 +299,10 @@ plt.colorbar(cax=cax)
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # step demo
@@ -326,5 +334,5 @@ plt.ylim(-0.5, 4)
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
