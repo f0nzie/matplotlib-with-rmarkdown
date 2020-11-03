@@ -1,7 +1,7 @@
 # Voxels
 
 
-```{r}
+```{r, deco=list(label="R", bc="#4C78DB", tc="#ffffff", icon=list(style="fab", name="r-project"))}
 library(reticulate)
 reticulate::use_condaenv("r-python")
 ```
@@ -23,7 +23,7 @@ reticulate::use_python(python_portable, required = TRUE)
 reticulate::py_config()
 ```
 
-```{python}
+```{python, deco=list()}
 # https://matplotlib.org/api/_as_gen/mpl_toolkits.mplot3d.axes3d.Axes3D.html
 #=======================================================
 #3D voxel / volumetric plot with cylindrical coordinates
@@ -73,7 +73,7 @@ plt.show()
 
 
 
-```{python}
+```{python, deco=list()}
 # https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/voxels.py
 
 import matplotlib.pyplot as plt

@@ -1,11 +1,11 @@
 # Introduction
 
-```{r}
+```{r, deco=list(label="R", bc="#4C78DB", tc="#ffffff", icon=list(style="fab", name="r-project"))}
 library(reticulate)
 reticulate::use_condaenv("r-python")
 ```
 
-```{python}
+```{python, deco=list()}
 import matplotlib.pyplot as plt
 plt.plot([1, 2, 3, 4])
 plt.ylabel('some numbers')
@@ -15,7 +15,7 @@ plt.show()
 
 ## The "hello world" plot
 
-```{python}
+```{python, deco=list()}
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -32,7 +32,7 @@ plt.show()
 ```
 
 
-```{python}
+```{python, deco=list()}
 # https://matplotlib.org/2.0.2/examples/mplot3d/contour3d_demo.html
 from mpl_toolkits.mplot3d import axes3d
 import matplotlib.pyplot as plt
@@ -48,7 +48,7 @@ plt.show()
 ```
 
 
-```{python, results = "hold", message=FALSE, collapse=TRUE}
+```{python, results = "hold", message=FALSE, collapse=TRUE, deco=list()}
 # https://matplotlib.org/gallery/showcase/anatomy.html#sphx-glr-gallery-showcase-anatomy-py
 
 import numpy as np
@@ -194,7 +194,7 @@ plt.show()
 
 
 
-```{python, collapse=TRUE}
+```{python, collapse=TRUE, deco=list()}
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -237,7 +237,7 @@ plt.show()
 ```
 
 
-```{python}
+```{python, deco=list()}
 # https://matplotlib.org/gallery/lines_bars_and_markers/cohere.html#sphx-glr-gallery-lines-bars-and-markers-cohere-py
 import numpy as np
 import matplotlib.pyplot as plt

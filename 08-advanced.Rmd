@@ -1,6 +1,6 @@
 # Advanced
 
-```{r}
+```{r, deco=list(label="R", bc="#4C78DB", tc="#ffffff", icon=list(style="fab", name="r-project"))}
 library(reticulate)
 reticulate::use_condaenv("r-python")
 ```
@@ -14,7 +14,7 @@ $\mathbb{blackboard}$
 
 
 
-```{python}
+```{python, deco=list()}
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -36,7 +36,7 @@ plt.show()
 
 
 
-```{python}
+```{python, deco=list()}
 # http://scipy-lectures.org/_downloads/ScipyLectures-simple.pdf
 
 import numpy as np

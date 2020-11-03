@@ -3,11 +3,14 @@
 
 * Always load the Python environment you are sure has the packages
 
+<div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i>  <b>R</b></span>
 
 ```r
 library(reticulate)
 use_condaenv("r-python", required = TRUE)
 ```
+
+</div></div>
 
 
 
@@ -17,6 +20,7 @@ autos = cars
 ```
 
 
+<div class=decocode><div style="background-color:#366994"><span style="font-size:90%;color:#ffffff"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 #Python
@@ -26,6 +30,8 @@ import pandas
 autos_py = r.autos
 autos_py['time']=autos_py['dist']/autos_py['speed']
 ```
+
+</div></div>
 
 
 ```r

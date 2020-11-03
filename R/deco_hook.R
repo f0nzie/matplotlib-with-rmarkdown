@@ -1,4 +1,5 @@
 library(knitr)
+
 knit_hooks$set(deco = function(before, options) {
   if (before) {
     label <- ifelse(is.null(options$deco$label), "<b>Python</b>",
