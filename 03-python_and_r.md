@@ -12,14 +12,6 @@ use_condaenv("r-python", required = TRUE)
 
 
 ```r
-reticulate::use_python("..\\..\\python-3.6.7.amd64\\python.exe")
-reticulate::py_config()
-reticulate::py_available()
-```
-
-
-
-```r
 #R
 autos = cars
 ```
@@ -41,5 +33,12 @@ autos_py['time']=autos_py['dist']/autos_py['speed']
 plot(py$autos_py)
 ```
 
-<img src="03-python_and_r_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="03-python_and_r_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" />
 
+
+
+```r
+reticulate::use_python("..\\..\\python-3.6.7.amd64\\python.exe")
+reticulate::py_config()
+reticulate::py_available()
+```

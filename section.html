@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Ch. 2 Python environment | Matplotlib with Rmarkdown</title>
+  <title>Ch. 9  | Matplotlib with Rmarkdown</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Ch. 2 Python environment | Matplotlib with Rmarkdown" />
+  <meta property="og:title" content="Ch. 9  | Matplotlib with Rmarkdown" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="/f0nzie/matplotlib-with-rmarkdown" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Ch. 2 Python environment | Matplotlib with Rmarkdown" />
+  <meta name="twitter:title" content="Ch. 9  | Matplotlib with Rmarkdown" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="introduction.html"/>
-<link rel="next" href="sharing-data-objects.html"/>
+<link rel="prev" href="advanced.html"/>
+<link rel="next" href="test-new.html"/>
 <script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -163,7 +163,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.2" data-path="advanced.html"><a href="advanced.html#subplots"><i class="fa fa-check"></i><b>8.2</b> Subplots</a></li>
 <li class="chapter" data-level="8.3" data-path="advanced.html"><a href="advanced.html#change-of-axes"><i class="fa fa-check"></i><b>8.3</b> Change of axes</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="test-new.html"><a href="test-new.html"><i class="fa fa-check"></i><b>9</b> Test new</a></li>
+<li class="chapter" data-level="9" data-path="section.html"><a href="section.html"><i class="fa fa-check"></i><b>9</b> <img src="08-advanced_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" /></a></li>
+<li class="chapter" data-level="10" data-path="test-new.html"><a href="test-new.html"><i class="fa fa-check"></i><b>10</b> Test new</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -184,46 +185,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="python-environment" class="section level1" number="2">
-<h1><span class="header-section-number">Ch. 2</span> Python environment</h1>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="python-environment.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span></code></pre></div>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="python-environment.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get the current folder of the notebook to set the relative path</span></span>
-<span id="cb9-2"><a href="python-environment.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="python-environment.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb10-2"><a href="python-environment.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">use_condaenv</span>(<span class="st">&quot;r-python&quot;</span>, <span class="at">required =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb10-3"><a href="python-environment.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">py_config</span>()</span></code></pre></div>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="python-environment.html#cb11-1" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">use_python</span>(<span class="st">&quot;..</span><span class="sc">\\</span><span class="st">..</span><span class="sc">\\</span><span class="st">python-3.6.7.amd64</span><span class="sc">\\</span><span class="st">python.exe&quot;</span>)</span>
-<span id="cb11-2"><a href="python-environment.html#cb11-2" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">py_config</span>()</span>
-<span id="cb11-3"><a href="python-environment.html#cb11-3" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">py_available</span>()</span></code></pre></div>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="python-environment.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this chunk with matplotlib will only run if the PyQt plugin path has been specified</span></span>
-<span id="cb12-2"><a href="python-environment.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib</span>
-<span id="cb12-3"><a href="python-environment.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb12-4"><a href="python-environment.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="python-environment.html#cb13-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.arange(<span class="fl">0.0</span>, <span class="fl">2.0</span>, <span class="fl">0.01</span>)</span>
-<span id="cb13-2"><a href="python-environment.html#cb13-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> np.sin(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> t)</span>
-<span id="cb13-3"><a href="python-environment.html#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="python-environment.html#cb13-4" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
-<span id="cb13-5"><a href="python-environment.html#cb13-5" aria-hidden="true" tabindex="-1"></a>ax.plot(t, s)</span>
-<span id="cb13-6"><a href="python-environment.html#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-7"><a href="python-environment.html#cb13-7" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(xlabel<span class="op">=</span><span class="st">&#39;time (s)&#39;</span>, ylabel<span class="op">=</span><span class="st">&#39;voltage (mV)&#39;</span>,</span>
-<span id="cb13-8"><a href="python-environment.html#cb13-8" aria-hidden="true" tabindex="-1"></a>       title<span class="op">=</span><span class="st">&#39;About as simple as it gets, folks&#39;</span>)</span>
-<span id="cb13-9"><a href="python-environment.html#cb13-9" aria-hidden="true" tabindex="-1"></a>ax.grid()</span>
-<span id="cb13-10"><a href="python-environment.html#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-11"><a href="python-environment.html#cb13-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="02-python-env_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="python-environment.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load the package that makes R and Python talk</span></span>
-<span id="cb14-2"><a href="python-environment.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb14-3"><a href="python-environment.html#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="python-environment.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># set the preferred Python to execute</span></span>
-<span id="cb14-5"><a href="python-environment.html#cb14-5" aria-hidden="true" tabindex="-1"></a>user_profile <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">&quot;USERPROFILE&quot;</span>)                    <span class="co"># user folder</span></span>
-<span id="cb14-6"><a href="python-environment.html#cb14-6" aria-hidden="true" tabindex="-1"></a>python_portable <span class="ot">&lt;-</span> <span class="fu">normalizePath</span>(<span class="fu">file.path</span>(user_profile,     <span class="co"># Python location</span></span>
-<span id="cb14-7"><a href="python-environment.html#cb14-7" aria-hidden="true" tabindex="-1"></a>                                <span class="st">&quot;WPy-3710zero/python-3.7.1.amd64/python.exe&quot;</span>))</span>
-<span id="cb14-8"><a href="python-environment.html#cb14-8" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">use_python</span>(python_portable, <span class="at">required =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb14-9"><a href="python-environment.html#cb14-9" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">py_config</span>()</span></code></pre></div>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="python-environment.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># library(reticulate)</span></span>
-<span id="cb15-2"><a href="python-environment.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># reticulate::use_python(&quot;..\\..\\python-3.6.7.amd64\\python.exe&quot;)</span></span>
-<span id="cb15-3"><a href="python-environment.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># reticulate::py_config()</span></span>
-<span id="cb15-4"><a href="python-environment.html#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># reticulate::py_available()</span></span></code></pre></div>
+<div id="section" class="section level1" number="9">
+<h1><span class="header-section-number">Ch. 9</span> <img src="08-advanced_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" /></h1>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>022d841… move fixed equations to ch 8</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<div class="sourceCode" id="cb82"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb82-1"><a href="section.html#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="co"># step demo</span></span>
+<span id="cb82-2"><a href="section.html#cb82-2" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py</span></span>
+<span id="cb82-3"><a href="section.html#cb82-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb82-4"><a href="section.html#cb82-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb82-5"><a href="section.html#cb82-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy <span class="im">import</span> ma</span>
+<span id="cb82-6"><a href="section.html#cb82-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb82-7"><a href="section.html#cb82-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb82-8"><a href="section.html#cb82-8" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">1</span>, <span class="dv">7</span>, <span class="fl">0.4</span>)</span>
+<span id="cb82-9"><a href="section.html#cb82-9" aria-hidden="true" tabindex="-1"></a>y0 <span class="op">=</span> np.sin(x)</span>
+<span id="cb82-10"><a href="section.html#cb82-10" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> y0.copy() <span class="op">+</span> <span class="fl">2.5</span></span>
+<span id="cb82-11"><a href="section.html#cb82-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb82-12"><a href="section.html#cb82-12" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, label<span class="op">=</span><span class="st">&#39;pre (default)&#39;</span>)</span>
+<span id="cb82-13"><a href="section.html#cb82-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb82-14"><a href="section.html#cb82-14" aria-hidden="true" tabindex="-1"></a>y <span class="op">-=</span> <span class="fl">0.5</span></span>
+<span id="cb82-15"><a href="section.html#cb82-15" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, where<span class="op">=</span><span class="st">&#39;mid&#39;</span>, label<span class="op">=</span><span class="st">&#39;mid&#39;</span>)</span>
+<span id="cb82-16"><a href="section.html#cb82-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb82-17"><a href="section.html#cb82-17" aria-hidden="true" tabindex="-1"></a>y <span class="op">-=</span> <span class="fl">0.5</span></span>
+<span id="cb82-18"><a href="section.html#cb82-18" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, where<span class="op">=</span><span class="st">&#39;post&#39;</span>, label<span class="op">=</span><span class="st">&#39;post&#39;</span>)</span>
+<span id="cb82-19"><a href="section.html#cb82-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb82-20"><a href="section.html#cb82-20" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> ma.masked_where((y0 <span class="op">&gt;</span> <span class="op">-</span><span class="fl">0.15</span>) <span class="op">&amp;</span> (y0 <span class="op">&lt;</span> <span class="fl">0.15</span>), y <span class="op">-</span> <span class="fl">0.5</span>)</span>
+<span id="cb82-21"><a href="section.html#cb82-21" aria-hidden="true" tabindex="-1"></a>plt.step(x, y, label<span class="op">=</span><span class="st">&#39;masked (pre)&#39;</span>)</span>
+<span id="cb82-22"><a href="section.html#cb82-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb82-23"><a href="section.html#cb82-23" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb82-24"><a href="section.html#cb82-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb82-25"><a href="section.html#cb82-25" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="dv">0</span>, <span class="dv">7</span>)</span>
+<span id="cb82-26"><a href="section.html#cb82-26" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="op">-</span><span class="fl">0.5</span>, <span class="dv">4</span>)</span>
+<span id="cb82-27"><a href="section.html#cb82-27" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="08-advanced_files/figure-html/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" /></p>
 
 </div>
             </section>
@@ -231,8 +237,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sharing-data-objects.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="advanced.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="test-new.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

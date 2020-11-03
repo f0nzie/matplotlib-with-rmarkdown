@@ -11,10 +11,7 @@ Math symbols printing
 
 $r's(t) = \mathcal{A}\/\sin(2 \omega t)'$
 
-
-
 $\mathbb{blackboard}$
-
 
 
 
@@ -263,8 +260,7 @@ plt.subplots_adjust(top=0.92, bottom=0.08, left=0.10, right=0.95, hspace=0.25,
 plt.show()
 ```
 
-<<<<<<< HEAD
-<img src="08-advanced_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -278,12 +274,20 @@ import numpy as np
 
 # Fixing random state for reproducibility
 np.random.seed(19680801)
-=======
-<img src="08-advanced_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" />
->>>>>>> 022d841... move fixed equations to ch 8
 
 
+plt.subplot(211)
+plt.imshow(np.random.random((100, 100)), cmap=plt.cm.BuPu_r)
+plt.subplot(212)
+plt.imshow(np.random.random((100, 100)), cmap=plt.cm.BuPu_r)
 
+plt.subplots_adjust(bottom=0.1, right=0.8, top=0.9)
+cax = plt.axes([0.85, 0.1, 0.075, 0.8])
+plt.colorbar(cax=cax)
+plt.show()
+```
+
+<img src="08-advanced_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -317,5 +321,5 @@ plt.ylim(-0.5, 4)
 plt.show()
 ```
 
-<img src="08-advanced_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="08-advanced_files/figure-html/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" />
 
