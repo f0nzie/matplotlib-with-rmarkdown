@@ -45,7 +45,6 @@ build_book2:
 	Sys.setenv(RSTUDIO_PANDOC='/usr/lib/rstudio/bin/pandoc');\
 	bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
 	
-	
 
 open_book:
 ifeq ($(OSFLAG), OSX)
@@ -70,6 +69,12 @@ remove_env:
 	source ~/anaconda3/etc/profile.d/conda.sh ;\
 	conda deactivate
 	conda remove --name ${CONDA_ENV} --all -y
+
+
+push:
+	git push ;\
+	git subtree push --prefix public origin gh-pages	
+
 
 
 .PHONY: clean
