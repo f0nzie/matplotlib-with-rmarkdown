@@ -29,7 +29,6 @@ x = mu + sigma * np.random.randn(10000)
 # the histogram of the data
 n, bins, patches = plt.hist(x, 50, density=1, facecolor='g', alpha=0.75)
 
-
 plt.xlabel('Smarts')
 plt.ylabel('Probability')
 plt.title('Histogram of IQ')
@@ -47,7 +46,6 @@ plt.show()
 
 ```python
 # http://scipy-lectures.org/_downloads/ScipyLectures-simple.pdf
-
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -83,13 +81,11 @@ plt.show()
 
 ```python
 # https://matplotlib.org/gallery/subplots_axes_and_figures/subplots_adjust.html#sphx-glr-gallery-subplots-axes-and-figures-subplots-adjust-py
-
 import matplotlib.pyplot as plt
 import numpy as np
 
 # Fixing random state for reproducibility
 np.random.seed(19680801)
-
 
 plt.subplot(211)
 plt.imshow(np.random.random((100, 100)), cmap=plt.cm.BuPu_r)
@@ -109,7 +105,6 @@ plt.show()
 
 ```python
 # https://matplotlib.org/gallery/text_labels_and_annotations/figlegend_demo.html#sphx-glr-gallery-text-labels-and-annotations-figlegend-demo-py
-
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -163,7 +158,6 @@ plt.show()
 
 ```python
 # https://www.python-course.eu/matplotlib_multiple_figures.php
-
 import matplotlib.gridspec as gridspec
 import matplotlib.pyplot as plt
 import numpy as np
@@ -195,7 +189,6 @@ plt.show()
 
 ```python
 # https://matplotlib.org/gallery/text_labels_and_annotations/figlegend_demo.html#sphx-glr-gallery-text-labels-and-annotations-figlegend-demo-py
-
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -227,7 +220,6 @@ plt.show()
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
-
 # Fixing random state for reproducibility
 np.random.seed(19680801)
 

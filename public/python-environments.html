@@ -33,6 +33,7 @@
   
 <link rel="prev" href="introduction.html"/>
 <link rel="next" href="sharing-data-objects.html"/>
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,24 +51,22 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -88,9 +87,9 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-le
 div.sourceCode
   { color: #1f1c1b; background-color: #ffffff; }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span. { color: #1f1c1b; } /* Normal */
+code span { color: #1f1c1b; } /* Normal */
 code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
 code span.an { color: #ca60ca; } /* Annotation */
 code span.at { color: #0057ae; } /* Attribute */
@@ -141,24 +140,29 @@ code span.wa { color: #bf0303; } /* Warning */
 <li><a href="./">Matplotlib with Rmarkdown</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#method"><i class="fa fa-check"></i>Method</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#method"><i class="fa fa-check"></i>Method</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#r-engine"><i class="fa fa-check"></i>R engine</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#bash-engine"><i class="fa fa-check"></i>Bash engine</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#python-engine"><i class="fa fa-check"></i>Python engine</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#hello-world"><i class="fa fa-check"></i><b>1.1</b> “Hello world”</a></li>
 <li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#the-parts-of-a-plot"><i class="fa fa-check"></i><b>1.2</b> The parts of a plot</a></li>
 <li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#can-do-business-plots-too"><i class="fa fa-check"></i><b>1.3</b> Can do business plots too</a></li>
 <li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#and-real-time"><i class="fa fa-check"></i><b>1.4</b> And real time</a></li>
 <li class="chapter" data-level="1.5" data-path="introduction.html"><a href="introduction.html#and-also-3d"><i class="fa fa-check"></i><b>1.5</b> And also 3D</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="python-environments.html"><a href="python-environments.html"><i class="fa fa-check"></i><b>2</b> Python environments</a><ul>
+<li class="chapter" data-level="2" data-path="python-environments.html"><a href="python-environments.html"><i class="fa fa-check"></i><b>2</b> Python environments</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="python-environments.html"><a href="python-environments.html#why-virtual-environments"><i class="fa fa-check"></i><b>2.1</b> Why virtual environments?</a></li>
 <li class="chapter" data-level="2.2" data-path="python-environments.html"><a href="python-environments.html#python-virtual-environment-and-r"><i class="fa fa-check"></i><b>2.2</b> Python virtual environment and R</a></li>
-<li class="chapter" data-level="2.3" data-path="python-environments.html"><a href="python-environments.html#conda-environments"><i class="fa fa-check"></i><b>2.3</b> conda environments</a><ul>
+<li class="chapter" data-level="2.3" data-path="python-environments.html"><a href="python-environments.html#conda-environments"><i class="fa fa-check"></i><b>2.3</b> conda environments</a>
+<ul>
 <li class="chapter" data-level="2.3.1" data-path="python-environments.html"><a href="python-environments.html#environment-with-python-version-specified"><i class="fa fa-check"></i><b>2.3.1</b> environment with Python version specified</a></li>
 <li class="chapter" data-level="2.3.2" data-path="python-environments.html"><a href="python-environments.html#specify-python-version-and-list-package-names"><i class="fa fa-check"></i><b>2.3.2</b> specify Python version and list package names</a></li>
 <li class="chapter" data-level="2.3.3" data-path="python-environments.html"><a href="python-environments.html#specify-python-version-and-version-for-the-packages"><i class="fa fa-check"></i><b>2.3.3</b> specify Python version and version for the packages</a></li>
@@ -166,11 +170,13 @@ code span.wa { color: #bf0303; } /* Warning */
 <li class="chapter" data-level="2.4" data-path="python-environments.html"><a href="python-environments.html#running-python-from-r"><i class="fa fa-check"></i><b>2.4</b> Running Python from R</a></li>
 <li class="chapter" data-level="2.5" data-path="python-environments.html"><a href="python-environments.html#a-plot-demo"><i class="fa fa-check"></i><b>2.5</b> A plot demo</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="sharing-data-objects.html"><a href="sharing-data-objects.html"><i class="fa fa-check"></i><b>3</b> Sharing data objects</a><ul>
+<li class="chapter" data-level="3" data-path="sharing-data-objects.html"><a href="sharing-data-objects.html"><i class="fa fa-check"></i><b>3</b> Sharing data objects</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="sharing-data-objects.html"><a href="sharing-data-objects.html#from-r-to-python-back-to-r"><i class="fa fa-check"></i><b>3.1</b> From R to Python, back to R</a></li>
 <li class="chapter" data-level="3.2" data-path="sharing-data-objects.html"><a href="sharing-data-objects.html#from-python-to-r-back-to-python"><i class="fa fa-check"></i><b>3.2</b> From Python to R, back to Python</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="math.html"><a href="math.html"><i class="fa fa-check"></i><b>4</b> Math</a><ul>
+<li class="chapter" data-level="4" data-path="math.html"><a href="math.html"><i class="fa fa-check"></i><b>4</b> Math</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="math.html"><a href="math.html#functions"><i class="fa fa-check"></i><b>4.1</b> Functions</a></li>
 <li class="chapter" data-level="4.2" data-path="math.html"><a href="math.html#functions-with-latex-labels"><i class="fa fa-check"></i><b>4.2</b> Functions with Latex labels</a></li>
 <li class="chapter" data-level="4.3" data-path="math.html"><a href="math.html#multiple-functions-in-the-same-plot"><i class="fa fa-check"></i><b>4.3</b> Multiple functions in the same plot</a></li>
@@ -180,7 +186,8 @@ code span.wa { color: #bf0303; } /* Warning */
 <li class="chapter" data-level="4.7" data-path="math.html"><a href="math.html#d-contour-plot"><i class="fa fa-check"></i><b>4.7</b> 3D contour plot</a></li>
 <li class="chapter" data-level="4.8" data-path="math.html"><a href="math.html#machine-learning"><i class="fa fa-check"></i><b>4.8</b> Machine Learning</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="scientific.html"><a href="scientific.html"><i class="fa fa-check"></i><b>5</b> Scientific</a><ul>
+<li class="chapter" data-level="5" data-path="scientific.html"><a href="scientific.html"><i class="fa fa-check"></i><b>5</b> Scientific</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="scientific.html"><a href="scientific.html#solving-laplace"><i class="fa fa-check"></i><b>5.1</b> Solving Laplace</a></li>
 <li class="chapter" data-level="5.2" data-path="scientific.html"><a href="scientific.html#eigenvalue-problems"><i class="fa fa-check"></i><b>5.2</b> Eigenvalue problems</a></li>
 <li class="chapter" data-level="5.3" data-path="scientific.html"><a href="scientific.html#computational-physics"><i class="fa fa-check"></i><b>5.3</b> Computational Physics</a></li>
@@ -189,7 +196,8 @@ code span.wa { color: #bf0303; } /* Warning */
 <li class="chapter" data-level="5.6" data-path="scientific.html"><a href="scientific.html#real-time"><i class="fa fa-check"></i><b>5.6</b> Real time</a></li>
 <li class="chapter" data-level="5.7" data-path="scientific.html"><a href="scientific.html#density-plots"><i class="fa fa-check"></i><b>5.7</b> Density plots</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="voxels.html"><a href="voxels.html"><i class="fa fa-check"></i><b>6</b> Voxels</a><ul>
+<li class="chapter" data-level="6" data-path="voxels.html"><a href="voxels.html"><i class="fa fa-check"></i><b>6</b> Voxels</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="voxels.html"><a href="voxels.html#radial"><i class="fa fa-check"></i><b>6.1</b> Radial</a></li>
 <li class="chapter" data-level="6.2" data-path="voxels.html"><a href="voxels.html#spherical"><i class="fa fa-check"></i><b>6.2</b> Spherical</a></li>
 <li class="chapter" data-level="6.3" data-path="voxels.html"><a href="voxels.html#solid-cubes"><i class="fa fa-check"></i><b>6.3</b> Solid cubes</a></li>
@@ -197,26 +205,31 @@ code span.wa { color: #bf0303; } /* Warning */
 <li class="chapter" data-level="6.5" data-path="voxels.html"><a href="voxels.html#semi-transparent"><i class="fa fa-check"></i><b>6.5</b> Semi-transparent</a></li>
 <li class="chapter" data-level="6.6" data-path="voxels.html"><a href="voxels.html#opaque-cubicles"><i class="fa fa-check"></i><b>6.6</b> Opaque cubicles</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="seaborn.html"><a href="seaborn.html"><i class="fa fa-check"></i><b>7</b> Seaborn</a><ul>
+<li class="chapter" data-level="7" data-path="seaborn.html"><a href="seaborn.html"><i class="fa fa-check"></i><b>7</b> Seaborn</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="seaborn.html"><a href="seaborn.html#error-bands"><i class="fa fa-check"></i><b>7.1</b> Error bands</a></li>
 <li class="chapter" data-level="7.2" data-path="seaborn.html"><a href="seaborn.html#boxplots"><i class="fa fa-check"></i><b>7.2</b> Boxplots</a></li>
 <li class="chapter" data-level="7.3" data-path="seaborn.html"><a href="seaborn.html#facets"><i class="fa fa-check"></i><b>7.3</b> Facets</a></li>
 <li class="chapter" data-level="7.4" data-path="seaborn.html"><a href="seaborn.html#functions-1"><i class="fa fa-check"></i><b>7.4</b> Functions</a></li>
 <li class="chapter" data-level="7.5" data-path="seaborn.html"><a href="seaborn.html#scatter-plot-matrix"><i class="fa fa-check"></i><b>7.5</b> Scatter plot matrix</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="advanced.html"><a href="advanced.html"><i class="fa fa-check"></i><b>8</b> Advanced</a><ul>
+<li class="chapter" data-level="8" data-path="advanced.html"><a href="advanced.html"><i class="fa fa-check"></i><b>8</b> Advanced</a>
+<ul>
 <li class="chapter" data-level="8.1" data-path="advanced.html"><a href="advanced.html#adding-labels"><i class="fa fa-check"></i><b>8.1</b> Adding labels</a></li>
 <li class="chapter" data-level="8.2" data-path="advanced.html"><a href="advanced.html#subplots"><i class="fa fa-check"></i><b>8.2</b> Subplots</a></li>
 <li class="chapter" data-level="8.3" data-path="advanced.html"><a href="advanced.html#change-of-axes"><i class="fa fa-check"></i><b>8.3</b> Change of axes</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html"><i class="fa fa-check"></i><b>9</b> Beyond <code>matplotlib</code></a><ul>
-<li class="chapter" data-level="9.1" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#brokenaxis"><i class="fa fa-check"></i><b>9.1</b> <code>brokenaxis</code></a><ul>
+<li class="chapter" data-level="9" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html"><i class="fa fa-check"></i><b>9</b> Beyond <code>matplotlib</code></a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#brokenaxis"><i class="fa fa-check"></i><b>9.1</b> <code>brokenaxis</code></a>
+<ul>
 <li class="chapter" data-level="9.1.1" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#usage"><i class="fa fa-check"></i><b>9.1.1</b> Usage</a></li>
 <li class="chapter" data-level="9.1.2" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#subplots-1"><i class="fa fa-check"></i><b>9.1.2</b> Subplots</a></li>
 <li class="chapter" data-level="9.1.3" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#log-scales"><i class="fa fa-check"></i><b>9.1.3</b> Log scales</a></li>
 <li class="chapter" data-level="9.1.4" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#different-scales"><i class="fa fa-check"></i><b>9.1.4</b> Different scales</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#yellowbrick"><i class="fa fa-check"></i><b>9.2</b> <code>yellowbrick</code></a><ul>
+<li class="chapter" data-level="9.2" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#yellowbrick"><i class="fa fa-check"></i><b>9.2</b> <code>yellowbrick</code></a>
+<ul>
 <li class="chapter" data-level="9.2.1" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#pearson-correlation"><i class="fa fa-check"></i><b>9.2.1</b> Pearson correlation</a></li>
 <li class="chapter" data-level="9.2.2" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#scatter-diagram"><i class="fa fa-check"></i><b>9.2.2</b> Scatter diagram</a></li>
 <li class="chapter" data-level="9.2.3" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#residuals-plot"><i class="fa fa-check"></i><b>9.2.3</b> Residuals plot</a></li>
@@ -244,9 +257,9 @@ code span.wa { color: #bf0303; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="python-environments" class="section level1">
+<div id="python-environments" class="section level1" number="2">
 <h1><span class="header-section-number">Ch. 2</span> Python environments</h1>
-<div id="why-virtual-environments" class="section level2">
+<div id="why-virtual-environments" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Why virtual environments?</h2>
 <p>There are several ways of running Python code. In this minimal book, we will see two of them:</p>
 <ul>
@@ -255,58 +268,58 @@ code span.wa { color: #bf0303; } /* Warning */
 </ul>
 <p>Both work similarly in the sense of providing an isolated, fresh Python environment with selected packages, without much interference of the existing Python in the operating system. Virtual environments, docker containers, and virtual machines are few of the several ways of virtualizing Python environments. This all in pursue of reproducibility, or a workspace that could replicate the same results of previous analysis without the issues provoked by missing dependencies, libraries, or the operating own system environment variables.</p>
 </div>
-<div id="python-virtual-environment-and-r" class="section level2">
+<div id="python-virtual-environment-and-r" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Python virtual environment and R</h2>
 <p>Although, it is not absolutely necessary to create a virtual environment to run Rmarkdown Python notebooks, it is highly recommended because you will be able to run a selected analysis, over and over, without paying too much attention to updates or upgrades in the hosting operating system. This means that you could freeze in time a virtual environment, without disturbing it with software updates.</p>
 <p>This virtual environment should be able to be re-created from a text file with a minimum set of instructions, or a list of packages, or recipe, that bring a fresh Python environment, few months from now. Both, methods of creating Python virtual environments, <code>conda</code> and <code>virtualenv</code> use a text file with a recipe to do just that.</p>
 <p>In <code>conda</code> there is the file <code>environment.yml</code>. In <code>virtualenv</code>, that file is named <code>requirements.txt</code>. But you could use any name you want. These names are just standard, and if you find them them in a repository, it mean less pain in reproducing the experiment.</p>
 </div>
-<div id="conda-environments" class="section level2">
+<div id="conda-environments" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> conda environments</h2>
 <p>They require the installation of the Anaconda3 platform, which is pretty straight forward for all operating systems.</p>
 <p>If you want want to create a conda virtual environment, then, you will have many ways of doing it:</p>
-<div id="environment-with-python-version-specified" class="section level3">
+<div id="environment-with-python-version-specified" class="section level3" number="2.3.1">
 <h3><span class="header-section-number">2.3.1</span> environment with Python version specified</h3>
 <p>In this example, <code>conda</code> will build an environment using the Python version <code>3.7</code>. If the version is not specified, <code>conda</code> will install the default.</p>
 <div class="decocode">
 <div style="background-color:#000000">
 <p><span style="font-size:90%;color:#ffffff"><i class="fas fa-terminal"></i> <b>Shell</b></span></p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="python-environments.html#cb14-1"></a><span class="ex">conda</span> create --name python_env python=3.7</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="python-environments.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create --name python_env python=3.7</span></code></pre></div>
 </div>
 <br>
 </div>
 </div>
-<div id="specify-python-version-and-list-package-names" class="section level3">
+<div id="specify-python-version-and-list-package-names" class="section level3" number="2.3.2">
 <h3><span class="header-section-number">2.3.2</span> specify Python version and list package names</h3>
 <p>Here, we leave <code>conda</code> to find a suitable combination of package versions to build this environment.</p>
 <div class="decocode">
 <div style="background-color:#000000">
 <p><span style="font-size:90%;color:#ffffff"><i class="fas fa-terminal"></i> <b>Shell</b></span></p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="python-environments.html#cb15-1"></a><span class="ex">conda</span> create --name python_book python=3.7 pandas numpy scipy scikit-learn nltk matplotlib seaborn plotnine ipython lxml -y</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="python-environments.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create --name python_book python=3.7 pandas numpy scipy scikit-learn nltk matplotlib seaborn plotnine ipython lxml -y</span></code></pre></div>
 </div>
 <br>
 </div>
 <p>The last option <code>-y</code> means that it will install without asking <em>yes</em> or <em>no</em>.</p>
 </div>
-<div id="specify-python-version-and-version-for-the-packages" class="section level3">
+<div id="specify-python-version-and-version-for-the-packages" class="section level3" number="2.3.3">
 <h3><span class="header-section-number">2.3.3</span> specify Python version and version for the packages</h3>
 <p>This recipe is more strict. You are looking for a precise package versions, which you know worked, and run without conflicts or bugs.</p>
 <div class="decocode">
 <div style="background-color:#000000">
 <p><span style="font-size:90%;color:#ffffff"><i class="fas fa-terminal"></i> <b>Shell</b></span></p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="python-environments.html#cb16-1"></a><span class="ex">conda</span> create -n plot_env python=3.7 numpy=1.19 matplotlib=3.3 pandas=1.1 seaborn=0.11</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="python-environments.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create -n plot_env python=3.7 numpy=1.19 matplotlib=3.3 pandas=1.1 seaborn=0.11</span></code></pre></div>
 </div>
 <br>
 </div>
 </div>
 </div>
-<div id="running-python-from-r" class="section level2">
+<div id="running-python-from-r" class="section level2" number="2.4">
 <h2><span class="header-section-number">2.4</span> Running Python from R</h2>
 <p>Load the <code>reticulate</code> library.</p>
 <div class="decocode">
 <div style="background-color:#4C78DB">
 <p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i> <b>R</b></span></p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="python-environments.html#cb17-1"></a><span class="kw">library</span>(reticulate)</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="python-environments.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span></code></pre></div>
 </div>
 <br>
 </div>
@@ -314,7 +327,7 @@ code span.wa { color: #bf0303; } /* Warning */
 <div class="decocode">
 <div style="background-color:#4C78DB">
 <p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i> <b>R</b></span></p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="python-environments.html#cb18-1"></a><span class="kw">use_condaenv</span>(<span class="st">&quot;r-python&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="python-environments.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">use_condaenv</span>(<span class="st">&quot;r-python&quot;</span>)</span></code></pre></div>
 </div>
 <br>
 </div>
@@ -322,7 +335,7 @@ code span.wa { color: #bf0303; } /* Warning */
 <div class="decocode">
 <div style="background-color:#4C78DB">
 <p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i> <b>R</b></span></p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="python-environments.html#cb19-1"></a><span class="kw">py_config</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="python-environments.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">py_config</span>()</span></code></pre></div>
 <pre><code>#:&gt; python:         /home/msfz751/anaconda3/envs/r-python/bin/python
 #:&gt; libpython:      /home/msfz751/anaconda3/envs/r-python/lib/libpython3.7m.so
 #:&gt; pythonhome:     /home/msfz751/anaconda3/envs/r-python:/home/msfz751/anaconda3/envs/r-python
@@ -348,73 +361,71 @@ code span.wa { color: #bf0303; } /* Warning */
 <div class="decocode">
 <div style="background-color:#4C78DB">
 <p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i> <b>R</b></span></p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="python-environments.html#cb21-1"></a>reticulate<span class="op">::</span><span class="kw">py_available</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="python-environments.html#cb21-1" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">py_available</span>()</span></code></pre></div>
 <pre><code>#:&gt; [1] TRUE</code></pre>
 </div>
 <br>
 </div>
 </div>
-<div id="a-plot-demo" class="section level2">
+<div id="a-plot-demo" class="section level2" number="2.5">
 <h2><span class="header-section-number">2.5</span> A plot demo</h2>
 <p>Once the environment is loaded, then our Python code chunks will just run:</p>
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="python-environments.html#cb23-1"></a><span class="co"># https://github.com/bendichter/brokenaxes</span></span>
-<span id="cb23-2"><a href="python-environments.html#cb23-2"></a></span>
-<span id="cb23-3"><a href="python-environments.html#cb23-3"></a><span class="im">import</span> matplotlib</span>
-<span id="cb23-4"><a href="python-environments.html#cb23-4"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb23-5"><a href="python-environments.html#cb23-5"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb23-6"><a href="python-environments.html#cb23-6"></a></span>
-<span id="cb23-7"><a href="python-environments.html#cb23-7"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb23-8"><a href="python-environments.html#cb23-8"></a><span class="im">from</span> brokenaxes <span class="im">import</span> brokenaxes</span>
-<span id="cb23-9"><a href="python-environments.html#cb23-9"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb23-10"><a href="python-environments.html#cb23-10"></a></span>
-<span id="cb23-11"><a href="python-environments.html#cb23-11"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">5</span>))</span>
-<span id="cb23-12"><a href="python-environments.html#cb23-12"></a>bax <span class="op">=</span> brokenaxes(xlims<span class="op">=</span>((<span class="dv">1</span>, <span class="dv">500</span>), (<span class="dv">600</span>, <span class="dv">10000</span>)),</span>
-<span id="cb23-13"><a href="python-environments.html#cb23-13"></a>         ylims<span class="op">=</span>((<span class="dv">1</span>, <span class="dv">500</span>), (<span class="dv">600</span>, <span class="dv">10000</span>)),</span>
-<span id="cb23-14"><a href="python-environments.html#cb23-14"></a>         hspace<span class="op">=</span>.<span class="dv">15</span>, xscale<span class="op">=</span><span class="st">&#39;log&#39;</span>, yscale<span class="op">=</span><span class="st">&#39;log&#39;</span>)</span>
-<span id="cb23-15"><a href="python-environments.html#cb23-15"></a></span>
-<span id="cb23-16"><a href="python-environments.html#cb23-16"></a>x <span class="op">=</span> np.logspace(<span class="fl">0.0</span>, <span class="dv">4</span>, <span class="dv">100</span>)</span>
-<span id="cb23-17"><a href="python-environments.html#cb23-17"></a>bax.loglog(x, x, label<span class="op">=</span><span class="st">&#39;$y=x=10^</span><span class="sc">{0}</span><span class="st">$ to $10^</span><span class="sc">{4}</span><span class="st">$&#39;</span>)</span>
-<span id="cb23-18"><a href="python-environments.html#cb23-18"></a>bax.legend(loc<span class="op">=</span><span class="st">&#39;best&#39;</span>)</span>
-<span id="cb23-19"><a href="python-environments.html#cb23-19"></a>bax.grid(axis<span class="op">=</span><span class="st">&#39;both&#39;</span>, which<span class="op">=</span><span class="st">&#39;major&#39;</span>, ls<span class="op">=</span><span class="st">&#39;-&#39;</span>)</span>
-<span id="cb23-20"><a href="python-environments.html#cb23-20"></a>bax.grid(axis<span class="op">=</span><span class="st">&#39;both&#39;</span>, which<span class="op">=</span><span class="st">&#39;minor&#39;</span>, ls<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.4</span>)</span>
-<span id="cb23-21"><a href="python-environments.html#cb23-21"></a>bax.set_xlabel(<span class="st">&#39;x&#39;</span>)</span>
-<span id="cb23-22"><a href="python-environments.html#cb23-22"></a>bax.set_ylabel(<span class="st">&#39;y&#39;</span>)</span>
-<span id="cb23-23"><a href="python-environments.html#cb23-23"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="python-environments.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/bendichter/brokenaxes</span></span>
+<span id="cb23-2"><a href="python-environments.html#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib</span>
+<span id="cb23-3"><a href="python-environments.html#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb23-4"><a href="python-environments.html#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb23-5"><a href="python-environments.html#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb23-6"><a href="python-environments.html#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> brokenaxes <span class="im">import</span> brokenaxes</span>
+<span id="cb23-7"><a href="python-environments.html#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb23-8"><a href="python-environments.html#cb23-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-9"><a href="python-environments.html#cb23-9" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">5</span>))</span>
+<span id="cb23-10"><a href="python-environments.html#cb23-10" aria-hidden="true" tabindex="-1"></a>bax <span class="op">=</span> brokenaxes(xlims<span class="op">=</span>((<span class="dv">1</span>, <span class="dv">500</span>), (<span class="dv">600</span>, <span class="dv">10000</span>)),</span>
+<span id="cb23-11"><a href="python-environments.html#cb23-11" aria-hidden="true" tabindex="-1"></a>         ylims<span class="op">=</span>((<span class="dv">1</span>, <span class="dv">500</span>), (<span class="dv">600</span>, <span class="dv">10000</span>)),</span>
+<span id="cb23-12"><a href="python-environments.html#cb23-12" aria-hidden="true" tabindex="-1"></a>         hspace<span class="op">=</span><span class="fl">.15</span>, xscale<span class="op">=</span><span class="st">&#39;log&#39;</span>, yscale<span class="op">=</span><span class="st">&#39;log&#39;</span>)</span>
+<span id="cb23-13"><a href="python-environments.html#cb23-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-14"><a href="python-environments.html#cb23-14" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.logspace(<span class="fl">0.0</span>, <span class="dv">4</span>, <span class="dv">100</span>)</span>
+<span id="cb23-15"><a href="python-environments.html#cb23-15" aria-hidden="true" tabindex="-1"></a>bax.loglog(x, x, label<span class="op">=</span><span class="st">&#39;$y=x=10^</span><span class="sc">{0}</span><span class="st">$ to $10^</span><span class="sc">{4}</span><span class="st">$&#39;</span>)</span>
+<span id="cb23-16"><a href="python-environments.html#cb23-16" aria-hidden="true" tabindex="-1"></a>bax.legend(loc<span class="op">=</span><span class="st">&#39;best&#39;</span>)</span>
+<span id="cb23-17"><a href="python-environments.html#cb23-17" aria-hidden="true" tabindex="-1"></a>bax.grid(axis<span class="op">=</span><span class="st">&#39;both&#39;</span>, which<span class="op">=</span><span class="st">&#39;major&#39;</span>, ls<span class="op">=</span><span class="st">&#39;-&#39;</span>)</span>
+<span id="cb23-18"><a href="python-environments.html#cb23-18" aria-hidden="true" tabindex="-1"></a>bax.grid(axis<span class="op">=</span><span class="st">&#39;both&#39;</span>, which<span class="op">=</span><span class="st">&#39;minor&#39;</span>, ls<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.4</span>)</span>
+<span id="cb23-19"><a href="python-environments.html#cb23-19" aria-hidden="true" tabindex="-1"></a>bax.set_xlabel(<span class="st">&#39;x&#39;</span>)</span>
+<span id="cb23-20"><a href="python-environments.html#cb23-20" aria-hidden="true" tabindex="-1"></a>bax.set_ylabel(<span class="st">&#39;y&#39;</span>)</span>
+<span id="cb23-21"><a href="python-environments.html#cb23-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <img src="02-python-env_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" />
 </div>
 <br>
 </div>
 <p>The code, you would have to type, would look like this:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb24-1"><a href="python-environments.html#cb24-1"></a> <span class="bn">```{python}</span></span>
-<span id="cb24-2"><a href="python-environments.html#cb24-2"></a><span class="bn">import matplotlib</span></span>
-<span id="cb24-3"><a href="python-environments.html#cb24-3"></a><span class="bn">import matplotlib.pyplot as plt</span></span>
-<span id="cb24-4"><a href="python-environments.html#cb24-4"></a><span class="bn">import numpy as np</span></span>
-<span id="cb24-5"><a href="python-environments.html#cb24-5"></a><span class="bn">import matplotlib.pyplot as plt</span></span>
-<span id="cb24-6"><a href="python-environments.html#cb24-6"></a><span class="bn">from brokenaxes import brokenaxes</span></span>
-<span id="cb24-7"><a href="python-environments.html#cb24-7"></a><span class="bn">import numpy as np</span></span>
-<span id="cb24-8"><a href="python-environments.html#cb24-8"></a></span>
-<span id="cb24-9"><a href="python-environments.html#cb24-9"></a><span class="bn">fig = plt.figure(figsize=(5,5))</span></span>
-<span id="cb24-10"><a href="python-environments.html#cb24-10"></a><span class="bn">bax = brokenaxes(xlims=((1, 500), (600, 10000)),</span></span>
-<span id="cb24-11"><a href="python-environments.html#cb24-11"></a><span class="bn">     ylims=((1, 500), (600, 10000)),</span></span>
-<span id="cb24-12"><a href="python-environments.html#cb24-12"></a><span class="bn">         hspace=.15, xscale=&#39;log&#39;, yscale=&#39;log&#39;)</span></span>
-<span id="cb24-13"><a href="python-environments.html#cb24-13"></a></span>
-<span id="cb24-14"><a href="python-environments.html#cb24-14"></a><span class="bn">x = np.logspace(0.0, 4, 100)</span></span>
-<span id="cb24-15"><a href="python-environments.html#cb24-15"></a><span class="bn">bax.loglog(x, x, label=&#39;\$y=x=10\^{0}\$ to \$10\^{4}\$&#39;)</span></span>
-<span id="cb24-16"><a href="python-environments.html#cb24-16"></a></span>
-<span id="cb24-17"><a href="python-environments.html#cb24-17"></a><span class="bn">bax.legend(loc=&#39;best&#39;)</span></span>
-<span id="cb24-18"><a href="python-environments.html#cb24-18"></a><span class="bn">bax.grid(axis=&#39;both&#39;, which=&#39;major&#39;, ls=&#39;-&#39;)</span></span>
-<span id="cb24-19"><a href="python-environments.html#cb24-19"></a><span class="bn">bax.grid(axis=&#39;both&#39;, which=&#39;minor&#39;, ls=&#39;--&#39;, alpha=0.4)</span></span>
-<span id="cb24-20"><a href="python-environments.html#cb24-20"></a><span class="bn">bax.set_xlabel(&#39;x&#39;)</span></span>
-<span id="cb24-21"><a href="python-environments.html#cb24-21"></a><span class="bn">bax.set_ylabel(&#39;y&#39;)</span></span>
-<span id="cb24-22"><a href="python-environments.html#cb24-22"></a><span class="bn">plt.show()</span></span>
-<span id="cb24-23"><a href="python-environments.html#cb24-23"></a><span class="bn">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb24-1"><a href="python-environments.html#cb24-1" aria-hidden="true" tabindex="-1"></a> <span class="in">```{python}</span></span>
+<span id="cb24-2"><a href="python-environments.html#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="in">import matplotlib</span></span>
+<span id="cb24-3"><a href="python-environments.html#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="in">import matplotlib.pyplot as plt</span></span>
+<span id="cb24-4"><a href="python-environments.html#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="in">import numpy as np</span></span>
+<span id="cb24-5"><a href="python-environments.html#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="in">import matplotlib.pyplot as plt</span></span>
+<span id="cb24-6"><a href="python-environments.html#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="in">from brokenaxes import brokenaxes</span></span>
+<span id="cb24-7"><a href="python-environments.html#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="in">import numpy as np</span></span>
+<span id="cb24-8"><a href="python-environments.html#cb24-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-9"><a href="python-environments.html#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="in">fig = plt.figure(figsize=(5,5))</span></span>
+<span id="cb24-10"><a href="python-environments.html#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="in">bax = brokenaxes(xlims=((1, 500), (600, 10000)),</span></span>
+<span id="cb24-11"><a href="python-environments.html#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="in">     ylims=((1, 500), (600, 10000)),</span></span>
+<span id="cb24-12"><a href="python-environments.html#cb24-12" aria-hidden="true" tabindex="-1"></a><span class="in">         hspace=.15, xscale=&#39;log&#39;, yscale=&#39;log&#39;)</span></span>
+<span id="cb24-13"><a href="python-environments.html#cb24-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-14"><a href="python-environments.html#cb24-14" aria-hidden="true" tabindex="-1"></a><span class="in">x = np.logspace(0.0, 4, 100)</span></span>
+<span id="cb24-15"><a href="python-environments.html#cb24-15" aria-hidden="true" tabindex="-1"></a><span class="in">bax.loglog(x, x, label=&#39;\$y=x=10\^{0}\$ to \$10\^{4}\$&#39;)</span></span>
+<span id="cb24-16"><a href="python-environments.html#cb24-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-17"><a href="python-environments.html#cb24-17" aria-hidden="true" tabindex="-1"></a><span class="in">bax.legend(loc=&#39;best&#39;)</span></span>
+<span id="cb24-18"><a href="python-environments.html#cb24-18" aria-hidden="true" tabindex="-1"></a><span class="in">bax.grid(axis=&#39;both&#39;, which=&#39;major&#39;, ls=&#39;-&#39;)</span></span>
+<span id="cb24-19"><a href="python-environments.html#cb24-19" aria-hidden="true" tabindex="-1"></a><span class="in">bax.grid(axis=&#39;both&#39;, which=&#39;minor&#39;, ls=&#39;--&#39;, alpha=0.4)</span></span>
+<span id="cb24-20"><a href="python-environments.html#cb24-20" aria-hidden="true" tabindex="-1"></a><span class="in">bax.set_xlabel(&#39;x&#39;)</span></span>
+<span id="cb24-21"><a href="python-environments.html#cb24-21" aria-hidden="true" tabindex="-1"></a><span class="in">bax.set_ylabel(&#39;y&#39;)</span></span>
+<span id="cb24-22"><a href="python-environments.html#cb24-22" aria-hidden="true" tabindex="-1"></a><span class="in">plt.show()</span></span>
+<span id="cb24-23"><a href="python-environments.html#cb24-23" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
 <p>Remember. You open a Python block in Rmarkdown with</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb25-1"><a href="python-environments.html#cb25-1"></a> <span class="bn">```{python}</span></span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb25-1"><a href="python-environments.html#cb25-1" aria-hidden="true" tabindex="-1"></a> <span class="in">```{python}</span></span></code></pre></div>
 <p>and close it with:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb26-1"><a href="python-environments.html#cb26-1"></a><span class="bn">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb26-1"><a href="python-environments.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
 
 </div>
 </div>

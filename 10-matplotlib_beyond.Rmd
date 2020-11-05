@@ -85,7 +85,6 @@ plt.show()
 # ================================
 # This example shows how to customize the scales and the ticks of each broken
 # axes.
-
 #############################################################################
 # brokenaxes lets you choose the aspect ratio of each sub-axes thanks to the
 # `height_ratios` and `width_ratios` to over-pass the default 1:1 scale for all
