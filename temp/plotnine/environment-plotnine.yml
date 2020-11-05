@@ -1,0 +1,32 @@
+name: r-python
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7
+  - pip
+  - pip:
+    - adjustText
+    - cycler
+    - descartes
+    - joblib
+    - jupyter
+    - jupytext
+    - kiwisolver
+    - matplotlib
+    - mizani
+    - numpy
+    - pandas
+    - palettable
+    - patsy
+    - pip
+    - pyparsing
+    - python-dateutil
+    - pytz
+    - scikit-learn
+    - statsmodels
+    - plotnine
+    - scipy
+    - scikit-misc
+prefix: /home/msfz751/anaconda3/envs/r-python
