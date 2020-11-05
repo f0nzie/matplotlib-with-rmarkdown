@@ -9,19 +9,7 @@ reticulate::use_condaenv("r-python")
 
 </div><br></div>
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
-
-```python
-import matplotlib.pyplot as plt
-plt.plot([1, 2, 3, 4])
-plt.ylabel('some numbers')
-plt.show()
-```
-
-<img src="01-introduction_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
-
-
-## The "hello world" plot
+## "Hello world"
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
@@ -41,28 +29,11 @@ plt.savefig("test.png")
 plt.show()
 ```
 
-<img src="01-introduction_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+<img src="01-introduction_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
+## The parts of a plot
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
-
-```python
-# https://matplotlib.org/2.0.2/examples/mplot3d/contour3d_demo.html
-from mpl_toolkits.mplot3d import axes3d
-import matplotlib.pyplot as plt
-from matplotlib import cm
-
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
-X, Y, Z = axes3d.get_test_data(0.05)
-cset = ax.contour(X, Y, Z, cmap=cm.coolwarm)
-ax.clabel(cset, fontsize=9, inline=1)
-
-plt.show()
-```
-
-<img src="01-introduction_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
-
+I love this plot because it will help to formulate the right question when you are looking for online assistance. Sooner of later you will be in need to customize the $x$ or $y$ axis ticks in such a way that present specific data points and skip the defaults. Or, get rid of so many x axis labels that superimposing one to each other.
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
@@ -209,11 +180,9 @@ ax.text(4.0, -0.4, "Made with http://matplotlib.org",
 plt.show()
 ```
 
-<img src="01-introduction_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+<img src="01-introduction_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
-
-
-
+## Can do business plots too
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
@@ -259,8 +228,9 @@ ax4.margins(0)
 plt.show()
 ```
 
-<img src="01-introduction_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+<img src="01-introduction_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
+## And real time
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
@@ -295,5 +265,28 @@ fig.tight_layout()
 plt.show()
 ```
 
-<img src="01-introduction_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+<img src="01-introduction_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
+## And also 3D
+
+Although in data science 3D plots are not recommended, if there is a compelling case where the 3D plot could explain it better than a 2D plot, then, it should be okay. But the rule is *do not abuse of 3D*. What you are trying to convey is information per square centimeter of graphics.
+
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+
+```python
+# https://matplotlib.org/2.0.2/examples/mplot3d/contour3d_demo.html
+
+from mpl_toolkits.mplot3d import axes3d
+import matplotlib.pyplot as plt
+from matplotlib import cm
+
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+X, Y, Z = axes3d.get_test_data(0.05)
+cset = ax.contour(X, Y, Z, cmap=cm.coolwarm)
+ax.clabel(cset, fontsize=9, inline=1)
+
+plt.show()
+```
+
+<img src="01-introduction_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>

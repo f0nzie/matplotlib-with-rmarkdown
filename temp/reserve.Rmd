@@ -1,0 +1,400 @@
+# Reserve
+
+```{python, curve-and-points, decorate=TRUE}
+from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+
+# Plot a sin curve using the x and y axes.
+x = np.linspace(0, 1, 100)
+y = np.sin(x * 2 * np.pi) / 2 + 0.5
+ax.plot(x, y, zs=0, zdir='z', label='curve in (x,y)')
+
+# Plot scatterplot data (20 2D points per colour) on the x and z axes.
+colors = ('r', 'g', 'b', 'k')
+
+# Fixing random state for reproducibility
+np.random.seed(19680801)
+
+x = np.random.sample(20 * len(colors))
+y = np.random.sample(20 * len(colors))
+c_list = []
+for c in colors:
+    c_list.extend([c] * 20)
+# By using zdir='y', the y value of these points is fixed to the zs value 0
+# and the (x,y) points are plotted on the x and z axes.
+ax.scatter(x, y, zs=0, zdir='y', c=c_list, label='points in (x,z)')
+
+# Make legend, set axes limits and labels
+ax.legend()
+ax.set_xlim(0, 1)
+ax.set_ylim(0, 1)
+ax.set_zlim(0, 1)
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+
+# Customize the view angle so it's easier to see that the scatter points lie
+# on the plane y=0
+ax.view_init(elev=20., azim=-35)
+
+plt.show()
+```
+
+
+
+```{python, decorate=TRUE}
+# ===================================
+# 3D wireframe plots in one direction
+# ===================================
+
+# Demonstrates that setting rstride or cstride to 0 causes wires to not be
+# generated in the corresponding direction.
+
+
+from mpl_toolkits.mplot3d import axes3d
+import matplotlib.pyplot as plt
+
+
+fig, [ax1, ax2] = plt.subplots(2, 1, figsize=(8, 12), subplot_kw={'projection': '3d'})
+
+# Get the test data
+X, Y, Z = axes3d.get_test_data(0.05)
+
+# Give the first plot only wireframes of the type y = c
+ax1.plot_wireframe(X, Y, Z, rstride=10, cstride=0)
+ax1.set_title("Column (x) stride set to 0")
+
+# Give the second plot only wireframes of the type x = c
+ax2.plot_wireframe(X, Y, Z, rstride=0, cstride=10)
+ax2.set_title("Row (y) stride set to 0")
+
+plt.tight_layout()
+plt.show()
+```
+
+
+## 3D axis
+
+
+```{python, decorate=TRUE}
+# ===================================
+# 3D wireframe plots in one direction
+# ===================================
+
+# Demonstrates that setting rstride or cstride to 0 causes wires to not be
+# generated in the corresponding direction.
+
+
+from mpl_toolkits.mplot3d import axes3d
+import matplotlib.pyplot as plt
+
+
+fig, [ax1, ax2] = plt.subplots(2, 1, figsize=(8, 12), subplot_kw={'projection': '3d'})
+
+# Get the test data
+X, Y, Z = axes3d.get_test_data(0.05)
+
+# Give the first plot only wireframes of the type y = c
+ax1.plot_wireframe(X, Y, Z, rstride=10, cstride=0)
+ax1.set_title("Column (x) stride set to 0")
+
+# Give the second plot only wireframes of the type x = c
+ax2.plot_wireframe(X, Y, Z, rstride=0, cstride=10)
+ax2.set_title("Row (y) stride set to 0")
+
+plt.tight_layout()
+plt.show()
+```
+
+```{python, decorate=TRUE}
+# ===================================
+# 3D wireframe plots in one direction
+# ===================================
+
+# Demonstrates that setting rstride or cstride to 0 causes wires to not be
+# generated in the corresponding direction.
+
+
+from mpl_toolkits.mplot3d import axes3d
+import matplotlib.pyplot as plt
+
+
+fig, [ax1, ax2] = plt.subplots(2, 1, figsize=(8, 12), subplot_kw={'projection': '3d'})
+
+# Get the test data
+X, Y, Z = axes3d.get_test_data(0.05)
+
+# Give the first plot only wireframes of the type y = c
+ax1.plot_wireframe(X, Y, Z, rstride=10, cstride=0)
+ax1.set_title("Column (x) stride set to 0")
+
+# Give the second plot only wireframes of the type x = c
+ax2.plot_wireframe(X, Y, Z, rstride=0, cstride=10)
+ax2.set_title("Row (y) stride set to 0")
+
+plt.tight_layout()
+plt.show()
+```
+
+
+```{python, decorate=TRUE}
+from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+
+# Plot a sin curve using the x and y axes.
+x = np.linspace(0, 1, 100)
+y = np.sin(x * 2 * np.pi) / 2 + 0.5
+ax.plot(x, y, zs=0, zdir='z', label='curve in (x,y)')
+
+# Plot scatterplot data (20 2D points per colour) on the x and z axes.
+colors = ('r', 'g', 'b', 'k')
+
+# Fixing random state for reproducibility
+np.random.seed(19680801)
+
+x = np.random.sample(20 * len(colors))
+y = np.random.sample(20 * len(colors))
+c_list = []
+for c in colors:
+    c_list.extend([c] * 20)
+# By using zdir='y', the y value of these points is fixed to the zs value 0
+# and the (x,y) points are plotted on the x and z axes.
+ax.scatter(x, y, zs=0, zdir='y', c=c_list, label='points in (x,z)')
+
+# Make legend, set axes limits and labels
+ax.legend()
+ax.set_xlim(0, 1)
+ax.set_ylim(0, 1)
+ax.set_zlim(0, 1)
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+
+# Customize the view angle so it's easier to see that the scatter points lie
+# on the plane y=0
+ax.view_init(elev=20., azim=-35)
+
+plt.show()
+```
+
+```{python, decorate=TRUE}
+# https://matplotlib.org/gallery/subplots_axes_and_figures/axhspan_demo.html#sphx-glr-gallery-subplots-axes-and-figures-axhspan-demo-py
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+t = np.arange(-1, 2, .01)
+s = np.sin(2 * np.pi * t)
+
+plt.plot(t, s)
+# Draw a thick red hline at y=0 that spans the xrange
+plt.axhline(linewidth=8, color='#d62728')
+
+# Draw a default hline at y=1 that spans the xrange
+plt.axhline(y=1)
+
+# Draw a default vline at x=1 that spans the yrange
+plt.axvline(x=1)
+
+# Draw a thick blue vline at x=0 that spans the upper quadrant of the yrange
+plt.axvline(x=0, ymin=0.75, linewidth=8, color='#1f77b4')
+
+# Draw a default hline at y=.5 that spans the middle half of the axes
+plt.axhline(y=.5, xmin=0.25, xmax=0.75)
+
+plt.axhspan(0.25, 0.75, facecolor='0.5', alpha=0.5)
+
+plt.axvspan(1.25, 1.55, facecolor='#2ca02c', alpha=0.5)
+
+plt.axis([-1, 2, -1, 2])
+
+plt.show()
+```
+
+
+
+
+```{python, decorate=TRUE}
+from mpl_toolkits.mplot3d import axes3d
+import matplotlib.pyplot as plt
+from matplotlib import cm
+
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+X, Y, Z = axes3d.get_test_data(0.05)
+ax.plot_surface(X, Y, Z, rstride=8, cstride=8, alpha=0.3)
+cset = ax.contourf(X, Y, Z, zdir='z', offset=-100, cmap=cm.coolwarm)
+cset = ax.contourf(X, Y, Z, zdir='x', offset=-40, cmap=cm.coolwarm)
+cset = ax.contourf(X, Y, Z, zdir='y', offset=40, cmap=cm.coolwarm)
+
+ax.set_xlabel('X')
+ax.set_xlim(-40, 40)
+ax.set_ylabel('Y')
+ax.set_ylim(-40, 40)
+ax.set_zlabel('Z')
+ax.set_zlim(-100, 100)
+
+plt.show()
+```
+
+```{python, decorate=TRUE}
+# step demo
+# https://matplotlib.org/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py
+
+import numpy as np
+from numpy import ma
+import matplotlib.pyplot as plt
+
+x = np.arange(1, 7, 0.4)
+y0 = np.sin(x)
+y = y0.copy() + 2.5
+
+plt.step(x, y, label='pre (default)')
+
+y -= 0.5
+plt.step(x, y, where='mid', label='mid')
+
+y -= 0.5
+plt.step(x, y, where='post', label='post')
+
+y = ma.masked_where((y0 > -0.15) & (y0 < 0.15), y - 0.5)
+plt.step(x, y, label='masked (pre)')
+
+plt.legend()
+
+plt.xlim(0, 7)
+plt.ylim(-0.5, 4)
+
+plt.show()
+```
+
+
+```{python, decorate=TRUE}
+# step demo
+# https://matplotlib.org/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py
+
+import numpy as np
+from numpy import ma
+import matplotlib.pyplot as plt
+
+x = np.arange(1, 7, 0.4)
+y0 = np.sin(x)
+y = y0.copy() + 2.5
+
+plt.step(x, y, label='pre (default)')
+
+y -= 0.5
+plt.step(x, y, where='mid', label='mid')
+
+y -= 0.5
+plt.step(x, y, where='post', label='post')
+
+y = ma.masked_where((y0 > -0.15) & (y0 < 0.15), y - 0.5)
+plt.step(x, y, label='masked (pre)')
+
+plt.legend()
+
+plt.xlim(0, 7)
+plt.ylim(-0.5, 4)
+
+plt.show()
+```
+
+
+
+
+
+```{python, decorate=TRUE}
+# https://matplotlib.org/gallery/images_contours_and_fields/contour_image.html#sphx-glr-gallery-images-contours-and-fields-contour-image-py
+
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib import cm
+
+# Default delta is large because that makes it fast, and it illustrates
+# the correct registration between image and contours.
+delta = 0.5
+
+extent = (-3, 4, -4, 3)
+
+x = np.arange(-3.0, 4.001, delta)
+y = np.arange(-4.0, 3.001, delta)
+X, Y = np.meshgrid(x, y)
+Z1 = np.exp(-X**2 - Y**2)
+Z2 = np.exp(-(X - 1)**2 - (Y - 1)**2)
+Z = (Z1 - Z2) * 2
+
+# Boost the upper limit to avoid truncation errors.
+levels = np.arange(-2.0, 1.601, 0.4)
+
+norm = cm.colors.Normalize(vmax=abs(Z).max(), vmin=-abs(Z).max())
+cmap = cm.PRGn
+
+fig, _axs = plt.subplots(nrows=2, ncols=2)
+fig.subplots_adjust(hspace=0.3)
+axs = _axs.flatten()
+
+cset1 = axs[0].contourf(X, Y, Z, levels, norm=norm,
+                     cmap=cm.get_cmap(cmap, len(levels) - 1))
+# It is not necessary, but for the colormap, we need only the
+# number of levels minus 1.  To avoid discretization error, use
+# either this number or a large number such as the default (256).
+
+# If we want lines as well as filled regions, we need to call
+# contour separately; don't try to change the edgecolor or edgewidth
+# of the polygons in the collections returned by contourf.
+# Use levels output from previous call to guarantee they are the same.
+
+cset2 = axs[0].contour(X, Y, Z, cset1.levels, colors='k')
+
+# We don't really need dashed contour lines to indicate negative
+# regions, so let's turn them off.
+
+for c in cset2.collections:
+    c.set_linestyle('solid')
+
+# It is easier here to make a separate call to contour than
+# to set up an array of colors and linewidths.
+# We are making a thick green line as a zero contour.
+# Specify the zero level as a tuple with only 0 in it.
+
+cset3 = axs[0].contour(X, Y, Z, (0,), colors='g', linewidths=2)
+axs[0].set_title('Filled contours')
+fig.colorbar(cset1, ax=axs[0])
+
+
+axs[1].imshow(Z, extent=extent, cmap=cmap, norm=norm)
+axs[1].contour(Z, levels, colors='k', origin='upper', extent=extent)
+axs[1].set_title("Image, origin 'upper'")
+
+axs[2].imshow(Z, origin='lower', extent=extent, cmap=cmap, norm=norm)
+axs[2].contour(Z, levels, colors='k', origin='lower', extent=extent)
+axs[2].set_title("Image, origin 'lower'")
+
+# We will use the interpolation "nearest" here to show the actual
+# image pixels.
+# Note that the contour lines don't extend to the edge of the box.
+# This is intentional. The Z values are defined at the center of each
+# image pixel (each color block on the following subplot), so the
+# domain that is contoured does not extend beyond these pixel centers.
+im = axs[3].imshow(Z, interpolation='nearest', extent=extent,
+                cmap=cmap, norm=norm)
+axs[3].contour(Z, levels, colors='k', origin='image', extent=extent)
+ylim = axs[3].get_ylim()
+axs[3].set_ylim(ylim[::-1])
+axs[3].set_title("Origin from rc, reversed y-axis")
+fig.colorbar(im, ax=axs[3])
+
+fig.tight_layout()
+plt.show()
+```

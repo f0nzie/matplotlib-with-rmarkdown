@@ -1,0 +1,88 @@
+# Plotnine 0
+
+```{r, decorate=TRUE}
+library(reticulate)
+reticulate::use_condaenv("r-python")
+```
+
+
+```{python, decorate=TRUE}
+import matplotlib.pyplot as plt
+from plotnine import *
+from plotnine.data import *
+from plotnine.data import mtcars
+
+import numpy as np
+import pandas as pd
+
+```
+
+```{python, decorate=TRUE, collapse=FALSE, results="markup"}
+print(mtcars)
+```
+
+```{python, decorate=TRUE, collapse=FALSE, results="markup", engine="python3"}
+ggplot(data=mpg) + geom_point(mapping=aes(x="displ", y="hwy"))
+print(mpg)
+```
+
+
+
+The `mpg` dataset:
+
+Plotting couple of variables:
+
+
+### Facets
+
+```{python, engine="python3"}
+# from plotnine import ggplot, geom_point, aes, stat_smooth, facet_wrap
+# from plotnine.data import mtcars
+# 
+# ggplot(mtcars, aes('wt', 'mpg', color='factor(gear)')) + geom_point() + stat_smooth(method='lm') + facet_wrap('~gear'))
+```
+
+
+```{python, facets}
+# import matplotlib.pyplot as plt
+# import numpy as np
+# from plotnine import ggplot, geom_point, aes, stat_smooth, facet_wrap
+# from plotnine.data import mtcars
+# 
+# (ggplot(mtcars, aes('wt', 'mpg', color='factor(gear)'))
+#  + geom_point()
+#  + stat_smooth(method='lm')
+#  + facet_wrap('~gear'))
+```
+
+
+### Two variables per facet
+
+```{python, facets-plot, decorate=TRUE, results="markup", collapse=FALSE}
+# https://plotnine.readthedocs.io/en/stable/generated/plotnine.facets.facet_wrap.html#facet-wrap
+# import matplotlib.pyplot as plt
+# import pandas as pd
+# import numpy as np
+# from plotnine import *
+# from plotnine.data import *
+# 
+# mpg.head()
+# 
+# 
+# 
+# (
+#     ggplot(mpg, aes(x='displ', y='hwy'))
+#     + geom_point()
+#     + labs(x='displacement', y='horsepower')
+# )
+# 
+# (
+#     ggplot(mpg, aes(x='displ', y='hwy'))
+#     + geom_point()
+#     + facet_wrap('class')
+#     + labs(x='displacement', y='horsepower')
+# )
+
+# g = ggplot(data=mpg)
+# g + geom_point(mapping=aes(x="displ", y="hwy"))
+```

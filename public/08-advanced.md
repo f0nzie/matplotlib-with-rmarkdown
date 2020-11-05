@@ -10,12 +10,11 @@ reticulate::use_condaenv("r-python")
 </div><br></div>
 
 ## Adding labels
-Math symbols printing
+Math symbols printing with Latex.
 
 $r's(t) = \mathcal{A}\/\sin(2 \omega t)'$
 
 $\mathbb{blackboard}$
-
 
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
@@ -80,7 +79,6 @@ plt.show()
 
 ## Subplots
 
-
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
@@ -140,6 +138,9 @@ plt.show()
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
+import matplotlib.pyplot as plt
+import numpy as np
+
 names = ['group_a', 'group_b', 'group_c']
 values = [1, 10, 100]
 
@@ -224,6 +225,9 @@ plt.show()
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
+import numpy as np
+import matplotlib.pyplot as plt
+
 # Fixing random state for reproducibility
 np.random.seed(19680801)
 
@@ -276,63 +280,4 @@ plt.show()
 
 
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
-
-```python
-# https://matplotlib.org/gallery/subplots_axes_and_figures/subplots_adjust.html#sphx-glr-gallery-subplots-axes-and-figures-subplots-adjust-py
-
-import matplotlib.pyplot as plt
-import numpy as np
-
-# Fixing random state for reproducibility
-np.random.seed(19680801)
-
-
-plt.subplot(211)
-plt.imshow(np.random.random((100, 100)), cmap=plt.cm.BuPu_r)
-plt.subplot(212)
-plt.imshow(np.random.random((100, 100)), cmap=plt.cm.BuPu_r)
-
-plt.subplots_adjust(bottom=0.1, right=0.8, top=0.9)
-cax = plt.axes([0.85, 0.1, 0.075, 0.8])
-plt.colorbar(cax=cax)
-plt.show()
-```
-
-<img src="08-advanced_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
-
-
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
-
-```python
-# step demo
-# https://matplotlib.org/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py
-
-import numpy as np
-from numpy import ma
-import matplotlib.pyplot as plt
-
-x = np.arange(1, 7, 0.4)
-y0 = np.sin(x)
-y = y0.copy() + 2.5
-
-plt.step(x, y, label='pre (default)')
-
-y -= 0.5
-plt.step(x, y, where='mid', label='mid')
-
-y -= 0.5
-plt.step(x, y, where='post', label='post')
-
-y = ma.masked_where((y0 > -0.15) & (y0 < 0.15), y - 0.5)
-plt.step(x, y, label='masked (pre)')
-
-plt.legend()
-
-plt.xlim(0, 7)
-plt.ylim(-0.5, 4)
-plt.show()
-```
-
-<img src="08-advanced_files/figure-html/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 

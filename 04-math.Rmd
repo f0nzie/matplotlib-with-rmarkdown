@@ -6,6 +6,7 @@ reticulate::use_condaenv("r-python")
 ```
 
 
+## Functions
 
 ```{python, decorate=TRUE}
 # https://www.geeksforgeeks.org/plot-mathematical-expressions-in-python-using-matplotlib/
@@ -45,6 +46,7 @@ plt.show()
 ```
 
 
+## Functions with Latex labels
 
 ```{python, decorate=TRUE}
 # https://www.kaggle.com/sskiing/matplotlib-showcase-examples
@@ -89,45 +91,7 @@ plt.show()
 ```
 
 
-
-
-## Middle
-
-
-```{python, decorate=TRUE}
-# ===================================
-# 3D wireframe plots in one direction
-# ===================================
-
-# Demonstrates that setting rstride or cstride to 0 causes wires to not be
-# generated in the corresponding direction.
-
-
-from mpl_toolkits.mplot3d import axes3d
-import matplotlib.pyplot as plt
-
-
-fig, [ax1, ax2] = plt.subplots(2, 1, figsize=(8, 12), subplot_kw={'projection': '3d'})
-
-# Get the test data
-X, Y, Z = axes3d.get_test_data(0.05)
-
-# Give the first plot only wireframes of the type y = c
-ax1.plot_wireframe(X, Y, Z, rstride=10, cstride=0)
-ax1.set_title("Column (x) stride set to 0")
-
-# Give the second plot only wireframes of the type x = c
-ax2.plot_wireframe(X, Y, Z, rstride=0, cstride=10)
-ax2.set_title("Row (y) stride set to 0")
-
-plt.tight_layout()
-plt.show()
-```
-
-
-
-
-
+## Multiple functions in the same plot
 
 
 ```{python, decorate=TRUE}
@@ -161,6 +125,28 @@ plt.show()
 ```
 
 
+## Overlapping functions
+We use `subplot` to arrange the two functions. Observe that the y-axis is the same in both functions.
+
+```{python, overlapping-fun, decorate=TRUE}
+# https://www.python-course.eu/matplotlib_multiple_figures.php
+
+import numpy as np
+import matplotlib.pyplot as plt
+def f(t):
+    return np.exp(-t) * np.cos(2*np.pi*t)
+def g(t):
+    return np.sin(t) * np.cos(1/(t+0.1))
+t1 = np.arange(0.0, 5.0, 0.1)
+t2 = np.arange(0.0, 5.0, 0.02)
+plt.subplot(212)
+plt.plot(t1, g(t1), 'ro', t2, f(t2), 'k')
+plt.grid(color='b', alpha=0.5, linestyle='dashed', linewidth=0.5)
+plt.show()
+```
+
+## Surface functions
+
 
 ```{python, decorate=TRUE}
 # http://www.scipy-lectures.org/intro/matplotlib/auto_examples/plot_plot3d_ex.html
@@ -184,29 +170,9 @@ ax.set_zlim(-2, 2)
 plt.show()
 ```
 
-```{python, decorate=TRUE}
-# https://www.python-course.eu/matplotlib_multiple_figures.php
-
-import numpy as np
-import matplotlib.pyplot as plt
-def f(t):
-    return np.exp(-t) * np.cos(2*np.pi*t)
-def g(t):
-    return np.sin(t) * np.cos(1/(t+0.1))
-t1 = np.arange(0.0, 5.0, 0.1)
-t2 = np.arange(0.0, 5.0, 0.02)
-plt.subplot(212)
-plt.plot(t1, g(t1), 'ro', t2, f(t2), 'k')
-plt.grid(color='b', alpha=0.5, linestyle='dashed', linewidth=0.5)
-plt.show()
-```
 
 
-## Surface functions
-
-
-
-```{python, decorate=TRUE}
+```{python, sqrt-cos, decorate=TRUE}
 # https://matplotlib.org/gallery/mplot3d/offset.html#sphx-glr-gallery-mplot3d-offset-py
 
 # This import registers the 3D projection, but is otherwise unused.
@@ -214,7 +180,6 @@ from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
 
 import matplotlib.pyplot as plt
 import numpy as np
-
 
 fig = plt.figure()
 ax = fig.gca(projection='3d')
@@ -234,16 +199,12 @@ plt.show()
 
 
 
-
-
-```{python, decorate=TRUE}
+```{python, hat-fun, decorate=TRUE}
 # https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/surface3d_radial.py
 
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
-
 import matplotlib.pyplot as plt
 import numpy as np
-
 
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
@@ -270,11 +231,10 @@ plt.show()
 ```
 
 
+## 3D wireframe
 
 
-
-
-```{python, decorate=TRUE}
+```{python, wireframe, decorate=TRUE}
 # https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/wire3d.py
 
 from mpl_toolkits.mplot3d import axes3d
@@ -294,53 +254,7 @@ plt.show()
 ```
 
 
-
-```{python, decorate=TRUE}
-from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-fig = plt.figure()
-ax = fig.gca(projection='3d')
-
-# Plot a sin curve using the x and y axes.
-x = np.linspace(0, 1, 100)
-y = np.sin(x * 2 * np.pi) / 2 + 0.5
-ax.plot(x, y, zs=0, zdir='z', label='curve in (x,y)')
-
-# Plot scatterplot data (20 2D points per colour) on the x and z axes.
-colors = ('r', 'g', 'b', 'k')
-
-# Fixing random state for reproducibility
-np.random.seed(19680801)
-
-x = np.random.sample(20 * len(colors))
-y = np.random.sample(20 * len(colors))
-c_list = []
-for c in colors:
-    c_list.extend([c] * 20)
-# By using zdir='y', the y value of these points is fixed to the zs value 0
-# and the (x,y) points are plotted on the x and z axes.
-ax.scatter(x, y, zs=0, zdir='y', c=c_list, label='points in (x,z)')
-
-# Make legend, set axes limits and labels
-ax.legend()
-ax.set_xlim(0, 1)
-ax.set_ylim(0, 1)
-ax.set_zlim(0, 1)
-ax.set_xlabel('X')
-ax.set_ylabel('Y')
-ax.set_zlabel('Z')
-
-# Customize the view angle so it's easier to see that the scatter points lie
-# on the plane y=0
-ax.view_init(elev=20., azim=-35)
-
-plt.show()
-```
-
-
+## 3D contour plot
 
 ```{python, decorate=TRUE}
 # https://matplotlib.org/2.0.2/examples/mplot3d/contour3d_demo.html
@@ -394,3 +308,6 @@ plt.ylabel('sepal width (cm)')
 plt.axis('tight')
 plt.show()
 ```
+
+
+

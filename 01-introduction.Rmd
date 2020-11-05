@@ -5,15 +5,7 @@ library(reticulate)
 reticulate::use_condaenv("r-python")
 ```
 
-```{python, decorate=TRUE}
-import matplotlib.pyplot as plt
-plt.plot([1, 2, 3, 4])
-plt.ylabel('some numbers')
-plt.show()
-```
-
-
-## The "hello world" plot
+## "Hello world"
 
 ```{python, decorate=TRUE}
 import matplotlib.pyplot as plt
@@ -31,22 +23,9 @@ plt.savefig("test.png")
 plt.show()
 ```
 
+## The parts of a plot
 
-```{python, decorate=TRUE}
-# https://matplotlib.org/2.0.2/examples/mplot3d/contour3d_demo.html
-from mpl_toolkits.mplot3d import axes3d
-import matplotlib.pyplot as plt
-from matplotlib import cm
-
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
-X, Y, Z = axes3d.get_test_data(0.05)
-cset = ax.contour(X, Y, Z, cmap=cm.coolwarm)
-ax.clabel(cset, fontsize=9, inline=1)
-
-plt.show()
-```
-
+I love this plot because it will help to formulate the right question when you are looking for online assistance. Sooner of later you will be in need to customize the $x$ or $y$ axis ticks in such a way that present specific data points and skip the defaults. Or, get rid of so many x axis labels that superimposing one to each other.
 
 ```{python, results = "hold", message=FALSE, collapse=TRUE, decorate=TRUE}
 # https://matplotlib.org/gallery/showcase/anatomy.html#sphx-glr-gallery-showcase-anatomy-py
@@ -190,9 +169,7 @@ ax.text(4.0, -0.4, "Made with http://matplotlib.org",
 plt.show()
 ```
 
-
-
-
+## Can do business plots too
 
 ```{python, collapse=TRUE, decorate=TRUE}
 import numpy as np
@@ -236,6 +213,7 @@ ax4.margins(0)
 plt.show()
 ```
 
+## And real time
 
 ```{python, decorate=TRUE}
 # https://matplotlib.org/gallery/lines_bars_and_markers/cohere.html#sphx-glr-gallery-lines-bars-and-markers-cohere-py
@@ -268,3 +246,22 @@ fig.tight_layout()
 plt.show()
 ```
 
+## And also 3D
+
+Although in data science 3D plots are not recommended, if there is a compelling case where the 3D plot could explain it better than a 2D plot, then, it should be okay. But the rule is *do not abuse of 3D*. What you are trying to convey is information per square centimeter of graphics.
+
+```{python, decorate=TRUE}
+# https://matplotlib.org/2.0.2/examples/mplot3d/contour3d_demo.html
+
+from mpl_toolkits.mplot3d import axes3d
+import matplotlib.pyplot as plt
+from matplotlib import cm
+
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+X, Y, Z = axes3d.get_test_data(0.05)
+cset = ax.contour(X, Y, Z, cmap=cm.coolwarm)
+ax.clabel(cset, fontsize=9, inline=1)
+
+plt.show()
+```

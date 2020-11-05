@@ -6,6 +6,7 @@ library(reticulate)
 reticulate::use_condaenv("r-python")
 ```
 
+## Radial
 
 
 ```{python, decorate=TRUE}
@@ -56,7 +57,53 @@ ax.voxels(x, y, z, sphere,
 plt.show()
 ```
 
+## Spherical
 
+```{python, spherical-voxels, decorate=TRUE}
+import matplotlib.pyplot as plt
+import numpy as np
+
+# This import registers the 3D projection, but is otherwise unused.
+from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
+
+
+def midpoints(x):
+    sl = ()
+    for i in range(x.ndim):
+        x = (x[sl + np.index_exp[:-1]] + x[sl + np.index_exp[1:]]) / 2.0
+        sl += np.index_exp[:]
+    return x
+
+# prepare some coordinates, and attach rgb values to each
+r, g, b = np.indices((17, 17, 17)) / 16.0
+rc = midpoints(r)
+gc = midpoints(g)
+bc = midpoints(b)
+
+# define a sphere about [0.5, 0.5, 0.5]
+sphere = (rc - 0.5)**2 + (gc - 0.5)**2 + (bc - 0.5)**2 < 0.5**2
+
+# combine the color components
+colors = np.zeros(sphere.shape + (3,))
+colors[..., 0] = rc
+colors[..., 1] = gc
+colors[..., 2] = bc
+
+# and plot everything
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+ax.voxels(r, g, b, sphere,
+          facecolors=colors,
+          edgecolors=np.clip(2*colors - 0.5, 0, 1),  # brighter
+          linewidth=0.5)
+ax.set(xlabel='r', ylabel='g', zlabel='b')
+
+plt.show()
+```
+
+
+
+## Solid cubes
 
 ```{python, decorate=TRUE}
 # https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/voxels.py
@@ -93,7 +140,60 @@ ax.voxels(voxels, facecolors=colors, edgecolor='k')
 plt.show()
 ```
 
+
 ```{python, decorate=TRUE}
+# https://stackoverflow.com/a/49281004/5270873
+
+from mpl_toolkits.mplot3d import Axes3D
+from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+def cuboid_data2(o, size=(1,1,1)):
+    X = [[[0, 1, 0], [0, 0, 0], [1, 0, 0], [1, 1, 0]],
+         [[0, 0, 0], [0, 0, 1], [1, 0, 1], [1, 0, 0]],
+         [[1, 0, 1], [1, 0, 0], [1, 1, 0], [1, 1, 1]],
+         [[0, 0, 1], [0, 0, 0], [0, 1, 0], [0, 1, 1]],
+         [[0, 1, 0], [0, 1, 1], [1, 1, 1], [1, 1, 0]],
+         [[0, 1, 1], [0, 0, 1], [1, 0, 1], [1, 1, 1]]]
+    X = np.array(X).astype(float)
+    for i in range(3):
+        X[:,:,i] *= size[i]
+    X += np.array(o)
+    return X
+
+def plotCubeAt2(positions,sizes=None,colors=None, **kwargs):
+    if not isinstance(colors,(list,np.ndarray)): colors=["C0"]*len(positions)
+    if not isinstance(sizes,(list,np.ndarray)): sizes=[(1,1,1)]*len(positions)
+    g = []
+    for p,s,c in zip(positions,sizes,colors):
+        g.append( cuboid_data2(p, size=s) )
+    return Poly3DCollection(np.concatenate(g),  
+                            facecolors=np.repeat(colors,6), **kwargs)
+
+
+positions = [(-3,5,-2),(1,7,1)]
+sizes = [(4,5,3), (3,3,7)]
+colors = ["crimson","limegreen"]
+
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+ax.set_aspect('auto')
+
+pc = plotCubeAt2(positions,sizes,colors=colors, edgecolor="k")
+ax.add_collection3d(pc)    
+
+ax.set_xlim([-4,6])
+ax.set_ylim([4,13])
+ax.set_zlim([-3,9])
+
+plt.show()
+```
+
+## Transparent cubicles
+
+```{python, transparent-cubicles-red, decorate=TRUE}
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -137,32 +237,8 @@ ax.voxels(x, y, z, filled, facecolors=colors, edgecolors='gray')
 plt.show()
 ```
 
-```{python, decorate=TRUE}
-import numpy as np
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
-def make_ax(grid=False):
-    fig = plt.figure()
-    ax = fig.gca(projection='3d')
-    ax.set_xlabel("x")
-    ax.set_ylabel("y")
-    ax.set_zlabel("z")
-    ax.grid(grid)
-    return ax
-
-filled = np.array([
-    [[1, 0, 1], [0, 0, 1], [0, 1, 0]],
-    [[0, 1, 1], [1, 0, 0], [1, 0, 1]],
-    [[1, 1, 0], [1, 1, 1], [0, 0, 0]]
-])
-
-ax = make_ax(True)
-ax.voxels(filled, edgecolors='gray')
-plt.show()
-```
-
-```{python, decorate=TRUE}
+```{python, transparent-cubicles-gray,decorate=TRUE}
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -187,8 +263,7 @@ ax.voxels(filled, facecolors='#1f77b430', edgecolors='gray')
 plt.show()
 ```
 
-
-```{python, decorate=TRUE}
+```{python, transparent-wireframe, decorate=TRUE}
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -213,78 +288,7 @@ ax.voxels(np.ones((3, 3, 3)), facecolors='#1f77b430', edgecolors='gray')
 plt.show()
 ```
 
-
-```{python, decorate=TRUE}
-import numpy as np
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-
-def make_ax(grid=False):
-    fig = plt.figure()
-    ax = fig.gca(projection='3d')
-    ax.set_xlabel("x")
-    ax.set_ylabel("y")
-    ax.set_zlabel("z")
-    ax.grid(grid)
-    return ax
-
-filled = np.array([
-    [[1, 0, 1], [0, 0, 1], [0, 1, 0]],
-    [[0, 1, 1], [1, 0, 0], [1, 0, 1]],
-    [[1, 1, 0], [1, 1, 1], [0, 0, 0]]
-])
-
-ax = make_ax()
-colors = np.array([[['#1f77b430']*3]*3]*3)
-colors[1,1,1] = '#ff0000ff'
-ax.voxels(np.ones((3, 3, 3)), facecolors=colors, edgecolor='gray')
-plt.show()
-```
-
-
-```{python, decorate=TRUE}
-import matplotlib.pyplot as plt
-import numpy as np
-
-# This import registers the 3D projection, but is otherwise unused.
-from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
-
-
-def midpoints(x):
-    sl = ()
-    for i in range(x.ndim):
-        x = (x[sl + np.index_exp[:-1]] + x[sl + np.index_exp[1:]]) / 2.0
-        sl += np.index_exp[:]
-    return x
-
-# prepare some coordinates, and attach rgb values to each
-r, g, b = np.indices((17, 17, 17)) / 16.0
-rc = midpoints(r)
-gc = midpoints(g)
-bc = midpoints(b)
-
-# define a sphere about [0.5, 0.5, 0.5]
-sphere = (rc - 0.5)**2 + (gc - 0.5)**2 + (bc - 0.5)**2 < 0.5**2
-
-# combine the color components
-colors = np.zeros(sphere.shape + (3,))
-colors[..., 0] = rc
-colors[..., 1] = gc
-colors[..., 2] = bc
-
-# and plot everything
-fig = plt.figure()
-ax = fig.gca(projection='3d')
-ax.voxels(r, g, b, sphere,
-          facecolors=colors,
-          edgecolors=np.clip(2*colors - 0.5, 0, 1),  # brighter
-          linewidth=0.5)
-ax.set(xlabel='r', ylabel='g', zlabel='b')
-
-plt.show()
-```
-
-
+## Semi-transparent
 
 ```{python, decorate=TRUE}
 # https://matplotlib.org/gallery/mplot3d/voxels_numpy_logo.html
@@ -333,54 +337,33 @@ ax.voxels(x, y, z, filled_2, facecolors=fcolors_2, edgecolors=ecolors_2)
 plt.show()
 ```
 
+## Opaque cubicles
 
-
-```{python, eval = FALSE, decorate=TRUE}
-# https://stackoverflow.com/a/49281004/5270873
-
-from mpl_toolkits.mplot3d import Axes3D
-from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+```{python, decorate=TRUE}
 import numpy as np
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 
+def make_ax(grid=False):
+    fig = plt.figure()
+    ax = fig.gca(projection='3d')
+    ax.set_xlabel("x")
+    ax.set_ylabel("y")
+    ax.set_zlabel("z")
+    ax.grid(grid)
+    return ax
 
-def cuboid_data2(o, size=(1,1,1)):
-    X = [[[0, 1, 0], [0, 0, 0], [1, 0, 0], [1, 1, 0]],
-         [[0, 0, 0], [0, 0, 1], [1, 0, 1], [1, 0, 0]],
-         [[1, 0, 1], [1, 0, 0], [1, 1, 0], [1, 1, 1]],
-         [[0, 0, 1], [0, 0, 0], [0, 1, 0], [0, 1, 1]],
-         [[0, 1, 0], [0, 1, 1], [1, 1, 1], [1, 1, 0]],
-         [[0, 1, 1], [0, 0, 1], [1, 0, 1], [1, 1, 1]]]
-    X = np.array(X).astype(float)
-    for i in range(3):
-        X[:,:,i] *= size[i]
-    X += np.array(o)
-    return X
+filled = np.array([
+    [[1, 0, 1], [0, 0, 1], [0, 1, 0]],
+    [[0, 1, 1], [1, 0, 0], [1, 0, 1]],
+    [[1, 1, 0], [1, 1, 1], [0, 0, 0]]
+])
 
-def plotCubeAt2(positions,sizes=None,colors=None, **kwargs):
-    if not isinstance(colors,(list,np.ndarray)): colors=["C0"]*len(positions)
-    if not isinstance(sizes,(list,np.ndarray)): sizes=[(1,1,1)]*len(positions)
-    g = []
-    for p,s,c in zip(positions,sizes,colors):
-        g.append( cuboid_data2(p, size=s) )
-    return Poly3DCollection(np.concatenate(g),  
-                            facecolors=np.repeat(colors,6), **kwargs)
-
-
-positions = [(-3,5,-2),(1,7,1)]
-sizes = [(4,5,3), (3,3,7)]
-colors = ["crimson","limegreen"]
-
-fig = plt.figure()
-ax = fig.gca(projection='3d')
-ax.set_aspect('equal')
-
-pc = plotCubeAt2(positions,sizes,colors=colors, edgecolor="k")
-ax.add_collection3d(pc)    
-
-ax.set_xlim([-4,6])
-ax.set_ylim([4,13])
-ax.set_zlim([-3,9])
-
+ax = make_ax(True)
+ax.voxels(filled, edgecolors='gray')
 plt.show()
 ```
+
+
+
+

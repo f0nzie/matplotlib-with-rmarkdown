@@ -24,7 +24,7 @@
 <meta name="author" content="Alfonso R. Reyes" />
 
 
-<meta name="date" content="2020-11-03" />
+<meta name="date" content="2020-11-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,6 @@
   
 <link rel="prev" href="scientific.html"/>
 <link rel="next" href="seaborn.html"/>
-<script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,22 +50,24 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -80,43 +81,46 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
+    background-color: #ffffff;
+    color: #a0a0a0;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #1f1c1b; background-color: #ffffff; }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code span. { color: #1f1c1b; } /* Normal */
+code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+code span.an { color: #ca60ca; } /* Annotation */
+code span.at { color: #0057ae; } /* Attribute */
+code span.bn { color: #b08000; } /* BaseN */
+code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #924c9d; } /* Char */
+code span.cn { color: #aa5500; } /* Constant */
+code span.co { color: #898887; } /* Comment */
+code span.cv { color: #0095ff; } /* CommentVar */
+code span.do { color: #607880; } /* Documentation */
+code span.dt { color: #0057ae; } /* DataType */
+code span.dv { color: #b08000; } /* DecVal */
+code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+code span.fl { color: #b08000; } /* Float */
+code span.fu { color: #644a9b; } /* Function */
+code span.im { color: #ff5500; } /* Import */
+code span.in { color: #b08000; } /* Information */
+code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+code span.op { color: #1f1c1b; } /* Operator */
+code span.ot { color: #006e28; } /* Other */
+code span.pp { color: #006e28; } /* Preprocessor */
+code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #ff5500; } /* SpecialString */
+code span.st { color: #bf0303; } /* String */
+code span.va { color: #0057ae; } /* Variable */
+code span.vs { color: #bf0303; } /* VerbatimString */
+code span.wa { color: #bf0303; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -137,35 +141,89 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Matplotlib with Rmarkdown</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
-<ul>
-<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#the-hello-world-plot"><i class="fa fa-check"></i><b>1.1</b> The “hello world” plot</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#method"><i class="fa fa-check"></i>Method</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#r-engine"><i class="fa fa-check"></i>R engine</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#bash-engine"><i class="fa fa-check"></i>Bash engine</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#python-engine"><i class="fa fa-check"></i>Python engine</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="python-environment.html"><a href="python-environment.html"><i class="fa fa-check"></i><b>2</b> Python environment</a></li>
-<li class="chapter" data-level="3" data-path="sharing-data-objects.html"><a href="sharing-data-objects.html"><i class="fa fa-check"></i><b>3</b> Sharing data objects</a></li>
-<li class="chapter" data-level="4" data-path="math.html"><a href="math.html"><i class="fa fa-check"></i><b>4</b> Math</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="math.html"><a href="math.html#middle"><i class="fa fa-check"></i><b>4.1</b> Middle</a></li>
-<li class="chapter" data-level="4.2" data-path="math.html"><a href="math.html#surface-functions"><i class="fa fa-check"></i><b>4.2</b> Surface functions</a></li>
-<li class="chapter" data-level="4.3" data-path="math.html"><a href="math.html#machine-learning"><i class="fa fa-check"></i><b>4.3</b> Machine Learning</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="scientific.html"><a href="scientific.html"><i class="fa fa-check"></i><b>5</b> Scientific</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="scientific.html"><a href="scientific.html#solve-large-scale-eigenvalue-problems"><i class="fa fa-check"></i><b>5.1</b> Solve large scale eigenvalue problems</a></li>
-<li class="chapter" data-level="5.2" data-path="scientific.html"><a href="scientific.html#computational-physics"><i class="fa fa-check"></i><b>5.2</b> Computational Physics</a></li>
-<li class="chapter" data-level="5.3" data-path="scientific.html"><a href="scientific.html#contour-maps"><i class="fa fa-check"></i><b>5.3</b> Contour maps</a></li>
-<li class="chapter" data-level="5.4" data-path="scientific.html"><a href="scientific.html#real-time"><i class="fa fa-check"></i><b>5.4</b> Real time</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#hello-world"><i class="fa fa-check"></i><b>1.1</b> “Hello world”</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#the-parts-of-a-plot"><i class="fa fa-check"></i><b>1.2</b> The parts of a plot</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#can-do-business-plots-too"><i class="fa fa-check"></i><b>1.3</b> Can do business plots too</a></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#and-real-time"><i class="fa fa-check"></i><b>1.4</b> And real time</a></li>
+<li class="chapter" data-level="1.5" data-path="introduction.html"><a href="introduction.html#and-also-3d"><i class="fa fa-check"></i><b>1.5</b> And also 3D</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="voxels.html"><a href="voxels.html"><i class="fa fa-check"></i><b>6</b> Voxels</a></li>
-<li class="chapter" data-level="7" data-path="seaborn.html"><a href="seaborn.html"><i class="fa fa-check"></i><b>7</b> Seaborn</a></li>
-<li class="chapter" data-level="8" data-path="advanced.html"><a href="advanced.html"><i class="fa fa-check"></i><b>8</b> Advanced</a>
-<ul>
+<li class="chapter" data-level="2" data-path="python-environments.html"><a href="python-environments.html"><i class="fa fa-check"></i><b>2</b> Python environments</a><ul>
+<li class="chapter" data-level="2.1" data-path="python-environments.html"><a href="python-environments.html#why-virtual-environments"><i class="fa fa-check"></i><b>2.1</b> Why virtual environments?</a></li>
+<li class="chapter" data-level="2.2" data-path="python-environments.html"><a href="python-environments.html#python-virtual-environment-and-r"><i class="fa fa-check"></i><b>2.2</b> Python virtual environment and R</a></li>
+<li class="chapter" data-level="2.3" data-path="python-environments.html"><a href="python-environments.html#conda-environments"><i class="fa fa-check"></i><b>2.3</b> conda environments</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="python-environments.html"><a href="python-environments.html#environment-with-python-version-specified"><i class="fa fa-check"></i><b>2.3.1</b> environment with Python version specified</a></li>
+<li class="chapter" data-level="2.3.2" data-path="python-environments.html"><a href="python-environments.html#specify-python-version-and-list-package-names"><i class="fa fa-check"></i><b>2.3.2</b> specify Python version and list package names</a></li>
+<li class="chapter" data-level="2.3.3" data-path="python-environments.html"><a href="python-environments.html#specify-python-version-and-version-for-the-packages"><i class="fa fa-check"></i><b>2.3.3</b> specify Python version and version for the packages</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="python-environments.html"><a href="python-environments.html#running-python-from-r"><i class="fa fa-check"></i><b>2.4</b> Running Python from R</a></li>
+<li class="chapter" data-level="2.5" data-path="python-environments.html"><a href="python-environments.html#a-plot-demo"><i class="fa fa-check"></i><b>2.5</b> A plot demo</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sharing-data-objects.html"><a href="sharing-data-objects.html"><i class="fa fa-check"></i><b>3</b> Sharing data objects</a><ul>
+<li class="chapter" data-level="3.1" data-path="sharing-data-objects.html"><a href="sharing-data-objects.html#from-r-to-python-back-to-r"><i class="fa fa-check"></i><b>3.1</b> From R to Python, back to R</a></li>
+<li class="chapter" data-level="3.2" data-path="sharing-data-objects.html"><a href="sharing-data-objects.html#from-python-to-r-back-to-python"><i class="fa fa-check"></i><b>3.2</b> From Python to R, back to Python</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="math.html"><a href="math.html"><i class="fa fa-check"></i><b>4</b> Math</a><ul>
+<li class="chapter" data-level="4.1" data-path="math.html"><a href="math.html#functions"><i class="fa fa-check"></i><b>4.1</b> Functions</a></li>
+<li class="chapter" data-level="4.2" data-path="math.html"><a href="math.html#functions-with-latex-labels"><i class="fa fa-check"></i><b>4.2</b> Functions with Latex labels</a></li>
+<li class="chapter" data-level="4.3" data-path="math.html"><a href="math.html#multiple-functions-in-the-same-plot"><i class="fa fa-check"></i><b>4.3</b> Multiple functions in the same plot</a></li>
+<li class="chapter" data-level="4.4" data-path="math.html"><a href="math.html#overlapping-functions"><i class="fa fa-check"></i><b>4.4</b> Overlapping functions</a></li>
+<li class="chapter" data-level="4.5" data-path="math.html"><a href="math.html#surface-functions"><i class="fa fa-check"></i><b>4.5</b> Surface functions</a></li>
+<li class="chapter" data-level="4.6" data-path="math.html"><a href="math.html#d-wireframe"><i class="fa fa-check"></i><b>4.6</b> 3D wireframe</a></li>
+<li class="chapter" data-level="4.7" data-path="math.html"><a href="math.html#d-contour-plot"><i class="fa fa-check"></i><b>4.7</b> 3D contour plot</a></li>
+<li class="chapter" data-level="4.8" data-path="math.html"><a href="math.html#machine-learning"><i class="fa fa-check"></i><b>4.8</b> Machine Learning</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="scientific.html"><a href="scientific.html"><i class="fa fa-check"></i><b>5</b> Scientific</a><ul>
+<li class="chapter" data-level="5.1" data-path="scientific.html"><a href="scientific.html#solve-laplace"><i class="fa fa-check"></i><b>5.1</b> Solve Laplace</a></li>
+<li class="chapter" data-level="5.2" data-path="scientific.html"><a href="scientific.html#eigenvalue-problems"><i class="fa fa-check"></i><b>5.2</b> Eigenvalue problems</a></li>
+<li class="chapter" data-level="5.3" data-path="scientific.html"><a href="scientific.html#computational-physics"><i class="fa fa-check"></i><b>5.3</b> Computational Physics</a></li>
+<li class="chapter" data-level="5.4" data-path="scientific.html"><a href="scientific.html#triangulation-and-delauney-maps"><i class="fa fa-check"></i><b>5.4</b> Triangulation and Delauney maps</a></li>
+<li class="chapter" data-level="5.5" data-path="scientific.html"><a href="scientific.html#contour-maps"><i class="fa fa-check"></i><b>5.5</b> Contour maps</a></li>
+<li class="chapter" data-level="5.6" data-path="scientific.html"><a href="scientific.html#real-time"><i class="fa fa-check"></i><b>5.6</b> Real time</a></li>
+<li class="chapter" data-level="5.7" data-path="scientific.html"><a href="scientific.html#density-plots"><i class="fa fa-check"></i><b>5.7</b> Density plots</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="voxels.html"><a href="voxels.html"><i class="fa fa-check"></i><b>6</b> Voxels</a><ul>
+<li class="chapter" data-level="6.1" data-path="voxels.html"><a href="voxels.html#radial"><i class="fa fa-check"></i><b>6.1</b> Radial</a></li>
+<li class="chapter" data-level="6.2" data-path="voxels.html"><a href="voxels.html#spherical"><i class="fa fa-check"></i><b>6.2</b> Spherical</a></li>
+<li class="chapter" data-level="6.3" data-path="voxels.html"><a href="voxels.html#solid-cubes"><i class="fa fa-check"></i><b>6.3</b> Solid cubes</a></li>
+<li class="chapter" data-level="6.4" data-path="voxels.html"><a href="voxels.html#transparent-cubicles"><i class="fa fa-check"></i><b>6.4</b> Transparent cubicles</a></li>
+<li class="chapter" data-level="6.5" data-path="voxels.html"><a href="voxels.html#semi-transparent"><i class="fa fa-check"></i><b>6.5</b> Semi-transparent</a></li>
+<li class="chapter" data-level="6.6" data-path="voxels.html"><a href="voxels.html#opaque-cubicles"><i class="fa fa-check"></i><b>6.6</b> Opaque cubicles</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="seaborn.html"><a href="seaborn.html"><i class="fa fa-check"></i><b>7</b> Seaborn</a><ul>
+<li class="chapter" data-level="7.1" data-path="seaborn.html"><a href="seaborn.html#error-bands"><i class="fa fa-check"></i><b>7.1</b> Error bands</a></li>
+<li class="chapter" data-level="7.2" data-path="seaborn.html"><a href="seaborn.html#boxplots"><i class="fa fa-check"></i><b>7.2</b> Boxplots</a></li>
+<li class="chapter" data-level="7.3" data-path="seaborn.html"><a href="seaborn.html#facets"><i class="fa fa-check"></i><b>7.3</b> Facets</a></li>
+<li class="chapter" data-level="7.4" data-path="seaborn.html"><a href="seaborn.html#functions-1"><i class="fa fa-check"></i><b>7.4</b> Functions</a></li>
+<li class="chapter" data-level="7.5" data-path="seaborn.html"><a href="seaborn.html#scatter-plot-matrix"><i class="fa fa-check"></i><b>7.5</b> Scatter plot matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="advanced.html"><a href="advanced.html"><i class="fa fa-check"></i><b>8</b> Advanced</a><ul>
 <li class="chapter" data-level="8.1" data-path="advanced.html"><a href="advanced.html#adding-labels"><i class="fa fa-check"></i><b>8.1</b> Adding labels</a></li>
 <li class="chapter" data-level="8.2" data-path="advanced.html"><a href="advanced.html#subplots"><i class="fa fa-check"></i><b>8.2</b> Subplots</a></li>
 <li class="chapter" data-level="8.3" data-path="advanced.html"><a href="advanced.html#change-of-axes"><i class="fa fa-check"></i><b>8.3</b> Change of axes</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="test-new.html"><a href="test-new.html"><i class="fa fa-check"></i><b>9</b> Test new</a></li>
+<li class="chapter" data-level="9" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html"><i class="fa fa-check"></i><b>9</b> Beyond <code>matplotlib</code></a><ul>
+<li class="chapter" data-level="9.1" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#brokenaxis"><i class="fa fa-check"></i><b>9.1</b> <code>brokenaxis</code></a><ul>
+<li class="chapter" data-level="9.1.1" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#usage"><i class="fa fa-check"></i><b>9.1.1</b> Usage</a></li>
+<li class="chapter" data-level="9.1.2" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#subplots-1"><i class="fa fa-check"></i><b>9.1.2</b> Subplots</a></li>
+<li class="chapter" data-level="9.1.3" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#log-scales"><i class="fa fa-check"></i><b>9.1.3</b> Log scales</a></li>
+<li class="chapter" data-level="9.1.4" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#different-scales"><i class="fa fa-check"></i><b>9.1.4</b> Different scales</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#yellowbrick"><i class="fa fa-check"></i><b>9.2</b> <code>yellowbrick</code></a><ul>
+<li class="chapter" data-level="9.2.1" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#pearson-correlation"><i class="fa fa-check"></i><b>9.2.1</b> Pearson correlation</a></li>
+<li class="chapter" data-level="9.2.2" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#scatter-diagram"><i class="fa fa-check"></i><b>9.2.2</b> Scatter diagram</a></li>
+<li class="chapter" data-level="9.2.3" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#residuals-plot"><i class="fa fa-check"></i><b>9.2.3</b> Residuals plot</a></li>
+<li class="chapter" data-level="9.2.4" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#discrimination-threshold"><i class="fa fa-check"></i><b>9.2.4</b> Discrimination threshold</a></li>
+<li class="chapter" data-level="9.2.5" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#intercluster-distance"><i class="fa fa-check"></i><b>9.2.5</b> Intercluster distance</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -186,420 +244,407 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="voxels" class="section level1" number="6">
+<div id="voxels" class="section level1">
 <h1><span class="header-section-number">Ch. 6</span> Voxels</h1>
 <div class="decocode">
 <div style="background-color:#4C78DB">
 <p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i> <b>R</b></span></p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="voxels.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb53-2"><a href="voxels.html#cb53-2" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">use_condaenv</span>(<span class="st">&quot;r-python&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="voxels.html#cb56-1"></a><span class="kw">library</span>(reticulate)</span>
+<span id="cb56-2"><a href="voxels.html#cb56-2"></a>reticulate<span class="op">::</span><span class="kw">use_condaenv</span>(<span class="st">&quot;r-python&quot;</span>)</span></code></pre></div>
+</div>
+<br>
+</div>
+<div id="radial" class="section level2">
+<h2><span class="header-section-number">6.1</span> Radial</h2>
+<div class="decocode">
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="voxels.html#cb57-1"></a><span class="co"># https://matplotlib.org/api/_as_gen/mpl_toolkits.mplot3d.axes3d.Axes3D.html</span></span>
+<span id="cb57-2"><a href="voxels.html#cb57-2"></a><span class="co">#=======================================================</span></span>
+<span id="cb57-3"><a href="voxels.html#cb57-3"></a><span class="co">#3D voxel / volumetric plot with cylindrical coordinates</span></span>
+<span id="cb57-4"><a href="voxels.html#cb57-4"></a><span class="co">#=======================================================</span></span>
+<span id="cb57-5"><a href="voxels.html#cb57-5"></a><span class="co">#Demonstrates using the ``x, y, z`` arguments of ``ax.voxels``.</span></span>
+<span id="cb57-6"><a href="voxels.html#cb57-6"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb57-7"><a href="voxels.html#cb57-7"></a><span class="im">import</span> matplotlib.colors</span>
+<span id="cb57-8"><a href="voxels.html#cb57-8"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb57-9"><a href="voxels.html#cb57-9"></a></span>
+<span id="cb57-10"><a href="voxels.html#cb57-10"></a><span class="co"># This import registers the 3D projection, but is otherwise unused.</span></span>
+<span id="cb57-11"><a href="voxels.html#cb57-11"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D  <span class="co"># noqa: F401 unused import</span></span>
+<span id="cb57-12"><a href="voxels.html#cb57-12"></a></span>
+<span id="cb57-13"><a href="voxels.html#cb57-13"></a><span class="kw">def</span> midpoints(x):</span>
+<span id="cb57-14"><a href="voxels.html#cb57-14"></a>    sl <span class="op">=</span> ()</span>
+<span id="cb57-15"><a href="voxels.html#cb57-15"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(x.ndim):</span>
+<span id="cb57-16"><a href="voxels.html#cb57-16"></a>        x <span class="op">=</span> (x[sl <span class="op">+</span> np.index_exp[:<span class="op">-</span><span class="dv">1</span>]] <span class="op">+</span> x[sl <span class="op">+</span> np.index_exp[<span class="dv">1</span>:]]) <span class="op">/</span> <span class="fl">2.0</span></span>
+<span id="cb57-17"><a href="voxels.html#cb57-17"></a>        sl <span class="op">+=</span> np.index_exp[:]</span>
+<span id="cb57-18"><a href="voxels.html#cb57-18"></a>    <span class="cf">return</span> x</span>
+<span id="cb57-19"><a href="voxels.html#cb57-19"></a></span>
+<span id="cb57-20"><a href="voxels.html#cb57-20"></a><span class="co"># prepare some coordinates, and attach rgb values to each</span></span>
+<span id="cb57-21"><a href="voxels.html#cb57-21"></a>r, theta, z <span class="op">=</span> np.mgrid[<span class="dv">0</span>:<span class="dv">1</span>:11j, <span class="dv">0</span>:np.pi<span class="op">*</span><span class="dv">2</span>:25j, <span class="fl">-0.5</span>:<span class="fl">0.5</span>:11j]</span>
+<span id="cb57-22"><a href="voxels.html#cb57-22"></a>x <span class="op">=</span> r<span class="op">*</span>np.cos(theta)</span>
+<span id="cb57-23"><a href="voxels.html#cb57-23"></a>y <span class="op">=</span> r<span class="op">*</span>np.sin(theta)</span>
+<span id="cb57-24"><a href="voxels.html#cb57-24"></a></span>
+<span id="cb57-25"><a href="voxels.html#cb57-25"></a>rc, thetac, zc <span class="op">=</span> midpoints(r), midpoints(theta), midpoints(z)</span>
+<span id="cb57-26"><a href="voxels.html#cb57-26"></a></span>
+<span id="cb57-27"><a href="voxels.html#cb57-27"></a><span class="co"># define a wobbly torus about [0.7, *, 0]</span></span>
+<span id="cb57-28"><a href="voxels.html#cb57-28"></a>sphere <span class="op">=</span> (rc <span class="op">-</span> <span class="fl">0.7</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (zc <span class="op">+</span> <span class="fl">0.2</span><span class="op">*</span>np.cos(thetac<span class="op">*</span><span class="dv">2</span>))<span class="op">**</span><span class="dv">2</span> <span class="op">&lt;</span> <span class="fl">0.2</span><span class="op">**</span><span class="dv">2</span></span>
+<span id="cb57-29"><a href="voxels.html#cb57-29"></a></span>
+<span id="cb57-30"><a href="voxels.html#cb57-30"></a><span class="co"># combine the color components</span></span>
+<span id="cb57-31"><a href="voxels.html#cb57-31"></a>hsv <span class="op">=</span> np.zeros(sphere.shape <span class="op">+</span> (<span class="dv">3</span>,))</span>
+<span id="cb57-32"><a href="voxels.html#cb57-32"></a>hsv[..., <span class="dv">0</span>] <span class="op">=</span> thetac <span class="op">/</span> (np.pi<span class="op">*</span><span class="dv">2</span>)</span>
+<span id="cb57-33"><a href="voxels.html#cb57-33"></a>hsv[..., <span class="dv">1</span>] <span class="op">=</span> rc</span>
+<span id="cb57-34"><a href="voxels.html#cb57-34"></a>hsv[..., <span class="dv">2</span>] <span class="op">=</span> zc <span class="op">+</span> <span class="fl">0.5</span></span>
+<span id="cb57-35"><a href="voxels.html#cb57-35"></a>colors <span class="op">=</span> matplotlib.colors.hsv_to_rgb(hsv)</span>
+<span id="cb57-36"><a href="voxels.html#cb57-36"></a></span>
+<span id="cb57-37"><a href="voxels.html#cb57-37"></a><span class="co"># and plot everything</span></span>
+<span id="cb57-38"><a href="voxels.html#cb57-38"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb57-39"><a href="voxels.html#cb57-39"></a>ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
+<span id="cb57-40"><a href="voxels.html#cb57-40"></a>ax.voxels(x, y, z, sphere,</span>
+<span id="cb57-41"><a href="voxels.html#cb57-41"></a>          facecolors<span class="op">=</span>colors,</span>
+<span id="cb57-42"><a href="voxels.html#cb57-42"></a>          edgecolors<span class="op">=</span>np.clip(<span class="dv">2</span><span class="op">*</span>colors <span class="op">-</span> <span class="fl">0.5</span>, <span class="dv">0</span>, <span class="dv">1</span>),  <span class="co"># brighter</span></span>
+<span id="cb57-43"><a href="voxels.html#cb57-43"></a>          linewidth<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb57-44"><a href="voxels.html#cb57-44"></a>plt.show()</span></code></pre></div>
+<img src="06-voxels_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" />
+</div>
+<br>
+</div>
+</div>
+<div id="spherical" class="section level2">
+<h2><span class="header-section-number">6.2</span> Spherical</h2>
+<div class="decocode">
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="voxels.html#cb58-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb58-2"><a href="voxels.html#cb58-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb58-3"><a href="voxels.html#cb58-3"></a></span>
+<span id="cb58-4"><a href="voxels.html#cb58-4"></a><span class="co"># This import registers the 3D projection, but is otherwise unused.</span></span>
+<span id="cb58-5"><a href="voxels.html#cb58-5"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D  <span class="co"># noqa: F401 unused import</span></span>
+<span id="cb58-6"><a href="voxels.html#cb58-6"></a></span>
+<span id="cb58-7"><a href="voxels.html#cb58-7"></a></span>
+<span id="cb58-8"><a href="voxels.html#cb58-8"></a><span class="kw">def</span> midpoints(x):</span>
+<span id="cb58-9"><a href="voxels.html#cb58-9"></a>    sl <span class="op">=</span> ()</span>
+<span id="cb58-10"><a href="voxels.html#cb58-10"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(x.ndim):</span>
+<span id="cb58-11"><a href="voxels.html#cb58-11"></a>        x <span class="op">=</span> (x[sl <span class="op">+</span> np.index_exp[:<span class="op">-</span><span class="dv">1</span>]] <span class="op">+</span> x[sl <span class="op">+</span> np.index_exp[<span class="dv">1</span>:]]) <span class="op">/</span> <span class="fl">2.0</span></span>
+<span id="cb58-12"><a href="voxels.html#cb58-12"></a>        sl <span class="op">+=</span> np.index_exp[:]</span>
+<span id="cb58-13"><a href="voxels.html#cb58-13"></a>    <span class="cf">return</span> x</span>
+<span id="cb58-14"><a href="voxels.html#cb58-14"></a></span>
+<span id="cb58-15"><a href="voxels.html#cb58-15"></a><span class="co"># prepare some coordinates, and attach rgb values to each</span></span>
+<span id="cb58-16"><a href="voxels.html#cb58-16"></a>r, g, b <span class="op">=</span> np.indices((<span class="dv">17</span>, <span class="dv">17</span>, <span class="dv">17</span>)) <span class="op">/</span> <span class="fl">16.0</span></span>
+<span id="cb58-17"><a href="voxels.html#cb58-17"></a>rc <span class="op">=</span> midpoints(r)</span>
+<span id="cb58-18"><a href="voxels.html#cb58-18"></a>gc <span class="op">=</span> midpoints(g)</span>
+<span id="cb58-19"><a href="voxels.html#cb58-19"></a>bc <span class="op">=</span> midpoints(b)</span>
+<span id="cb58-20"><a href="voxels.html#cb58-20"></a></span>
+<span id="cb58-21"><a href="voxels.html#cb58-21"></a><span class="co"># define a sphere about [0.5, 0.5, 0.5]</span></span>
+<span id="cb58-22"><a href="voxels.html#cb58-22"></a>sphere <span class="op">=</span> (rc <span class="op">-</span> <span class="fl">0.5</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (gc <span class="op">-</span> <span class="fl">0.5</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (bc <span class="op">-</span> <span class="fl">0.5</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">&lt;</span> <span class="fl">0.5</span><span class="op">**</span><span class="dv">2</span></span>
+<span id="cb58-23"><a href="voxels.html#cb58-23"></a></span>
+<span id="cb58-24"><a href="voxels.html#cb58-24"></a><span class="co"># combine the color components</span></span>
+<span id="cb58-25"><a href="voxels.html#cb58-25"></a>colors <span class="op">=</span> np.zeros(sphere.shape <span class="op">+</span> (<span class="dv">3</span>,))</span>
+<span id="cb58-26"><a href="voxels.html#cb58-26"></a>colors[..., <span class="dv">0</span>] <span class="op">=</span> rc</span>
+<span id="cb58-27"><a href="voxels.html#cb58-27"></a>colors[..., <span class="dv">1</span>] <span class="op">=</span> gc</span>
+<span id="cb58-28"><a href="voxels.html#cb58-28"></a>colors[..., <span class="dv">2</span>] <span class="op">=</span> bc</span>
+<span id="cb58-29"><a href="voxels.html#cb58-29"></a></span>
+<span id="cb58-30"><a href="voxels.html#cb58-30"></a><span class="co"># and plot everything</span></span>
+<span id="cb58-31"><a href="voxels.html#cb58-31"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb58-32"><a href="voxels.html#cb58-32"></a>ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
+<span id="cb58-33"><a href="voxels.html#cb58-33"></a>ax.voxels(r, g, b, sphere,</span>
+<span id="cb58-34"><a href="voxels.html#cb58-34"></a>          facecolors<span class="op">=</span>colors,</span>
+<span id="cb58-35"><a href="voxels.html#cb58-35"></a>          edgecolors<span class="op">=</span>np.clip(<span class="dv">2</span><span class="op">*</span>colors <span class="op">-</span> <span class="fl">0.5</span>, <span class="dv">0</span>, <span class="dv">1</span>),  <span class="co"># brighter</span></span>
+<span id="cb58-36"><a href="voxels.html#cb58-36"></a>          linewidth<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb58-37"><a href="voxels.html#cb58-37"></a>ax.<span class="bu">set</span>(xlabel<span class="op">=</span><span class="st">&#39;r&#39;</span>, ylabel<span class="op">=</span><span class="st">&#39;g&#39;</span>, zlabel<span class="op">=</span><span class="st">&#39;b&#39;</span>)</span>
+<span id="cb58-38"><a href="voxels.html#cb58-38"></a>plt.show()</span></code></pre></div>
+<img src="06-voxels_files/figure-html/spherical-voxels-1.png" width="90%" style="display: block; margin: auto;" />
+</div>
+<br>
+</div>
+</div>
+<div id="solid-cubes" class="section level2">
+<h2><span class="header-section-number">6.3</span> Solid cubes</h2>
+<div class="decocode">
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="voxels.html#cb59-1"></a><span class="co"># https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/voxels.py</span></span>
+<span id="cb59-2"><a href="voxels.html#cb59-2"></a></span>
+<span id="cb59-3"><a href="voxels.html#cb59-3"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb59-4"><a href="voxels.html#cb59-4"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb59-5"><a href="voxels.html#cb59-5"></a></span>
+<span id="cb59-6"><a href="voxels.html#cb59-6"></a><span class="co"># This import registers the 3D projection, but is otherwise unused.</span></span>
+<span id="cb59-7"><a href="voxels.html#cb59-7"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D  <span class="co"># noqa: F401 unused import</span></span>
+<span id="cb59-8"><a href="voxels.html#cb59-8"></a></span>
+<span id="cb59-9"><a href="voxels.html#cb59-9"></a></span>
+<span id="cb59-10"><a href="voxels.html#cb59-10"></a><span class="co"># prepare some coordinates</span></span>
+<span id="cb59-11"><a href="voxels.html#cb59-11"></a>x, y, z <span class="op">=</span> np.indices((<span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">8</span>))</span>
+<span id="cb59-12"><a href="voxels.html#cb59-12"></a></span>
+<span id="cb59-13"><a href="voxels.html#cb59-13"></a><span class="co"># draw cuboids in the top left and bottom right corners, and a link between them</span></span>
+<span id="cb59-14"><a href="voxels.html#cb59-14"></a>cube1 <span class="op">=</span> (x <span class="op">&lt;</span> <span class="dv">3</span>) <span class="op">&amp;</span> (y <span class="op">&lt;</span> <span class="dv">3</span>) <span class="op">&amp;</span> (z <span class="op">&lt;</span> <span class="dv">3</span>)</span>
+<span id="cb59-15"><a href="voxels.html#cb59-15"></a>cube2 <span class="op">=</span> (x <span class="op">&gt;=</span> <span class="dv">5</span>) <span class="op">&amp;</span> (y <span class="op">&gt;=</span> <span class="dv">5</span>) <span class="op">&amp;</span> (z <span class="op">&gt;=</span> <span class="dv">5</span>)</span>
+<span id="cb59-16"><a href="voxels.html#cb59-16"></a>link <span class="op">=</span> <span class="bu">abs</span>(x <span class="op">-</span> y) <span class="op">+</span> <span class="bu">abs</span>(y <span class="op">-</span> z) <span class="op">+</span> <span class="bu">abs</span>(z <span class="op">-</span> x) <span class="op">&lt;=</span> <span class="dv">2</span></span>
+<span id="cb59-17"><a href="voxels.html#cb59-17"></a></span>
+<span id="cb59-18"><a href="voxels.html#cb59-18"></a><span class="co"># combine the objects into a single boolean array</span></span>
+<span id="cb59-19"><a href="voxels.html#cb59-19"></a>voxels <span class="op">=</span> cube1 <span class="op">|</span> cube2 <span class="op">|</span> link</span>
+<span id="cb59-20"><a href="voxels.html#cb59-20"></a></span>
+<span id="cb59-21"><a href="voxels.html#cb59-21"></a><span class="co"># set the colors of each object</span></span>
+<span id="cb59-22"><a href="voxels.html#cb59-22"></a>colors <span class="op">=</span> np.empty(voxels.shape, dtype<span class="op">=</span><span class="bu">object</span>)</span>
+<span id="cb59-23"><a href="voxels.html#cb59-23"></a>colors[link] <span class="op">=</span> <span class="st">&#39;red&#39;</span></span>
+<span id="cb59-24"><a href="voxels.html#cb59-24"></a>colors[cube1] <span class="op">=</span> <span class="st">&#39;blue&#39;</span></span>
+<span id="cb59-25"><a href="voxels.html#cb59-25"></a>colors[cube2] <span class="op">=</span> <span class="st">&#39;green&#39;</span></span>
+<span id="cb59-26"><a href="voxels.html#cb59-26"></a></span>
+<span id="cb59-27"><a href="voxels.html#cb59-27"></a><span class="co"># and plot everything</span></span>
+<span id="cb59-28"><a href="voxels.html#cb59-28"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb59-29"><a href="voxels.html#cb59-29"></a>ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
+<span id="cb59-30"><a href="voxels.html#cb59-30"></a>ax.voxels(voxels, facecolors<span class="op">=</span>colors, edgecolor<span class="op">=</span><span class="st">&#39;k&#39;</span>)</span>
+<span id="cb59-31"><a href="voxels.html#cb59-31"></a>plt.show()</span></code></pre></div>
+<img src="06-voxels_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" />
 </div>
 <br>
 </div>
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="voxels.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/api/_as_gen/mpl_toolkits.mplot3d.axes3d.Axes3D.html</span></span>
-<span id="cb54-2"><a href="voxels.html#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="co">#=======================================================</span></span>
-<span id="cb54-3"><a href="voxels.html#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="co">#3D voxel / volumetric plot with cylindrical coordinates</span></span>
-<span id="cb54-4"><a href="voxels.html#cb54-4" aria-hidden="true" tabindex="-1"></a><span class="co">#=======================================================</span></span>
-<span id="cb54-5"><a href="voxels.html#cb54-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Demonstrates using the ``x, y, z`` arguments of ``ax.voxels``.</span></span>
-<span id="cb54-6"><a href="voxels.html#cb54-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb54-7"><a href="voxels.html#cb54-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.colors</span>
-<span id="cb54-8"><a href="voxels.html#cb54-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb54-9"><a href="voxels.html#cb54-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-10"><a href="voxels.html#cb54-10" aria-hidden="true" tabindex="-1"></a><span class="co"># This import registers the 3D projection, but is otherwise unused.</span></span>
-<span id="cb54-11"><a href="voxels.html#cb54-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D  <span class="co"># noqa: F401 unused import</span></span>
-<span id="cb54-12"><a href="voxels.html#cb54-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-13"><a href="voxels.html#cb54-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> midpoints(x):</span>
-<span id="cb54-14"><a href="voxels.html#cb54-14" aria-hidden="true" tabindex="-1"></a>    sl <span class="op">=</span> ()</span>
-<span id="cb54-15"><a href="voxels.html#cb54-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(x.ndim):</span>
-<span id="cb54-16"><a href="voxels.html#cb54-16" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> (x[sl <span class="op">+</span> np.index_exp[:<span class="op">-</span><span class="dv">1</span>]] <span class="op">+</span> x[sl <span class="op">+</span> np.index_exp[<span class="dv">1</span>:]]) <span class="op">/</span> <span class="fl">2.0</span></span>
-<span id="cb54-17"><a href="voxels.html#cb54-17" aria-hidden="true" tabindex="-1"></a>        sl <span class="op">+=</span> np.index_exp[:]</span>
-<span id="cb54-18"><a href="voxels.html#cb54-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span>
-<span id="cb54-19"><a href="voxels.html#cb54-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-20"><a href="voxels.html#cb54-20" aria-hidden="true" tabindex="-1"></a><span class="co"># prepare some coordinates, and attach rgb values to each</span></span>
-<span id="cb54-21"><a href="voxels.html#cb54-21" aria-hidden="true" tabindex="-1"></a>r, theta, z <span class="op">=</span> np.mgrid[<span class="dv">0</span>:<span class="dv">1</span>:<span class="ot">11j</span>, <span class="dv">0</span>:np.pi<span class="op">*</span><span class="dv">2</span>:<span class="ot">25j</span>, <span class="op">-</span><span class="fl">0.5</span>:<span class="fl">0.5</span>:<span class="ot">11j</span>]</span>
-<span id="cb54-22"><a href="voxels.html#cb54-22" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> r<span class="op">*</span>np.cos(theta)</span>
-<span id="cb54-23"><a href="voxels.html#cb54-23" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> r<span class="op">*</span>np.sin(theta)</span>
-<span id="cb54-24"><a href="voxels.html#cb54-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-25"><a href="voxels.html#cb54-25" aria-hidden="true" tabindex="-1"></a>rc, thetac, zc <span class="op">=</span> midpoints(r), midpoints(theta), midpoints(z)</span>
-<span id="cb54-26"><a href="voxels.html#cb54-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-27"><a href="voxels.html#cb54-27" aria-hidden="true" tabindex="-1"></a><span class="co"># define a wobbly torus about [0.7, *, 0]</span></span>
-<span id="cb54-28"><a href="voxels.html#cb54-28" aria-hidden="true" tabindex="-1"></a>sphere <span class="op">=</span> (rc <span class="op">-</span> <span class="fl">0.7</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (zc <span class="op">+</span> <span class="fl">0.2</span><span class="op">*</span>np.cos(thetac<span class="op">*</span><span class="dv">2</span>))<span class="op">**</span><span class="dv">2</span> <span class="op">&lt;</span> <span class="fl">0.2</span><span class="op">**</span><span class="dv">2</span></span>
-<span id="cb54-29"><a href="voxels.html#cb54-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-30"><a href="voxels.html#cb54-30" aria-hidden="true" tabindex="-1"></a><span class="co"># combine the color components</span></span>
-<span id="cb54-31"><a href="voxels.html#cb54-31" aria-hidden="true" tabindex="-1"></a>hsv <span class="op">=</span> np.zeros(sphere.shape <span class="op">+</span> (<span class="dv">3</span>,))</span>
-<span id="cb54-32"><a href="voxels.html#cb54-32" aria-hidden="true" tabindex="-1"></a>hsv[..., <span class="dv">0</span>] <span class="op">=</span> thetac <span class="op">/</span> (np.pi<span class="op">*</span><span class="dv">2</span>)</span>
-<span id="cb54-33"><a href="voxels.html#cb54-33" aria-hidden="true" tabindex="-1"></a>hsv[..., <span class="dv">1</span>] <span class="op">=</span> rc</span>
-<span id="cb54-34"><a href="voxels.html#cb54-34" aria-hidden="true" tabindex="-1"></a>hsv[..., <span class="dv">2</span>] <span class="op">=</span> zc <span class="op">+</span> <span class="fl">0.5</span></span>
-<span id="cb54-35"><a href="voxels.html#cb54-35" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> matplotlib.colors.hsv_to_rgb(hsv)</span>
-<span id="cb54-36"><a href="voxels.html#cb54-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-37"><a href="voxels.html#cb54-37" aria-hidden="true" tabindex="-1"></a><span class="co"># and plot everything</span></span>
-<span id="cb54-38"><a href="voxels.html#cb54-38" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
-<span id="cb54-39"><a href="voxels.html#cb54-39" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
-<span id="cb54-40"><a href="voxels.html#cb54-40" aria-hidden="true" tabindex="-1"></a>ax.voxels(x, y, z, sphere,</span>
-<span id="cb54-41"><a href="voxels.html#cb54-41" aria-hidden="true" tabindex="-1"></a>          facecolors<span class="op">=</span>colors,</span>
-<span id="cb54-42"><a href="voxels.html#cb54-42" aria-hidden="true" tabindex="-1"></a>          edgecolors<span class="op">=</span>np.clip(<span class="dv">2</span><span class="op">*</span>colors <span class="op">-</span> <span class="fl">0.5</span>, <span class="dv">0</span>, <span class="dv">1</span>),  <span class="co"># brighter</span></span>
-<span id="cb54-43"><a href="voxels.html#cb54-43" aria-hidden="true" tabindex="-1"></a>          linewidth<span class="op">=</span><span class="fl">0.5</span>)</span>
-<span id="cb54-44"><a href="voxels.html#cb54-44" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" />
+<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="voxels.html#cb60-1"></a><span class="co"># https://stackoverflow.com/a/49281004/5270873</span></span>
+<span id="cb60-2"><a href="voxels.html#cb60-2"></a></span>
+<span id="cb60-3"><a href="voxels.html#cb60-3"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
+<span id="cb60-4"><a href="voxels.html#cb60-4"></a><span class="im">from</span> mpl_toolkits.mplot3d.art3d <span class="im">import</span> Poly3DCollection</span>
+<span id="cb60-5"><a href="voxels.html#cb60-5"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb60-6"><a href="voxels.html#cb60-6"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb60-7"><a href="voxels.html#cb60-7"></a></span>
+<span id="cb60-8"><a href="voxels.html#cb60-8"></a></span>
+<span id="cb60-9"><a href="voxels.html#cb60-9"></a><span class="kw">def</span> cuboid_data2(o, size<span class="op">=</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>)):</span>
+<span id="cb60-10"><a href="voxels.html#cb60-10"></a>    X <span class="op">=</span> [[[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>]],</span>
+<span id="cb60-11"><a href="voxels.html#cb60-11"></a>         [[<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>]],</span>
+<span id="cb60-12"><a href="voxels.html#cb60-12"></a>         [[<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>]],</span>
+<span id="cb60-13"><a href="voxels.html#cb60-13"></a>         [[<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>]],</span>
+<span id="cb60-14"><a href="voxels.html#cb60-14"></a>         [[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>]],</span>
+<span id="cb60-15"><a href="voxels.html#cb60-15"></a>         [[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>]]]</span>
+<span id="cb60-16"><a href="voxels.html#cb60-16"></a>    X <span class="op">=</span> np.array(X).astype(<span class="bu">float</span>)</span>
+<span id="cb60-17"><a href="voxels.html#cb60-17"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb60-18"><a href="voxels.html#cb60-18"></a>        X[:,:,i] <span class="op">*=</span> size[i]</span>
+<span id="cb60-19"><a href="voxels.html#cb60-19"></a>    X <span class="op">+=</span> np.array(o)</span>
+<span id="cb60-20"><a href="voxels.html#cb60-20"></a>    <span class="cf">return</span> X</span>
+<span id="cb60-21"><a href="voxels.html#cb60-21"></a></span>
+<span id="cb60-22"><a href="voxels.html#cb60-22"></a><span class="kw">def</span> plotCubeAt2(positions,sizes<span class="op">=</span><span class="va">None</span>,colors<span class="op">=</span><span class="va">None</span>, <span class="op">**</span>kwargs):</span>
+<span id="cb60-23"><a href="voxels.html#cb60-23"></a>    <span class="cf">if</span> <span class="kw">not</span> <span class="bu">isinstance</span>(colors,(<span class="bu">list</span>,np.ndarray)): colors<span class="op">=</span>[<span class="st">&quot;C0&quot;</span>]<span class="op">*</span><span class="bu">len</span>(positions)</span>
+<span id="cb60-24"><a href="voxels.html#cb60-24"></a>    <span class="cf">if</span> <span class="kw">not</span> <span class="bu">isinstance</span>(sizes,(<span class="bu">list</span>,np.ndarray)): sizes<span class="op">=</span>[(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>)]<span class="op">*</span><span class="bu">len</span>(positions)</span>
+<span id="cb60-25"><a href="voxels.html#cb60-25"></a>    g <span class="op">=</span> []</span>
+<span id="cb60-26"><a href="voxels.html#cb60-26"></a>    <span class="cf">for</span> p,s,c <span class="kw">in</span> <span class="bu">zip</span>(positions,sizes,colors):</span>
+<span id="cb60-27"><a href="voxels.html#cb60-27"></a>        g.append( cuboid_data2(p, size<span class="op">=</span>s) )</span>
+<span id="cb60-28"><a href="voxels.html#cb60-28"></a>    <span class="cf">return</span> Poly3DCollection(np.concatenate(g),  </span>
+<span id="cb60-29"><a href="voxels.html#cb60-29"></a>                            facecolors<span class="op">=</span>np.repeat(colors,<span class="dv">6</span>), <span class="op">**</span>kwargs)</span>
+<span id="cb60-30"><a href="voxels.html#cb60-30"></a></span>
+<span id="cb60-31"><a href="voxels.html#cb60-31"></a></span>
+<span id="cb60-32"><a href="voxels.html#cb60-32"></a>positions <span class="op">=</span> [(<span class="op">-</span><span class="dv">3</span>,<span class="dv">5</span>,<span class="op">-</span><span class="dv">2</span>),(<span class="dv">1</span>,<span class="dv">7</span>,<span class="dv">1</span>)]</span>
+<span id="cb60-33"><a href="voxels.html#cb60-33"></a>sizes <span class="op">=</span> [(<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">3</span>), (<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">7</span>)]</span>
+<span id="cb60-34"><a href="voxels.html#cb60-34"></a>colors <span class="op">=</span> [<span class="st">&quot;crimson&quot;</span>,<span class="st">&quot;limegreen&quot;</span>]</span>
+<span id="cb60-35"><a href="voxels.html#cb60-35"></a></span>
+<span id="cb60-36"><a href="voxels.html#cb60-36"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb60-37"><a href="voxels.html#cb60-37"></a>ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
+<span id="cb60-38"><a href="voxels.html#cb60-38"></a>ax.set_aspect(<span class="st">&#39;auto&#39;</span>)</span>
+<span id="cb60-39"><a href="voxels.html#cb60-39"></a></span>
+<span id="cb60-40"><a href="voxels.html#cb60-40"></a>pc <span class="op">=</span> plotCubeAt2(positions,sizes,colors<span class="op">=</span>colors, edgecolor<span class="op">=</span><span class="st">&quot;k&quot;</span>)</span>
+<span id="cb60-41"><a href="voxels.html#cb60-41"></a>ax.add_collection3d(pc)    </span>
+<span id="cb60-42"><a href="voxels.html#cb60-42"></a></span>
+<span id="cb60-43"><a href="voxels.html#cb60-43"></a>ax.set_xlim([<span class="op">-</span><span class="dv">4</span>,<span class="dv">6</span>])</span>
+<span id="cb60-44"><a href="voxels.html#cb60-44"></a>ax.set_ylim([<span class="dv">4</span>,<span class="dv">13</span>])</span>
+<span id="cb60-45"><a href="voxels.html#cb60-45"></a>ax.set_zlim([<span class="op">-</span><span class="dv">3</span>,<span class="dv">9</span>])</span>
+<span id="cb60-46"><a href="voxels.html#cb60-46"></a>plt.show()</span></code></pre></div>
+<img src="06-voxels_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" />
+</div>
+<br>
+</div>
+</div>
+<div id="transparent-cubicles" class="section level2">
+<h2><span class="header-section-number">6.4</span> Transparent cubicles</h2>
+<div class="decocode">
+<div style="background-color:#417FB1">
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="voxels.html#cb61-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb61-2"><a href="voxels.html#cb61-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb61-3"><a href="voxels.html#cb61-3"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
+<span id="cb61-4"><a href="voxels.html#cb61-4"></a></span>
+<span id="cb61-5"><a href="voxels.html#cb61-5"></a><span class="kw">def</span> make_ax(grid<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb61-6"><a href="voxels.html#cb61-6"></a>    fig <span class="op">=</span> plt.figure()</span>
+<span id="cb61-7"><a href="voxels.html#cb61-7"></a>    ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
+<span id="cb61-8"><a href="voxels.html#cb61-8"></a>    ax.set_xlabel(<span class="st">&quot;x&quot;</span>)</span>
+<span id="cb61-9"><a href="voxels.html#cb61-9"></a>    ax.set_ylabel(<span class="st">&quot;y&quot;</span>)</span>
+<span id="cb61-10"><a href="voxels.html#cb61-10"></a>    ax.set_zlabel(<span class="st">&quot;z&quot;</span>)</span>
+<span id="cb61-11"><a href="voxels.html#cb61-11"></a>    ax.grid(grid)</span>
+<span id="cb61-12"><a href="voxels.html#cb61-12"></a>    <span class="cf">return</span> ax</span>
+<span id="cb61-13"><a href="voxels.html#cb61-13"></a></span>
+<span id="cb61-14"><a href="voxels.html#cb61-14"></a>filled <span class="op">=</span> np.array([</span>
+<span id="cb61-15"><a href="voxels.html#cb61-15"></a>    [[<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>]],</span>
+<span id="cb61-16"><a href="voxels.html#cb61-16"></a>    [[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>]],</span>
+<span id="cb61-17"><a href="voxels.html#cb61-17"></a>    [[<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]]</span>
+<span id="cb61-18"><a href="voxels.html#cb61-18"></a>])</span>
+<span id="cb61-19"><a href="voxels.html#cb61-19"></a></span>
+<span id="cb61-20"><a href="voxels.html#cb61-20"></a><span class="kw">def</span> explode(data):</span>
+<span id="cb61-21"><a href="voxels.html#cb61-21"></a>    shape_arr <span class="op">=</span> np.array(data.shape)</span>
+<span id="cb61-22"><a href="voxels.html#cb61-22"></a>    size <span class="op">=</span> shape_arr[:<span class="dv">3</span>]<span class="op">*</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb61-23"><a href="voxels.html#cb61-23"></a>    exploded <span class="op">=</span> np.zeros(np.concatenate([size, shape_arr[<span class="dv">3</span>:]]), dtype<span class="op">=</span>data.dtype)</span>
+<span id="cb61-24"><a href="voxels.html#cb61-24"></a>    exploded[::<span class="dv">2</span>, ::<span class="dv">2</span>, ::<span class="dv">2</span>] <span class="op">=</span> data</span>
+<span id="cb61-25"><a href="voxels.html#cb61-25"></a>    <span class="cf">return</span> exploded</span>
+<span id="cb61-26"><a href="voxels.html#cb61-26"></a>    </span>
+<span id="cb61-27"><a href="voxels.html#cb61-27"></a><span class="kw">def</span> expand_coordinates(indices):</span>
+<span id="cb61-28"><a href="voxels.html#cb61-28"></a>    x, y, z <span class="op">=</span> indices</span>
+<span id="cb61-29"><a href="voxels.html#cb61-29"></a>    x[<span class="dv">1</span>::<span class="dv">2</span>, :, :] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb61-30"><a href="voxels.html#cb61-30"></a>    y[:, <span class="dv">1</span>::<span class="dv">2</span>, :] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb61-31"><a href="voxels.html#cb61-31"></a>    z[:, :, <span class="dv">1</span>::<span class="dv">2</span>] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb61-32"><a href="voxels.html#cb61-32"></a>    <span class="cf">return</span> x, y, z</span>
+<span id="cb61-33"><a href="voxels.html#cb61-33"></a></span>
+<span id="cb61-34"><a href="voxels.html#cb61-34"></a>ax <span class="op">=</span> make_ax()</span>
+<span id="cb61-35"><a href="voxels.html#cb61-35"></a>colors <span class="op">=</span> np.array([[[<span class="st">&#39;#1f77b430&#39;</span>]<span class="op">*</span><span class="dv">3</span>]<span class="op">*</span><span class="dv">3</span>]<span class="op">*</span><span class="dv">3</span>)</span>
+<span id="cb61-36"><a href="voxels.html#cb61-36"></a>colors[<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>] <span class="op">=</span> <span class="st">&#39;#ff0000ff&#39;</span></span>
+<span id="cb61-37"><a href="voxels.html#cb61-37"></a>colors <span class="op">=</span> explode(colors)</span>
+<span id="cb61-38"><a href="voxels.html#cb61-38"></a>filled <span class="op">=</span> explode(np.ones((<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>)))</span>
+<span id="cb61-39"><a href="voxels.html#cb61-39"></a>x, y, z <span class="op">=</span> expand_coordinates(np.indices(np.array(filled.shape) <span class="op">+</span> <span class="dv">1</span>))</span>
+<span id="cb61-40"><a href="voxels.html#cb61-40"></a>ax.voxels(x, y, z, filled, facecolors<span class="op">=</span>colors, edgecolors<span class="op">=</span><span class="st">&#39;gray&#39;</span>)</span>
+<span id="cb61-41"><a href="voxels.html#cb61-41"></a>plt.show()</span></code></pre></div>
+<img src="06-voxels_files/figure-html/transparent-cubicles-red-1.png" width="90%" style="display: block; margin: auto;" />
 </div>
 <br>
 </div>
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="voxels.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/voxels.py</span></span>
-<span id="cb55-2"><a href="voxels.html#cb55-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-3"><a href="voxels.html#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb55-4"><a href="voxels.html#cb55-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb55-5"><a href="voxels.html#cb55-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-6"><a href="voxels.html#cb55-6" aria-hidden="true" tabindex="-1"></a><span class="co"># This import registers the 3D projection, but is otherwise unused.</span></span>
-<span id="cb55-7"><a href="voxels.html#cb55-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D  <span class="co"># noqa: F401 unused import</span></span>
-<span id="cb55-8"><a href="voxels.html#cb55-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-9"><a href="voxels.html#cb55-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-10"><a href="voxels.html#cb55-10" aria-hidden="true" tabindex="-1"></a><span class="co"># prepare some coordinates</span></span>
-<span id="cb55-11"><a href="voxels.html#cb55-11" aria-hidden="true" tabindex="-1"></a>x, y, z <span class="op">=</span> np.indices((<span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">8</span>))</span>
-<span id="cb55-12"><a href="voxels.html#cb55-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-13"><a href="voxels.html#cb55-13" aria-hidden="true" tabindex="-1"></a><span class="co"># draw cuboids in the top left and bottom right corners, and a link between them</span></span>
-<span id="cb55-14"><a href="voxels.html#cb55-14" aria-hidden="true" tabindex="-1"></a>cube1 <span class="op">=</span> (x <span class="op">&lt;</span> <span class="dv">3</span>) <span class="op">&amp;</span> (y <span class="op">&lt;</span> <span class="dv">3</span>) <span class="op">&amp;</span> (z <span class="op">&lt;</span> <span class="dv">3</span>)</span>
-<span id="cb55-15"><a href="voxels.html#cb55-15" aria-hidden="true" tabindex="-1"></a>cube2 <span class="op">=</span> (x <span class="op">&gt;=</span> <span class="dv">5</span>) <span class="op">&amp;</span> (y <span class="op">&gt;=</span> <span class="dv">5</span>) <span class="op">&amp;</span> (z <span class="op">&gt;=</span> <span class="dv">5</span>)</span>
-<span id="cb55-16"><a href="voxels.html#cb55-16" aria-hidden="true" tabindex="-1"></a>link <span class="op">=</span> <span class="bu">abs</span>(x <span class="op">-</span> y) <span class="op">+</span> <span class="bu">abs</span>(y <span class="op">-</span> z) <span class="op">+</span> <span class="bu">abs</span>(z <span class="op">-</span> x) <span class="op">&lt;=</span> <span class="dv">2</span></span>
-<span id="cb55-17"><a href="voxels.html#cb55-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-18"><a href="voxels.html#cb55-18" aria-hidden="true" tabindex="-1"></a><span class="co"># combine the objects into a single boolean array</span></span>
-<span id="cb55-19"><a href="voxels.html#cb55-19" aria-hidden="true" tabindex="-1"></a>voxels <span class="op">=</span> cube1 <span class="op">|</span> cube2 <span class="op">|</span> link</span>
-<span id="cb55-20"><a href="voxels.html#cb55-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-21"><a href="voxels.html#cb55-21" aria-hidden="true" tabindex="-1"></a><span class="co"># set the colors of each object</span></span>
-<span id="cb55-22"><a href="voxels.html#cb55-22" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> np.empty(voxels.shape, dtype<span class="op">=</span><span class="bu">object</span>)</span>
-<span id="cb55-23"><a href="voxels.html#cb55-23" aria-hidden="true" tabindex="-1"></a>colors[link] <span class="op">=</span> <span class="st">&#39;red&#39;</span></span>
-<span id="cb55-24"><a href="voxels.html#cb55-24" aria-hidden="true" tabindex="-1"></a>colors[cube1] <span class="op">=</span> <span class="st">&#39;blue&#39;</span></span>
-<span id="cb55-25"><a href="voxels.html#cb55-25" aria-hidden="true" tabindex="-1"></a>colors[cube2] <span class="op">=</span> <span class="st">&#39;green&#39;</span></span>
-<span id="cb55-26"><a href="voxels.html#cb55-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-27"><a href="voxels.html#cb55-27" aria-hidden="true" tabindex="-1"></a><span class="co"># and plot everything</span></span>
-<span id="cb55-28"><a href="voxels.html#cb55-28" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
-<span id="cb55-29"><a href="voxels.html#cb55-29" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
-<span id="cb55-30"><a href="voxels.html#cb55-30" aria-hidden="true" tabindex="-1"></a>ax.voxels(voxels, facecolors<span class="op">=</span>colors, edgecolor<span class="op">=</span><span class="st">&#39;k&#39;</span>)</span>
-<span id="cb55-31"><a href="voxels.html#cb55-31" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" />
+<div class="sourceCode" id="cb62"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb62-1"><a href="voxels.html#cb62-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb62-2"><a href="voxels.html#cb62-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb62-3"><a href="voxels.html#cb62-3"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
+<span id="cb62-4"><a href="voxels.html#cb62-4"></a></span>
+<span id="cb62-5"><a href="voxels.html#cb62-5"></a><span class="kw">def</span> make_ax(grid<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb62-6"><a href="voxels.html#cb62-6"></a>    fig <span class="op">=</span> plt.figure()</span>
+<span id="cb62-7"><a href="voxels.html#cb62-7"></a>    ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
+<span id="cb62-8"><a href="voxels.html#cb62-8"></a>    ax.set_xlabel(<span class="st">&quot;x&quot;</span>)</span>
+<span id="cb62-9"><a href="voxels.html#cb62-9"></a>    ax.set_ylabel(<span class="st">&quot;y&quot;</span>)</span>
+<span id="cb62-10"><a href="voxels.html#cb62-10"></a>    ax.set_zlabel(<span class="st">&quot;z&quot;</span>)</span>
+<span id="cb62-11"><a href="voxels.html#cb62-11"></a>    ax.grid(grid)</span>
+<span id="cb62-12"><a href="voxels.html#cb62-12"></a>    <span class="cf">return</span> ax</span>
+<span id="cb62-13"><a href="voxels.html#cb62-13"></a></span>
+<span id="cb62-14"><a href="voxels.html#cb62-14"></a>filled <span class="op">=</span> np.array([</span>
+<span id="cb62-15"><a href="voxels.html#cb62-15"></a>    [[<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>]],</span>
+<span id="cb62-16"><a href="voxels.html#cb62-16"></a>    [[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>]],</span>
+<span id="cb62-17"><a href="voxels.html#cb62-17"></a>    [[<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]]</span>
+<span id="cb62-18"><a href="voxels.html#cb62-18"></a>])</span>
+<span id="cb62-19"><a href="voxels.html#cb62-19"></a></span>
+<span id="cb62-20"><a href="voxels.html#cb62-20"></a>ax <span class="op">=</span> make_ax()</span>
+<span id="cb62-21"><a href="voxels.html#cb62-21"></a>ax.voxels(filled, facecolors<span class="op">=</span><span class="st">&#39;#1f77b430&#39;</span>, edgecolors<span class="op">=</span><span class="st">&#39;gray&#39;</span>)</span>
+<span id="cb62-22"><a href="voxels.html#cb62-22"></a>plt.show()</span></code></pre></div>
+<img src="06-voxels_files/figure-html/transparent-cubicles-gray-1.png" width="90%" style="display: block; margin: auto;" />
 </div>
 <br>
 </div>
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="voxels.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb56-2"><a href="voxels.html#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb56-3"><a href="voxels.html#cb56-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
-<span id="cb56-4"><a href="voxels.html#cb56-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-5"><a href="voxels.html#cb56-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_ax(grid<span class="op">=</span><span class="va">False</span>):</span>
-<span id="cb56-6"><a href="voxels.html#cb56-6" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> plt.figure()</span>
-<span id="cb56-7"><a href="voxels.html#cb56-7" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
-<span id="cb56-8"><a href="voxels.html#cb56-8" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">&quot;x&quot;</span>)</span>
-<span id="cb56-9"><a href="voxels.html#cb56-9" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">&quot;y&quot;</span>)</span>
-<span id="cb56-10"><a href="voxels.html#cb56-10" aria-hidden="true" tabindex="-1"></a>    ax.set_zlabel(<span class="st">&quot;z&quot;</span>)</span>
-<span id="cb56-11"><a href="voxels.html#cb56-11" aria-hidden="true" tabindex="-1"></a>    ax.grid(grid)</span>
-<span id="cb56-12"><a href="voxels.html#cb56-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ax</span>
-<span id="cb56-13"><a href="voxels.html#cb56-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-14"><a href="voxels.html#cb56-14" aria-hidden="true" tabindex="-1"></a>filled <span class="op">=</span> np.array([</span>
-<span id="cb56-15"><a href="voxels.html#cb56-15" aria-hidden="true" tabindex="-1"></a>    [[<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>]],</span>
-<span id="cb56-16"><a href="voxels.html#cb56-16" aria-hidden="true" tabindex="-1"></a>    [[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>]],</span>
-<span id="cb56-17"><a href="voxels.html#cb56-17" aria-hidden="true" tabindex="-1"></a>    [[<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]]</span>
-<span id="cb56-18"><a href="voxels.html#cb56-18" aria-hidden="true" tabindex="-1"></a>])</span>
-<span id="cb56-19"><a href="voxels.html#cb56-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-20"><a href="voxels.html#cb56-20" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> explode(data):</span>
-<span id="cb56-21"><a href="voxels.html#cb56-21" aria-hidden="true" tabindex="-1"></a>    shape_arr <span class="op">=</span> np.array(data.shape)</span>
-<span id="cb56-22"><a href="voxels.html#cb56-22" aria-hidden="true" tabindex="-1"></a>    size <span class="op">=</span> shape_arr[:<span class="dv">3</span>]<span class="op">*</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">1</span></span>
-<span id="cb56-23"><a href="voxels.html#cb56-23" aria-hidden="true" tabindex="-1"></a>    exploded <span class="op">=</span> np.zeros(np.concatenate([size, shape_arr[<span class="dv">3</span>:]]), dtype<span class="op">=</span>data.dtype)</span>
-<span id="cb56-24"><a href="voxels.html#cb56-24" aria-hidden="true" tabindex="-1"></a>    exploded[::<span class="dv">2</span>, ::<span class="dv">2</span>, ::<span class="dv">2</span>] <span class="op">=</span> data</span>
-<span id="cb56-25"><a href="voxels.html#cb56-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> exploded</span>
-<span id="cb56-26"><a href="voxels.html#cb56-26" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb56-27"><a href="voxels.html#cb56-27" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> expand_coordinates(indices):</span>
-<span id="cb56-28"><a href="voxels.html#cb56-28" aria-hidden="true" tabindex="-1"></a>    x, y, z <span class="op">=</span> indices</span>
-<span id="cb56-29"><a href="voxels.html#cb56-29" aria-hidden="true" tabindex="-1"></a>    x[<span class="dv">1</span>::<span class="dv">2</span>, :, :] <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb56-30"><a href="voxels.html#cb56-30" aria-hidden="true" tabindex="-1"></a>    y[:, <span class="dv">1</span>::<span class="dv">2</span>, :] <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb56-31"><a href="voxels.html#cb56-31" aria-hidden="true" tabindex="-1"></a>    z[:, :, <span class="dv">1</span>::<span class="dv">2</span>] <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb56-32"><a href="voxels.html#cb56-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x, y, z</span>
-<span id="cb56-33"><a href="voxels.html#cb56-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-34"><a href="voxels.html#cb56-34" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> make_ax()</span>
-<span id="cb56-35"><a href="voxels.html#cb56-35" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> np.array([[[<span class="st">&#39;#1f77b430&#39;</span>]<span class="op">*</span><span class="dv">3</span>]<span class="op">*</span><span class="dv">3</span>]<span class="op">*</span><span class="dv">3</span>)</span>
-<span id="cb56-36"><a href="voxels.html#cb56-36" aria-hidden="true" tabindex="-1"></a>colors[<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>] <span class="op">=</span> <span class="st">&#39;#ff0000ff&#39;</span></span>
-<span id="cb56-37"><a href="voxels.html#cb56-37" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> explode(colors)</span>
-<span id="cb56-38"><a href="voxels.html#cb56-38" aria-hidden="true" tabindex="-1"></a>filled <span class="op">=</span> explode(np.ones((<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>)))</span>
-<span id="cb56-39"><a href="voxels.html#cb56-39" aria-hidden="true" tabindex="-1"></a>x, y, z <span class="op">=</span> expand_coordinates(np.indices(np.array(filled.shape) <span class="op">+</span> <span class="dv">1</span>))</span>
-<span id="cb56-40"><a href="voxels.html#cb56-40" aria-hidden="true" tabindex="-1"></a>ax.voxels(x, y, z, filled, facecolors<span class="op">=</span>colors, edgecolors<span class="op">=</span><span class="st">&#39;gray&#39;</span>)</span>
-<span id="cb56-41"><a href="voxels.html#cb56-41" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" />
+<div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="voxels.html#cb63-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb63-2"><a href="voxels.html#cb63-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb63-3"><a href="voxels.html#cb63-3"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
+<span id="cb63-4"><a href="voxels.html#cb63-4"></a></span>
+<span id="cb63-5"><a href="voxels.html#cb63-5"></a><span class="kw">def</span> make_ax(grid<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb63-6"><a href="voxels.html#cb63-6"></a>    fig <span class="op">=</span> plt.figure()</span>
+<span id="cb63-7"><a href="voxels.html#cb63-7"></a>    ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
+<span id="cb63-8"><a href="voxels.html#cb63-8"></a>    ax.set_xlabel(<span class="st">&quot;x&quot;</span>)</span>
+<span id="cb63-9"><a href="voxels.html#cb63-9"></a>    ax.set_ylabel(<span class="st">&quot;y&quot;</span>)</span>
+<span id="cb63-10"><a href="voxels.html#cb63-10"></a>    ax.set_zlabel(<span class="st">&quot;z&quot;</span>)</span>
+<span id="cb63-11"><a href="voxels.html#cb63-11"></a>    ax.grid(grid)</span>
+<span id="cb63-12"><a href="voxels.html#cb63-12"></a>    <span class="cf">return</span> ax</span>
+<span id="cb63-13"><a href="voxels.html#cb63-13"></a></span>
+<span id="cb63-14"><a href="voxels.html#cb63-14"></a>filled <span class="op">=</span> np.array([</span>
+<span id="cb63-15"><a href="voxels.html#cb63-15"></a>    [[<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>]],</span>
+<span id="cb63-16"><a href="voxels.html#cb63-16"></a>    [[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>]],</span>
+<span id="cb63-17"><a href="voxels.html#cb63-17"></a>    [[<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]]</span>
+<span id="cb63-18"><a href="voxels.html#cb63-18"></a>])</span>
+<span id="cb63-19"><a href="voxels.html#cb63-19"></a></span>
+<span id="cb63-20"><a href="voxels.html#cb63-20"></a>ax <span class="op">=</span> make_ax()</span>
+<span id="cb63-21"><a href="voxels.html#cb63-21"></a>ax.voxels(np.ones((<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>)), facecolors<span class="op">=</span><span class="st">&#39;#1f77b430&#39;</span>, edgecolors<span class="op">=</span><span class="st">&#39;gray&#39;</span>)</span>
+<span id="cb63-22"><a href="voxels.html#cb63-22"></a>plt.show()</span></code></pre></div>
+<img src="06-voxels_files/figure-html/transparent-wireframe-1.png" width="90%" style="display: block; margin: auto;" />
 </div>
 <br>
 </div>
+</div>
+<div id="semi-transparent" class="section level2">
+<h2><span class="header-section-number">6.5</span> Semi-transparent</h2>
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="voxels.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb57-2"><a href="voxels.html#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb57-3"><a href="voxels.html#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
-<span id="cb57-4"><a href="voxels.html#cb57-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-5"><a href="voxels.html#cb57-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_ax(grid<span class="op">=</span><span class="va">False</span>):</span>
-<span id="cb57-6"><a href="voxels.html#cb57-6" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> plt.figure()</span>
-<span id="cb57-7"><a href="voxels.html#cb57-7" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
-<span id="cb57-8"><a href="voxels.html#cb57-8" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">&quot;x&quot;</span>)</span>
-<span id="cb57-9"><a href="voxels.html#cb57-9" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">&quot;y&quot;</span>)</span>
-<span id="cb57-10"><a href="voxels.html#cb57-10" aria-hidden="true" tabindex="-1"></a>    ax.set_zlabel(<span class="st">&quot;z&quot;</span>)</span>
-<span id="cb57-11"><a href="voxels.html#cb57-11" aria-hidden="true" tabindex="-1"></a>    ax.grid(grid)</span>
-<span id="cb57-12"><a href="voxels.html#cb57-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ax</span>
-<span id="cb57-13"><a href="voxels.html#cb57-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-14"><a href="voxels.html#cb57-14" aria-hidden="true" tabindex="-1"></a>filled <span class="op">=</span> np.array([</span>
-<span id="cb57-15"><a href="voxels.html#cb57-15" aria-hidden="true" tabindex="-1"></a>    [[<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>]],</span>
-<span id="cb57-16"><a href="voxels.html#cb57-16" aria-hidden="true" tabindex="-1"></a>    [[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>]],</span>
-<span id="cb57-17"><a href="voxels.html#cb57-17" aria-hidden="true" tabindex="-1"></a>    [[<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]]</span>
-<span id="cb57-18"><a href="voxels.html#cb57-18" aria-hidden="true" tabindex="-1"></a>])</span>
-<span id="cb57-19"><a href="voxels.html#cb57-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-20"><a href="voxels.html#cb57-20" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> make_ax(<span class="va">True</span>)</span>
-<span id="cb57-21"><a href="voxels.html#cb57-21" aria-hidden="true" tabindex="-1"></a>ax.voxels(filled, edgecolors<span class="op">=</span><span class="st">&#39;gray&#39;</span>)</span>
-<span id="cb57-22"><a href="voxels.html#cb57-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
+<div class="sourceCode" id="cb64"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb64-1"><a href="voxels.html#cb64-1"></a><span class="co"># https://matplotlib.org/gallery/mplot3d/voxels_numpy_logo.html</span></span>
+<span id="cb64-2"><a href="voxels.html#cb64-2"></a></span>
+<span id="cb64-3"><a href="voxels.html#cb64-3"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb64-4"><a href="voxels.html#cb64-4"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb64-5"><a href="voxels.html#cb64-5"></a></span>
+<span id="cb64-6"><a href="voxels.html#cb64-6"></a><span class="co"># This import registers the 3D projection, but is otherwise unused.</span></span>
+<span id="cb64-7"><a href="voxels.html#cb64-7"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D  <span class="co"># noqa: F401 unused import</span></span>
+<span id="cb64-8"><a href="voxels.html#cb64-8"></a></span>
+<span id="cb64-9"><a href="voxels.html#cb64-9"></a></span>
+<span id="cb64-10"><a href="voxels.html#cb64-10"></a><span class="kw">def</span> explode(data):</span>
+<span id="cb64-11"><a href="voxels.html#cb64-11"></a>    size <span class="op">=</span> np.array(data.shape)<span class="op">*</span><span class="dv">2</span></span>
+<span id="cb64-12"><a href="voxels.html#cb64-12"></a>    data_e <span class="op">=</span> np.zeros(size <span class="op">-</span> <span class="dv">1</span>, dtype<span class="op">=</span>data.dtype)</span>
+<span id="cb64-13"><a href="voxels.html#cb64-13"></a>    data_e[::<span class="dv">2</span>, ::<span class="dv">2</span>, ::<span class="dv">2</span>] <span class="op">=</span> data</span>
+<span id="cb64-14"><a href="voxels.html#cb64-14"></a>    <span class="cf">return</span> data_e</span>
+<span id="cb64-15"><a href="voxels.html#cb64-15"></a></span>
+<span id="cb64-16"><a href="voxels.html#cb64-16"></a><span class="co"># build up the numpy logo</span></span>
+<span id="cb64-17"><a href="voxels.html#cb64-17"></a>n_voxels <span class="op">=</span> np.zeros((<span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">4</span>), dtype<span class="op">=</span><span class="bu">bool</span>)</span>
+<span id="cb64-18"><a href="voxels.html#cb64-18"></a>n_voxels[<span class="dv">0</span>, <span class="dv">0</span>, :] <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb64-19"><a href="voxels.html#cb64-19"></a>n_voxels[<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, :] <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb64-20"><a href="voxels.html#cb64-20"></a>n_voxels[<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">2</span>] <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb64-21"><a href="voxels.html#cb64-21"></a>n_voxels[<span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">1</span>] <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb64-22"><a href="voxels.html#cb64-22"></a>facecolors <span class="op">=</span> np.where(n_voxels, <span class="st">&#39;#FFD65DC0&#39;</span>, <span class="st">&#39;#7A88CCC0&#39;</span>)</span>
+<span id="cb64-23"><a href="voxels.html#cb64-23"></a>edgecolors <span class="op">=</span> np.where(n_voxels, <span class="st">&#39;#BFAB6E&#39;</span>, <span class="st">&#39;#7D84A6&#39;</span>)</span>
+<span id="cb64-24"><a href="voxels.html#cb64-24"></a>filled <span class="op">=</span> np.ones(n_voxels.shape)</span>
+<span id="cb64-25"><a href="voxels.html#cb64-25"></a></span>
+<span id="cb64-26"><a href="voxels.html#cb64-26"></a><span class="co"># upscale the above voxel image, leaving gaps</span></span>
+<span id="cb64-27"><a href="voxels.html#cb64-27"></a>filled_2 <span class="op">=</span> explode(filled)</span>
+<span id="cb64-28"><a href="voxels.html#cb64-28"></a>fcolors_2 <span class="op">=</span> explode(facecolors)</span>
+<span id="cb64-29"><a href="voxels.html#cb64-29"></a>ecolors_2 <span class="op">=</span> explode(edgecolors)</span>
+<span id="cb64-30"><a href="voxels.html#cb64-30"></a></span>
+<span id="cb64-31"><a href="voxels.html#cb64-31"></a><span class="co"># Shrink the gaps</span></span>
+<span id="cb64-32"><a href="voxels.html#cb64-32"></a>x, y, z <span class="op">=</span> np.indices(np.array(filled_2.shape) <span class="op">+</span> <span class="dv">1</span>).astype(<span class="bu">float</span>) <span class="op">//</span> <span class="dv">2</span></span>
+<span id="cb64-33"><a href="voxels.html#cb64-33"></a>x[<span class="dv">0</span>::<span class="dv">2</span>, :, :] <span class="op">+=</span> <span class="fl">0.05</span></span>
+<span id="cb64-34"><a href="voxels.html#cb64-34"></a>y[:, <span class="dv">0</span>::<span class="dv">2</span>, :] <span class="op">+=</span> <span class="fl">0.05</span></span>
+<span id="cb64-35"><a href="voxels.html#cb64-35"></a>z[:, :, <span class="dv">0</span>::<span class="dv">2</span>] <span class="op">+=</span> <span class="fl">0.05</span></span>
+<span id="cb64-36"><a href="voxels.html#cb64-36"></a>x[<span class="dv">1</span>::<span class="dv">2</span>, :, :] <span class="op">+=</span> <span class="fl">0.95</span></span>
+<span id="cb64-37"><a href="voxels.html#cb64-37"></a>y[:, <span class="dv">1</span>::<span class="dv">2</span>, :] <span class="op">+=</span> <span class="fl">0.95</span></span>
+<span id="cb64-38"><a href="voxels.html#cb64-38"></a>z[:, :, <span class="dv">1</span>::<span class="dv">2</span>] <span class="op">+=</span> <span class="fl">0.95</span></span>
+<span id="cb64-39"><a href="voxels.html#cb64-39"></a></span>
+<span id="cb64-40"><a href="voxels.html#cb64-40"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb64-41"><a href="voxels.html#cb64-41"></a>ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
+<span id="cb64-42"><a href="voxels.html#cb64-42"></a>ax.voxels(x, y, z, filled_2, facecolors<span class="op">=</span>fcolors_2, edgecolors<span class="op">=</span>ecolors_2)</span>
+<span id="cb64-43"><a href="voxels.html#cb64-43"></a>plt.show()</span></code></pre></div>
+<img src="06-voxels_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
 </div>
 <br>
 </div>
+</div>
+<div id="opaque-cubicles" class="section level2">
+<h2><span class="header-section-number">6.6</span> Opaque cubicles</h2>
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="voxels.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb58-2"><a href="voxels.html#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb58-3"><a href="voxels.html#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
-<span id="cb58-4"><a href="voxels.html#cb58-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb58-5"><a href="voxels.html#cb58-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_ax(grid<span class="op">=</span><span class="va">False</span>):</span>
-<span id="cb58-6"><a href="voxels.html#cb58-6" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> plt.figure()</span>
-<span id="cb58-7"><a href="voxels.html#cb58-7" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
-<span id="cb58-8"><a href="voxels.html#cb58-8" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">&quot;x&quot;</span>)</span>
-<span id="cb58-9"><a href="voxels.html#cb58-9" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">&quot;y&quot;</span>)</span>
-<span id="cb58-10"><a href="voxels.html#cb58-10" aria-hidden="true" tabindex="-1"></a>    ax.set_zlabel(<span class="st">&quot;z&quot;</span>)</span>
-<span id="cb58-11"><a href="voxels.html#cb58-11" aria-hidden="true" tabindex="-1"></a>    ax.grid(grid)</span>
-<span id="cb58-12"><a href="voxels.html#cb58-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ax</span>
-<span id="cb58-13"><a href="voxels.html#cb58-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb58-14"><a href="voxels.html#cb58-14" aria-hidden="true" tabindex="-1"></a>filled <span class="op">=</span> np.array([</span>
-<span id="cb58-15"><a href="voxels.html#cb58-15" aria-hidden="true" tabindex="-1"></a>    [[<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>]],</span>
-<span id="cb58-16"><a href="voxels.html#cb58-16" aria-hidden="true" tabindex="-1"></a>    [[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>]],</span>
-<span id="cb58-17"><a href="voxels.html#cb58-17" aria-hidden="true" tabindex="-1"></a>    [[<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]]</span>
-<span id="cb58-18"><a href="voxels.html#cb58-18" aria-hidden="true" tabindex="-1"></a>])</span>
-<span id="cb58-19"><a href="voxels.html#cb58-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb58-20"><a href="voxels.html#cb58-20" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> make_ax()</span>
-<span id="cb58-21"><a href="voxels.html#cb58-21" aria-hidden="true" tabindex="-1"></a>ax.voxels(filled, facecolors<span class="op">=</span><span class="st">&#39;#1f77b430&#39;</span>, edgecolors<span class="op">=</span><span class="st">&#39;gray&#39;</span>)</span>
-<span id="cb58-22"><a href="voxels.html#cb58-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
-</div>
-<br>
-</div>
-<div class="decocode">
-<div style="background-color:#417FB1">
-<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="voxels.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb59-2"><a href="voxels.html#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb59-3"><a href="voxels.html#cb59-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
-<span id="cb59-4"><a href="voxels.html#cb59-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb59-5"><a href="voxels.html#cb59-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_ax(grid<span class="op">=</span><span class="va">False</span>):</span>
-<span id="cb59-6"><a href="voxels.html#cb59-6" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> plt.figure()</span>
-<span id="cb59-7"><a href="voxels.html#cb59-7" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
-<span id="cb59-8"><a href="voxels.html#cb59-8" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">&quot;x&quot;</span>)</span>
-<span id="cb59-9"><a href="voxels.html#cb59-9" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">&quot;y&quot;</span>)</span>
-<span id="cb59-10"><a href="voxels.html#cb59-10" aria-hidden="true" tabindex="-1"></a>    ax.set_zlabel(<span class="st">&quot;z&quot;</span>)</span>
-<span id="cb59-11"><a href="voxels.html#cb59-11" aria-hidden="true" tabindex="-1"></a>    ax.grid(grid)</span>
-<span id="cb59-12"><a href="voxels.html#cb59-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ax</span>
-<span id="cb59-13"><a href="voxels.html#cb59-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb59-14"><a href="voxels.html#cb59-14" aria-hidden="true" tabindex="-1"></a>filled <span class="op">=</span> np.array([</span>
-<span id="cb59-15"><a href="voxels.html#cb59-15" aria-hidden="true" tabindex="-1"></a>    [[<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>]],</span>
-<span id="cb59-16"><a href="voxels.html#cb59-16" aria-hidden="true" tabindex="-1"></a>    [[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>]],</span>
-<span id="cb59-17"><a href="voxels.html#cb59-17" aria-hidden="true" tabindex="-1"></a>    [[<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]]</span>
-<span id="cb59-18"><a href="voxels.html#cb59-18" aria-hidden="true" tabindex="-1"></a>])</span>
-<span id="cb59-19"><a href="voxels.html#cb59-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb59-20"><a href="voxels.html#cb59-20" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> make_ax()</span>
-<span id="cb59-21"><a href="voxels.html#cb59-21" aria-hidden="true" tabindex="-1"></a>ax.voxels(np.ones((<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>)), facecolors<span class="op">=</span><span class="st">&#39;#1f77b430&#39;</span>, edgecolors<span class="op">=</span><span class="st">&#39;gray&#39;</span>)</span>
-<span id="cb59-22"><a href="voxels.html#cb59-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" />
-</div>
-<br>
-</div>
-<div class="decocode">
-<div style="background-color:#417FB1">
-<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="voxels.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb60-2"><a href="voxels.html#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb60-3"><a href="voxels.html#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
-<span id="cb60-4"><a href="voxels.html#cb60-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb60-5"><a href="voxels.html#cb60-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_ax(grid<span class="op">=</span><span class="va">False</span>):</span>
-<span id="cb60-6"><a href="voxels.html#cb60-6" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> plt.figure()</span>
-<span id="cb60-7"><a href="voxels.html#cb60-7" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
-<span id="cb60-8"><a href="voxels.html#cb60-8" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">&quot;x&quot;</span>)</span>
-<span id="cb60-9"><a href="voxels.html#cb60-9" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">&quot;y&quot;</span>)</span>
-<span id="cb60-10"><a href="voxels.html#cb60-10" aria-hidden="true" tabindex="-1"></a>    ax.set_zlabel(<span class="st">&quot;z&quot;</span>)</span>
-<span id="cb60-11"><a href="voxels.html#cb60-11" aria-hidden="true" tabindex="-1"></a>    ax.grid(grid)</span>
-<span id="cb60-12"><a href="voxels.html#cb60-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ax</span>
-<span id="cb60-13"><a href="voxels.html#cb60-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb60-14"><a href="voxels.html#cb60-14" aria-hidden="true" tabindex="-1"></a>filled <span class="op">=</span> np.array([</span>
-<span id="cb60-15"><a href="voxels.html#cb60-15" aria-hidden="true" tabindex="-1"></a>    [[<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>]],</span>
-<span id="cb60-16"><a href="voxels.html#cb60-16" aria-hidden="true" tabindex="-1"></a>    [[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>]],</span>
-<span id="cb60-17"><a href="voxels.html#cb60-17" aria-hidden="true" tabindex="-1"></a>    [[<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]]</span>
-<span id="cb60-18"><a href="voxels.html#cb60-18" aria-hidden="true" tabindex="-1"></a>])</span>
-<span id="cb60-19"><a href="voxels.html#cb60-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb60-20"><a href="voxels.html#cb60-20" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> make_ax()</span>
-<span id="cb60-21"><a href="voxels.html#cb60-21" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> np.array([[[<span class="st">&#39;#1f77b430&#39;</span>]<span class="op">*</span><span class="dv">3</span>]<span class="op">*</span><span class="dv">3</span>]<span class="op">*</span><span class="dv">3</span>)</span>
-<span id="cb60-22"><a href="voxels.html#cb60-22" aria-hidden="true" tabindex="-1"></a>colors[<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>] <span class="op">=</span> <span class="st">&#39;#ff0000ff&#39;</span></span>
-<span id="cb60-23"><a href="voxels.html#cb60-23" aria-hidden="true" tabindex="-1"></a>ax.voxels(np.ones((<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>)), facecolors<span class="op">=</span>colors, edgecolor<span class="op">=</span><span class="st">&#39;gray&#39;</span>)</span>
-<span id="cb60-24"><a href="voxels.html#cb60-24" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" />
-</div>
-<br>
-</div>
-<div class="decocode">
-<div style="background-color:#417FB1">
-<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="voxels.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb61-2"><a href="voxels.html#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb61-3"><a href="voxels.html#cb61-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb61-4"><a href="voxels.html#cb61-4" aria-hidden="true" tabindex="-1"></a><span class="co"># This import registers the 3D projection, but is otherwise unused.</span></span>
-<span id="cb61-5"><a href="voxels.html#cb61-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D  <span class="co"># noqa: F401 unused import</span></span>
-<span id="cb61-6"><a href="voxels.html#cb61-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb61-7"><a href="voxels.html#cb61-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb61-8"><a href="voxels.html#cb61-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> midpoints(x):</span>
-<span id="cb61-9"><a href="voxels.html#cb61-9" aria-hidden="true" tabindex="-1"></a>    sl <span class="op">=</span> ()</span>
-<span id="cb61-10"><a href="voxels.html#cb61-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(x.ndim):</span>
-<span id="cb61-11"><a href="voxels.html#cb61-11" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> (x[sl <span class="op">+</span> np.index_exp[:<span class="op">-</span><span class="dv">1</span>]] <span class="op">+</span> x[sl <span class="op">+</span> np.index_exp[<span class="dv">1</span>:]]) <span class="op">/</span> <span class="fl">2.0</span></span>
-<span id="cb61-12"><a href="voxels.html#cb61-12" aria-hidden="true" tabindex="-1"></a>        sl <span class="op">+=</span> np.index_exp[:]</span>
-<span id="cb61-13"><a href="voxels.html#cb61-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span>
-<span id="cb61-14"><a href="voxels.html#cb61-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb61-15"><a href="voxels.html#cb61-15" aria-hidden="true" tabindex="-1"></a><span class="co"># prepare some coordinates, and attach rgb values to each</span></span>
-<span id="cb61-16"><a href="voxels.html#cb61-16" aria-hidden="true" tabindex="-1"></a>r, g, b <span class="op">=</span> np.indices((<span class="dv">17</span>, <span class="dv">17</span>, <span class="dv">17</span>)) <span class="op">/</span> <span class="fl">16.0</span></span>
-<span id="cb61-17"><a href="voxels.html#cb61-17" aria-hidden="true" tabindex="-1"></a>rc <span class="op">=</span> midpoints(r)</span>
-<span id="cb61-18"><a href="voxels.html#cb61-18" aria-hidden="true" tabindex="-1"></a>gc <span class="op">=</span> midpoints(g)</span>
-<span id="cb61-19"><a href="voxels.html#cb61-19" aria-hidden="true" tabindex="-1"></a>bc <span class="op">=</span> midpoints(b)</span>
-<span id="cb61-20"><a href="voxels.html#cb61-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb61-21"><a href="voxels.html#cb61-21" aria-hidden="true" tabindex="-1"></a><span class="co"># define a sphere about [0.5, 0.5, 0.5]</span></span>
-<span id="cb61-22"><a href="voxels.html#cb61-22" aria-hidden="true" tabindex="-1"></a>sphere <span class="op">=</span> (rc <span class="op">-</span> <span class="fl">0.5</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (gc <span class="op">-</span> <span class="fl">0.5</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (bc <span class="op">-</span> <span class="fl">0.5</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">&lt;</span> <span class="fl">0.5</span><span class="op">**</span><span class="dv">2</span></span>
-<span id="cb61-23"><a href="voxels.html#cb61-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb61-24"><a href="voxels.html#cb61-24" aria-hidden="true" tabindex="-1"></a><span class="co"># combine the color components</span></span>
-<span id="cb61-25"><a href="voxels.html#cb61-25" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> np.zeros(sphere.shape <span class="op">+</span> (<span class="dv">3</span>,))</span>
-<span id="cb61-26"><a href="voxels.html#cb61-26" aria-hidden="true" tabindex="-1"></a>colors[..., <span class="dv">0</span>] <span class="op">=</span> rc</span>
-<span id="cb61-27"><a href="voxels.html#cb61-27" aria-hidden="true" tabindex="-1"></a>colors[..., <span class="dv">1</span>] <span class="op">=</span> gc</span>
-<span id="cb61-28"><a href="voxels.html#cb61-28" aria-hidden="true" tabindex="-1"></a>colors[..., <span class="dv">2</span>] <span class="op">=</span> bc</span>
-<span id="cb61-29"><a href="voxels.html#cb61-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb61-30"><a href="voxels.html#cb61-30" aria-hidden="true" tabindex="-1"></a><span class="co"># and plot everything</span></span>
-<span id="cb61-31"><a href="voxels.html#cb61-31" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
-<span id="cb61-32"><a href="voxels.html#cb61-32" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
-<span id="cb61-33"><a href="voxels.html#cb61-33" aria-hidden="true" tabindex="-1"></a>ax.voxels(r, g, b, sphere,</span>
-<span id="cb61-34"><a href="voxels.html#cb61-34" aria-hidden="true" tabindex="-1"></a>          facecolors<span class="op">=</span>colors,</span>
-<span id="cb61-35"><a href="voxels.html#cb61-35" aria-hidden="true" tabindex="-1"></a>          edgecolors<span class="op">=</span>np.clip(<span class="dv">2</span><span class="op">*</span>colors <span class="op">-</span> <span class="fl">0.5</span>, <span class="dv">0</span>, <span class="dv">1</span>),  <span class="co"># brighter</span></span>
-<span id="cb61-36"><a href="voxels.html#cb61-36" aria-hidden="true" tabindex="-1"></a>          linewidth<span class="op">=</span><span class="fl">0.5</span>)</span>
-<span id="cb61-37"><a href="voxels.html#cb61-37" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(xlabel<span class="op">=</span><span class="st">&#39;r&#39;</span>, ylabel<span class="op">=</span><span class="st">&#39;g&#39;</span>, zlabel<span class="op">=</span><span class="st">&#39;b&#39;</span>)</span>
-<span id="cb61-38"><a href="voxels.html#cb61-38" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" />
-</div>
-<br>
-</div>
-<div class="decocode">
-<div style="background-color:#417FB1">
-<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb62-1"><a href="voxels.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/mplot3d/voxels_numpy_logo.html</span></span>
-<span id="cb62-2"><a href="voxels.html#cb62-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb62-3"><a href="voxels.html#cb62-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb62-4"><a href="voxels.html#cb62-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb62-5"><a href="voxels.html#cb62-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb62-6"><a href="voxels.html#cb62-6" aria-hidden="true" tabindex="-1"></a><span class="co"># This import registers the 3D projection, but is otherwise unused.</span></span>
-<span id="cb62-7"><a href="voxels.html#cb62-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D  <span class="co"># noqa: F401 unused import</span></span>
-<span id="cb62-8"><a href="voxels.html#cb62-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb62-9"><a href="voxels.html#cb62-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb62-10"><a href="voxels.html#cb62-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> explode(data):</span>
-<span id="cb62-11"><a href="voxels.html#cb62-11" aria-hidden="true" tabindex="-1"></a>    size <span class="op">=</span> np.array(data.shape)<span class="op">*</span><span class="dv">2</span></span>
-<span id="cb62-12"><a href="voxels.html#cb62-12" aria-hidden="true" tabindex="-1"></a>    data_e <span class="op">=</span> np.zeros(size <span class="op">-</span> <span class="dv">1</span>, dtype<span class="op">=</span>data.dtype)</span>
-<span id="cb62-13"><a href="voxels.html#cb62-13" aria-hidden="true" tabindex="-1"></a>    data_e[::<span class="dv">2</span>, ::<span class="dv">2</span>, ::<span class="dv">2</span>] <span class="op">=</span> data</span>
-<span id="cb62-14"><a href="voxels.html#cb62-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> data_e</span>
-<span id="cb62-15"><a href="voxels.html#cb62-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb62-16"><a href="voxels.html#cb62-16" aria-hidden="true" tabindex="-1"></a><span class="co"># build up the numpy logo</span></span>
-<span id="cb62-17"><a href="voxels.html#cb62-17" aria-hidden="true" tabindex="-1"></a>n_voxels <span class="op">=</span> np.zeros((<span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">4</span>), dtype<span class="op">=</span><span class="bu">bool</span>)</span>
-<span id="cb62-18"><a href="voxels.html#cb62-18" aria-hidden="true" tabindex="-1"></a>n_voxels[<span class="dv">0</span>, <span class="dv">0</span>, :] <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb62-19"><a href="voxels.html#cb62-19" aria-hidden="true" tabindex="-1"></a>n_voxels[<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, :] <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb62-20"><a href="voxels.html#cb62-20" aria-hidden="true" tabindex="-1"></a>n_voxels[<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">2</span>] <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb62-21"><a href="voxels.html#cb62-21" aria-hidden="true" tabindex="-1"></a>n_voxels[<span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">1</span>] <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb62-22"><a href="voxels.html#cb62-22" aria-hidden="true" tabindex="-1"></a>facecolors <span class="op">=</span> np.where(n_voxels, <span class="st">&#39;#FFD65DC0&#39;</span>, <span class="st">&#39;#7A88CCC0&#39;</span>)</span>
-<span id="cb62-23"><a href="voxels.html#cb62-23" aria-hidden="true" tabindex="-1"></a>edgecolors <span class="op">=</span> np.where(n_voxels, <span class="st">&#39;#BFAB6E&#39;</span>, <span class="st">&#39;#7D84A6&#39;</span>)</span>
-<span id="cb62-24"><a href="voxels.html#cb62-24" aria-hidden="true" tabindex="-1"></a>filled <span class="op">=</span> np.ones(n_voxels.shape)</span>
-<span id="cb62-25"><a href="voxels.html#cb62-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb62-26"><a href="voxels.html#cb62-26" aria-hidden="true" tabindex="-1"></a><span class="co"># upscale the above voxel image, leaving gaps</span></span>
-<span id="cb62-27"><a href="voxels.html#cb62-27" aria-hidden="true" tabindex="-1"></a>filled_2 <span class="op">=</span> explode(filled)</span>
-<span id="cb62-28"><a href="voxels.html#cb62-28" aria-hidden="true" tabindex="-1"></a>fcolors_2 <span class="op">=</span> explode(facecolors)</span>
-<span id="cb62-29"><a href="voxels.html#cb62-29" aria-hidden="true" tabindex="-1"></a>ecolors_2 <span class="op">=</span> explode(edgecolors)</span>
-<span id="cb62-30"><a href="voxels.html#cb62-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb62-31"><a href="voxels.html#cb62-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Shrink the gaps</span></span>
-<span id="cb62-32"><a href="voxels.html#cb62-32" aria-hidden="true" tabindex="-1"></a>x, y, z <span class="op">=</span> np.indices(np.array(filled_2.shape) <span class="op">+</span> <span class="dv">1</span>).astype(<span class="bu">float</span>) <span class="op">//</span> <span class="dv">2</span></span>
-<span id="cb62-33"><a href="voxels.html#cb62-33" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">0</span>::<span class="dv">2</span>, :, :] <span class="op">+=</span> <span class="fl">0.05</span></span>
-<span id="cb62-34"><a href="voxels.html#cb62-34" aria-hidden="true" tabindex="-1"></a>y[:, <span class="dv">0</span>::<span class="dv">2</span>, :] <span class="op">+=</span> <span class="fl">0.05</span></span>
-<span id="cb62-35"><a href="voxels.html#cb62-35" aria-hidden="true" tabindex="-1"></a>z[:, :, <span class="dv">0</span>::<span class="dv">2</span>] <span class="op">+=</span> <span class="fl">0.05</span></span>
-<span id="cb62-36"><a href="voxels.html#cb62-36" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">1</span>::<span class="dv">2</span>, :, :] <span class="op">+=</span> <span class="fl">0.95</span></span>
-<span id="cb62-37"><a href="voxels.html#cb62-37" aria-hidden="true" tabindex="-1"></a>y[:, <span class="dv">1</span>::<span class="dv">2</span>, :] <span class="op">+=</span> <span class="fl">0.95</span></span>
-<span id="cb62-38"><a href="voxels.html#cb62-38" aria-hidden="true" tabindex="-1"></a>z[:, :, <span class="dv">1</span>::<span class="dv">2</span>] <span class="op">+=</span> <span class="fl">0.95</span></span>
-<span id="cb62-39"><a href="voxels.html#cb62-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb62-40"><a href="voxels.html#cb62-40" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
-<span id="cb62-41"><a href="voxels.html#cb62-41" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
-<span id="cb62-42"><a href="voxels.html#cb62-42" aria-hidden="true" tabindex="-1"></a>ax.voxels(x, y, z, filled_2, facecolors<span class="op">=</span>fcolors_2, edgecolors<span class="op">=</span>ecolors_2)</span>
-<span id="cb62-43"><a href="voxels.html#cb62-43" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<img src="06-matplotlib-voxels_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" />
-</div>
-<br>
-</div>
-<div class="decocode">
-<div style="background-color:#417FB1">
-<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="voxels.html#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://stackoverflow.com/a/49281004/5270873</span></span>
-<span id="cb63-2"><a href="voxels.html#cb63-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-3"><a href="voxels.html#cb63-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
-<span id="cb63-4"><a href="voxels.html#cb63-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d.art3d <span class="im">import</span> Poly3DCollection</span>
-<span id="cb63-5"><a href="voxels.html#cb63-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb63-6"><a href="voxels.html#cb63-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb63-7"><a href="voxels.html#cb63-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-8"><a href="voxels.html#cb63-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-9"><a href="voxels.html#cb63-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cuboid_data2(o, size<span class="op">=</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>)):</span>
-<span id="cb63-10"><a href="voxels.html#cb63-10" aria-hidden="true" tabindex="-1"></a>    X <span class="op">=</span> [[[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>]],</span>
-<span id="cb63-11"><a href="voxels.html#cb63-11" aria-hidden="true" tabindex="-1"></a>         [[<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>]],</span>
-<span id="cb63-12"><a href="voxels.html#cb63-12" aria-hidden="true" tabindex="-1"></a>         [[<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>]],</span>
-<span id="cb63-13"><a href="voxels.html#cb63-13" aria-hidden="true" tabindex="-1"></a>         [[<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>]],</span>
-<span id="cb63-14"><a href="voxels.html#cb63-14" aria-hidden="true" tabindex="-1"></a>         [[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>]],</span>
-<span id="cb63-15"><a href="voxels.html#cb63-15" aria-hidden="true" tabindex="-1"></a>         [[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>]]]</span>
-<span id="cb63-16"><a href="voxels.html#cb63-16" aria-hidden="true" tabindex="-1"></a>    X <span class="op">=</span> np.array(X).astype(<span class="bu">float</span>)</span>
-<span id="cb63-17"><a href="voxels.html#cb63-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
-<span id="cb63-18"><a href="voxels.html#cb63-18" aria-hidden="true" tabindex="-1"></a>        X[:,:,i] <span class="op">*=</span> size[i]</span>
-<span id="cb63-19"><a href="voxels.html#cb63-19" aria-hidden="true" tabindex="-1"></a>    X <span class="op">+=</span> np.array(o)</span>
-<span id="cb63-20"><a href="voxels.html#cb63-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> X</span>
-<span id="cb63-21"><a href="voxels.html#cb63-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-22"><a href="voxels.html#cb63-22" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plotCubeAt2(positions,sizes<span class="op">=</span><span class="va">None</span>,colors<span class="op">=</span><span class="va">None</span>, <span class="op">**</span>kwargs):</span>
-<span id="cb63-23"><a href="voxels.html#cb63-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> <span class="bu">isinstance</span>(colors,(<span class="bu">list</span>,np.ndarray)): colors<span class="op">=</span>[<span class="st">&quot;C0&quot;</span>]<span class="op">*</span><span class="bu">len</span>(positions)</span>
-<span id="cb63-24"><a href="voxels.html#cb63-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> <span class="bu">isinstance</span>(sizes,(<span class="bu">list</span>,np.ndarray)): sizes<span class="op">=</span>[(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>)]<span class="op">*</span><span class="bu">len</span>(positions)</span>
-<span id="cb63-25"><a href="voxels.html#cb63-25" aria-hidden="true" tabindex="-1"></a>    g <span class="op">=</span> []</span>
-<span id="cb63-26"><a href="voxels.html#cb63-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> p,s,c <span class="kw">in</span> <span class="bu">zip</span>(positions,sizes,colors):</span>
-<span id="cb63-27"><a href="voxels.html#cb63-27" aria-hidden="true" tabindex="-1"></a>        g.append( cuboid_data2(p, size<span class="op">=</span>s) )</span>
-<span id="cb63-28"><a href="voxels.html#cb63-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Poly3DCollection(np.concatenate(g),  </span>
-<span id="cb63-29"><a href="voxels.html#cb63-29" aria-hidden="true" tabindex="-1"></a>                            facecolors<span class="op">=</span>np.repeat(colors,<span class="dv">6</span>), <span class="op">**</span>kwargs)</span>
-<span id="cb63-30"><a href="voxels.html#cb63-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-31"><a href="voxels.html#cb63-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-32"><a href="voxels.html#cb63-32" aria-hidden="true" tabindex="-1"></a>positions <span class="op">=</span> [(<span class="op">-</span><span class="dv">3</span>,<span class="dv">5</span>,<span class="op">-</span><span class="dv">2</span>),(<span class="dv">1</span>,<span class="dv">7</span>,<span class="dv">1</span>)]</span>
-<span id="cb63-33"><a href="voxels.html#cb63-33" aria-hidden="true" tabindex="-1"></a>sizes <span class="op">=</span> [(<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">3</span>), (<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">7</span>)]</span>
-<span id="cb63-34"><a href="voxels.html#cb63-34" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> [<span class="st">&quot;crimson&quot;</span>,<span class="st">&quot;limegreen&quot;</span>]</span>
-<span id="cb63-35"><a href="voxels.html#cb63-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-36"><a href="voxels.html#cb63-36" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
-<span id="cb63-37"><a href="voxels.html#cb63-37" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
-<span id="cb63-38"><a href="voxels.html#cb63-38" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">&#39;equal&#39;</span>)</span>
-<span id="cb63-39"><a href="voxels.html#cb63-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-40"><a href="voxels.html#cb63-40" aria-hidden="true" tabindex="-1"></a>pc <span class="op">=</span> plotCubeAt2(positions,sizes,colors<span class="op">=</span>colors, edgecolor<span class="op">=</span><span class="st">&quot;k&quot;</span>)</span>
-<span id="cb63-41"><a href="voxels.html#cb63-41" aria-hidden="true" tabindex="-1"></a>ax.add_collection3d(pc)    </span>
-<span id="cb63-42"><a href="voxels.html#cb63-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-43"><a href="voxels.html#cb63-43" aria-hidden="true" tabindex="-1"></a>ax.set_xlim([<span class="op">-</span><span class="dv">4</span>,<span class="dv">6</span>])</span>
-<span id="cb63-44"><a href="voxels.html#cb63-44" aria-hidden="true" tabindex="-1"></a>ax.set_ylim([<span class="dv">4</span>,<span class="dv">13</span>])</span>
-<span id="cb63-45"><a href="voxels.html#cb63-45" aria-hidden="true" tabindex="-1"></a>ax.set_zlim([<span class="op">-</span><span class="dv">3</span>,<span class="dv">9</span>])</span>
-<span id="cb63-46"><a href="voxels.html#cb63-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-47"><a href="voxels.html#cb63-47" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb65-1"><a href="voxels.html#cb65-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb65-2"><a href="voxels.html#cb65-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb65-3"><a href="voxels.html#cb65-3"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
+<span id="cb65-4"><a href="voxels.html#cb65-4"></a></span>
+<span id="cb65-5"><a href="voxels.html#cb65-5"></a><span class="kw">def</span> make_ax(grid<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb65-6"><a href="voxels.html#cb65-6"></a>    fig <span class="op">=</span> plt.figure()</span>
+<span id="cb65-7"><a href="voxels.html#cb65-7"></a>    ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
+<span id="cb65-8"><a href="voxels.html#cb65-8"></a>    ax.set_xlabel(<span class="st">&quot;x&quot;</span>)</span>
+<span id="cb65-9"><a href="voxels.html#cb65-9"></a>    ax.set_ylabel(<span class="st">&quot;y&quot;</span>)</span>
+<span id="cb65-10"><a href="voxels.html#cb65-10"></a>    ax.set_zlabel(<span class="st">&quot;z&quot;</span>)</span>
+<span id="cb65-11"><a href="voxels.html#cb65-11"></a>    ax.grid(grid)</span>
+<span id="cb65-12"><a href="voxels.html#cb65-12"></a>    <span class="cf">return</span> ax</span>
+<span id="cb65-13"><a href="voxels.html#cb65-13"></a></span>
+<span id="cb65-14"><a href="voxels.html#cb65-14"></a>filled <span class="op">=</span> np.array([</span>
+<span id="cb65-15"><a href="voxels.html#cb65-15"></a>    [[<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>]],</span>
+<span id="cb65-16"><a href="voxels.html#cb65-16"></a>    [[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>]],</span>
+<span id="cb65-17"><a href="voxels.html#cb65-17"></a>    [[<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]]</span>
+<span id="cb65-18"><a href="voxels.html#cb65-18"></a>])</span>
+<span id="cb65-19"><a href="voxels.html#cb65-19"></a></span>
+<span id="cb65-20"><a href="voxels.html#cb65-20"></a>ax <span class="op">=</span> make_ax(<span class="va">True</span>)</span>
+<span id="cb65-21"><a href="voxels.html#cb65-21"></a>ax.voxels(filled, edgecolors<span class="op">=</span><span class="st">&#39;gray&#39;</span>)</span>
+<span id="cb65-22"><a href="voxels.html#cb65-22"></a>plt.show()</span></code></pre></div>
+<img src="06-voxels_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
 </div>
 <br>
 </div>
 
+</div>
 </div>
             </section>
 
@@ -652,8 +697,7 @@ gitbook.start({
 "download": ["matplotlib-with-rmarkdown.pdf", "matplotlib-with-rmarkdown.epub"],
 "toc": {
 "collapse": "subsection"
-},
-"highlight": "tango"
+}
 });
 });
 </script>
