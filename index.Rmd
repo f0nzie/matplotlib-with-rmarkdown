@@ -1,4 +1,4 @@
---- 
+---
 title: "Matplotlib with Rmarkdown"
 author: "Alfonso R. Reyes"
 date: "`r Sys.Date()`"
@@ -12,6 +12,80 @@ github-repo: /f0nzie/matplotlib-with-rmarkdown
 description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
 ---
 
-# Preface {-}
+# Preface {.unnumbered}
 
-The goal of **r-test-matplotlib** is testing that Python `matplotlib` works seamlessly from within `RStudio`. Making `matplotlib` run from within RStudio using the R package `reticulate` and **Python Anaconda** has improved a lot in the past few months. The package `reticulate` and RStudio have gone through a thorough transformation and now seems to be an accepted fact that Python and R have to get along.
+The goal of **r-test-matplotlib** is thoroughly testing that Python `matplotlib` works seamlessly from within `RStudio`. Making `matplotlib` run from within RStudio using the R package `reticulate` and **Python Anaconda** has improved a lot in the past few months. The package `reticulate` and RStudio have gone through a thorough transformation. Enough to say that it's an accepted fact that Python and R have to get along for the benefit of data science, machine learning and artificial intelligence.
+
+## Method {.unnumbered}
+
+### R engine {.unnumbered}
+
+Since I combine code from different sources (`R`, `Python`, and `Bash`), I have added some colorization to the code chunks when I use a code engine. Here is an example of using the R engine. {-=""}
+
+```{r, decorate=TRUE, results = "markdown", collapse=FALSE}
+library(reticulate)
+reticulate::use_condaenv("r-python")
+```
+
+What we are doing is calling the R package reticulate, which makes possible the communication between Python and R.
+
+The way you will enter this block of code is pretty straightforward; you just indicate the engine you want, in this, case `r`, like this:
+
+```` {.markdown}
+`r ''````{r}
+library(reticulate)
+reticulate::use_condaenv("r-python")
+```
+````
+
+There is even a shortcut in RStudio to add the R block automatically for you: `Ctrl` `Alt` `I`.
+
+### Bash engine {.unnumbered}
+
+This chunk of code with the engine set to `bash` will list all the `conda` environments installed and available to the user (in my machine):
+
+```{bash, decorate=TRUE, results = "markdown", collapse=FALSE}
+echo "list all conda environments available"
+source ~/anaconda3/etc/profile.d/conda.sh
+conda activate r-python
+conda env list
+echo "working from the terminal"
+```
+
+To set the block as bash, we enter it like this:
+
+```` {.markdown}
+`r ' '````{bash}
+echo "list all conda environments available"
+source ~/anaconda3/etc/profile.d/conda.sh
+conda activate r-python
+conda env list
+echo "working from the terminal"
+```
+````
+
+And the block will execute your commands as you were in the terminal.
+
+### Python engine {.unnumbered}
+
+This other colorized chunk of code shows a simple example of the use of `matplotlib` from with R. It is a very simple example but now you now the color convention for different sets of code I will be using in this minimal book.
+
+```{python, decorate=TRUE}
+import matplotlib.pyplot as plt
+
+plt.plot([1, 2, 3, 4])
+plt.ylabel('some numbers')
+plt.show()
+```
+
+As you may be expecting it follows the same pattern when we want to use a Python engine. You just have to indicate it after three backticks, curly brace opened, `python`, and a curly brace closed: \`\`\``{python}`. You end the Python block with other three backticks. That's it.
+
+```` {.markdown}
+`r ' '````{python}
+import matplotlib.pyplot as plt
+
+plt.plot([1, 2, 3, 4])
+plt.ylabel('some numbers')
+plt.show()
+```
+````

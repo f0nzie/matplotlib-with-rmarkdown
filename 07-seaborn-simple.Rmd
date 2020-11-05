@@ -6,6 +6,9 @@ library(reticulate)
 use_condaenv("r-python", required = TRUE)
 ```
 
+## Error bands
+
+
 ```{python, decorate=TRUE}
 # https://seaborn.pydata.org/examples/errorband_lineplots.html
 import matplotlib.pyplot as plt
@@ -24,6 +27,8 @@ sns.lineplot(x="timepoint", y="signal",
 plt.show()
 ```
 
+
+## Boxplots
 
 ```{python, decorate=TRUE}
 # https://seaborn.pydata.org/examples/horizontal_boxplot.html
@@ -57,6 +62,7 @@ plt.show()
 ```
 
 
+## Facets
 
 ```{python, decorate=TRUE}
 # https://seaborn.pydata.org/examples/timeseries_facets.html
@@ -97,40 +103,6 @@ g.tight_layout()
 plt.show()
 ```
 
-
-
-```{python, decorate=TRUE}
-from __future__ import print_function, division
-
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-
-x = np.linspace(0, 10, 1000)
-plt.style.use('ggplot')
-plt.plot(x, np.sin(x), x, np.cos(x));
-plt.show()
-```
-
-
-
-
-```{python, decorate=TRUE}
-# https://seaborn.pydata.org/examples/scatterplot_matrix.html
-
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-sns.set_theme(style="ticks")
-
-df = sns.load_dataset("penguins")
-sns.pairplot(df, hue="species")
-
-plt.show()
-```
-
-
-
 ```{python, decorate=TRUE}
 import numpy as np
 import pandas as pd
@@ -149,4 +121,39 @@ sns.relplot(x="timepoint", y="signal", hue="event", style="event",
 
 plt.show()
 ```
+
+## Functions
+
+```{python, decorate=TRUE}
+from __future__ import print_function, division
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+x = np.linspace(0, 10, 1000)
+plt.style.use('ggplot')
+plt.plot(x, np.sin(x), x, np.cos(x));
+plt.show()
+```
+
+
+## Scatter plot matrix
+
+```{python, decorate=TRUE}
+# https://seaborn.pydata.org/examples/scatterplot_matrix.html
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set_theme(style="ticks")
+
+df = sns.load_dataset("penguins")
+sns.pairplot(df, hue="species")
+
+plt.show()
+```
+
+
+
 

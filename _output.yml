@@ -1,5 +1,6 @@
 bookdown::gitbook:
   css: [css/style.css, css/toc.css, fontawesome/css/all.css]
+  highlight: kate
   config:
     toc:
       before: |
@@ -11,11 +12,11 @@ bookdown::gitbook:
       github: yes
       facebook: no
       twitter: no
-    highlight: tango
 # bookdown::pdf_book:
 #   includes:
 #     in_header: preamble.tex
 #   latex_engine: xelatex
 #   citation_package: natbib
 #   keep_tex: yes
+
 

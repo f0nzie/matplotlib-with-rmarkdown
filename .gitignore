@@ -6,10 +6,12 @@
 *.rds
 _book/
 _bookdown_files/
-temp/
+.ipynb_checkpoints/
 bookdown/
 matplotlib-voxels.pdf
 matplotlib-simple.pdf
 test.png
 environment.yml.original
 
+
+matplotlib-with-rmarkdown.Rmd
