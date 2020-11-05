@@ -10,7 +10,7 @@ reticulate::use_condaenv("r-python")
 </div><br></div>
 
 
-## Solve Laplace
+## Solving Laplace
 
 
 ```python

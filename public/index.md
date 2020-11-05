@@ -1,7 +1,7 @@
 ---
 title: "Matplotlib with Rmarkdown"
 author: "Alfonso R. Reyes"
-date: "2020-11-04"
+date: "2020-11-05"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]

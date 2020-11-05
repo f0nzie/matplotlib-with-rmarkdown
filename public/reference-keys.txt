@@ -26,7 +26,7 @@ d-wireframe
 d-contour-plot
 machine-learning
 scientific
-solve-laplace
+solving-laplace
 eigenvalue-problems
 computational-physics
 triangulation-and-delauney-maps
