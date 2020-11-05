@@ -11,9 +11,8 @@ reticulate::use_condaenv("r-python")
 
 ### Usage
 
-```{python, ba-usage}
+```{python, ba-usage, decorate=TRUE}
 # https://github.com/bendichter/brokenaxes/blob/master/examples/plot_usage.py
-
 import matplotlib.pyplot as plt
 from brokenaxes import brokenaxes
 import numpy as np
@@ -30,9 +29,8 @@ bax.set_ylabel('value')
 
 ### Subplots
 
-```{python}
+```{python, decorate=TRUE}
 # https://github.com/bendichter/brokenaxes/blob/master/examples/plot_subplots.py
-
 from brokenaxes import brokenaxes
 from matplotlib.gridspec import GridSpec
 import numpy as np
@@ -46,18 +44,18 @@ bax.plot(x, np.sin(x*30), ls=':', color='m')
 x = np.random.poisson(3, 1000)
 bax = brokenaxes(xlims=((0, 2.5), (3, 6)), subplot_spec=sps2)
 bax.hist(x, histtype='bar')
+plt.show()
 ```
 
 
 ### Log scales
-```{python}
+```{python, decorate=TRUE}
 # https://github.com/bendichter/brokenaxes/blob/master/examples/plot_logscales.py
 # Log scales
 # ==========
 # Brokenaxe compute automatically the correct layout for a 1:1 scale. However, for
 # logarithmic scales, the 1:1 scale has to be adapted. This is done via the
 # `yscale` or `xscale` arguments.
-
 import matplotlib.pyplot as plt
 from brokenaxes import brokenaxes
 import numpy as np
@@ -93,12 +91,10 @@ plt.show()
 # `height_ratios` and `width_ratios` to over-pass the default 1:1 scale for all
 # axes. However, by default the ticks spacing are still identical for all axes.
 # In this example, we present how to customize the ticks of your brokenaxes.
-
 import numpy as np
 import matplotlib.pyplot as plt
 from brokenaxes import brokenaxes
 import matplotlib.ticker as ticker
-
 
 def make_plot():
     x = np.linspace(0, 5*2*np.pi, 300)
@@ -127,13 +123,11 @@ def make_plot():
 #############################################################################
 # Use the AutoLocator() ticker
 # ----------------------------
-
 plt.figure()
 bax = make_plot()
 
 # Then, we get the different axes created and set the ticks according to the
 # axe x and y limits.
-
 for i, ax in enumerate(bax.last_row):
     ax.xaxis.set_major_locator(ticker.AutoLocator())
     ax.set_xlabel('xscale {i}'.format(i=i))
@@ -149,10 +143,8 @@ for i, ax in enumerate(bax.first_col):
 ##############################################################################
 # Manually set the ticks
 # ----------------------
-#
 # Since brokenaxes return normal matplotlib axes, you could also set them
 # manually.
-
 fig2 = plt.figure()
 bax = make_plot()
 
@@ -169,19 +161,16 @@ plt.show()
 ## `yellowbrick`
 
 ### Pearson correlation
-```{python}
+```{python, decorate=TRUE, collapse=FALSE, results="markup"}
 # https://www.scikit-yb.org/en/latest/quickstart.html
-
 import pandas as pd
 from yellowbrick.datasets import load_bikeshare
-
 X, y = load_bikeshare()
 print(X.head())
 ```
 
-```{python}
+```{python, decorate=TRUE}
 from yellowbrick.features import Rank2D
-
 visualizer = Rank2D(algorithm="pearson")
 visualizer.fit_transform(X)
 visualizer.show()
@@ -189,11 +178,9 @@ visualizer.show()
 
 ### Scatter diagram
 
-```{python}
+```{python, decorate=TRUE}
 # https://www.scikit-yb.org/en/latest//quickstart-2.py
-
 from yellowbrick.features import JointPlotVisualizer
-
 visualizer = JointPlotVisualizer(columns=['temp', 'feelslike'])
 visualizer.fit_transform(X, y)
 visualizer.show()
@@ -201,9 +188,8 @@ visualizer.show()
 
 ### Residuals plot
 
-```{python}
+```{python, decorate=TRUE}
 # https://www.scikit-yb.org/en/latest//quickstart-3.py
-
 from yellowbrick.regressor import ResidualsPlot
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
@@ -212,7 +198,6 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.1
 )
-
 visualizer = ResidualsPlot(LinearRegression())
 visualizer.fit(X_train, y_train)
 visualizer.score(X_test, y_test)
@@ -222,7 +207,7 @@ visualizer.show()
 
 ### Discrimination threshold
 
-```{python}
+```{python, decorate=TRUE}
 from yellowbrick.classifier import discrimination_threshold
 from sklearn.linear_model import LogisticRegression
 from yellowbrick.datasets import load_spam
