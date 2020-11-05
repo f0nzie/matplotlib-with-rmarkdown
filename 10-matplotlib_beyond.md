@@ -15,10 +15,10 @@ reticulate::use_condaenv("r-python")
 
 ### Usage
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://github.com/bendichter/brokenaxes/blob/master/examples/plot_usage.py
-
 import matplotlib.pyplot as plt
 from brokenaxes import brokenaxes
 import numpy as np
@@ -33,14 +33,14 @@ bax.set_xlabel('time')
 bax.set_ylabel('value')
 ```
 
-<img src="10-matplotlib_beyond_files/figure-html/ba-usage-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="10-matplotlib_beyond_files/figure-html/ba-usage-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 ### Subplots
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://github.com/bendichter/brokenaxes/blob/master/examples/plot_subplots.py
-
 from brokenaxes import brokenaxes
 from matplotlib.gridspec import GridSpec
 import numpy as np
@@ -53,10 +53,14 @@ bax.plot(x, np.sin(x*30), ls=':', color='m')
 x = np.random.poisson(3, 1000)
 bax = brokenaxes(xlims=((0, 2.5), (3, 6)), subplot_spec=sps2)
 bax.hist(x, histtype='bar')
+plt.show()
 ```
+
+<img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 ### Log scales
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://github.com/bendichter/brokenaxes/blob/master/examples/plot_logscales.py
@@ -65,7 +69,6 @@ bax.hist(x, histtype='bar')
 # Brokenaxe compute automatically the correct layout for a 1:1 scale. However, for
 # logarithmic scales, the 1:1 scale has to be adapted. This is done via the
 # `yscale` or `xscale` arguments.
-
 import matplotlib.pyplot as plt
 from brokenaxes import brokenaxes
 import numpy as np
@@ -85,7 +88,7 @@ bax.set_ylabel('y')
 plt.show()
 ```
 
-<img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 ### Different scales
@@ -104,12 +107,10 @@ plt.show()
 # `height_ratios` and `width_ratios` to over-pass the default 1:1 scale for all
 # axes. However, by default the ticks spacing are still identical for all axes.
 # In this example, we present how to customize the ticks of your brokenaxes.
-
 import numpy as np
 import matplotlib.pyplot as plt
 from brokenaxes import brokenaxes
 import matplotlib.ticker as ticker
-
 
 def make_plot():
     x = np.linspace(0, 5*2*np.pi, 300)
@@ -138,7 +139,6 @@ def make_plot():
 #############################################################################
 # Use the AutoLocator() ticker
 # ----------------------------
-
 plt.figure()
 bax = make_plot()
 
@@ -159,10 +159,8 @@ for i, ax in enumerate(bax.first_col):
 ##############################################################################
 # Manually set the ticks
 # ----------------------
-#
 # Since brokenaxes return normal matplotlib axes, you could also set them
 # manually.
-
 fig2 = plt.figure()
 bax = make_plot()
 bax.first_col[0].set_yticks([80, 85, 90, 95, 100])
@@ -179,49 +177,58 @@ plt.show()
 ## `yellowbrick`
 
 ### Pearson correlation
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://www.scikit-yb.org/en/latest/quickstart.html
-
 import pandas as pd
 from yellowbrick.datasets import load_bikeshare
-
 X, y = load_bikeshare()
 print(X.head())
 ```
 
+```
+#:>    season  year  month  hour  holiday  weekday  workingday  weather  temp  feelslike  humidity  windspeed
+#:> 0       1     0      1     0        0        6           0        1  0.24     0.2879      0.81        0.0
+#:> 1       1     0      1     1        0        6           0        1  0.22     0.2727      0.80        0.0
+#:> 2       1     0      1     2        0        6           0        1  0.22     0.2727      0.80        0.0
+#:> 3       1     0      1     3        0        6           0        1  0.24     0.2879      0.75        0.0
+#:> 4       1     0      1     4        0        6           0        1  0.24     0.2879      0.75        0.0
+```
+
+</div><br></div>
+
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 from yellowbrick.features import Rank2D
-
 visualizer = Rank2D(algorithm="pearson")
 visualizer.fit_transform(X)
 visualizer.show()
 ```
 
-<img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /><img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-6-2.png" width="90%" style="display: block; margin: auto;" />
+<img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /><img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-6-2.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 ### Scatter diagram
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://www.scikit-yb.org/en/latest//quickstart-2.py
-
 from yellowbrick.features import JointPlotVisualizer
-
 visualizer = JointPlotVisualizer(columns=['temp', 'feelslike'])
 visualizer.fit_transform(X, y)
 visualizer.show()
 ```
 
-<img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" /><img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-7-2.png" width="90%" style="display: block; margin: auto;" />
+<img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" /><img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-7-2.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 ### Residuals plot
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://www.scikit-yb.org/en/latest//quickstart-3.py
-
 from yellowbrick.regressor import ResidualsPlot
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
@@ -230,18 +237,18 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.1
 )
-
 visualizer = ResidualsPlot(LinearRegression())
 visualizer.fit(X_train, y_train)
 visualizer.score(X_test, y_test)
 visualizer.show()
 ```
 
-<img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" /><img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-8-2.png" width="90%" style="display: block; margin: auto;" />
+<img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" /><img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-8-2.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 ### Discrimination threshold
 
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 from yellowbrick.classifier import discrimination_threshold
@@ -254,7 +261,7 @@ visualizer = discrimination_threshold(
 )
 ```
 
-<img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" />
+<img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 ### Intercluster distance
