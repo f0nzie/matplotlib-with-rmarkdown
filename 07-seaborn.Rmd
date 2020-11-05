@@ -8,7 +8,6 @@ use_condaenv("r-python", required = TRUE)
 
 ## Error bands
 
-
 ```{python, decorate=TRUE}
 # https://seaborn.pydata.org/examples/errorband_lineplots.html
 import matplotlib.pyplot as plt
@@ -23,7 +22,6 @@ fmri = sns.load_dataset("fmri")
 sns.lineplot(x="timepoint", y="signal",
              hue="region", style="event",
              data=fmri)
-
 plt.show()
 ```
 
@@ -32,7 +30,6 @@ plt.show()
 
 ```{python, decorate=TRUE}
 # https://seaborn.pydata.org/examples/horizontal_boxplot.html
-
 import seaborn as sns
 import matplotlib.pyplot as plt
 
@@ -44,15 +41,12 @@ ax.set_xscale("log")
 
 # Load the example planets dataset
 planets = sns.load_dataset("planets")
-
 # Plot the orbital period with horizontal boxes
 sns.boxplot(x="distance", y="method", data=planets,
             whis=[0, 100], width=.6, palette="vlag")
-
 # Add in points to show each observation
 sns.stripplot(x="distance", y="method", data=planets,
               size=4, color=".3", linewidth=0)
-
 # Tweak the visual presentation
 ax.xaxis.grid(True)
 ax.set(ylabel="")
@@ -91,10 +85,8 @@ for year, ax in g.axes_dict.items():
         data=flights, x="month", y="passengers", units="year",
         estimator=None, color=".7", linewidth=1, ax=ax,
     )
-
 # Reduce the frequency of the x axis ticks
 ax.set_xticks(ax.get_xticks()[::2])
-
 # Tweak the supporting aspects of the plot
 g.set_titles("")
 g.set_axis_labels("", "Passengers")
@@ -142,7 +134,6 @@ plt.show()
 
 ```{python, decorate=TRUE}
 # https://seaborn.pydata.org/examples/scatterplot_matrix.html
-
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -150,7 +141,6 @@ sns.set_theme(style="ticks")
 
 df = sns.load_dataset("penguins")
 sns.pairplot(df, hue="species")
-
 plt.show()
 ```
 
