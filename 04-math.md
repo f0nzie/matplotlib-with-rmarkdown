@@ -10,6 +10,7 @@ reticulate::use_condaenv("r-python")
 </div><br></div>
 
 
+## Functions
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
@@ -52,6 +53,7 @@ plt.show()
 <img src="04-math_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
+## Functions with Latex labels
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
@@ -99,49 +101,7 @@ plt.show()
 <img src="04-math_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
-
-
-## Middle
-
-
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
-
-```python
-# ===================================
-# 3D wireframe plots in one direction
-# ===================================
-
-# Demonstrates that setting rstride or cstride to 0 causes wires to not be
-# generated in the corresponding direction.
-
-
-from mpl_toolkits.mplot3d import axes3d
-import matplotlib.pyplot as plt
-
-
-fig, [ax1, ax2] = plt.subplots(2, 1, figsize=(8, 12), subplot_kw={'projection': '3d'})
-
-# Get the test data
-X, Y, Z = axes3d.get_test_data(0.05)
-
-# Give the first plot only wireframes of the type y = c
-ax1.plot_wireframe(X, Y, Z, rstride=10, cstride=0)
-ax1.set_title("Column (x) stride set to 0")
-
-# Give the second plot only wireframes of the type x = c
-ax2.plot_wireframe(X, Y, Z, rstride=0, cstride=10)
-ax2.set_title("Row (y) stride set to 0")
-
-plt.tight_layout()
-plt.show()
-```
-
-<img src="04-math_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
-
-
-
-
-
+## Multiple functions in the same plot
 
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
@@ -173,8 +133,34 @@ axs[2].set_ylim(-1, 1)
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+<img src="04-math_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
+
+## Overlapping functions
+We use `subplot` to arrange the two functions. Observe that the y-axis is the same in both functions.
+
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+
+```python
+# https://www.python-course.eu/matplotlib_multiple_figures.php
+
+import numpy as np
+import matplotlib.pyplot as plt
+def f(t):
+    return np.exp(-t) * np.cos(2*np.pi*t)
+def g(t):
+    return np.sin(t) * np.cos(1/(t+0.1))
+t1 = np.arange(0.0, 5.0, 0.1)
+t2 = np.arange(0.0, 5.0, 0.02)
+plt.subplot(212)
+plt.plot(t1, g(t1), 'ro', t2, f(t2), 'k')
+plt.grid(color='b', alpha=0.5, linestyle='dashed', linewidth=0.5)
+plt.show()
+```
+
+<img src="04-math_files/figure-html/overlapping-fun-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+
+## Surface functions
 
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
@@ -200,31 +186,7 @@ ax.set_zlim(-2, 2)
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
-
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
-
-```python
-# https://www.python-course.eu/matplotlib_multiple_figures.php
-
-import numpy as np
-import matplotlib.pyplot as plt
-def f(t):
-    return np.exp(-t) * np.cos(2*np.pi*t)
-def g(t):
-    return np.sin(t) * np.cos(1/(t+0.1))
-t1 = np.arange(0.0, 5.0, 0.1)
-t2 = np.arange(0.0, 5.0, 0.02)
-plt.subplot(212)
-plt.plot(t1, g(t1), 'ro', t2, f(t2), 'k')
-plt.grid(color='b', alpha=0.5, linestyle='dashed', linewidth=0.5)
-plt.show()
-```
-
-<img src="04-math_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
-
-
-## Surface functions
+<img src="04-math_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
@@ -238,7 +200,6 @@ from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
 
 import matplotlib.pyplot as plt
 import numpy as np
-
 
 fig = plt.figure()
 ax = fig.gca(projection='3d')
@@ -255,9 +216,7 @@ ax.set_zlim(0, 2)
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
-
-
+<img src="04-math_files/figure-html/sqrt-cos-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
@@ -267,10 +226,8 @@ plt.show()
 # https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/surface3d_radial.py
 
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
-
 import matplotlib.pyplot as plt
 import numpy as np
-
 
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
@@ -296,11 +253,10 @@ ax.set_zlabel(r'$V(\phi)$')
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+<img src="04-math_files/figure-html/hat-fun-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
-
-
+## 3D wireframe
 
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
@@ -324,60 +280,10 @@ ax.plot_wireframe(X, Y, Z, rstride=10, cstride=10)
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+<img src="04-math_files/figure-html/wireframe-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
-
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
-
-```python
-from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-fig = plt.figure()
-ax = fig.gca(projection='3d')
-
-# Plot a sin curve using the x and y axes.
-x = np.linspace(0, 1, 100)
-y = np.sin(x * 2 * np.pi) / 2 + 0.5
-ax.plot(x, y, zs=0, zdir='z', label='curve in (x,y)')
-
-# Plot scatterplot data (20 2D points per colour) on the x and z axes.
-colors = ('r', 'g', 'b', 'k')
-
-# Fixing random state for reproducibility
-np.random.seed(19680801)
-
-x = np.random.sample(20 * len(colors))
-y = np.random.sample(20 * len(colors))
-c_list = []
-for c in colors:
-    c_list.extend([c] * 20)
-# By using zdir='y', the y value of these points is fixed to the zs value 0
-# and the (x,y) points are plotted on the x and z axes.
-ax.scatter(x, y, zs=0, zdir='y', c=c_list, label='points in (x,z)')
-
-# Make legend, set axes limits and labels
-ax.legend()
-ax.set_xlim(0, 1)
-ax.set_ylim(0, 1)
-ax.set_zlim(0, 1)
-ax.set_xlabel('X')
-ax.set_ylabel('Y')
-ax.set_zlabel('Z')
-
-# Customize the view angle so it's easier to see that the scatter points lie
-# on the plane y=0
-ax.view_init(elev=20., azim=-35)
-
-plt.show()
-```
-
-<img src="04-math_files/figure-html/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
-
-
+## 3D contour plot
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
@@ -396,7 +302,7 @@ ax.clabel(cset, fontsize=9, inline=1)
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-12-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+<img src="04-math_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 ## Machine Learning
@@ -438,4 +344,7 @@ plt.axis('tight')
 plt.show()
 ```
 
-<img src="04-math_files/figure-html/unnamed-chunk-13-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+<img src="04-math_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+
+
+

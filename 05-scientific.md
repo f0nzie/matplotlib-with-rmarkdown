@@ -1,6 +1,5 @@
 # Scientific
 
-
 <div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i>  <b>R</b></span>
 
 ```r
@@ -10,7 +9,50 @@ reticulate::use_condaenv("r-python")
 
 </div><br></div>
 
-## Solve large scale eigenvalue problems
+
+## Solve Laplace
+
+
+```python
+# https://www.eidos.ic.i.u-tokyo.ac.jp/~tau/lecture/computational_physics/docs/computational_physics.pdf
+# Page 
+# Solve Laplace equation
+from numpy import * 
+import matplotlib.pylab as p;
+from mpl_toolkits.mplot3d import Axes3D
+
+print("Initializing")
+Nmax = 100; Niter = 70; V = zeros((Nmax, Nmax), float)          # float maybe Float
+
+print("Working hard, wait for the figure while I count to 60")
+for k in range(0, Nmax-1):  V[k,0] = 100.0                      # line at 100V
+
+for iter in range(Niter):                                       # iterations over algorithm
+    if iter%10 == 0: print( iter)
+    for i in range(1, Nmax-2):
+        for j in range(1,Nmax-2): V[i,j] = 0.25 * (V[i+1,j] + V[i-1,j] + V[i,j+1] + V[i,j-1])
+x = range(0, Nmax-1, 2); y = range(0, 50, 2)               # plot every other point
+X, Y = p.meshgrid(x,y)
+
+def functz(V):                                        # Function returns V(x, y)
+    z = V[X,Y]
+    return z
+
+Z = functz(V)
+fig = p.figure()                                       # Create figures
+ax = Axes3D(fig)                                       # plot axe
+ax.plot_wireframe(X, Y, Z, color = 'r')                # red wireframe
+ax.set_xlabel('X')                                     # label axes
+ax.set_ylabel('Y')
+ax.set_zlabel('Potential')
+p.show()                                               # display fig, close shell to quit
+```
+
+<img src="05-scientific_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" />
+
+
+
+## Eigenvalue problems
     
 * `lobpcg` (Locally Optimal Block Preconditioned Conjugate Gradient Method) * works very well in combination with `PyAMG` (example by Nathan Bell)
 
@@ -61,7 +103,7 @@ for i in range(K):
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+<img src="05-scientific_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 ## Computational Physics
 
@@ -115,42 +157,8 @@ ax.set_title("Lorenz Attractor")
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
-
-
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
-
-```python
-# ===================================
-# 3D wireframe plots in one direction
-# ===================================
-
-# Demonstrates that setting rstride or cstride to 0 causes wires to not be
-# generated in the corresponding direction.
-
-
-from mpl_toolkits.mplot3d import axes3d
-import matplotlib.pyplot as plt
-
-
-fig, [ax1, ax2] = plt.subplots(2, 1, figsize=(8, 12), subplot_kw={'projection': '3d'})
-
-# Get the test data
-X, Y, Z = axes3d.get_test_data(0.05)
-
-# Give the first plot only wireframes of the type y = c
-ax1.plot_wireframe(X, Y, Z, rstride=10, cstride=0)
-ax1.set_title("Column (x) stride set to 0")
-
-# Give the second plot only wireframes of the type x = c
-ax2.plot_wireframe(X, Y, Z, rstride=0, cstride=10)
-ax2.set_title("Row (y) stride set to 0")
-
-plt.tight_layout()
-plt.show()
-```
-
 <img src="05-scientific_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+
 
 
 
@@ -242,251 +250,6 @@ plt.show()
 <img src="05-scientific_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
-
-```python
-# step demo
-# https://matplotlib.org/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py
-
-import numpy as np
-from numpy import ma
-import matplotlib.pyplot as plt
-
-x = np.arange(1, 7, 0.4)
-y0 = np.sin(x)
-y = y0.copy() + 2.5
-
-plt.step(x, y, label='pre (default)')
-
-y -= 0.5
-plt.step(x, y, where='mid', label='mid')
-
-y -= 0.5
-plt.step(x, y, where='post', label='post')
-
-y = ma.masked_where((y0 > -0.15) & (y0 < 0.15), y - 0.5)
-plt.step(x, y, label='masked (pre)')
-
-plt.legend()
-
-plt.xlim(0, 7)
-plt.ylim(-0.5, 4)
-plt.show()
-```
-
-<img src="05-scientific_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
-
-
-
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
-
-```python
-# Plot of the Lorenz Attractor based on Edward Lorenz's 1963 "Deterministic
-# Nonperiodic Flow" publication.
-# http://journals.ametsoc.org/doi/abs/10.1175/1520-0469%281963%29020%3C0130%3ADNF%3E2.0.CO%3B2
-
-
-import numpy as np
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-
-
-def lorenz(x, y, z, s=10, r=28, b=2.667):
-    x_dot = s*(y - x)
-    y_dot = r*x - y - x*z
-    z_dot = x*y - b*z
-    return x_dot, y_dot, z_dot
-
-dt = 0.01
-stepCnt = 10000
-
-# Need one more for the initial values
-xs = np.empty((stepCnt + 1,))
-ys = np.empty((stepCnt + 1,))
-zs = np.empty((stepCnt + 1,))
-
-# Setting initial values
-xs[0], ys[0], zs[0] = (0., 1., 1.05)
-
-# Stepping through "time".
-for i in range(stepCnt):
-    # Derivatives of the X, Y, Z state
-    x_dot, y_dot, z_dot = lorenz(xs[i], ys[i], zs[i])
-    xs[i + 1] = xs[i] + (x_dot * dt)
-    ys[i + 1] = ys[i] + (y_dot * dt)
-    zs[i + 1] = zs[i] + (z_dot * dt)
-
-fig = plt.figure()
-ax = fig.gca(projection='3d')
-
-ax.plot(xs, ys, zs, lw=0.5)
-ax.set_xlabel("X Axis")
-ax.set_ylabel("Y Axis")
-ax.set_zlabel("Z Axis")
-ax.set_title("Lorenz Attractor")
-
-plt.show()
-```
-
-<img src="05-scientific_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
-
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
-
-```python
-# ===================================
-# 3D wireframe plots in one direction
-# ===================================
-
-# Demonstrates that setting rstride or cstride to 0 causes wires to not be
-# generated in the corresponding direction.
-
-
-from mpl_toolkits.mplot3d import axes3d
-import matplotlib.pyplot as plt
-
-
-fig, [ax1, ax2] = plt.subplots(2, 1, figsize=(8, 12), subplot_kw={'projection': '3d'})
-
-# Get the test data
-X, Y, Z = axes3d.get_test_data(0.05)
-
-# Give the first plot only wireframes of the type y = c
-ax1.plot_wireframe(X, Y, Z, rstride=10, cstride=0)
-ax1.set_title("Column (x) stride set to 0")
-
-# Give the second plot only wireframes of the type x = c
-ax2.plot_wireframe(X, Y, Z, rstride=0, cstride=10)
-ax2.set_title("Row (y) stride set to 0")
-
-plt.tight_layout()
-plt.show()
-```
-
-<img src="05-scientific_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
-
-
-
-
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
-
-```python
-# https://matplotlib.org/gallery/images_contours_and_fields/contour_image.html#sphx-glr-gallery-images-contours-and-fields-contour-image-py
-
-import matplotlib.pyplot as plt
-import numpy as np
-from matplotlib import cm
-
-# Default delta is large because that makes it fast, and it illustrates
-# the correct registration between image and contours.
-delta = 0.5
-
-extent = (-3, 4, -4, 3)
-
-x = np.arange(-3.0, 4.001, delta)
-y = np.arange(-4.0, 3.001, delta)
-X, Y = np.meshgrid(x, y)
-Z1 = np.exp(-X**2 - Y**2)
-Z2 = np.exp(-(X - 1)**2 - (Y - 1)**2)
-Z = (Z1 - Z2) * 2
-
-# Boost the upper limit to avoid truncation errors.
-levels = np.arange(-2.0, 1.601, 0.4)
-
-norm = cm.colors.Normalize(vmax=abs(Z).max(), vmin=-abs(Z).max())
-cmap = cm.PRGn
-
-fig, _axs = plt.subplots(nrows=2, ncols=2)
-fig.subplots_adjust(hspace=0.3)
-axs = _axs.flatten()
-
-cset1 = axs[0].contourf(X, Y, Z, levels, norm=norm,
-                     cmap=cm.get_cmap(cmap, len(levels) - 1))
-# It is not necessary, but for the colormap, we need only the
-# number of levels minus 1.  To avoid discretization error, use
-# either this number or a large number such as the default (256).
-
-# If we want lines as well as filled regions, we need to call
-# contour separately; don't try to change the edgecolor or edgewidth
-# of the polygons in the collections returned by contourf.
-# Use levels output from previous call to guarantee they are the same.
-
-cset2 = axs[0].contour(X, Y, Z, cset1.levels, colors='k')
-
-# We don't really need dashed contour lines to indicate negative
-# regions, so let's turn them off.
-
-for c in cset2.collections:
-    c.set_linestyle('solid')
-
-# It is easier here to make a separate call to contour than
-# to set up an array of colors and linewidths.
-# We are making a thick green line as a zero contour.
-# Specify the zero level as a tuple with only 0 in it.
-
-cset3 = axs[0].contour(X, Y, Z, (0,), colors='g', linewidths=2)
-axs[0].set_title('Filled contours')
-fig.colorbar(cset1, ax=axs[0])
-
-axs[1].imshow(Z, extent=extent, cmap=cmap, norm=norm)
-axs[1].contour(Z, levels, colors='k', origin='upper', extent=extent)
-axs[1].set_title("Image, origin 'upper'")
-
-axs[2].imshow(Z, origin='lower', extent=extent, cmap=cmap, norm=norm)
-axs[2].contour(Z, levels, colors='k', origin='lower', extent=extent)
-axs[2].set_title("Image, origin 'lower'")
-
-# We will use the interpolation "nearest" here to show the actual
-# image pixels.
-# Note that the contour lines don't extend to the edge of the box.
-# This is intentional. The Z values are defined at the center of each
-# image pixel (each color block on the following subplot), so the
-# domain that is contoured does not extend beyond these pixel centers.
-im = axs[3].imshow(Z, interpolation='nearest', extent=extent,
-                cmap=cmap, norm=norm)
-axs[3].contour(Z, levels, colors='k', origin='image', extent=extent)
-ylim = axs[3].get_ylim()
-axs[3].set_ylim(ylim[::-1])
-axs[3].set_title("Origin from rc, reversed y-axis")
-fig.colorbar(im, ax=axs[3])
-fig.tight_layout()
-plt.show()
-```
-
-<img src="05-scientific_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
-
-
-
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
-
-```python
-# https://matplotlib.org/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py
-import numpy as np
-from numpy import ma
-import matplotlib.pyplot as plt
-
-x = np.arange(1, 7, 0.4)
-y0 = np.sin(x)
-y = y0.copy() + 2.5
-
-plt.step(x, y, label='pre (default)')
-
-y -= 0.5
-plt.step(x, y, where='mid', label='mid')
-
-y -= 0.5
-plt.step(x, y, where='post', label='post')
-
-y = ma.masked_where((y0 > -0.15) & (y0 < 0.15), y - 0.5)
-plt.step(x, y, label='masked (pre)')
-
-plt.legend()
-
-plt.xlim(0, 7)
-plt.ylim(-0.5, 4)
-plt.show()
-```
-
-<img src="05-scientific_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
@@ -558,9 +321,10 @@ plt.subplots_adjust(hspace=0.5)
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+<img src="05-scientific_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
+## Triangulation and Delauney maps
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
@@ -569,7 +333,6 @@ from matplotlib.tri import Triangulation, TriAnalyzer, UniformTriRefiner
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import numpy as np
-
 
 #-----------------------------------------------------------------------------
 # Analytical test function
@@ -621,7 +384,6 @@ masked_tri = random_gen.randint(0, ntri, int(ntri * init_mask_frac))
 mask_init[masked_tri] = True
 tri.set_mask(mask_init)
 
-
 #-----------------------------------------------------------------------------
 # Improving the triangulation before high-res plots: removing flat triangles
 #-----------------------------------------------------------------------------
@@ -640,7 +402,6 @@ z_expected = experiment_res(tri_refi.x, tri_refi.y)
 flat_tri = Triangulation(x_test, y_test)
 flat_tri.set_mask(~mask)
 
-
 #-----------------------------------------------------------------------------
 # Now the plots
 #-----------------------------------------------------------------------------
@@ -649,7 +410,6 @@ plot_tri = True          # plot of base triangulation
 plot_masked_tri = True   # plot of excessively flat excluded triangles
 plot_refi_tri = False    # plot of refined triangulation
 plot_expected = False    # plot of analytical function values for comparison
-
 
 # Graphical options for tricontouring
 levels = np.arange(0., 1., 0.025)
@@ -679,7 +439,7 @@ if plot_masked_tri:
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-12-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+<img src="05-scientific_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
@@ -741,48 +501,11 @@ fig.tight_layout()
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-13-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+<img src="05-scientific_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
-
-```python
-# https://matplotlib.org/gallery/subplots_axes_and_figures/axhspan_demo.html#sphx-glr-gallery-subplots-axes-and-figures-axhspan-demo-py
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-t = np.arange(-1, 2, .01)
-s = np.sin(2 * np.pi * t)
-
-plt.plot(t, s)
-# Draw a thick red hline at y=0 that spans the xrange
-plt.axhline(linewidth=8, color='#d62728')
-
-# Draw a default hline at y=1 that spans the xrange
-plt.axhline(y=1)
-
-# Draw a default vline at x=1 that spans the yrange
-plt.axvline(x=1)
-
-# Draw a thick blue vline at x=0 that spans the upper quadrant of the yrange
-plt.axvline(x=0, ymin=0.75, linewidth=8, color='#1f77b4')
-
-# Draw a default hline at y=.5 that spans the middle half of the axes
-plt.axhline(y=.5, xmin=0.25, xmax=0.75)
-
-plt.axhspan(0.25, 0.75, facecolor='0.5', alpha=0.5)
-
-plt.axvspan(1.25, 1.55, facecolor='#2ca02c', alpha=0.5)
-
-plt.axis([-1, 2, -1, 2])
-plt.show()
-```
-
-<img src="05-scientific_files/figure-html/unnamed-chunk-14-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 ## Contour maps
-
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
@@ -809,91 +532,8 @@ plt.yticks(())
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-15-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+<img src="05-scientific_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
-
-
-
-
-
-
-
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
-
-```python
-from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-fig = plt.figure()
-ax = fig.gca(projection='3d')
-
-# Plot a sin curve using the x and y axes.
-x = np.linspace(0, 1, 100)
-y = np.sin(x * 2 * np.pi) / 2 + 0.5
-ax.plot(x, y, zs=0, zdir='z', label='curve in (x,y)')
-
-# Plot scatterplot data (20 2D points per colour) on the x and z axes.
-colors = ('r', 'g', 'b', 'k')
-
-# Fixing random state for reproducibility
-np.random.seed(19680801)
-
-x = np.random.sample(20 * len(colors))
-y = np.random.sample(20 * len(colors))
-c_list = []
-for c in colors:
-    c_list.extend([c] * 20)
-# By using zdir='y', the y value of these points is fixed to the zs value 0
-# and the (x,y) points are plotted on the x and z axes.
-ax.scatter(x, y, zs=0, zdir='y', c=c_list, label='points in (x,z)')
-
-# Make legend, set axes limits and labels
-ax.legend()
-ax.set_xlim(0, 1)
-ax.set_ylim(0, 1)
-ax.set_zlim(0, 1)
-ax.set_xlabel('X')
-ax.set_ylabel('Y')
-ax.set_zlabel('Z')
-
-# Customize the view angle so it's easier to see that the scatter points lie
-# on the plane y=0
-ax.view_init(elev=20., azim=-35)
-
-plt.show()
-```
-
-<img src="05-scientific_files/figure-html/unnamed-chunk-16-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
-
-
-
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
-
-```python
-from mpl_toolkits.mplot3d import axes3d
-import matplotlib.pyplot as plt
-from matplotlib import cm
-
-fig = plt.figure()
-ax = fig.gca(projection='3d')
-X, Y, Z = axes3d.get_test_data(0.05)
-ax.plot_surface(X, Y, Z, rstride=8, cstride=8, alpha=0.3)
-cset = ax.contourf(X, Y, Z, zdir='z', offset=-100, cmap=cm.coolwarm)
-cset = ax.contourf(X, Y, Z, zdir='x', offset=-40, cmap=cm.coolwarm)
-cset = ax.contourf(X, Y, Z, zdir='y', offset=40, cmap=cm.coolwarm)
-
-ax.set_xlabel('X')
-ax.set_xlim(-40, 40)
-ax.set_ylabel('Y')
-ax.set_ylim(-40, 40)
-ax.set_zlabel('Z')
-ax.set_zlim(-100, 100)
-plt.show()
-```
-
-<img src="05-scientific_files/figure-html/unnamed-chunk-17-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 ## Real time
 
@@ -931,7 +571,7 @@ fig.tight_layout()
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-18-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+<img src="05-scientific_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
 
@@ -970,5 +610,82 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="05-scientific_files/figure-html/unnamed-chunk-19-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+<img src="05-scientific_files/figure-html/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
+
+
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+
+```python
+# https://matplotlib.org/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py
+import numpy as np
+from numpy import ma
+import matplotlib.pyplot as plt
+
+x = np.arange(1, 7, 0.4)
+y0 = np.sin(x)
+y = y0.copy() + 2.5
+
+plt.step(x, y, label='pre (default)')
+
+y -= 0.5
+plt.step(x, y, where='mid', label='mid')
+
+y -= 0.5
+plt.step(x, y, where='post', label='post')
+
+y = ma.masked_where((y0 > -0.15) & (y0 < 0.15), y - 0.5)
+plt.step(x, y, label='masked (pre)')
+
+plt.legend()
+
+plt.xlim(0, 7)
+plt.ylim(-0.5, 4)
+plt.show()
+```
+
+<img src="05-scientific_files/figure-html/unnamed-chunk-12-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+
+## Density plots
+
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+
+```python
+# https://blogs.umass.edu/candela/computational-physics-in-python/
+# Visualize the interference from two point sources, vectorized version.
+
+import numpy as np
+import matplotlib.pyplot as plt
+from numpy import pi,sqrt,sin
+
+wavelength = 5e-2     # wavelength (m) (this is 5cm as in Newman)
+k = 2*pi/wavelength   # wavenumber (m^-1)
+aa0 = 1.0             # amplitude of the waves (arb. units)
+separation = 20e-2    # separation of centers (m)
+side = 100e-2         # side of the square (m)
+points = 500          # number of grid points along each side
+
+# Calculate the positions of the centers of the circles
+x1 = side/2 + separation/2
+y1 = side/2
+x2 = side/2 - separation/2
+y2 = side/2
+
+# Calculate an array aas with the sum of the two waves at a grid of points
+xs = np.linspace(0,side,points)                 # row vector of x's
+ys = np.linspace(0,side,points)[:,np.newaxis]   # column vector of y's
+r1s = sqrt((xs-x1)**2+(ys-y1)**2)
+r2s = sqrt((xs-x2)**2+(ys-y2)**2)
+aas = aa0*sin(k*r1s) + aa0*sin(k*r2s)
+
+# Make the plot
+plt.figure(figsize=(9,6)) 
+plt.imshow(aas,origin='lower',extent=[0,side,0,side])
+plt.xlabel('x (m)')
+plt.ylabel('y (m)')
+# plt.gray()
+plt.colorbar()
+plt.show()
+```
+
+<img src="05-scientific_files/figure-html/interference-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>

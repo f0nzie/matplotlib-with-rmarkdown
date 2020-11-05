@@ -10,6 +10,9 @@ use_condaenv("r-python", required = TRUE)
 
 </div><br></div>
 
+## Error bands
+
+
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
@@ -32,6 +35,8 @@ plt.show()
 
 <img src="07-seaborn-simple_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
+
+## Boxplots
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
@@ -69,6 +74,7 @@ plt.show()
 <img src="07-seaborn-simple_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 
+## Facets
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
@@ -113,47 +119,6 @@ plt.show()
 
 <img src="07-seaborn-simple_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
-
-
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
-
-```python
-from __future__ import print_function, division
-
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-
-x = np.linspace(0, 10, 1000)
-plt.style.use('ggplot')
-plt.plot(x, np.sin(x), x, np.cos(x));
-plt.show()
-```
-
-<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
-
-
-
-
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
-
-```python
-# https://seaborn.pydata.org/examples/scatterplot_matrix.html
-
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-sns.set_theme(style="ticks")
-
-df = sns.load_dataset("penguins")
-sns.pairplot(df, hue="species")
-plt.show()
-```
-
-<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
-
-
-
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
@@ -175,5 +140,47 @@ sns.relplot(x="timepoint", y="signal", hue="event", style="event",
 plt.show()
 ```
 
+<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+
+## Functions
+
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+
+```python
+from __future__ import print_function, division
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+x = np.linspace(0, 10, 1000)
+plt.style.use('ggplot')
+plt.plot(x, np.sin(x), x, np.cos(x));
+plt.show()
+```
+
+<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+
+
+## Scatter plot matrix
+
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+
+```python
+# https://seaborn.pydata.org/examples/scatterplot_matrix.html
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set_theme(style="ticks")
+
+df = sns.load_dataset("penguins")
+sns.pairplot(df, hue="species")
+plt.show()
+```
+
 <img src="07-seaborn-simple_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
+
+
+
 
