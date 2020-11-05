@@ -136,11 +136,9 @@ Once the environment is loaded, then our Python code chunks will just run:
 
 ```python
 # https://github.com/bendichter/brokenaxes
-
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
-
 import matplotlib.pyplot as plt
 from brokenaxes import brokenaxes
 import numpy as np
@@ -175,8 +173,8 @@ import numpy as np
 
 fig = plt.figure(figsize=(5,5))
 bax = brokenaxes(xlims=((1, 500), (600, 10000)),
-	 ylims=((1, 500), (600, 10000)),
-		 hspace=.15, xscale='log', yscale='log')
+     ylims=((1, 500), (600, 10000)),
+         hspace=.15, xscale='log', yscale='log')
 
 x = np.logspace(0.0, 4, 100)
 bax.loglog(x, x, label='\$y=x=10\^{0}\$ to \$10\^{4}\$')
@@ -190,14 +188,14 @@ plt.show()
 ```
 ````
 
-Remember. You open a Python block in Rmarkdown with 
-```` {.markdown}
+Remember. You open a Python block in Rmarkdown with
+
+``` {.markdown}
  ```{python}
-````
+```
 
 and close it with:
+
 ```` {.markdown}
 ```
 ````
-
-

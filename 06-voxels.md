@@ -1,6 +1,5 @@
 # Voxels
 
-
 <div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i>  <b>R</b></span>
 
 ```r
@@ -44,14 +43,12 @@ rc, thetac, zc = midpoints(r), midpoints(theta), midpoints(z)
 
 # define a wobbly torus about [0.7, *, 0]
 sphere = (rc - 0.7)**2 + (zc + 0.2*np.cos(thetac*2))**2 < 0.2**2
-
 # combine the color components
 hsv = np.zeros(sphere.shape + (3,))
 hsv[..., 0] = thetac / (np.pi*2)
 hsv[..., 1] = rc
 hsv[..., 2] = zc + 0.5
 colors = matplotlib.colors.hsv_to_rgb(hsv)
-
 # and plot everything
 fig = plt.figure()
 ax = fig.gca(projection='3d')
@@ -88,16 +85,13 @@ r, g, b = np.indices((17, 17, 17)) / 16.0
 rc = midpoints(r)
 gc = midpoints(g)
 bc = midpoints(b)
-
 # define a sphere about [0.5, 0.5, 0.5]
 sphere = (rc - 0.5)**2 + (gc - 0.5)**2 + (bc - 0.5)**2 < 0.5**2
-
 # combine the color components
 colors = np.zeros(sphere.shape + (3,))
 colors[..., 0] = rc
 colors[..., 1] = gc
 colors[..., 2] = bc
-
 # and plot everything
 fig = plt.figure()
 ax = fig.gca(projection='3d')
@@ -119,13 +113,10 @@ plt.show()
 
 ```python
 # https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/voxels.py
-
 import matplotlib.pyplot as plt
 import numpy as np
-
 # This import registers the 3D projection, but is otherwise unused.
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
-
 
 # prepare some coordinates
 x, y, z = np.indices((8, 8, 8))
@@ -158,7 +149,6 @@ plt.show()
 
 ```python
 # https://stackoverflow.com/a/49281004/5270873
-
 from mpl_toolkits.mplot3d import Axes3D
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 import numpy as np

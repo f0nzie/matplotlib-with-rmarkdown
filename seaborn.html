@@ -33,6 +33,7 @@
   
 <link rel="prev" href="voxels.html"/>
 <link rel="next" href="advanced.html"/>
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,24 +51,22 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -88,9 +87,9 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-le
 div.sourceCode
   { color: #1f1c1b; background-color: #ffffff; }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span. { color: #1f1c1b; } /* Normal */
+code span { color: #1f1c1b; } /* Normal */
 code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
 code span.an { color: #ca60ca; } /* Annotation */
 code span.at { color: #0057ae; } /* Attribute */
@@ -141,24 +140,29 @@ code span.wa { color: #bf0303; } /* Warning */
 <li><a href="./">Matplotlib with Rmarkdown</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#method"><i class="fa fa-check"></i>Method</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#method"><i class="fa fa-check"></i>Method</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#r-engine"><i class="fa fa-check"></i>R engine</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#bash-engine"><i class="fa fa-check"></i>Bash engine</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#python-engine"><i class="fa fa-check"></i>Python engine</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#hello-world"><i class="fa fa-check"></i><b>1.1</b> “Hello world”</a></li>
 <li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#the-parts-of-a-plot"><i class="fa fa-check"></i><b>1.2</b> The parts of a plot</a></li>
 <li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#can-do-business-plots-too"><i class="fa fa-check"></i><b>1.3</b> Can do business plots too</a></li>
 <li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#and-real-time"><i class="fa fa-check"></i><b>1.4</b> And real time</a></li>
 <li class="chapter" data-level="1.5" data-path="introduction.html"><a href="introduction.html#and-also-3d"><i class="fa fa-check"></i><b>1.5</b> And also 3D</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="python-environments.html"><a href="python-environments.html"><i class="fa fa-check"></i><b>2</b> Python environments</a><ul>
+<li class="chapter" data-level="2" data-path="python-environments.html"><a href="python-environments.html"><i class="fa fa-check"></i><b>2</b> Python environments</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="python-environments.html"><a href="python-environments.html#why-virtual-environments"><i class="fa fa-check"></i><b>2.1</b> Why virtual environments?</a></li>
 <li class="chapter" data-level="2.2" data-path="python-environments.html"><a href="python-environments.html#python-virtual-environment-and-r"><i class="fa fa-check"></i><b>2.2</b> Python virtual environment and R</a></li>
-<li class="chapter" data-level="2.3" data-path="python-environments.html"><a href="python-environments.html#conda-environments"><i class="fa fa-check"></i><b>2.3</b> conda environments</a><ul>
+<li class="chapter" data-level="2.3" data-path="python-environments.html"><a href="python-environments.html#conda-environments"><i class="fa fa-check"></i><b>2.3</b> conda environments</a>
+<ul>
 <li class="chapter" data-level="2.3.1" data-path="python-environments.html"><a href="python-environments.html#environment-with-python-version-specified"><i class="fa fa-check"></i><b>2.3.1</b> environment with Python version specified</a></li>
 <li class="chapter" data-level="2.3.2" data-path="python-environments.html"><a href="python-environments.html#specify-python-version-and-list-package-names"><i class="fa fa-check"></i><b>2.3.2</b> specify Python version and list package names</a></li>
 <li class="chapter" data-level="2.3.3" data-path="python-environments.html"><a href="python-environments.html#specify-python-version-and-version-for-the-packages"><i class="fa fa-check"></i><b>2.3.3</b> specify Python version and version for the packages</a></li>
@@ -166,11 +170,13 @@ code span.wa { color: #bf0303; } /* Warning */
 <li class="chapter" data-level="2.4" data-path="python-environments.html"><a href="python-environments.html#running-python-from-r"><i class="fa fa-check"></i><b>2.4</b> Running Python from R</a></li>
 <li class="chapter" data-level="2.5" data-path="python-environments.html"><a href="python-environments.html#a-plot-demo"><i class="fa fa-check"></i><b>2.5</b> A plot demo</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="sharing-data-objects.html"><a href="sharing-data-objects.html"><i class="fa fa-check"></i><b>3</b> Sharing data objects</a><ul>
+<li class="chapter" data-level="3" data-path="sharing-data-objects.html"><a href="sharing-data-objects.html"><i class="fa fa-check"></i><b>3</b> Sharing data objects</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="sharing-data-objects.html"><a href="sharing-data-objects.html#from-r-to-python-back-to-r"><i class="fa fa-check"></i><b>3.1</b> From R to Python, back to R</a></li>
 <li class="chapter" data-level="3.2" data-path="sharing-data-objects.html"><a href="sharing-data-objects.html#from-python-to-r-back-to-python"><i class="fa fa-check"></i><b>3.2</b> From Python to R, back to Python</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="math.html"><a href="math.html"><i class="fa fa-check"></i><b>4</b> Math</a><ul>
+<li class="chapter" data-level="4" data-path="math.html"><a href="math.html"><i class="fa fa-check"></i><b>4</b> Math</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="math.html"><a href="math.html#functions"><i class="fa fa-check"></i><b>4.1</b> Functions</a></li>
 <li class="chapter" data-level="4.2" data-path="math.html"><a href="math.html#functions-with-latex-labels"><i class="fa fa-check"></i><b>4.2</b> Functions with Latex labels</a></li>
 <li class="chapter" data-level="4.3" data-path="math.html"><a href="math.html#multiple-functions-in-the-same-plot"><i class="fa fa-check"></i><b>4.3</b> Multiple functions in the same plot</a></li>
@@ -180,7 +186,8 @@ code span.wa { color: #bf0303; } /* Warning */
 <li class="chapter" data-level="4.7" data-path="math.html"><a href="math.html#d-contour-plot"><i class="fa fa-check"></i><b>4.7</b> 3D contour plot</a></li>
 <li class="chapter" data-level="4.8" data-path="math.html"><a href="math.html#machine-learning"><i class="fa fa-check"></i><b>4.8</b> Machine Learning</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="scientific.html"><a href="scientific.html"><i class="fa fa-check"></i><b>5</b> Scientific</a><ul>
+<li class="chapter" data-level="5" data-path="scientific.html"><a href="scientific.html"><i class="fa fa-check"></i><b>5</b> Scientific</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="scientific.html"><a href="scientific.html#solving-laplace"><i class="fa fa-check"></i><b>5.1</b> Solving Laplace</a></li>
 <li class="chapter" data-level="5.2" data-path="scientific.html"><a href="scientific.html#eigenvalue-problems"><i class="fa fa-check"></i><b>5.2</b> Eigenvalue problems</a></li>
 <li class="chapter" data-level="5.3" data-path="scientific.html"><a href="scientific.html#computational-physics"><i class="fa fa-check"></i><b>5.3</b> Computational Physics</a></li>
@@ -189,7 +196,8 @@ code span.wa { color: #bf0303; } /* Warning */
 <li class="chapter" data-level="5.6" data-path="scientific.html"><a href="scientific.html#real-time"><i class="fa fa-check"></i><b>5.6</b> Real time</a></li>
 <li class="chapter" data-level="5.7" data-path="scientific.html"><a href="scientific.html#density-plots"><i class="fa fa-check"></i><b>5.7</b> Density plots</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="voxels.html"><a href="voxels.html"><i class="fa fa-check"></i><b>6</b> Voxels</a><ul>
+<li class="chapter" data-level="6" data-path="voxels.html"><a href="voxels.html"><i class="fa fa-check"></i><b>6</b> Voxels</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="voxels.html"><a href="voxels.html#radial"><i class="fa fa-check"></i><b>6.1</b> Radial</a></li>
 <li class="chapter" data-level="6.2" data-path="voxels.html"><a href="voxels.html#spherical"><i class="fa fa-check"></i><b>6.2</b> Spherical</a></li>
 <li class="chapter" data-level="6.3" data-path="voxels.html"><a href="voxels.html#solid-cubes"><i class="fa fa-check"></i><b>6.3</b> Solid cubes</a></li>
@@ -197,26 +205,31 @@ code span.wa { color: #bf0303; } /* Warning */
 <li class="chapter" data-level="6.5" data-path="voxels.html"><a href="voxels.html#semi-transparent"><i class="fa fa-check"></i><b>6.5</b> Semi-transparent</a></li>
 <li class="chapter" data-level="6.6" data-path="voxels.html"><a href="voxels.html#opaque-cubicles"><i class="fa fa-check"></i><b>6.6</b> Opaque cubicles</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="seaborn.html"><a href="seaborn.html"><i class="fa fa-check"></i><b>7</b> Seaborn</a><ul>
+<li class="chapter" data-level="7" data-path="seaborn.html"><a href="seaborn.html"><i class="fa fa-check"></i><b>7</b> Seaborn</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="seaborn.html"><a href="seaborn.html#error-bands"><i class="fa fa-check"></i><b>7.1</b> Error bands</a></li>
 <li class="chapter" data-level="7.2" data-path="seaborn.html"><a href="seaborn.html#boxplots"><i class="fa fa-check"></i><b>7.2</b> Boxplots</a></li>
 <li class="chapter" data-level="7.3" data-path="seaborn.html"><a href="seaborn.html#facets"><i class="fa fa-check"></i><b>7.3</b> Facets</a></li>
 <li class="chapter" data-level="7.4" data-path="seaborn.html"><a href="seaborn.html#functions-1"><i class="fa fa-check"></i><b>7.4</b> Functions</a></li>
 <li class="chapter" data-level="7.5" data-path="seaborn.html"><a href="seaborn.html#scatter-plot-matrix"><i class="fa fa-check"></i><b>7.5</b> Scatter plot matrix</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="advanced.html"><a href="advanced.html"><i class="fa fa-check"></i><b>8</b> Advanced</a><ul>
+<li class="chapter" data-level="8" data-path="advanced.html"><a href="advanced.html"><i class="fa fa-check"></i><b>8</b> Advanced</a>
+<ul>
 <li class="chapter" data-level="8.1" data-path="advanced.html"><a href="advanced.html#adding-labels"><i class="fa fa-check"></i><b>8.1</b> Adding labels</a></li>
 <li class="chapter" data-level="8.2" data-path="advanced.html"><a href="advanced.html#subplots"><i class="fa fa-check"></i><b>8.2</b> Subplots</a></li>
 <li class="chapter" data-level="8.3" data-path="advanced.html"><a href="advanced.html#change-of-axes"><i class="fa fa-check"></i><b>8.3</b> Change of axes</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html"><i class="fa fa-check"></i><b>9</b> Beyond <code>matplotlib</code></a><ul>
-<li class="chapter" data-level="9.1" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#brokenaxis"><i class="fa fa-check"></i><b>9.1</b> <code>brokenaxis</code></a><ul>
+<li class="chapter" data-level="9" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html"><i class="fa fa-check"></i><b>9</b> Beyond <code>matplotlib</code></a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#brokenaxis"><i class="fa fa-check"></i><b>9.1</b> <code>brokenaxis</code></a>
+<ul>
 <li class="chapter" data-level="9.1.1" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#usage"><i class="fa fa-check"></i><b>9.1.1</b> Usage</a></li>
 <li class="chapter" data-level="9.1.2" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#subplots-1"><i class="fa fa-check"></i><b>9.1.2</b> Subplots</a></li>
 <li class="chapter" data-level="9.1.3" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#log-scales"><i class="fa fa-check"></i><b>9.1.3</b> Log scales</a></li>
 <li class="chapter" data-level="9.1.4" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#different-scales"><i class="fa fa-check"></i><b>9.1.4</b> Different scales</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#yellowbrick"><i class="fa fa-check"></i><b>9.2</b> <code>yellowbrick</code></a><ul>
+<li class="chapter" data-level="9.2" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#yellowbrick"><i class="fa fa-check"></i><b>9.2</b> <code>yellowbrick</code></a>
+<ul>
 <li class="chapter" data-level="9.2.1" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#pearson-correlation"><i class="fa fa-check"></i><b>9.2.1</b> Pearson correlation</a></li>
 <li class="chapter" data-level="9.2.2" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#scatter-diagram"><i class="fa fa-check"></i><b>9.2.2</b> Scatter diagram</a></li>
 <li class="chapter" data-level="9.2.3" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#residuals-plot"><i class="fa fa-check"></i><b>9.2.3</b> Residuals plot</a></li>
@@ -244,184 +257,176 @@ code span.wa { color: #bf0303; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="seaborn" class="section level1">
+<div id="seaborn" class="section level1" number="7">
 <h1><span class="header-section-number">Ch. 7</span> Seaborn</h1>
 <div class="decocode">
 <div style="background-color:#4C78DB">
 <p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i> <b>R</b></span></p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="seaborn.html#cb66-1"></a><span class="kw">library</span>(reticulate)</span>
-<span id="cb66-2"><a href="seaborn.html#cb66-2"></a><span class="kw">use_condaenv</span>(<span class="st">&quot;r-python&quot;</span>, <span class="dt">required =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="seaborn.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb66-2"><a href="seaborn.html#cb66-2" aria-hidden="true" tabindex="-1"></a><span class="fu">use_condaenv</span>(<span class="st">&quot;r-python&quot;</span>, <span class="at">required =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 </div>
 <br>
 </div>
-<div id="error-bands" class="section level2">
+<div id="error-bands" class="section level2" number="7.1">
 <h2><span class="header-section-number">7.1</span> Error bands</h2>
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a href="seaborn.html#cb67-1"></a><span class="co"># https://seaborn.pydata.org/examples/errorband_lineplots.html</span></span>
-<span id="cb67-2"><a href="seaborn.html#cb67-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb67-3"><a href="seaborn.html#cb67-3"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb67-4"><a href="seaborn.html#cb67-4"></a></span>
-<span id="cb67-5"><a href="seaborn.html#cb67-5"></a>sns.set_theme(style<span class="op">=</span><span class="st">&quot;darkgrid&quot;</span>)</span>
-<span id="cb67-6"><a href="seaborn.html#cb67-6"></a></span>
-<span id="cb67-7"><a href="seaborn.html#cb67-7"></a><span class="co"># Load an example dataset with long-form data</span></span>
-<span id="cb67-8"><a href="seaborn.html#cb67-8"></a>fmri <span class="op">=</span> sns.load_dataset(<span class="st">&quot;fmri&quot;</span>)</span>
-<span id="cb67-9"><a href="seaborn.html#cb67-9"></a></span>
-<span id="cb67-10"><a href="seaborn.html#cb67-10"></a><span class="co"># Plot the responses for different events and regions</span></span>
-<span id="cb67-11"><a href="seaborn.html#cb67-11"></a>sns.lineplot(x<span class="op">=</span><span class="st">&quot;timepoint&quot;</span>, y<span class="op">=</span><span class="st">&quot;signal&quot;</span>,</span>
-<span id="cb67-12"><a href="seaborn.html#cb67-12"></a>             hue<span class="op">=</span><span class="st">&quot;region&quot;</span>, style<span class="op">=</span><span class="st">&quot;event&quot;</span>,</span>
-<span id="cb67-13"><a href="seaborn.html#cb67-13"></a>             data<span class="op">=</span>fmri)</span>
-<span id="cb67-14"><a href="seaborn.html#cb67-14"></a></span>
-<span id="cb67-15"><a href="seaborn.html#cb67-15"></a>plt.show()</span></code></pre></div>
-<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" />
+<div class="sourceCode" id="cb67"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a href="seaborn.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://seaborn.pydata.org/examples/errorband_lineplots.html</span></span>
+<span id="cb67-2"><a href="seaborn.html#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb67-3"><a href="seaborn.html#cb67-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb67-4"><a href="seaborn.html#cb67-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-5"><a href="seaborn.html#cb67-5" aria-hidden="true" tabindex="-1"></a>sns.set_theme(style<span class="op">=</span><span class="st">&quot;darkgrid&quot;</span>)</span>
+<span id="cb67-6"><a href="seaborn.html#cb67-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-7"><a href="seaborn.html#cb67-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Load an example dataset with long-form data</span></span>
+<span id="cb67-8"><a href="seaborn.html#cb67-8" aria-hidden="true" tabindex="-1"></a>fmri <span class="op">=</span> sns.load_dataset(<span class="st">&quot;fmri&quot;</span>)</span>
+<span id="cb67-9"><a href="seaborn.html#cb67-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-10"><a href="seaborn.html#cb67-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the responses for different events and regions</span></span>
+<span id="cb67-11"><a href="seaborn.html#cb67-11" aria-hidden="true" tabindex="-1"></a>sns.lineplot(x<span class="op">=</span><span class="st">&quot;timepoint&quot;</span>, y<span class="op">=</span><span class="st">&quot;signal&quot;</span>,</span>
+<span id="cb67-12"><a href="seaborn.html#cb67-12" aria-hidden="true" tabindex="-1"></a>             hue<span class="op">=</span><span class="st">&quot;region&quot;</span>, style<span class="op">=</span><span class="st">&quot;event&quot;</span>,</span>
+<span id="cb67-13"><a href="seaborn.html#cb67-13" aria-hidden="true" tabindex="-1"></a>             data<span class="op">=</span>fmri)</span>
+<span id="cb67-14"><a href="seaborn.html#cb67-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<img src="07-seaborn_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" />
 </div>
 <br>
 </div>
 </div>
-<div id="boxplots" class="section level2">
+<div id="boxplots" class="section level2" number="7.2">
 <h2><span class="header-section-number">7.2</span> Boxplots</h2>
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb68"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb68-1"><a href="seaborn.html#cb68-1"></a><span class="co"># https://seaborn.pydata.org/examples/horizontal_boxplot.html</span></span>
-<span id="cb68-2"><a href="seaborn.html#cb68-2"></a></span>
-<span id="cb68-3"><a href="seaborn.html#cb68-3"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb68-4"><a href="seaborn.html#cb68-4"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb68-5"><a href="seaborn.html#cb68-5"></a></span>
-<span id="cb68-6"><a href="seaborn.html#cb68-6"></a>sns.set_theme(style<span class="op">=</span><span class="st">&quot;ticks&quot;</span>)</span>
-<span id="cb68-7"><a href="seaborn.html#cb68-7"></a></span>
-<span id="cb68-8"><a href="seaborn.html#cb68-8"></a><span class="co"># Initialize the figure with a logarithmic x axis</span></span>
-<span id="cb68-9"><a href="seaborn.html#cb68-9"></a>f, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">7</span>, <span class="dv">6</span>))</span>
-<span id="cb68-10"><a href="seaborn.html#cb68-10"></a>ax.set_xscale(<span class="st">&quot;log&quot;</span>)</span>
-<span id="cb68-11"><a href="seaborn.html#cb68-11"></a></span>
-<span id="cb68-12"><a href="seaborn.html#cb68-12"></a><span class="co"># Load the example planets dataset</span></span>
-<span id="cb68-13"><a href="seaborn.html#cb68-13"></a>planets <span class="op">=</span> sns.load_dataset(<span class="st">&quot;planets&quot;</span>)</span>
-<span id="cb68-14"><a href="seaborn.html#cb68-14"></a></span>
-<span id="cb68-15"><a href="seaborn.html#cb68-15"></a><span class="co"># Plot the orbital period with horizontal boxes</span></span>
-<span id="cb68-16"><a href="seaborn.html#cb68-16"></a>sns.boxplot(x<span class="op">=</span><span class="st">&quot;distance&quot;</span>, y<span class="op">=</span><span class="st">&quot;method&quot;</span>, data<span class="op">=</span>planets,</span>
-<span id="cb68-17"><a href="seaborn.html#cb68-17"></a>            whis<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">100</span>], width<span class="op">=</span>.<span class="dv">6</span>, palette<span class="op">=</span><span class="st">&quot;vlag&quot;</span>)</span>
-<span id="cb68-18"><a href="seaborn.html#cb68-18"></a></span>
-<span id="cb68-19"><a href="seaborn.html#cb68-19"></a><span class="co"># Add in points to show each observation</span></span>
-<span id="cb68-20"><a href="seaborn.html#cb68-20"></a>sns.stripplot(x<span class="op">=</span><span class="st">&quot;distance&quot;</span>, y<span class="op">=</span><span class="st">&quot;method&quot;</span>, data<span class="op">=</span>planets,</span>
-<span id="cb68-21"><a href="seaborn.html#cb68-21"></a>              size<span class="op">=</span><span class="dv">4</span>, color<span class="op">=</span><span class="st">&quot;.3&quot;</span>, linewidth<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb68-22"><a href="seaborn.html#cb68-22"></a></span>
-<span id="cb68-23"><a href="seaborn.html#cb68-23"></a><span class="co"># Tweak the visual presentation</span></span>
-<span id="cb68-24"><a href="seaborn.html#cb68-24"></a>ax.xaxis.grid(<span class="va">True</span>)</span>
-<span id="cb68-25"><a href="seaborn.html#cb68-25"></a>ax.<span class="bu">set</span>(ylabel<span class="op">=</span><span class="st">&quot;&quot;</span>)</span>
-<span id="cb68-26"><a href="seaborn.html#cb68-26"></a>sns.despine(trim<span class="op">=</span><span class="va">True</span>, left<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb68-27"><a href="seaborn.html#cb68-27"></a></span>
-<span id="cb68-28"><a href="seaborn.html#cb68-28"></a>plt.show()</span></code></pre></div>
-<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" />
+<div class="sourceCode" id="cb68"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb68-1"><a href="seaborn.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://seaborn.pydata.org/examples/horizontal_boxplot.html</span></span>
+<span id="cb68-2"><a href="seaborn.html#cb68-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb68-3"><a href="seaborn.html#cb68-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb68-4"><a href="seaborn.html#cb68-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-5"><a href="seaborn.html#cb68-5" aria-hidden="true" tabindex="-1"></a>sns.set_theme(style<span class="op">=</span><span class="st">&quot;ticks&quot;</span>)</span>
+<span id="cb68-6"><a href="seaborn.html#cb68-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-7"><a href="seaborn.html#cb68-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize the figure with a logarithmic x axis</span></span>
+<span id="cb68-8"><a href="seaborn.html#cb68-8" aria-hidden="true" tabindex="-1"></a>f, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">7</span>, <span class="dv">6</span>))</span>
+<span id="cb68-9"><a href="seaborn.html#cb68-9" aria-hidden="true" tabindex="-1"></a>ax.set_xscale(<span class="st">&quot;log&quot;</span>)</span>
+<span id="cb68-10"><a href="seaborn.html#cb68-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-11"><a href="seaborn.html#cb68-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the example planets dataset</span></span>
+<span id="cb68-12"><a href="seaborn.html#cb68-12" aria-hidden="true" tabindex="-1"></a>planets <span class="op">=</span> sns.load_dataset(<span class="st">&quot;planets&quot;</span>)</span>
+<span id="cb68-13"><a href="seaborn.html#cb68-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the orbital period with horizontal boxes</span></span>
+<span id="cb68-14"><a href="seaborn.html#cb68-14" aria-hidden="true" tabindex="-1"></a>sns.boxplot(x<span class="op">=</span><span class="st">&quot;distance&quot;</span>, y<span class="op">=</span><span class="st">&quot;method&quot;</span>, data<span class="op">=</span>planets,</span>
+<span id="cb68-15"><a href="seaborn.html#cb68-15" aria-hidden="true" tabindex="-1"></a>            whis<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">100</span>], width<span class="op">=</span><span class="fl">.6</span>, palette<span class="op">=</span><span class="st">&quot;vlag&quot;</span>)</span>
+<span id="cb68-16"><a href="seaborn.html#cb68-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Add in points to show each observation</span></span>
+<span id="cb68-17"><a href="seaborn.html#cb68-17" aria-hidden="true" tabindex="-1"></a>sns.stripplot(x<span class="op">=</span><span class="st">&quot;distance&quot;</span>, y<span class="op">=</span><span class="st">&quot;method&quot;</span>, data<span class="op">=</span>planets,</span>
+<span id="cb68-18"><a href="seaborn.html#cb68-18" aria-hidden="true" tabindex="-1"></a>              size<span class="op">=</span><span class="dv">4</span>, color<span class="op">=</span><span class="st">&quot;.3&quot;</span>, linewidth<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb68-19"><a href="seaborn.html#cb68-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Tweak the visual presentation</span></span>
+<span id="cb68-20"><a href="seaborn.html#cb68-20" aria-hidden="true" tabindex="-1"></a>ax.xaxis.grid(<span class="va">True</span>)</span>
+<span id="cb68-21"><a href="seaborn.html#cb68-21" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(ylabel<span class="op">=</span><span class="st">&quot;&quot;</span>)</span>
+<span id="cb68-22"><a href="seaborn.html#cb68-22" aria-hidden="true" tabindex="-1"></a>sns.despine(trim<span class="op">=</span><span class="va">True</span>, left<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb68-23"><a href="seaborn.html#cb68-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-24"><a href="seaborn.html#cb68-24" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<img src="07-seaborn_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" />
 </div>
 <br>
 </div>
 </div>
-<div id="facets" class="section level2">
+<div id="facets" class="section level2" number="7.3">
 <h2><span class="header-section-number">7.3</span> Facets</h2>
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="seaborn.html#cb69-1"></a><span class="co"># https://seaborn.pydata.org/examples/timeseries_facets.html</span></span>
-<span id="cb69-2"><a href="seaborn.html#cb69-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb69-3"><a href="seaborn.html#cb69-3"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb69-4"><a href="seaborn.html#cb69-4"></a></span>
-<span id="cb69-5"><a href="seaborn.html#cb69-5"></a>sns.set_theme(style<span class="op">=</span><span class="st">&quot;dark&quot;</span>)</span>
-<span id="cb69-6"><a href="seaborn.html#cb69-6"></a>flights <span class="op">=</span> sns.load_dataset(<span class="st">&quot;flights&quot;</span>)</span>
-<span id="cb69-7"><a href="seaborn.html#cb69-7"></a></span>
-<span id="cb69-8"><a href="seaborn.html#cb69-8"></a><span class="co"># Plot each year&#39;s time series in its own facet</span></span>
-<span id="cb69-9"><a href="seaborn.html#cb69-9"></a>g <span class="op">=</span> sns.relplot(</span>
-<span id="cb69-10"><a href="seaborn.html#cb69-10"></a>    data<span class="op">=</span>flights,</span>
-<span id="cb69-11"><a href="seaborn.html#cb69-11"></a>    x<span class="op">=</span><span class="st">&quot;month&quot;</span>, y<span class="op">=</span><span class="st">&quot;passengers&quot;</span>, col<span class="op">=</span><span class="st">&quot;year&quot;</span>, hue<span class="op">=</span><span class="st">&quot;year&quot;</span>,</span>
-<span id="cb69-12"><a href="seaborn.html#cb69-12"></a>    kind<span class="op">=</span><span class="st">&quot;line&quot;</span>, palette<span class="op">=</span><span class="st">&quot;crest&quot;</span>, linewidth<span class="op">=</span><span class="dv">4</span>, zorder<span class="op">=</span><span class="dv">5</span>,</span>
-<span id="cb69-13"><a href="seaborn.html#cb69-13"></a>    col_wrap<span class="op">=</span><span class="dv">3</span>, height<span class="op">=</span><span class="dv">2</span>, aspect<span class="op">=</span><span class="fl">1.5</span>, legend<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb69-14"><a href="seaborn.html#cb69-14"></a>)</span>
-<span id="cb69-15"><a href="seaborn.html#cb69-15"></a></span>
-<span id="cb69-16"><a href="seaborn.html#cb69-16"></a><span class="co"># Iterate over each subplot to customize further</span></span>
-<span id="cb69-17"><a href="seaborn.html#cb69-17"></a><span class="cf">for</span> year, ax <span class="kw">in</span> g.axes_dict.items():</span>
-<span id="cb69-18"><a href="seaborn.html#cb69-18"></a></span>
-<span id="cb69-19"><a href="seaborn.html#cb69-19"></a>    <span class="co"># Add the title as an annotation within the plot</span></span>
-<span id="cb69-20"><a href="seaborn.html#cb69-20"></a>    ax.text(.<span class="dv">8</span>, <span class="fl">.85</span>, year, transform<span class="op">=</span>ax.transAxes, fontweight<span class="op">=</span><span class="st">&quot;bold&quot;</span>)</span>
-<span id="cb69-21"><a href="seaborn.html#cb69-21"></a></span>
-<span id="cb69-22"><a href="seaborn.html#cb69-22"></a>    <span class="co"># Plot every year&#39;s time series in the background</span></span>
-<span id="cb69-23"><a href="seaborn.html#cb69-23"></a>    sns.lineplot(</span>
-<span id="cb69-24"><a href="seaborn.html#cb69-24"></a>        data<span class="op">=</span>flights, x<span class="op">=</span><span class="st">&quot;month&quot;</span>, y<span class="op">=</span><span class="st">&quot;passengers&quot;</span>, units<span class="op">=</span><span class="st">&quot;year&quot;</span>,</span>
-<span id="cb69-25"><a href="seaborn.html#cb69-25"></a>        estimator<span class="op">=</span><span class="va">None</span>, color<span class="op">=</span><span class="st">&quot;.7&quot;</span>, linewidth<span class="op">=</span><span class="dv">1</span>, ax<span class="op">=</span>ax,</span>
-<span id="cb69-26"><a href="seaborn.html#cb69-26"></a>    )</span>
-<span id="cb69-27"><a href="seaborn.html#cb69-27"></a></span>
-<span id="cb69-28"><a href="seaborn.html#cb69-28"></a><span class="co"># Reduce the frequency of the x axis ticks</span></span>
-<span id="cb69-29"><a href="seaborn.html#cb69-29"></a>ax.set_xticks(ax.get_xticks()[::<span class="dv">2</span>])</span>
-<span id="cb69-30"><a href="seaborn.html#cb69-30"></a></span>
-<span id="cb69-31"><a href="seaborn.html#cb69-31"></a><span class="co"># Tweak the supporting aspects of the plot</span></span>
-<span id="cb69-32"><a href="seaborn.html#cb69-32"></a>g.set_titles(<span class="st">&quot;&quot;</span>)</span>
-<span id="cb69-33"><a href="seaborn.html#cb69-33"></a>g.set_axis_labels(<span class="st">&quot;&quot;</span>, <span class="st">&quot;Passengers&quot;</span>)</span>
-<span id="cb69-34"><a href="seaborn.html#cb69-34"></a>g.tight_layout()</span>
-<span id="cb69-35"><a href="seaborn.html#cb69-35"></a></span>
-<span id="cb69-36"><a href="seaborn.html#cb69-36"></a>plt.show()</span></code></pre></div>
-<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" />
+<div class="sourceCode" id="cb69"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="seaborn.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://seaborn.pydata.org/examples/timeseries_facets.html</span></span>
+<span id="cb69-2"><a href="seaborn.html#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb69-3"><a href="seaborn.html#cb69-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb69-4"><a href="seaborn.html#cb69-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-5"><a href="seaborn.html#cb69-5" aria-hidden="true" tabindex="-1"></a>sns.set_theme(style<span class="op">=</span><span class="st">&quot;dark&quot;</span>)</span>
+<span id="cb69-6"><a href="seaborn.html#cb69-6" aria-hidden="true" tabindex="-1"></a>flights <span class="op">=</span> sns.load_dataset(<span class="st">&quot;flights&quot;</span>)</span>
+<span id="cb69-7"><a href="seaborn.html#cb69-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-8"><a href="seaborn.html#cb69-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot each year&#39;s time series in its own facet</span></span>
+<span id="cb69-9"><a href="seaborn.html#cb69-9" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> sns.relplot(</span>
+<span id="cb69-10"><a href="seaborn.html#cb69-10" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>flights,</span>
+<span id="cb69-11"><a href="seaborn.html#cb69-11" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">&quot;month&quot;</span>, y<span class="op">=</span><span class="st">&quot;passengers&quot;</span>, col<span class="op">=</span><span class="st">&quot;year&quot;</span>, hue<span class="op">=</span><span class="st">&quot;year&quot;</span>,</span>
+<span id="cb69-12"><a href="seaborn.html#cb69-12" aria-hidden="true" tabindex="-1"></a>    kind<span class="op">=</span><span class="st">&quot;line&quot;</span>, palette<span class="op">=</span><span class="st">&quot;crest&quot;</span>, linewidth<span class="op">=</span><span class="dv">4</span>, zorder<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb69-13"><a href="seaborn.html#cb69-13" aria-hidden="true" tabindex="-1"></a>    col_wrap<span class="op">=</span><span class="dv">3</span>, height<span class="op">=</span><span class="dv">2</span>, aspect<span class="op">=</span><span class="fl">1.5</span>, legend<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb69-14"><a href="seaborn.html#cb69-14" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb69-15"><a href="seaborn.html#cb69-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-16"><a href="seaborn.html#cb69-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Iterate over each subplot to customize further</span></span>
+<span id="cb69-17"><a href="seaborn.html#cb69-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> year, ax <span class="kw">in</span> g.axes_dict.items():</span>
+<span id="cb69-18"><a href="seaborn.html#cb69-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-19"><a href="seaborn.html#cb69-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add the title as an annotation within the plot</span></span>
+<span id="cb69-20"><a href="seaborn.html#cb69-20" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="fl">.8</span>, <span class="fl">.85</span>, year, transform<span class="op">=</span>ax.transAxes, fontweight<span class="op">=</span><span class="st">&quot;bold&quot;</span>)</span>
+<span id="cb69-21"><a href="seaborn.html#cb69-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-22"><a href="seaborn.html#cb69-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Plot every year&#39;s time series in the background</span></span>
+<span id="cb69-23"><a href="seaborn.html#cb69-23" aria-hidden="true" tabindex="-1"></a>    sns.lineplot(</span>
+<span id="cb69-24"><a href="seaborn.html#cb69-24" aria-hidden="true" tabindex="-1"></a>        data<span class="op">=</span>flights, x<span class="op">=</span><span class="st">&quot;month&quot;</span>, y<span class="op">=</span><span class="st">&quot;passengers&quot;</span>, units<span class="op">=</span><span class="st">&quot;year&quot;</span>,</span>
+<span id="cb69-25"><a href="seaborn.html#cb69-25" aria-hidden="true" tabindex="-1"></a>        estimator<span class="op">=</span><span class="va">None</span>, color<span class="op">=</span><span class="st">&quot;.7&quot;</span>, linewidth<span class="op">=</span><span class="dv">1</span>, ax<span class="op">=</span>ax,</span>
+<span id="cb69-26"><a href="seaborn.html#cb69-26" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb69-27"><a href="seaborn.html#cb69-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Reduce the frequency of the x axis ticks</span></span>
+<span id="cb69-28"><a href="seaborn.html#cb69-28" aria-hidden="true" tabindex="-1"></a>ax.set_xticks(ax.get_xticks()[::<span class="dv">2</span>])</span>
+<span id="cb69-29"><a href="seaborn.html#cb69-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Tweak the supporting aspects of the plot</span></span>
+<span id="cb69-30"><a href="seaborn.html#cb69-30" aria-hidden="true" tabindex="-1"></a>g.set_titles(<span class="st">&quot;&quot;</span>)</span>
+<span id="cb69-31"><a href="seaborn.html#cb69-31" aria-hidden="true" tabindex="-1"></a>g.set_axis_labels(<span class="st">&quot;&quot;</span>, <span class="st">&quot;Passengers&quot;</span>)</span>
+<span id="cb69-32"><a href="seaborn.html#cb69-32" aria-hidden="true" tabindex="-1"></a>g.tight_layout()</span>
+<span id="cb69-33"><a href="seaborn.html#cb69-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-34"><a href="seaborn.html#cb69-34" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<img src="07-seaborn_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" />
 </div>
 <br>
 </div>
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb70"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb70-1"><a href="seaborn.html#cb70-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb70-2"><a href="seaborn.html#cb70-2"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb70-3"><a href="seaborn.html#cb70-3"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb70-4"><a href="seaborn.html#cb70-4"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb70-5"><a href="seaborn.html#cb70-5"></a></span>
-<span id="cb70-6"><a href="seaborn.html#cb70-6"></a>sns.set_theme(style<span class="op">=</span><span class="st">&quot;darkgrid&quot;</span>)</span>
-<span id="cb70-7"><a href="seaborn.html#cb70-7"></a></span>
-<span id="cb70-8"><a href="seaborn.html#cb70-8"></a>tips <span class="op">=</span> sns.load_dataset(<span class="st">&quot;tips&quot;</span>)</span>
-<span id="cb70-9"><a href="seaborn.html#cb70-9"></a>fmri <span class="op">=</span> sns.load_dataset(<span class="st">&quot;fmri&quot;</span>)</span>
-<span id="cb70-10"><a href="seaborn.html#cb70-10"></a></span>
-<span id="cb70-11"><a href="seaborn.html#cb70-11"></a>sns.relplot(x<span class="op">=</span><span class="st">&quot;timepoint&quot;</span>, y<span class="op">=</span><span class="st">&quot;signal&quot;</span>, hue<span class="op">=</span><span class="st">&quot;event&quot;</span>, style<span class="op">=</span><span class="st">&quot;event&quot;</span>,</span>
-<span id="cb70-12"><a href="seaborn.html#cb70-12"></a>            col<span class="op">=</span><span class="st">&quot;subject&quot;</span>, col_wrap<span class="op">=</span><span class="dv">5</span>,</span>
-<span id="cb70-13"><a href="seaborn.html#cb70-13"></a>            height<span class="op">=</span><span class="dv">3</span>, aspect<span class="op">=</span>.<span class="dv">75</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>,</span>
-<span id="cb70-14"><a href="seaborn.html#cb70-14"></a>            kind<span class="op">=</span><span class="st">&quot;line&quot;</span>, data<span class="op">=</span>fmri.query(<span class="st">&quot;region == &#39;frontal&#39;&quot;</span>))<span class="op">;</span></span>
-<span id="cb70-15"><a href="seaborn.html#cb70-15"></a></span>
-<span id="cb70-16"><a href="seaborn.html#cb70-16"></a>plt.show()</span></code></pre></div>
-<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
+<div class="sourceCode" id="cb70"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb70-1"><a href="seaborn.html#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb70-2"><a href="seaborn.html#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb70-3"><a href="seaborn.html#cb70-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb70-4"><a href="seaborn.html#cb70-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb70-5"><a href="seaborn.html#cb70-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-6"><a href="seaborn.html#cb70-6" aria-hidden="true" tabindex="-1"></a>sns.set_theme(style<span class="op">=</span><span class="st">&quot;darkgrid&quot;</span>)</span>
+<span id="cb70-7"><a href="seaborn.html#cb70-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-8"><a href="seaborn.html#cb70-8" aria-hidden="true" tabindex="-1"></a>tips <span class="op">=</span> sns.load_dataset(<span class="st">&quot;tips&quot;</span>)</span>
+<span id="cb70-9"><a href="seaborn.html#cb70-9" aria-hidden="true" tabindex="-1"></a>fmri <span class="op">=</span> sns.load_dataset(<span class="st">&quot;fmri&quot;</span>)</span>
+<span id="cb70-10"><a href="seaborn.html#cb70-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-11"><a href="seaborn.html#cb70-11" aria-hidden="true" tabindex="-1"></a>sns.relplot(x<span class="op">=</span><span class="st">&quot;timepoint&quot;</span>, y<span class="op">=</span><span class="st">&quot;signal&quot;</span>, hue<span class="op">=</span><span class="st">&quot;event&quot;</span>, style<span class="op">=</span><span class="st">&quot;event&quot;</span>,</span>
+<span id="cb70-12"><a href="seaborn.html#cb70-12" aria-hidden="true" tabindex="-1"></a>            col<span class="op">=</span><span class="st">&quot;subject&quot;</span>, col_wrap<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb70-13"><a href="seaborn.html#cb70-13" aria-hidden="true" tabindex="-1"></a>            height<span class="op">=</span><span class="dv">3</span>, aspect<span class="op">=</span><span class="fl">.75</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>,</span>
+<span id="cb70-14"><a href="seaborn.html#cb70-14" aria-hidden="true" tabindex="-1"></a>            kind<span class="op">=</span><span class="st">&quot;line&quot;</span>, data<span class="op">=</span>fmri.query(<span class="st">&quot;region == &#39;frontal&#39;&quot;</span>))<span class="op">;</span></span>
+<span id="cb70-15"><a href="seaborn.html#cb70-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-16"><a href="seaborn.html#cb70-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<img src="07-seaborn_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
 </div>
 <br>
 </div>
 </div>
-<div id="functions-1" class="section level2">
+<div id="functions-1" class="section level2" number="7.4">
 <h2><span class="header-section-number">7.4</span> Functions</h2>
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb71-1"><a href="seaborn.html#cb71-1"></a><span class="im">from</span> __future__ <span class="im">import</span> print_function, division</span>
-<span id="cb71-2"><a href="seaborn.html#cb71-2"></a></span>
-<span id="cb71-3"><a href="seaborn.html#cb71-3"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb71-4"><a href="seaborn.html#cb71-4"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb71-5"><a href="seaborn.html#cb71-5"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb71-6"><a href="seaborn.html#cb71-6"></a></span>
-<span id="cb71-7"><a href="seaborn.html#cb71-7"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">1000</span>)</span>
-<span id="cb71-8"><a href="seaborn.html#cb71-8"></a>plt.style.use(<span class="st">&#39;ggplot&#39;</span>)</span>
-<span id="cb71-9"><a href="seaborn.html#cb71-9"></a>plt.plot(x, np.sin(x), x, np.cos(x))<span class="op">;</span></span>
-<span id="cb71-10"><a href="seaborn.html#cb71-10"></a>plt.show()</span></code></pre></div>
-<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
+<div class="sourceCode" id="cb71"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb71-1"><a href="seaborn.html#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> __future__ <span class="im">import</span> print_function, division</span>
+<span id="cb71-2"><a href="seaborn.html#cb71-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb71-3"><a href="seaborn.html#cb71-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb71-4"><a href="seaborn.html#cb71-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb71-5"><a href="seaborn.html#cb71-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb71-6"><a href="seaborn.html#cb71-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb71-7"><a href="seaborn.html#cb71-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">1000</span>)</span>
+<span id="cb71-8"><a href="seaborn.html#cb71-8" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">&#39;ggplot&#39;</span>)</span>
+<span id="cb71-9"><a href="seaborn.html#cb71-9" aria-hidden="true" tabindex="-1"></a>plt.plot(x, np.sin(x), x, np.cos(x))<span class="op">;</span></span>
+<span id="cb71-10"><a href="seaborn.html#cb71-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<img src="07-seaborn_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" />
 </div>
 <br>
 </div>
 </div>
-<div id="scatter-plot-matrix" class="section level2">
+<div id="scatter-plot-matrix" class="section level2" number="7.5">
 <h2><span class="header-section-number">7.5</span> Scatter plot matrix</h2>
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb72"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb72-1"><a href="seaborn.html#cb72-1"></a><span class="co"># https://seaborn.pydata.org/examples/scatterplot_matrix.html</span></span>
-<span id="cb72-2"><a href="seaborn.html#cb72-2"></a></span>
-<span id="cb72-3"><a href="seaborn.html#cb72-3"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb72-4"><a href="seaborn.html#cb72-4"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb72-5"><a href="seaborn.html#cb72-5"></a></span>
-<span id="cb72-6"><a href="seaborn.html#cb72-6"></a>sns.set_theme(style<span class="op">=</span><span class="st">&quot;ticks&quot;</span>)</span>
-<span id="cb72-7"><a href="seaborn.html#cb72-7"></a></span>
-<span id="cb72-8"><a href="seaborn.html#cb72-8"></a>df <span class="op">=</span> sns.load_dataset(<span class="st">&quot;penguins&quot;</span>)</span>
-<span id="cb72-9"><a href="seaborn.html#cb72-9"></a>sns.pairplot(df, hue<span class="op">=</span><span class="st">&quot;species&quot;</span>)</span>
-<span id="cb72-10"><a href="seaborn.html#cb72-10"></a>plt.show()</span></code></pre></div>
-<img src="07-seaborn-simple_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" />
+<div class="sourceCode" id="cb72"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb72-1"><a href="seaborn.html#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://seaborn.pydata.org/examples/scatterplot_matrix.html</span></span>
+<span id="cb72-2"><a href="seaborn.html#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb72-3"><a href="seaborn.html#cb72-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb72-4"><a href="seaborn.html#cb72-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-5"><a href="seaborn.html#cb72-5" aria-hidden="true" tabindex="-1"></a>sns.set_theme(style<span class="op">=</span><span class="st">&quot;ticks&quot;</span>)</span>
+<span id="cb72-6"><a href="seaborn.html#cb72-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-7"><a href="seaborn.html#cb72-7" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> sns.load_dataset(<span class="st">&quot;penguins&quot;</span>)</span>
+<span id="cb72-8"><a href="seaborn.html#cb72-8" aria-hidden="true" tabindex="-1"></a>sns.pairplot(df, hue<span class="op">=</span><span class="st">&quot;species&quot;</span>)</span>
+<span id="cb72-9"><a href="seaborn.html#cb72-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<img src="07-seaborn_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;" />
 </div>
 <br>
 </div>

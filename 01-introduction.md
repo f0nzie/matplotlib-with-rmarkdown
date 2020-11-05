@@ -11,6 +11,8 @@ reticulate::use_condaenv("r-python")
 
 ## "Hello world"
 
+This is one of the simplest of examples: plotting the sine of a random numpy array.
+
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
@@ -33,13 +35,12 @@ plt.show()
 
 ## The parts of a plot
 
-I love this plot because it will help to formulate the right question when you are looking for online assistance. Sooner of later you will be in need to customize the $x$ or $y$ axis ticks in such a way that present specific data points and skip the defaults. Or, get rid of so many x axis labels that superimposing one to each other.
+I love this plot because it helps to formulate the right question when you are looking for online assistance. Sooner of later you will be in need to customize the $x$ or $y$ axis ticks in such a way that present specific data points and skip the defaults. Or, get rid of so many x axis labels that superimposing one over each other.
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://matplotlib.org/gallery/showcase/anatomy.html#sphx-glr-gallery-showcase-anatomy-py
-
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.ticker import AutoMinorLocator, MultipleLocator, FuncFormatter
@@ -85,7 +86,6 @@ ax.plot(X, Y3, linewidth=0,
 ax.set_title("Anatomy of a figure", fontsize=20, verticalalignment='bottom')
 ax.set_xlabel("X axis label")
 ax.set_ylabel("Y axis label")
-
 ax.legend()
 
 
@@ -101,7 +101,6 @@ def circle(x, y, radius=0.15):
 def text(x, y, text):
     ax.text(x, y, text, backgroundcolor="white",
             ha='center', va='top', weight='bold', color='blue')
-
 
 # Minor tick
 circle(0.50, -0.10)
@@ -184,6 +183,8 @@ plt.show()
 
 ## Can do business plots too
 
+Not precisely the kind of plots I am interested right now, all the kinds of business plots areve available in `matplotlib`, including the infamous **pie chart**.
+
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
@@ -224,13 +225,14 @@ for i, color in enumerate(plt.rcParams['axes.prop_cycle']):
     ax4.add_patch(plt.Circle(xy, radius=0.3, color=color['color']))
 ax4.axis('equal')
 ax4.margins(0)
-
 plt.show()
 ```
 
 <img src="01-introduction_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 ## And real time
+
+Strip charts are the favorites for plotting real time data, from sensors, or from any other internet source.
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
@@ -269,7 +271,7 @@ plt.show()
 
 ## And also 3D
 
-Although in data science 3D plots are not recommended, if there is a compelling case where the 3D plot could explain it better than a 2D plot, then, it should be okay. But the rule is *do not abuse of 3D*. What you are trying to convey is information per square centimeter of graphics.
+Although in data science 3D plots are not recommended, if there is a compelling case where a 3D plot explains a discovery better than a 2D plot, then, it should be okay and justified. But the rule is *do not abuse of 3D*. What you are trying to convey is information per square centimeter of graphics.
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 

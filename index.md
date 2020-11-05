@@ -14,7 +14,7 @@ description: "This is a minimal example of using the bookdown package to write a
 
 # Preface {.unnumbered}
 
-The goal of **r-test-matplotlib** is thoroughly testing that Python `matplotlib` works seamlessly from within `RStudio`. Making `matplotlib` run from within RStudio using the R package `reticulate` and **Python Anaconda** has improved a lot in the past few months. The package `reticulate` and RStudio have gone through a thorough transformation. Enough to say that it's an accepted fact that Python and R have to get along for the benefit of data science, machine learning and artificial intelligence.
+The goal of this minimal book is thoroughly testing that Python `matplotlib` works seamlessly from within `RStudio`. Making `matplotlib` run from within RStudio using the R package `reticulate` and **Python Anaconda** has improved a lot. The package `reticulate` and RStudio have gone through a thorough transformation in the past few months. Enough to say that it's an accepted fact today that Python and R are ready to work along for the benefit of data science, machine learning and artificial intelligence.
 
 ## Method {.unnumbered}
 

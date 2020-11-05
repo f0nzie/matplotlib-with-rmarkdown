@@ -21,7 +21,6 @@ import matplotlib.pyplot as plt
 import numpy as np 
   
 x = np.linspace(-6, 6, 50) 
-  
 fig = plt.figure(figsize = (14, 8)) 
   
 # Plot y = cos(x) 
@@ -103,7 +102,6 @@ plt.show()
 
 ## Multiple functions in the same plot
 
-
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
@@ -143,7 +141,6 @@ We use `subplot` to arrange the two functions. Observe that the y-axis is the sa
 
 ```python
 # https://www.python-course.eu/matplotlib_multiple_figures.php
-
 import numpy as np
 import matplotlib.pyplot as plt
 def f(t):
@@ -167,7 +164,6 @@ plt.show()
 
 ```python
 # http://www.scipy-lectures.org/intro/matplotlib/auto_examples/plot_plot3d_ex.html
-
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -194,10 +190,8 @@ plt.show()
 
 ```python
 # https://matplotlib.org/gallery/mplot3d/offset.html#sphx-glr-gallery-mplot3d-offset-py
-
 # This import registers the 3D projection, but is otherwise unused.
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
-
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -224,7 +218,6 @@ plt.show()
 
 ```python
 # https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/surface3d_radial.py
-
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
 import matplotlib.pyplot as plt
 import numpy as np
@@ -237,13 +230,10 @@ r = np.linspace(0, 1.25, 50)
 p = np.linspace(0, 2*np.pi, 50)
 R, P = np.meshgrid(r, p)
 Z = ((R**2 - 1)**2)
-
 # Express the mesh in the cartesian system.
 X, Y = R*np.cos(P), R*np.sin(P)
-
 # Plot the surface.
 ax.plot_surface(X, Y, Z, cmap=plt.cm.YlGnBu_r)
-
 # Tweak the limits and add latex math labels.
 ax.set_zlim(0, 1)
 ax.set_xlabel(r'$\phi_\mathrm{real}$')
@@ -258,15 +248,12 @@ plt.show()
 
 ## 3D wireframe
 
-
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
 # https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/wire3d.py
-
 from mpl_toolkits.mplot3d import axes3d
 import matplotlib.pyplot as plt
-
 
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
@@ -306,7 +293,7 @@ plt.show()
 
 
 ## Machine Learning
-
+This is just one sample of discovering patterns with machine learning.
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 

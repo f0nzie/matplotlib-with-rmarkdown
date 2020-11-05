@@ -33,6 +33,7 @@
   
 <link rel="prev" href="python-environments.html"/>
 <link rel="next" href="math.html"/>
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,24 +51,22 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -88,9 +87,9 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-le
 div.sourceCode
   { color: #1f1c1b; background-color: #ffffff; }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span. { color: #1f1c1b; } /* Normal */
+code span { color: #1f1c1b; } /* Normal */
 code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
 code span.an { color: #ca60ca; } /* Annotation */
 code span.at { color: #0057ae; } /* Attribute */
@@ -141,24 +140,29 @@ code span.wa { color: #bf0303; } /* Warning */
 <li><a href="./">Matplotlib with Rmarkdown</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#method"><i class="fa fa-check"></i>Method</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#method"><i class="fa fa-check"></i>Method</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#r-engine"><i class="fa fa-check"></i>R engine</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#bash-engine"><i class="fa fa-check"></i>Bash engine</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#python-engine"><i class="fa fa-check"></i>Python engine</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#hello-world"><i class="fa fa-check"></i><b>1.1</b> “Hello world”</a></li>
 <li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#the-parts-of-a-plot"><i class="fa fa-check"></i><b>1.2</b> The parts of a plot</a></li>
 <li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#can-do-business-plots-too"><i class="fa fa-check"></i><b>1.3</b> Can do business plots too</a></li>
 <li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#and-real-time"><i class="fa fa-check"></i><b>1.4</b> And real time</a></li>
 <li class="chapter" data-level="1.5" data-path="introduction.html"><a href="introduction.html#and-also-3d"><i class="fa fa-check"></i><b>1.5</b> And also 3D</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="python-environments.html"><a href="python-environments.html"><i class="fa fa-check"></i><b>2</b> Python environments</a><ul>
+<li class="chapter" data-level="2" data-path="python-environments.html"><a href="python-environments.html"><i class="fa fa-check"></i><b>2</b> Python environments</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="python-environments.html"><a href="python-environments.html#why-virtual-environments"><i class="fa fa-check"></i><b>2.1</b> Why virtual environments?</a></li>
 <li class="chapter" data-level="2.2" data-path="python-environments.html"><a href="python-environments.html#python-virtual-environment-and-r"><i class="fa fa-check"></i><b>2.2</b> Python virtual environment and R</a></li>
-<li class="chapter" data-level="2.3" data-path="python-environments.html"><a href="python-environments.html#conda-environments"><i class="fa fa-check"></i><b>2.3</b> conda environments</a><ul>
+<li class="chapter" data-level="2.3" data-path="python-environments.html"><a href="python-environments.html#conda-environments"><i class="fa fa-check"></i><b>2.3</b> conda environments</a>
+<ul>
 <li class="chapter" data-level="2.3.1" data-path="python-environments.html"><a href="python-environments.html#environment-with-python-version-specified"><i class="fa fa-check"></i><b>2.3.1</b> environment with Python version specified</a></li>
 <li class="chapter" data-level="2.3.2" data-path="python-environments.html"><a href="python-environments.html#specify-python-version-and-list-package-names"><i class="fa fa-check"></i><b>2.3.2</b> specify Python version and list package names</a></li>
 <li class="chapter" data-level="2.3.3" data-path="python-environments.html"><a href="python-environments.html#specify-python-version-and-version-for-the-packages"><i class="fa fa-check"></i><b>2.3.3</b> specify Python version and version for the packages</a></li>
@@ -166,11 +170,13 @@ code span.wa { color: #bf0303; } /* Warning */
 <li class="chapter" data-level="2.4" data-path="python-environments.html"><a href="python-environments.html#running-python-from-r"><i class="fa fa-check"></i><b>2.4</b> Running Python from R</a></li>
 <li class="chapter" data-level="2.5" data-path="python-environments.html"><a href="python-environments.html#a-plot-demo"><i class="fa fa-check"></i><b>2.5</b> A plot demo</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="sharing-data-objects.html"><a href="sharing-data-objects.html"><i class="fa fa-check"></i><b>3</b> Sharing data objects</a><ul>
+<li class="chapter" data-level="3" data-path="sharing-data-objects.html"><a href="sharing-data-objects.html"><i class="fa fa-check"></i><b>3</b> Sharing data objects</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="sharing-data-objects.html"><a href="sharing-data-objects.html#from-r-to-python-back-to-r"><i class="fa fa-check"></i><b>3.1</b> From R to Python, back to R</a></li>
 <li class="chapter" data-level="3.2" data-path="sharing-data-objects.html"><a href="sharing-data-objects.html#from-python-to-r-back-to-python"><i class="fa fa-check"></i><b>3.2</b> From Python to R, back to Python</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="math.html"><a href="math.html"><i class="fa fa-check"></i><b>4</b> Math</a><ul>
+<li class="chapter" data-level="4" data-path="math.html"><a href="math.html"><i class="fa fa-check"></i><b>4</b> Math</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="math.html"><a href="math.html#functions"><i class="fa fa-check"></i><b>4.1</b> Functions</a></li>
 <li class="chapter" data-level="4.2" data-path="math.html"><a href="math.html#functions-with-latex-labels"><i class="fa fa-check"></i><b>4.2</b> Functions with Latex labels</a></li>
 <li class="chapter" data-level="4.3" data-path="math.html"><a href="math.html#multiple-functions-in-the-same-plot"><i class="fa fa-check"></i><b>4.3</b> Multiple functions in the same plot</a></li>
@@ -180,7 +186,8 @@ code span.wa { color: #bf0303; } /* Warning */
 <li class="chapter" data-level="4.7" data-path="math.html"><a href="math.html#d-contour-plot"><i class="fa fa-check"></i><b>4.7</b> 3D contour plot</a></li>
 <li class="chapter" data-level="4.8" data-path="math.html"><a href="math.html#machine-learning"><i class="fa fa-check"></i><b>4.8</b> Machine Learning</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="scientific.html"><a href="scientific.html"><i class="fa fa-check"></i><b>5</b> Scientific</a><ul>
+<li class="chapter" data-level="5" data-path="scientific.html"><a href="scientific.html"><i class="fa fa-check"></i><b>5</b> Scientific</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="scientific.html"><a href="scientific.html#solving-laplace"><i class="fa fa-check"></i><b>5.1</b> Solving Laplace</a></li>
 <li class="chapter" data-level="5.2" data-path="scientific.html"><a href="scientific.html#eigenvalue-problems"><i class="fa fa-check"></i><b>5.2</b> Eigenvalue problems</a></li>
 <li class="chapter" data-level="5.3" data-path="scientific.html"><a href="scientific.html#computational-physics"><i class="fa fa-check"></i><b>5.3</b> Computational Physics</a></li>
@@ -189,7 +196,8 @@ code span.wa { color: #bf0303; } /* Warning */
 <li class="chapter" data-level="5.6" data-path="scientific.html"><a href="scientific.html#real-time"><i class="fa fa-check"></i><b>5.6</b> Real time</a></li>
 <li class="chapter" data-level="5.7" data-path="scientific.html"><a href="scientific.html#density-plots"><i class="fa fa-check"></i><b>5.7</b> Density plots</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="voxels.html"><a href="voxels.html"><i class="fa fa-check"></i><b>6</b> Voxels</a><ul>
+<li class="chapter" data-level="6" data-path="voxels.html"><a href="voxels.html"><i class="fa fa-check"></i><b>6</b> Voxels</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="voxels.html"><a href="voxels.html#radial"><i class="fa fa-check"></i><b>6.1</b> Radial</a></li>
 <li class="chapter" data-level="6.2" data-path="voxels.html"><a href="voxels.html#spherical"><i class="fa fa-check"></i><b>6.2</b> Spherical</a></li>
 <li class="chapter" data-level="6.3" data-path="voxels.html"><a href="voxels.html#solid-cubes"><i class="fa fa-check"></i><b>6.3</b> Solid cubes</a></li>
@@ -197,26 +205,31 @@ code span.wa { color: #bf0303; } /* Warning */
 <li class="chapter" data-level="6.5" data-path="voxels.html"><a href="voxels.html#semi-transparent"><i class="fa fa-check"></i><b>6.5</b> Semi-transparent</a></li>
 <li class="chapter" data-level="6.6" data-path="voxels.html"><a href="voxels.html#opaque-cubicles"><i class="fa fa-check"></i><b>6.6</b> Opaque cubicles</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="seaborn.html"><a href="seaborn.html"><i class="fa fa-check"></i><b>7</b> Seaborn</a><ul>
+<li class="chapter" data-level="7" data-path="seaborn.html"><a href="seaborn.html"><i class="fa fa-check"></i><b>7</b> Seaborn</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="seaborn.html"><a href="seaborn.html#error-bands"><i class="fa fa-check"></i><b>7.1</b> Error bands</a></li>
 <li class="chapter" data-level="7.2" data-path="seaborn.html"><a href="seaborn.html#boxplots"><i class="fa fa-check"></i><b>7.2</b> Boxplots</a></li>
 <li class="chapter" data-level="7.3" data-path="seaborn.html"><a href="seaborn.html#facets"><i class="fa fa-check"></i><b>7.3</b> Facets</a></li>
 <li class="chapter" data-level="7.4" data-path="seaborn.html"><a href="seaborn.html#functions-1"><i class="fa fa-check"></i><b>7.4</b> Functions</a></li>
 <li class="chapter" data-level="7.5" data-path="seaborn.html"><a href="seaborn.html#scatter-plot-matrix"><i class="fa fa-check"></i><b>7.5</b> Scatter plot matrix</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="advanced.html"><a href="advanced.html"><i class="fa fa-check"></i><b>8</b> Advanced</a><ul>
+<li class="chapter" data-level="8" data-path="advanced.html"><a href="advanced.html"><i class="fa fa-check"></i><b>8</b> Advanced</a>
+<ul>
 <li class="chapter" data-level="8.1" data-path="advanced.html"><a href="advanced.html#adding-labels"><i class="fa fa-check"></i><b>8.1</b> Adding labels</a></li>
 <li class="chapter" data-level="8.2" data-path="advanced.html"><a href="advanced.html#subplots"><i class="fa fa-check"></i><b>8.2</b> Subplots</a></li>
 <li class="chapter" data-level="8.3" data-path="advanced.html"><a href="advanced.html#change-of-axes"><i class="fa fa-check"></i><b>8.3</b> Change of axes</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html"><i class="fa fa-check"></i><b>9</b> Beyond <code>matplotlib</code></a><ul>
-<li class="chapter" data-level="9.1" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#brokenaxis"><i class="fa fa-check"></i><b>9.1</b> <code>brokenaxis</code></a><ul>
+<li class="chapter" data-level="9" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html"><i class="fa fa-check"></i><b>9</b> Beyond <code>matplotlib</code></a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#brokenaxis"><i class="fa fa-check"></i><b>9.1</b> <code>brokenaxis</code></a>
+<ul>
 <li class="chapter" data-level="9.1.1" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#usage"><i class="fa fa-check"></i><b>9.1.1</b> Usage</a></li>
 <li class="chapter" data-level="9.1.2" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#subplots-1"><i class="fa fa-check"></i><b>9.1.2</b> Subplots</a></li>
 <li class="chapter" data-level="9.1.3" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#log-scales"><i class="fa fa-check"></i><b>9.1.3</b> Log scales</a></li>
 <li class="chapter" data-level="9.1.4" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#different-scales"><i class="fa fa-check"></i><b>9.1.4</b> Different scales</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#yellowbrick"><i class="fa fa-check"></i><b>9.2</b> <code>yellowbrick</code></a><ul>
+<li class="chapter" data-level="9.2" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#yellowbrick"><i class="fa fa-check"></i><b>9.2</b> <code>yellowbrick</code></a>
+<ul>
 <li class="chapter" data-level="9.2.1" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#pearson-correlation"><i class="fa fa-check"></i><b>9.2.1</b> Pearson correlation</a></li>
 <li class="chapter" data-level="9.2.2" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#scatter-diagram"><i class="fa fa-check"></i><b>9.2.2</b> Scatter diagram</a></li>
 <li class="chapter" data-level="9.2.3" data-path="beyond-matplotlib.html"><a href="beyond-matplotlib.html#residuals-plot"><i class="fa fa-check"></i><b>9.2.3</b> Residuals plot</a></li>
@@ -244,9 +257,9 @@ code span.wa { color: #bf0303; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sharing-data-objects" class="section level1">
+<div id="sharing-data-objects" class="section level1" number="3">
 <h1><span class="header-section-number">Ch. 3</span> Sharing data objects</h1>
-<div id="from-r-to-python-back-to-r" class="section level2">
+<div id="from-r-to-python-back-to-r" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> From R to Python, back to R</h2>
 <ul>
 <li>Always load the Python environment with the packages you need.</li>
@@ -254,8 +267,8 @@ code span.wa { color: #bf0303; } /* Warning */
 <div class="decocode">
 <div style="background-color:#4C78DB">
 <p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i> <b>R</b></span></p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="sharing-data-objects.html#cb27-1"></a><span class="kw">library</span>(reticulate)</span>
-<span id="cb27-2"><a href="sharing-data-objects.html#cb27-2"></a><span class="kw">use_condaenv</span>(<span class="st">&quot;r-python&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="sharing-data-objects.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb27-2"><a href="sharing-data-objects.html#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">use_condaenv</span>(<span class="st">&quot;r-python&quot;</span>)</span></code></pre></div>
 </div>
 <br>
 </div>
@@ -265,8 +278,8 @@ code span.wa { color: #bf0303; } /* Warning */
 <div class="decocode">
 <div style="background-color:#4C78DB">
 <p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i> <b>R</b></span></p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="sharing-data-objects.html#cb28-1"></a><span class="co"># R chunk</span></span>
-<span id="cb28-2"><a href="sharing-data-objects.html#cb28-2"></a>autos =<span class="st"> </span>cars       <span class="co"># assign cars to autos</span></span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="sharing-data-objects.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R chunk</span></span>
+<span id="cb28-2"><a href="sharing-data-objects.html#cb28-2" aria-hidden="true" tabindex="-1"></a>autos <span class="ot">=</span> cars       <span class="co"># assign cars to autos</span></span></code></pre></div>
 </div>
 <br>
 </div>
@@ -276,11 +289,11 @@ code span.wa { color: #bf0303; } /* Warning */
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="sharing-data-objects.html#cb29-1"></a><span class="co"># Python chunk</span></span>
-<span id="cb29-2"><a href="sharing-data-objects.html#cb29-2"></a><span class="im">import</span> numpy</span>
-<span id="cb29-3"><a href="sharing-data-objects.html#cb29-3"></a><span class="im">import</span> pandas </span>
-<span id="cb29-4"><a href="sharing-data-objects.html#cb29-4"></a></span>
-<span id="cb29-5"><a href="sharing-data-objects.html#cb29-5"></a>autos_py <span class="op">=</span> r.autos</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="sharing-data-objects.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Python chunk</span></span>
+<span id="cb29-2"><a href="sharing-data-objects.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy</span>
+<span id="cb29-3"><a href="sharing-data-objects.html#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas </span>
+<span id="cb29-4"><a href="sharing-data-objects.html#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="sharing-data-objects.html#cb29-5" aria-hidden="true" tabindex="-1"></a>autos_py <span class="op">=</span> r.autos    <span class="co"># assign to a Python object</span></span></code></pre></div>
 </div>
 <br>
 </div>
@@ -290,8 +303,8 @@ code span.wa { color: #bf0303; } /* Warning */
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="sharing-data-objects.html#cb30-1"></a><span class="co"># Python chunk</span></span>
-<span id="cb30-2"><a href="sharing-data-objects.html#cb30-2"></a>autos_py[<span class="st">&#39;time&#39;</span>] <span class="op">=</span> autos_py[<span class="st">&#39;dist&#39;</span>] <span class="op">/</span> autos_py[<span class="st">&#39;speed&#39;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="sharing-data-objects.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Python chunk</span></span>
+<span id="cb30-2"><a href="sharing-data-objects.html#cb30-2" aria-hidden="true" tabindex="-1"></a>autos_py[<span class="st">&#39;time&#39;</span>] <span class="op">=</span> autos_py[<span class="st">&#39;dist&#39;</span>] <span class="op">/</span> autos_py[<span class="st">&#39;speed&#39;</span>]   <span class="co"># calculate on variables</span></span></code></pre></div>
 </div>
 <br>
 </div>
@@ -301,14 +314,14 @@ code span.wa { color: #bf0303; } /* Warning */
 <div class="decocode">
 <div style="background-color:#4C78DB">
 <p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i> <b>R</b></span></p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="sharing-data-objects.html#cb31-1"></a><span class="co"># R chunk</span></span>
-<span id="cb31-2"><a href="sharing-data-objects.html#cb31-2"></a><span class="kw">plot</span>(py<span class="op">$</span>autos_py)</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="sharing-data-objects.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R chunk</span></span>
+<span id="cb31-2"><a href="sharing-data-objects.html#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(py<span class="sc">$</span>autos_py)          <span class="co"># plot a Python data object</span></span></code></pre></div>
 <img src="03-python_and_r_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
 </div>
 <br>
 </div>
 </div>
-<div id="from-python-to-r-back-to-python" class="section level2">
+<div id="from-python-to-r-back-to-python" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> From Python to R, back to Python</h2>
 
 </div>

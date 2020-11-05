@@ -51,7 +51,6 @@ p.show()                                               # display fig, close shel
 <img src="05-scientific_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;" />
 
 
-
 ## Eigenvalue problems
     
 * `lobpcg` (Locally Optimal Block Preconditioned Conjugate Gradient Method) * works very well in combination with `PyAMG` (example by Nathan Bell)
@@ -61,14 +60,11 @@ p.show()                                               # display fig, close shel
 ```python
 # http://scipy-lectures.org/_downloads/ScipyLectures-simple.pdf
 # Page 348
-
 # Compute eigenvectors and eigenvalues using a preconditioned eigensolver
 # ========================================================================
-# 
 # In this example Smoothed Aggregation (SA) is used to precondition
 # the LOBPCG eigensolver on a two-dimensional Poisson problem with
 # Dirichlet boundary conditions.
-
 import scipy
 from scipy.sparse.linalg import lobpcg
 import matplotlib.pyplot as plt
@@ -78,22 +74,17 @@ from pyamg.gallery import poisson
 N = 100
 K = 9
 A = poisson((N,N), format='csr')
-
 # create the AMG hierarchy
 ml = smoothed_aggregation_solver(A)
-
 # initial approximation to the K eigenvectors
 X = scipy.rand(A.shape[0], K)
-
 # preconditioner based on ml
 M = ml.aspreconditioner()
-
 # compute eigenvalues and eigenvectors with LOBPCG
 W,V = lobpcg(A, X, M=M, tol=1e-8, largest=False)
 
-
 plt.figure(figsize=(9,9))
-
+# iterate through the subplots adding data points
 for i in range(K):
     plt.subplot(3, 3, i+1)
     plt.title('Eigenvector%d'% i)
@@ -113,8 +104,6 @@ plt.show()
 # Plot of the Lorenz Attractor based on Edward Lorenz's 1963 "Deterministic
 # Nonperiodic Flow" publication.
 # http://journals.ametsoc.org/doi/abs/10.1175/1520-0469%281963%29020%3C0130%3ADNF%3E2.0.CO%3B2
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -125,18 +114,15 @@ def lorenz(x, y, z, s=10, r=28, b=2.667):
     y_dot = r*x - y - x*z
     z_dot = x*y - b*z
     return x_dot, y_dot, z_dot
-
+# parameters
 dt = 0.01
 stepCnt = 10000
-
 # Need one more for the initial values
 xs = np.empty((stepCnt + 1,))
 ys = np.empty((stepCnt + 1,))
 zs = np.empty((stepCnt + 1,))
-
 # Setting initial values
 xs[0], ys[0], zs[0] = (0., 1., 1.05)
-
 # Stepping through "time".
 for i in range(stepCnt):
     # Derivatives of the X, Y, Z state
@@ -166,11 +152,9 @@ plt.show()
 
 ```python
 # https://matplotlib.org/gallery/images_contours_and_fields/contour_image.html#sphx-glr-gallery-images-contours-and-fields-contour-image-py
-
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import cm
-
 # Default delta is large because that makes it fast, and it illustrates
 # the correct registration between image and contours.
 delta = 0.5
@@ -204,12 +188,10 @@ cset1 = axs[0].contourf(X, Y, Z, levels, norm=norm,
 # contour separately; don't try to change the edgecolor or edgewidth
 # of the polygons in the collections returned by contourf.
 # Use levels output from previous call to guarantee they are the same.
-
 cset2 = axs[0].contour(X, Y, Z, cset1.levels, colors='k')
 
 # We don't really need dashed contour lines to indicate negative
 # regions, so let's turn them off.
-
 for c in cset2.collections:
     c.set_linestyle('solid')
 
@@ -217,11 +199,9 @@ for c in cset2.collections:
 # to set up an array of colors and linewidths.
 # We are making a thick green line as a zero contour.
 # Specify the zero level as a tuple with only 0 in it.
-
 cset3 = axs[0].contour(X, Y, Z, (0,), colors='g', linewidths=2)
 axs[0].set_title('Filled contours')
 fig.colorbar(cset1, ax=axs[0])
-
 axs[1].imshow(Z, extent=extent, cmap=cmap, norm=norm)
 axs[1].contour(Z, levels, colors='k', origin='upper', extent=extent)
 axs[1].set_title("Image, origin 'upper'")
@@ -291,8 +271,6 @@ zi = interpolator(Xi, Yi)
 # as well. The following would be an alternative to the four lines above:
 #from scipy.interpolate import griddata
 #zi = griddata((x, y), z, (xi[None,:], yi[:,None]), method='linear')
-
-
 ax1.contour(xi, yi, zi, 14, linewidths=0.5, colors='k')
 cntr1 = ax1.contourf(xi, yi, zi, 14, cmap="RdBu_r")
 
@@ -301,14 +279,11 @@ ax1.plot(x, y, 'ko', ms=3)
 ax1.axis((-2, 2, -2, 2))
 ax1.set_title('grid and contour (%d points, %d grid points)' %
               (npts, ngridx * ngridy))
-
-
 # ----------
 # Tricontour
 # ----------
 # Directly supply the unordered, irregularly spaced coordinates
 # to tricontour.
-
 ax2.tricontour(x, y, z, 14, linewidths=0.5, colors='k')
 cntr2 = ax2.tricontourf(x, y, z, 14, cmap="RdBu_r")
 
@@ -333,7 +308,6 @@ from matplotlib.tri import Triangulation, TriAnalyzer, UniformTriRefiner
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import numpy as np
-
 #-----------------------------------------------------------------------------
 # Analytical test function
 #-----------------------------------------------------------------------------
@@ -373,35 +347,28 @@ random_gen = np.random.RandomState(seed=19680801)
 x_test = random_gen.uniform(-1., 1., size=n_test)
 y_test = random_gen.uniform(-1., 1., size=n_test)
 z_test = experiment_res(x_test, y_test)
-
 # meshing with Delaunay triangulation
 tri = Triangulation(x_test, y_test)
 ntri = tri.triangles.shape[0]
-
 # Some invalid data are masked out
 mask_init = np.zeros(ntri, dtype=bool)
 masked_tri = random_gen.randint(0, ntri, int(ntri * init_mask_frac))
 mask_init[masked_tri] = True
 tri.set_mask(mask_init)
-
 #-----------------------------------------------------------------------------
 # Improving the triangulation before high-res plots: removing flat triangles
 #-----------------------------------------------------------------------------
 # masking badly shaped triangles at the border of the triangular mesh.
 mask = TriAnalyzer(tri).get_flat_tri_mask(min_circle_ratio)
 tri.set_mask(mask)
-
 # refining the data
 refiner = UniformTriRefiner(tri)
 tri_refi, z_test_refi = refiner.refine_field(z_test, subdiv=subdiv)
-
 # analytical 'results' for comparison
 z_expected = experiment_res(tri_refi.x, tri_refi.y)
-
 # for the demo: loading the 'flat' triangles for plot
 flat_tri = Triangulation(x_test, y_test)
 flat_tri.set_mask(~mask)
-
 #-----------------------------------------------------------------------------
 # Now the plots
 #-----------------------------------------------------------------------------
@@ -445,7 +412,6 @@ plt.show()
 
 ```python
 # https://matplotlib.org/gallery/images_contours_and_fields/triinterp_demo.html#sphx-glr-gallery-images-contours-and-fields-triinterp-demo-py
-
 import matplotlib.pyplot as plt
 import matplotlib.tri as mtri
 import numpy as np
@@ -510,9 +476,10 @@ plt.show()
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
 
 ```python
+# http://www.scipy-lectures.org/intro/matplotlib/auto_examples/plot_contour_ex.html
 import matplotlib.pyplot as plt
 import numpy as np
-# http://www.scipy-lectures.org/intro/matplotlib/auto_examples/plot_contour_ex.html
+
 
 def f(x, y):
     return (1 - x / 2 + x ** 5 + y ** 3) * np.exp(-x ** 2 -y ** 2)
@@ -544,7 +511,6 @@ plt.show()
 # https://matplotlib.org/gallery/lines_bars_and_markers/cohere.html#sphx-glr-gallery-lines-bars-and-markers-cohere-py
 import numpy as np
 import matplotlib.pyplot as plt
-
 # Fixing random state for reproducibility
 np.random.seed(19680801)
 
@@ -579,7 +545,6 @@ plt.show()
 
 ```python
 # https://matplotlib.org/gallery/scales/symlog_demo.html#sphx-glr-gallery-scales-symlog-demo-py
-
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -653,7 +618,6 @@ plt.show()
 ```python
 # https://blogs.umass.edu/candela/computational-physics-in-python/
 # Visualize the interference from two point sources, vectorized version.
-
 import numpy as np
 import matplotlib.pyplot as plt
 from numpy import pi,sqrt,sin
