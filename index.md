@@ -14,6 +14,8 @@ description: "This is a minimal example of using the bookdown package to write a
 
 # Preface {.unnumbered}
 
+_Last update: Thu Nov 5 14:04:38 2020 -0600 (afafa56)_
+
 The goal of this minimal book is thoroughly testing that Python `matplotlib` works seamlessly from within `RStudio`. Making `matplotlib` run from within RStudio using the R package `reticulate` and **Python Anaconda** has improved a lot. The package `reticulate` and RStudio have gone through a thorough transformation in the past few months. Enough to say that it's an accepted fact today that Python and R are ready to work along for the benefit of data science, machine learning and artificial intelligence.
 
 ## Method {.unnumbered}
@@ -60,16 +62,31 @@ echo "working from the terminal"
 
 ```
 #:> list all conda environments available
+#:> bash: line 1: /home/msfz751/anaconda3/etc/profile.d/conda.sh: No such file or directory
+#:> 
+#:> CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+#:> To initialize your shell, run
+#:> 
+#:>     $ conda init <SHELL_NAME>
+#:> 
+#:> Currently supported shells are:
+#:>   - bash
+#:>   - fish
+#:>   - tcsh
+#:>   - xonsh
+#:>   - zsh
+#:>   - powershell
+#:> 
+#:> See 'conda init --help' for more information and options.
+#:> 
+#:> IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+#:> 
+#:> 
 #:> # conda environments:
 #:> #
-#:> base                     /home/msfz751/anaconda3
-#:> man_ccia                 /home/msfz751/anaconda3/envs/man_ccia
-#:> porepy                   /home/msfz751/anaconda3/envs/porepy
-#:> python_book              /home/msfz751/anaconda3/envs/python_book
-#:> r-python              *  /home/msfz751/anaconda3/envs/r-python
-#:> r-tensorflow             /home/msfz751/anaconda3/envs/r-tensorflow
-#:> r-toarchboard            /home/msfz751/anaconda3/envs/r-toarchboard
-#:> r-torch                  /home/msfz751/anaconda3/envs/r-torch
+#:> base                  *  /home/msfz751/miniconda3
+#:> man_ccia                 /home/msfz751/miniconda3/envs/man_ccia
+#:> r-python                 /home/msfz751/miniconda3/envs/r-python
 #:> 
 #:> working from the terminal
 ```

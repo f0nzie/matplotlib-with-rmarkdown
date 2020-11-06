@@ -1,5 +1,7 @@
 # Python environments
 
+_Last update: Thu Nov 5 14:04:38 2020 -0600 (afafa56)_
+
 ## Why virtual environments?
 
 There are several ways of running Python code. In this minimal book, we will see two of them:
@@ -92,24 +94,19 @@ py_config()
 ```
 
 ```
-#:> python:         /home/msfz751/anaconda3/envs/r-python/bin/python
-#:> libpython:      /home/msfz751/anaconda3/envs/r-python/lib/libpython3.7m.so
-#:> pythonhome:     /home/msfz751/anaconda3/envs/r-python:/home/msfz751/anaconda3/envs/r-python
+#:> python:         /home/msfz751/miniconda3/envs/r-python/bin/python
+#:> libpython:      /home/msfz751/miniconda3/envs/r-python/lib/libpython3.7m.so
+#:> pythonhome:     /home/msfz751/miniconda3/envs/r-python:/home/msfz751/miniconda3/envs/r-python
 #:> version:        3.7.8 | packaged by conda-forge | (default, Jul 31 2020, 02:25:08)  [GCC 7.5.0]
-#:> numpy:          /home/msfz751/anaconda3/envs/r-python/lib/python3.7/site-packages/numpy
-#:> numpy_version:  1.19.2
+#:> numpy:          /home/msfz751/miniconda3/envs/r-python/lib/python3.7/site-packages/numpy
+#:> numpy_version:  1.19.4
 #:> 
 #:> python versions found: 
-#:>  /home/msfz751/anaconda3/envs/r-python/bin/python
+#:>  /home/msfz751/miniconda3/envs/r-python/bin/python
 #:>  /usr/bin/python3
 #:>  /usr/bin/python
-#:>  /home/msfz751/anaconda3/bin/python
-#:>  /home/msfz751/anaconda3/envs/man_ccia/bin/python
-#:>  /home/msfz751/anaconda3/envs/porepy/bin/python
-#:>  /home/msfz751/anaconda3/envs/python_book/bin/python
-#:>  /home/msfz751/anaconda3/envs/r-tensorflow/bin/python
-#:>  /home/msfz751/anaconda3/envs/r-toarchboard/bin/python
-#:>  /home/msfz751/anaconda3/envs/r-torch/bin/python
+#:>  /home/msfz751/miniconda3/envs/man_ccia/bin/python
+#:>  /home/msfz751/miniconda3/bin/python
 ```
 
 </div><br></div>
