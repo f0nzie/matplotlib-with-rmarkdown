@@ -1,5 +1,7 @@
 # Introduction
 
+_Last update: `r system("git log -1 --format=\"%ad (%h)\" -- 01-introduction.Rmd", intern = TRUE)`_
+
 ```{r, decorate=TRUE}
 library(reticulate)
 reticulate::use_condaenv("r-python")

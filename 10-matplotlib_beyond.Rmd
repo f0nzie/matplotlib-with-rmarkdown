@@ -1,5 +1,7 @@
 # Beyond `matplotlib`
 
+_Last update: `r system("git log -1 --format=\"%ad (%h)\" -- 10-matplotlib_beyond.Rmd", intern = TRUE)`_
+
 
 ```{r, decorate=TRUE}
 library(reticulate)

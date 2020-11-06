@@ -264,6 +264,7 @@ code span.wa { color: #bf0303; } /* Warning */
 </div>
 <div id="preface" class="section level1 unnumbered">
 <h1>Preface</h1>
+<p><em>Last update: Thu Nov 5 14:04:38 2020 -0600 (afafa56)</em></p>
 <p>The goal of this minimal book is thoroughly testing that Python <code>matplotlib</code> works seamlessly from within <code>RStudio</code>. Making <code>matplotlib</code> run from within RStudio using the R package <code>reticulate</code> and <strong>Python Anaconda</strong> has improved a lot. The package <code>reticulate</code> and RStudio have gone through a thorough transformation in the past few months. Enough to say that it’s an accepted fact today that Python and R are ready to work along for the benefit of data science, machine learning and artificial intelligence.</p>
 <div id="method" class="section level2 unnumbered">
 <h2>Method</h2>
@@ -298,16 +299,31 @@ code span.wa { color: #bf0303; } /* Warning */
 <span id="cb3-4"><a href="index.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env list</span>
 <span id="cb3-5"><a href="index.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;working from the terminal&quot;</span></span></code></pre></div>
 <pre><code>#:&gt; list all conda environments available
+#:&gt; bash: line 1: /home/msfz751/anaconda3/etc/profile.d/conda.sh: No such file or directory
+#:&gt; 
+#:&gt; CommandNotFoundError: Your shell has not been properly configured to use &#39;conda activate&#39;.
+#:&gt; To initialize your shell, run
+#:&gt; 
+#:&gt;     $ conda init &lt;SHELL_NAME&gt;
+#:&gt; 
+#:&gt; Currently supported shells are:
+#:&gt;   - bash
+#:&gt;   - fish
+#:&gt;   - tcsh
+#:&gt;   - xonsh
+#:&gt;   - zsh
+#:&gt;   - powershell
+#:&gt; 
+#:&gt; See &#39;conda init --help&#39; for more information and options.
+#:&gt; 
+#:&gt; IMPORTANT: You may need to close and restart your shell after running &#39;conda init&#39;.
+#:&gt; 
+#:&gt; 
 #:&gt; # conda environments:
 #:&gt; #
-#:&gt; base                     /home/msfz751/anaconda3
-#:&gt; man_ccia                 /home/msfz751/anaconda3/envs/man_ccia
-#:&gt; porepy                   /home/msfz751/anaconda3/envs/porepy
-#:&gt; python_book              /home/msfz751/anaconda3/envs/python_book
-#:&gt; r-python              *  /home/msfz751/anaconda3/envs/r-python
-#:&gt; r-tensorflow             /home/msfz751/anaconda3/envs/r-tensorflow
-#:&gt; r-toarchboard            /home/msfz751/anaconda3/envs/r-toarchboard
-#:&gt; r-torch                  /home/msfz751/anaconda3/envs/r-torch
+#:&gt; base                  *  /home/msfz751/miniconda3
+#:&gt; man_ccia                 /home/msfz751/miniconda3/envs/man_ccia
+#:&gt; r-python                 /home/msfz751/miniconda3/envs/r-python
 #:&gt; 
 #:&gt; working from the terminal</code></pre>
 </div>

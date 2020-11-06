@@ -1,5 +1,7 @@
 # Seaborn
 
+_Last update: `r system("git log -1 --format=\"%ad (%h)\" -- 07-seaborn.Rmd", intern = TRUE)`_
+
 
 ```{r, decorate=TRUE}
 library(reticulate)

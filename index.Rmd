@@ -14,6 +14,8 @@ description: "This is a minimal example of using the bookdown package to write a
 
 # Preface {.unnumbered}
 
+_Last update: `r system("git log -1 --format=\"%ad (%h)\" -- index.Rmd", intern = TRUE)`_
+
 The goal of this minimal book is thoroughly testing that Python `matplotlib` works seamlessly from within `RStudio`. Making `matplotlib` run from within RStudio using the R package `reticulate` and **Python Anaconda** has improved a lot. The package `reticulate` and RStudio have gone through a thorough transformation in the past few months. Enough to say that it's an accepted fact today that Python and R are ready to work along for the benefit of data science, machine learning and artificial intelligence.
 
 ## Method {.unnumbered}

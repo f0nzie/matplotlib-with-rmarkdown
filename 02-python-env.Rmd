@@ -1,5 +1,7 @@
 # Python environments
 
+_Last update: `r system("git log -1 --format=\"%ad (%h)\" -- 02-python-env.Rmd", intern = TRUE)`_
+
 ## Why virtual environments?
 
 There are several ways of running Python code. In this minimal book, we will see two of them:

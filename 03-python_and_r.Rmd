@@ -1,5 +1,7 @@
 # Sharing data objects
 
+_Last update: `r system("git log -1 --format=\"%ad (%h)\" -- 03-python_and_r.Rmd", intern = TRUE)`_
+
 ## From R to Python, back to R
 
 -   Always load the Python environment with the packages you need.

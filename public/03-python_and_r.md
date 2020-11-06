@@ -1,5 +1,7 @@
 # Sharing data objects
 
+_Last update: Thu Nov 5 14:04:38 2020 -0600 (afafa56)_
+
 ## From R to Python, back to R
 
 -   Always load the Python environment with the packages you need.

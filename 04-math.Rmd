@@ -1,5 +1,7 @@
 # Math
 
+_Last update: `r system("git log -1 --format=\"%ad (%h)\" -- 04-math.Rmd", intern = TRUE)`_
+
 ```{r, decorate=TRUE}
 library(reticulate)
 reticulate::use_condaenv("r-python")
