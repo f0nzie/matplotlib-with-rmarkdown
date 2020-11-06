@@ -5,6 +5,7 @@ OUTPUT_DIR = .
 PUBLISH_BOOK_DIR = public
 PYTHON_ENV_DIR = 
 CONDA_ENV = r-python
+CONDA_TYPE = miniconda3
 ENV_RECIPE = environment.yml
 START_NOTEBOOK = 
 FIGURE_DIR = 
@@ -60,13 +61,13 @@ endif
 
 # create conda environment
 create_env:
-	source ~/anaconda3/etc/profile.d/conda.sh ;\
+	source ${HOME}/${CONDA_TYPE}/etc/profile.d/conda.sh ;\
 	conda deactivate
 	conda remove --name ${CONDA_ENV} --all -y
 	conda env create -f ${ENV_RECIPE}
 
 remove_env:
-	source ~/anaconda3/etc/profile.d/conda.sh ;\
+	source ${HOME}/${CONDA_TYPE}/etc/profile.d/conda.sh ;\
 	conda deactivate
 	conda remove --name ${CONDA_ENV} --all -y
 
