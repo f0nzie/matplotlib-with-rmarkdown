@@ -6,10 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Ch. 1 Introduction | Matplotlib with Rmarkdown</title>
 <meta name="author" content="Alfonso R. Reyes">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.2"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.5/header-attrs.js"></script><script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.2"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.5.3/header-attrs.js"></script><script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.5.3/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.5.3/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.2.9000/tabs.js"></script><script src="libs/bs3compat-0.2.2.9000/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script><!-- CSS -->
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script><!-- CSS --><link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/toc.css">
+<link rel="stylesheet" href="fontawesome/css/all.css">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -55,8 +57,8 @@
 <p><em>Last update: Thu Nov 5 19:22:01 2020 -0600 (5124cef)</em></p>
 <div class="decocode">
 <div style="background-color:#4C78DB">
-<p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i> <b>R</b></span></p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i><b>R</b></span></p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rstudio/reticulate">reticulate</a></span><span class="op">)</span>
 <span class="fu">reticulate</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/reticulate/man/use_python.html">use_condaenv</a></span><span class="op">(</span><span class="st">"r-python"</span><span class="op">)</span></code></pre></div>
 </div>
@@ -69,20 +71,20 @@
 <p>This is one of the simplest of examples: plotting the sine of a random numpy array.</p>
 <div class="decocode">
 <div style="background-color:#417FB1">
-<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="introduction.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb9-2"><a href="introduction.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb9-3"><a href="introduction.html#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="introduction.html#cb9-4" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.arange(<span class="fl">0.0</span>, <span class="fl">2.0</span>, <span class="fl">0.01</span>)</span>
-<span id="cb9-5"><a href="introduction.html#cb9-5" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> np.sin(<span class="dv">2</span><span class="op">*</span>np.pi<span class="op">*</span>t)</span>
-<span id="cb9-6"><a href="introduction.html#cb9-6" aria-hidden="true" tabindex="-1"></a>plt.plot(t, s)</span>
-<span id="cb9-7"><a href="introduction.html#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-8"><a href="introduction.html#cb9-8" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'time (s)'</span>)</span>
-<span id="cb9-9"><a href="introduction.html#cb9-9" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'voltage (mV)'</span>)</span>
-<span id="cb9-10"><a href="introduction.html#cb9-10" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'About as simple as it gets, folks'</span>)</span>
-<span id="cb9-11"><a href="introduction.html#cb9-11" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
-<span id="cb9-12"><a href="introduction.html#cb9-12" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"test.png"</span>)</span>
-<span id="cb9-13"><a href="introduction.html#cb9-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="introduction.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb10-2"><a href="introduction.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb10-3"><a href="introduction.html#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="introduction.html#cb10-4" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.arange(<span class="fl">0.0</span>, <span class="fl">2.0</span>, <span class="fl">0.01</span>)</span>
+<span id="cb10-5"><a href="introduction.html#cb10-5" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> np.sin(<span class="dv">2</span><span class="op">*</span>np.pi<span class="op">*</span>t)</span>
+<span id="cb10-6"><a href="introduction.html#cb10-6" aria-hidden="true" tabindex="-1"></a>plt.plot(t, s)</span>
+<span id="cb10-7"><a href="introduction.html#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="introduction.html#cb10-8" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'time (s)'</span>)</span>
+<span id="cb10-9"><a href="introduction.html#cb10-9" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'voltage (mV)'</span>)</span>
+<span id="cb10-10"><a href="introduction.html#cb10-10" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'About as simple as it gets, folks'</span>)</span>
+<span id="cb10-11"><a href="introduction.html#cb10-11" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb10-12"><a href="introduction.html#cb10-12" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"test.png"</span>)</span>
+<span id="cb10-13"><a href="introduction.html#cb10-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <img src="01-introduction_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;">
 </div>
 <br>
@@ -95,144 +97,144 @@
 <p>I love this plot because it helps to formulate the right question when you are looking for online assistance. Sooner of later you will be in need to customize the <span class="math inline">\(x\)</span> or <span class="math inline">\(y\)</span> axis ticks in such a way that present specific data points and skip the defaults. Or, get rid of so many x axis labels that superimposing one over each other.</p>
 <div class="decocode">
 <div style="background-color:#417FB1">
-<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="introduction.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/showcase/anatomy.html#sphx-glr-gallery-showcase-anatomy-py</span></span>
-<span id="cb10-2"><a href="introduction.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb10-3"><a href="introduction.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb10-4"><a href="introduction.html#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.ticker <span class="im">import</span> AutoMinorLocator, MultipleLocator, FuncFormatter</span>
-<span id="cb10-5"><a href="introduction.html#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-6"><a href="introduction.html#cb10-6" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">19680801</span>)</span>
-<span id="cb10-7"><a href="introduction.html#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-8"><a href="introduction.html#cb10-8" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.linspace(<span class="fl">0.5</span>, <span class="fl">3.5</span>, <span class="dv">100</span>)</span>
-<span id="cb10-9"><a href="introduction.html#cb10-9" aria-hidden="true" tabindex="-1"></a>Y1 <span class="op">=</span> <span class="dv">3</span><span class="op">+</span>np.cos(X)</span>
-<span id="cb10-10"><a href="introduction.html#cb10-10" aria-hidden="true" tabindex="-1"></a>Y2 <span class="op">=</span> <span class="dv">1</span><span class="op">+</span>np.cos(<span class="dv">1</span><span class="op">+</span>X<span class="op">/</span><span class="fl">0.75</span>)<span class="op">/</span><span class="dv">2</span></span>
-<span id="cb10-11"><a href="introduction.html#cb10-11" aria-hidden="true" tabindex="-1"></a>Y3 <span class="op">=</span> np.random.uniform(Y1, Y2, <span class="bu">len</span>(X))</span>
-<span id="cb10-12"><a href="introduction.html#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-13"><a href="introduction.html#cb10-13" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
-<span id="cb10-14"><a href="introduction.html#cb10-14" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, aspect<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb10-15"><a href="introduction.html#cb10-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-16"><a href="introduction.html#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-17"><a href="introduction.html#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> minor_tick(x, pos):</span>
-<span id="cb10-18"><a href="introduction.html#cb10-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> x <span class="op">%</span> <span class="fl">1.0</span>:</span>
-<span id="cb10-19"><a href="introduction.html#cb10-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">""</span></span>
-<span id="cb10-20"><a href="introduction.html#cb10-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"</span><span class="sc">%.2f</span><span class="st">"</span> <span class="op">%</span> x</span>
-<span id="cb10-21"><a href="introduction.html#cb10-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-22"><a href="introduction.html#cb10-22" aria-hidden="true" tabindex="-1"></a>ax.xaxis.set_major_locator(MultipleLocator(<span class="fl">1.000</span>))</span>
-<span id="cb10-23"><a href="introduction.html#cb10-23" aria-hidden="true" tabindex="-1"></a>ax.xaxis.set_minor_locator(AutoMinorLocator(<span class="dv">4</span>))</span>
-<span id="cb10-24"><a href="introduction.html#cb10-24" aria-hidden="true" tabindex="-1"></a>ax.yaxis.set_major_locator(MultipleLocator(<span class="fl">1.000</span>))</span>
-<span id="cb10-25"><a href="introduction.html#cb10-25" aria-hidden="true" tabindex="-1"></a>ax.yaxis.set_minor_locator(AutoMinorLocator(<span class="dv">4</span>))</span>
-<span id="cb10-26"><a href="introduction.html#cb10-26" aria-hidden="true" tabindex="-1"></a>ax.xaxis.set_minor_formatter(FuncFormatter(minor_tick))</span>
-<span id="cb10-27"><a href="introduction.html#cb10-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-28"><a href="introduction.html#cb10-28" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="dv">0</span>, <span class="dv">4</span>)</span>
-<span id="cb10-29"><a href="introduction.html#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="co">#:&gt; (0.0, 4.0)</span></span>
-<span id="cb10-30"><a href="introduction.html#cb10-30" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">0</span>, <span class="dv">4</span>)</span>
-<span id="cb10-31"><a href="introduction.html#cb10-31" aria-hidden="true" tabindex="-1"></a><span class="co">#:&gt; (0.0, 4.0)</span></span>
-<span id="cb10-32"><a href="introduction.html#cb10-32" aria-hidden="true" tabindex="-1"></a>ax.tick_params(which<span class="op">=</span><span class="st">'major'</span>, width<span class="op">=</span><span class="fl">1.0</span>)</span>
-<span id="cb10-33"><a href="introduction.html#cb10-33" aria-hidden="true" tabindex="-1"></a>ax.tick_params(which<span class="op">=</span><span class="st">'major'</span>, length<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb10-34"><a href="introduction.html#cb10-34" aria-hidden="true" tabindex="-1"></a>ax.tick_params(which<span class="op">=</span><span class="st">'minor'</span>, width<span class="op">=</span><span class="fl">1.0</span>, labelsize<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb10-35"><a href="introduction.html#cb10-35" aria-hidden="true" tabindex="-1"></a>ax.tick_params(which<span class="op">=</span><span class="st">'minor'</span>, length<span class="op">=</span><span class="dv">5</span>, labelsize<span class="op">=</span><span class="dv">10</span>, labelcolor<span class="op">=</span><span class="st">'0.25'</span>)</span>
-<span id="cb10-36"><a href="introduction.html#cb10-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-37"><a href="introduction.html#cb10-37" aria-hidden="true" tabindex="-1"></a>ax.grid(linestyle<span class="op">=</span><span class="st">"--"</span>, linewidth<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="st">'.25'</span>, zorder<span class="op">=-</span><span class="dv">10</span>)</span>
-<span id="cb10-38"><a href="introduction.html#cb10-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-39"><a href="introduction.html#cb10-39" aria-hidden="true" tabindex="-1"></a>ax.plot(X, Y1, c<span class="op">=</span>(<span class="fl">0.25</span>, <span class="fl">0.25</span>, <span class="fl">1.00</span>), lw<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">"Blue signal"</span>, zorder<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb10-40"><a href="introduction.html#cb10-40" aria-hidden="true" tabindex="-1"></a>ax.plot(X, Y2, c<span class="op">=</span>(<span class="fl">1.00</span>, <span class="fl">0.25</span>, <span class="fl">0.25</span>), lw<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">"Red signal"</span>)</span>
-<span id="cb10-41"><a href="introduction.html#cb10-41" aria-hidden="true" tabindex="-1"></a>ax.plot(X, Y3, linewidth<span class="op">=</span><span class="dv">0</span>,</span>
-<span id="cb10-42"><a href="introduction.html#cb10-42" aria-hidden="true" tabindex="-1"></a>        marker<span class="op">=</span><span class="st">'o'</span>, markerfacecolor<span class="op">=</span><span class="st">'w'</span>, markeredgecolor<span class="op">=</span><span class="st">'k'</span>)</span>
-<span id="cb10-43"><a href="introduction.html#cb10-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-44"><a href="introduction.html#cb10-44" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Anatomy of a figure"</span>, fontsize<span class="op">=</span><span class="dv">20</span>, verticalalignment<span class="op">=</span><span class="st">'bottom'</span>)</span>
-<span id="cb10-45"><a href="introduction.html#cb10-45" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"X axis label"</span>)</span>
-<span id="cb10-46"><a href="introduction.html#cb10-46" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Y axis label"</span>)</span>
-<span id="cb10-47"><a href="introduction.html#cb10-47" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
-<span id="cb10-48"><a href="introduction.html#cb10-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-49"><a href="introduction.html#cb10-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-50"><a href="introduction.html#cb10-50" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> circle(x, y, radius<span class="op">=</span><span class="fl">0.15</span>):</span>
-<span id="cb10-51"><a href="introduction.html#cb10-51" aria-hidden="true" tabindex="-1"></a>    <span class="im">from</span> matplotlib.patches <span class="im">import</span> Circle</span>
-<span id="cb10-52"><a href="introduction.html#cb10-52" aria-hidden="true" tabindex="-1"></a>    <span class="im">from</span> matplotlib.patheffects <span class="im">import</span> withStroke</span>
-<span id="cb10-53"><a href="introduction.html#cb10-53" aria-hidden="true" tabindex="-1"></a>    circle <span class="op">=</span> Circle((x, y), radius, clip_on<span class="op">=</span><span class="va">False</span>, zorder<span class="op">=</span><span class="dv">10</span>, linewidth<span class="op">=</span><span class="dv">1</span>,</span>
-<span id="cb10-54"><a href="introduction.html#cb10-54" aria-hidden="true" tabindex="-1"></a>                    edgecolor<span class="op">=</span><span class="st">'black'</span>, facecolor<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">.0125</span>),</span>
-<span id="cb10-55"><a href="introduction.html#cb10-55" aria-hidden="true" tabindex="-1"></a>                    path_effects<span class="op">=</span>[withStroke(linewidth<span class="op">=</span><span class="dv">5</span>, foreground<span class="op">=</span><span class="st">'w'</span>)])</span>
-<span id="cb10-56"><a href="introduction.html#cb10-56" aria-hidden="true" tabindex="-1"></a>    ax.add_artist(circle)</span>
-<span id="cb10-57"><a href="introduction.html#cb10-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-58"><a href="introduction.html#cb10-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-59"><a href="introduction.html#cb10-59" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> text(x, y, text):</span>
-<span id="cb10-60"><a href="introduction.html#cb10-60" aria-hidden="true" tabindex="-1"></a>    ax.text(x, y, text, backgroundcolor<span class="op">=</span><span class="st">"white"</span>,</span>
-<span id="cb10-61"><a href="introduction.html#cb10-61" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'top'</span>, weight<span class="op">=</span><span class="st">'bold'</span>, color<span class="op">=</span><span class="st">'blue'</span>)</span>
-<span id="cb10-62"><a href="introduction.html#cb10-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-63"><a href="introduction.html#cb10-63" aria-hidden="true" tabindex="-1"></a><span class="co"># Minor tick</span></span>
-<span id="cb10-64"><a href="introduction.html#cb10-64" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">0.50</span>, <span class="op">-</span><span class="fl">0.10</span>)</span>
-<span id="cb10-65"><a href="introduction.html#cb10-65" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">0.50</span>, <span class="op">-</span><span class="fl">0.32</span>, <span class="st">"Minor tick label"</span>)</span>
-<span id="cb10-66"><a href="introduction.html#cb10-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-67"><a href="introduction.html#cb10-67" aria-hidden="true" tabindex="-1"></a><span class="co"># Major tick</span></span>
-<span id="cb10-68"><a href="introduction.html#cb10-68" aria-hidden="true" tabindex="-1"></a>circle(<span class="op">-</span><span class="fl">0.03</span>, <span class="fl">4.00</span>)</span>
-<span id="cb10-69"><a href="introduction.html#cb10-69" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">0.03</span>, <span class="fl">3.80</span>, <span class="st">"Major tick"</span>)</span>
-<span id="cb10-70"><a href="introduction.html#cb10-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-71"><a href="introduction.html#cb10-71" aria-hidden="true" tabindex="-1"></a><span class="co"># Minor tick</span></span>
-<span id="cb10-72"><a href="introduction.html#cb10-72" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">0.00</span>, <span class="fl">3.50</span>)</span>
-<span id="cb10-73"><a href="introduction.html#cb10-73" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">0.00</span>, <span class="fl">3.30</span>, <span class="st">"Minor tick"</span>)</span>
-<span id="cb10-74"><a href="introduction.html#cb10-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-75"><a href="introduction.html#cb10-75" aria-hidden="true" tabindex="-1"></a><span class="co"># Major tick label</span></span>
-<span id="cb10-76"><a href="introduction.html#cb10-76" aria-hidden="true" tabindex="-1"></a>circle(<span class="op">-</span><span class="fl">0.15</span>, <span class="fl">3.00</span>)</span>
-<span id="cb10-77"><a href="introduction.html#cb10-77" aria-hidden="true" tabindex="-1"></a>text(<span class="op">-</span><span class="fl">0.15</span>, <span class="fl">2.80</span>, <span class="st">"Major tick label"</span>)</span>
-<span id="cb10-78"><a href="introduction.html#cb10-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-79"><a href="introduction.html#cb10-79" aria-hidden="true" tabindex="-1"></a><span class="co"># X Label</span></span>
-<span id="cb10-80"><a href="introduction.html#cb10-80" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">1.80</span>, <span class="op">-</span><span class="fl">0.27</span>)</span>
-<span id="cb10-81"><a href="introduction.html#cb10-81" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">1.80</span>, <span class="op">-</span><span class="fl">0.45</span>, <span class="st">"X axis label"</span>)</span>
-<span id="cb10-82"><a href="introduction.html#cb10-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-83"><a href="introduction.html#cb10-83" aria-hidden="true" tabindex="-1"></a><span class="co"># Y Label</span></span>
-<span id="cb10-84"><a href="introduction.html#cb10-84" aria-hidden="true" tabindex="-1"></a>circle(<span class="op">-</span><span class="fl">0.27</span>, <span class="fl">1.80</span>)</span>
-<span id="cb10-85"><a href="introduction.html#cb10-85" aria-hidden="true" tabindex="-1"></a>text(<span class="op">-</span><span class="fl">0.27</span>, <span class="fl">1.6</span>, <span class="st">"Y axis label"</span>)</span>
-<span id="cb10-86"><a href="introduction.html#cb10-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-87"><a href="introduction.html#cb10-87" aria-hidden="true" tabindex="-1"></a><span class="co"># Title</span></span>
-<span id="cb10-88"><a href="introduction.html#cb10-88" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">1.60</span>, <span class="fl">4.13</span>)</span>
-<span id="cb10-89"><a href="introduction.html#cb10-89" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">1.60</span>, <span class="fl">3.93</span>, <span class="st">"Title"</span>)</span>
-<span id="cb10-90"><a href="introduction.html#cb10-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-91"><a href="introduction.html#cb10-91" aria-hidden="true" tabindex="-1"></a><span class="co"># Blue plot</span></span>
-<span id="cb10-92"><a href="introduction.html#cb10-92" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">1.75</span>, <span class="fl">2.80</span>)</span>
-<span id="cb10-93"><a href="introduction.html#cb10-93" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">1.75</span>, <span class="fl">2.60</span>, <span class="st">"Line</span><span class="ch">\n</span><span class="st">(line plot)"</span>)</span>
-<span id="cb10-94"><a href="introduction.html#cb10-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-95"><a href="introduction.html#cb10-95" aria-hidden="true" tabindex="-1"></a><span class="co"># Red plot</span></span>
-<span id="cb10-96"><a href="introduction.html#cb10-96" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">1.20</span>, <span class="fl">0.60</span>)</span>
-<span id="cb10-97"><a href="introduction.html#cb10-97" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">1.20</span>, <span class="fl">0.40</span>, <span class="st">"Line</span><span class="ch">\n</span><span class="st">(line plot)"</span>)</span>
-<span id="cb10-98"><a href="introduction.html#cb10-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-99"><a href="introduction.html#cb10-99" aria-hidden="true" tabindex="-1"></a><span class="co"># Scatter plot</span></span>
-<span id="cb10-100"><a href="introduction.html#cb10-100" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">3.20</span>, <span class="fl">1.75</span>)</span>
-<span id="cb10-101"><a href="introduction.html#cb10-101" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">3.20</span>, <span class="fl">1.55</span>, <span class="st">"Markers</span><span class="ch">\n</span><span class="st">(scatter plot)"</span>)</span>
-<span id="cb10-102"><a href="introduction.html#cb10-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-103"><a href="introduction.html#cb10-103" aria-hidden="true" tabindex="-1"></a><span class="co"># Grid</span></span>
-<span id="cb10-104"><a href="introduction.html#cb10-104" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">3.00</span>, <span class="fl">3.00</span>)</span>
-<span id="cb10-105"><a href="introduction.html#cb10-105" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">3.00</span>, <span class="fl">2.80</span>, <span class="st">"Grid"</span>)</span>
-<span id="cb10-106"><a href="introduction.html#cb10-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-107"><a href="introduction.html#cb10-107" aria-hidden="true" tabindex="-1"></a><span class="co"># Legend</span></span>
-<span id="cb10-108"><a href="introduction.html#cb10-108" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">3.70</span>, <span class="fl">3.80</span>)</span>
-<span id="cb10-109"><a href="introduction.html#cb10-109" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">3.70</span>, <span class="fl">3.60</span>, <span class="st">"Legend"</span>)</span>
-<span id="cb10-110"><a href="introduction.html#cb10-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-111"><a href="introduction.html#cb10-111" aria-hidden="true" tabindex="-1"></a><span class="co"># Axes</span></span>
-<span id="cb10-112"><a href="introduction.html#cb10-112" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">0.5</span>, <span class="fl">0.5</span>)</span>
-<span id="cb10-113"><a href="introduction.html#cb10-113" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">0.5</span>, <span class="fl">0.3</span>, <span class="st">"Axes"</span>)</span>
-<span id="cb10-114"><a href="introduction.html#cb10-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-115"><a href="introduction.html#cb10-115" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure</span></span>
-<span id="cb10-116"><a href="introduction.html#cb10-116" aria-hidden="true" tabindex="-1"></a>circle(<span class="op">-</span><span class="fl">0.3</span>, <span class="fl">0.65</span>)</span>
-<span id="cb10-117"><a href="introduction.html#cb10-117" aria-hidden="true" tabindex="-1"></a>text(<span class="op">-</span><span class="fl">0.3</span>, <span class="fl">0.45</span>, <span class="st">"Figure"</span>)</span>
-<span id="cb10-118"><a href="introduction.html#cb10-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-119"><a href="introduction.html#cb10-119" aria-hidden="true" tabindex="-1"></a>color <span class="op">=</span> <span class="st">'blue'</span></span>
-<span id="cb10-120"><a href="introduction.html#cb10-120" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="st">'Spines'</span>, xy<span class="op">=</span>(<span class="fl">4.0</span>, <span class="fl">0.35</span>), xycoords<span class="op">=</span><span class="st">'data'</span>,</span>
-<span id="cb10-121"><a href="introduction.html#cb10-121" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(<span class="fl">3.3</span>, <span class="fl">0.5</span>), textcoords<span class="op">=</span><span class="st">'data'</span>,</span>
-<span id="cb10-122"><a href="introduction.html#cb10-122" aria-hidden="true" tabindex="-1"></a>            weight<span class="op">=</span><span class="st">'bold'</span>, color<span class="op">=</span>color,</span>
-<span id="cb10-123"><a href="introduction.html#cb10-123" aria-hidden="true" tabindex="-1"></a>            arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">'-&gt;'</span>,</span>
-<span id="cb10-124"><a href="introduction.html#cb10-124" aria-hidden="true" tabindex="-1"></a>                            connectionstyle<span class="op">=</span><span class="st">"arc3"</span>,</span>
-<span id="cb10-125"><a href="introduction.html#cb10-125" aria-hidden="true" tabindex="-1"></a>                            color<span class="op">=</span>color))</span>
-<span id="cb10-126"><a href="introduction.html#cb10-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-127"><a href="introduction.html#cb10-127" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="st">''</span>, xy<span class="op">=</span>(<span class="fl">3.15</span>, <span class="fl">0.0</span>), xycoords<span class="op">=</span><span class="st">'data'</span>,</span>
-<span id="cb10-128"><a href="introduction.html#cb10-128" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(<span class="fl">3.45</span>, <span class="fl">0.45</span>), textcoords<span class="op">=</span><span class="st">'data'</span>,</span>
-<span id="cb10-129"><a href="introduction.html#cb10-129" aria-hidden="true" tabindex="-1"></a>            weight<span class="op">=</span><span class="st">'bold'</span>, color<span class="op">=</span>color,</span>
-<span id="cb10-130"><a href="introduction.html#cb10-130" aria-hidden="true" tabindex="-1"></a>            arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">'-&gt;'</span>,</span>
-<span id="cb10-131"><a href="introduction.html#cb10-131" aria-hidden="true" tabindex="-1"></a>                            connectionstyle<span class="op">=</span><span class="st">"arc3"</span>,</span>
-<span id="cb10-132"><a href="introduction.html#cb10-132" aria-hidden="true" tabindex="-1"></a>                            color<span class="op">=</span>color))</span>
-<span id="cb10-133"><a href="introduction.html#cb10-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-134"><a href="introduction.html#cb10-134" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">4.0</span>, <span class="op">-</span><span class="fl">0.4</span>, <span class="st">"Made with http://matplotlib.org"</span>,</span>
-<span id="cb10-135"><a href="introduction.html#cb10-135" aria-hidden="true" tabindex="-1"></a>        fontsize<span class="op">=</span><span class="dv">10</span>, ha<span class="op">=</span><span class="st">"right"</span>, color<span class="op">=</span><span class="st">'.5'</span>)</span>
-<span id="cb10-136"><a href="introduction.html#cb10-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-137"><a href="introduction.html#cb10-137" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="introduction.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/showcase/anatomy.html#sphx-glr-gallery-showcase-anatomy-py</span></span>
+<span id="cb11-2"><a href="introduction.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb11-3"><a href="introduction.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb11-4"><a href="introduction.html#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.ticker <span class="im">import</span> AutoMinorLocator, MultipleLocator, FuncFormatter</span>
+<span id="cb11-5"><a href="introduction.html#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="introduction.html#cb11-6" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">19680801</span>)</span>
+<span id="cb11-7"><a href="introduction.html#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="introduction.html#cb11-8" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.linspace(<span class="fl">0.5</span>, <span class="fl">3.5</span>, <span class="dv">100</span>)</span>
+<span id="cb11-9"><a href="introduction.html#cb11-9" aria-hidden="true" tabindex="-1"></a>Y1 <span class="op">=</span> <span class="dv">3</span><span class="op">+</span>np.cos(X)</span>
+<span id="cb11-10"><a href="introduction.html#cb11-10" aria-hidden="true" tabindex="-1"></a>Y2 <span class="op">=</span> <span class="dv">1</span><span class="op">+</span>np.cos(<span class="dv">1</span><span class="op">+</span>X<span class="op">/</span><span class="fl">0.75</span>)<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb11-11"><a href="introduction.html#cb11-11" aria-hidden="true" tabindex="-1"></a>Y3 <span class="op">=</span> np.random.uniform(Y1, Y2, <span class="bu">len</span>(X))</span>
+<span id="cb11-12"><a href="introduction.html#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="introduction.html#cb11-13" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
+<span id="cb11-14"><a href="introduction.html#cb11-14" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, aspect<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb11-15"><a href="introduction.html#cb11-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-16"><a href="introduction.html#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-17"><a href="introduction.html#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> minor_tick(x, pos):</span>
+<span id="cb11-18"><a href="introduction.html#cb11-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> x <span class="op">%</span> <span class="fl">1.0</span>:</span>
+<span id="cb11-19"><a href="introduction.html#cb11-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">""</span></span>
+<span id="cb11-20"><a href="introduction.html#cb11-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"</span><span class="sc">%.2f</span><span class="st">"</span> <span class="op">%</span> x</span>
+<span id="cb11-21"><a href="introduction.html#cb11-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-22"><a href="introduction.html#cb11-22" aria-hidden="true" tabindex="-1"></a>ax.xaxis.set_major_locator(MultipleLocator(<span class="fl">1.000</span>))</span>
+<span id="cb11-23"><a href="introduction.html#cb11-23" aria-hidden="true" tabindex="-1"></a>ax.xaxis.set_minor_locator(AutoMinorLocator(<span class="dv">4</span>))</span>
+<span id="cb11-24"><a href="introduction.html#cb11-24" aria-hidden="true" tabindex="-1"></a>ax.yaxis.set_major_locator(MultipleLocator(<span class="fl">1.000</span>))</span>
+<span id="cb11-25"><a href="introduction.html#cb11-25" aria-hidden="true" tabindex="-1"></a>ax.yaxis.set_minor_locator(AutoMinorLocator(<span class="dv">4</span>))</span>
+<span id="cb11-26"><a href="introduction.html#cb11-26" aria-hidden="true" tabindex="-1"></a>ax.xaxis.set_minor_formatter(FuncFormatter(minor_tick))</span>
+<span id="cb11-27"><a href="introduction.html#cb11-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-28"><a href="introduction.html#cb11-28" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="dv">0</span>, <span class="dv">4</span>)</span>
+<span id="cb11-29"><a href="introduction.html#cb11-29" aria-hidden="true" tabindex="-1"></a><span class="co">#:&gt; (0.0, 4.0)</span></span>
+<span id="cb11-30"><a href="introduction.html#cb11-30" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">0</span>, <span class="dv">4</span>)</span>
+<span id="cb11-31"><a href="introduction.html#cb11-31" aria-hidden="true" tabindex="-1"></a><span class="co">#:&gt; (0.0, 4.0)</span></span>
+<span id="cb11-32"><a href="introduction.html#cb11-32" aria-hidden="true" tabindex="-1"></a>ax.tick_params(which<span class="op">=</span><span class="st">'major'</span>, width<span class="op">=</span><span class="fl">1.0</span>)</span>
+<span id="cb11-33"><a href="introduction.html#cb11-33" aria-hidden="true" tabindex="-1"></a>ax.tick_params(which<span class="op">=</span><span class="st">'major'</span>, length<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb11-34"><a href="introduction.html#cb11-34" aria-hidden="true" tabindex="-1"></a>ax.tick_params(which<span class="op">=</span><span class="st">'minor'</span>, width<span class="op">=</span><span class="fl">1.0</span>, labelsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb11-35"><a href="introduction.html#cb11-35" aria-hidden="true" tabindex="-1"></a>ax.tick_params(which<span class="op">=</span><span class="st">'minor'</span>, length<span class="op">=</span><span class="dv">5</span>, labelsize<span class="op">=</span><span class="dv">10</span>, labelcolor<span class="op">=</span><span class="st">'0.25'</span>)</span>
+<span id="cb11-36"><a href="introduction.html#cb11-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-37"><a href="introduction.html#cb11-37" aria-hidden="true" tabindex="-1"></a>ax.grid(linestyle<span class="op">=</span><span class="st">"--"</span>, linewidth<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="st">'.25'</span>, zorder<span class="op">=-</span><span class="dv">10</span>)</span>
+<span id="cb11-38"><a href="introduction.html#cb11-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-39"><a href="introduction.html#cb11-39" aria-hidden="true" tabindex="-1"></a>ax.plot(X, Y1, c<span class="op">=</span>(<span class="fl">0.25</span>, <span class="fl">0.25</span>, <span class="fl">1.00</span>), lw<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">"Blue signal"</span>, zorder<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb11-40"><a href="introduction.html#cb11-40" aria-hidden="true" tabindex="-1"></a>ax.plot(X, Y2, c<span class="op">=</span>(<span class="fl">1.00</span>, <span class="fl">0.25</span>, <span class="fl">0.25</span>), lw<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">"Red signal"</span>)</span>
+<span id="cb11-41"><a href="introduction.html#cb11-41" aria-hidden="true" tabindex="-1"></a>ax.plot(X, Y3, linewidth<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb11-42"><a href="introduction.html#cb11-42" aria-hidden="true" tabindex="-1"></a>        marker<span class="op">=</span><span class="st">'o'</span>, markerfacecolor<span class="op">=</span><span class="st">'w'</span>, markeredgecolor<span class="op">=</span><span class="st">'k'</span>)</span>
+<span id="cb11-43"><a href="introduction.html#cb11-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-44"><a href="introduction.html#cb11-44" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Anatomy of a figure"</span>, fontsize<span class="op">=</span><span class="dv">20</span>, verticalalignment<span class="op">=</span><span class="st">'bottom'</span>)</span>
+<span id="cb11-45"><a href="introduction.html#cb11-45" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"X axis label"</span>)</span>
+<span id="cb11-46"><a href="introduction.html#cb11-46" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Y axis label"</span>)</span>
+<span id="cb11-47"><a href="introduction.html#cb11-47" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb11-48"><a href="introduction.html#cb11-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-49"><a href="introduction.html#cb11-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-50"><a href="introduction.html#cb11-50" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> circle(x, y, radius<span class="op">=</span><span class="fl">0.15</span>):</span>
+<span id="cb11-51"><a href="introduction.html#cb11-51" aria-hidden="true" tabindex="-1"></a>    <span class="im">from</span> matplotlib.patches <span class="im">import</span> Circle</span>
+<span id="cb11-52"><a href="introduction.html#cb11-52" aria-hidden="true" tabindex="-1"></a>    <span class="im">from</span> matplotlib.patheffects <span class="im">import</span> withStroke</span>
+<span id="cb11-53"><a href="introduction.html#cb11-53" aria-hidden="true" tabindex="-1"></a>    circle <span class="op">=</span> Circle((x, y), radius, clip_on<span class="op">=</span><span class="va">False</span>, zorder<span class="op">=</span><span class="dv">10</span>, linewidth<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb11-54"><a href="introduction.html#cb11-54" aria-hidden="true" tabindex="-1"></a>                    edgecolor<span class="op">=</span><span class="st">'black'</span>, facecolor<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">.0125</span>),</span>
+<span id="cb11-55"><a href="introduction.html#cb11-55" aria-hidden="true" tabindex="-1"></a>                    path_effects<span class="op">=</span>[withStroke(linewidth<span class="op">=</span><span class="dv">5</span>, foreground<span class="op">=</span><span class="st">'w'</span>)])</span>
+<span id="cb11-56"><a href="introduction.html#cb11-56" aria-hidden="true" tabindex="-1"></a>    ax.add_artist(circle)</span>
+<span id="cb11-57"><a href="introduction.html#cb11-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-58"><a href="introduction.html#cb11-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-59"><a href="introduction.html#cb11-59" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> text(x, y, text):</span>
+<span id="cb11-60"><a href="introduction.html#cb11-60" aria-hidden="true" tabindex="-1"></a>    ax.text(x, y, text, backgroundcolor<span class="op">=</span><span class="st">"white"</span>,</span>
+<span id="cb11-61"><a href="introduction.html#cb11-61" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'top'</span>, weight<span class="op">=</span><span class="st">'bold'</span>, color<span class="op">=</span><span class="st">'blue'</span>)</span>
+<span id="cb11-62"><a href="introduction.html#cb11-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-63"><a href="introduction.html#cb11-63" aria-hidden="true" tabindex="-1"></a><span class="co"># Minor tick</span></span>
+<span id="cb11-64"><a href="introduction.html#cb11-64" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">0.50</span>, <span class="op">-</span><span class="fl">0.10</span>)</span>
+<span id="cb11-65"><a href="introduction.html#cb11-65" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">0.50</span>, <span class="op">-</span><span class="fl">0.32</span>, <span class="st">"Minor tick label"</span>)</span>
+<span id="cb11-66"><a href="introduction.html#cb11-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-67"><a href="introduction.html#cb11-67" aria-hidden="true" tabindex="-1"></a><span class="co"># Major tick</span></span>
+<span id="cb11-68"><a href="introduction.html#cb11-68" aria-hidden="true" tabindex="-1"></a>circle(<span class="op">-</span><span class="fl">0.03</span>, <span class="fl">4.00</span>)</span>
+<span id="cb11-69"><a href="introduction.html#cb11-69" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">0.03</span>, <span class="fl">3.80</span>, <span class="st">"Major tick"</span>)</span>
+<span id="cb11-70"><a href="introduction.html#cb11-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-71"><a href="introduction.html#cb11-71" aria-hidden="true" tabindex="-1"></a><span class="co"># Minor tick</span></span>
+<span id="cb11-72"><a href="introduction.html#cb11-72" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">0.00</span>, <span class="fl">3.50</span>)</span>
+<span id="cb11-73"><a href="introduction.html#cb11-73" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">0.00</span>, <span class="fl">3.30</span>, <span class="st">"Minor tick"</span>)</span>
+<span id="cb11-74"><a href="introduction.html#cb11-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-75"><a href="introduction.html#cb11-75" aria-hidden="true" tabindex="-1"></a><span class="co"># Major tick label</span></span>
+<span id="cb11-76"><a href="introduction.html#cb11-76" aria-hidden="true" tabindex="-1"></a>circle(<span class="op">-</span><span class="fl">0.15</span>, <span class="fl">3.00</span>)</span>
+<span id="cb11-77"><a href="introduction.html#cb11-77" aria-hidden="true" tabindex="-1"></a>text(<span class="op">-</span><span class="fl">0.15</span>, <span class="fl">2.80</span>, <span class="st">"Major tick label"</span>)</span>
+<span id="cb11-78"><a href="introduction.html#cb11-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-79"><a href="introduction.html#cb11-79" aria-hidden="true" tabindex="-1"></a><span class="co"># X Label</span></span>
+<span id="cb11-80"><a href="introduction.html#cb11-80" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">1.80</span>, <span class="op">-</span><span class="fl">0.27</span>)</span>
+<span id="cb11-81"><a href="introduction.html#cb11-81" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">1.80</span>, <span class="op">-</span><span class="fl">0.45</span>, <span class="st">"X axis label"</span>)</span>
+<span id="cb11-82"><a href="introduction.html#cb11-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-83"><a href="introduction.html#cb11-83" aria-hidden="true" tabindex="-1"></a><span class="co"># Y Label</span></span>
+<span id="cb11-84"><a href="introduction.html#cb11-84" aria-hidden="true" tabindex="-1"></a>circle(<span class="op">-</span><span class="fl">0.27</span>, <span class="fl">1.80</span>)</span>
+<span id="cb11-85"><a href="introduction.html#cb11-85" aria-hidden="true" tabindex="-1"></a>text(<span class="op">-</span><span class="fl">0.27</span>, <span class="fl">1.6</span>, <span class="st">"Y axis label"</span>)</span>
+<span id="cb11-86"><a href="introduction.html#cb11-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-87"><a href="introduction.html#cb11-87" aria-hidden="true" tabindex="-1"></a><span class="co"># Title</span></span>
+<span id="cb11-88"><a href="introduction.html#cb11-88" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">1.60</span>, <span class="fl">4.13</span>)</span>
+<span id="cb11-89"><a href="introduction.html#cb11-89" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">1.60</span>, <span class="fl">3.93</span>, <span class="st">"Title"</span>)</span>
+<span id="cb11-90"><a href="introduction.html#cb11-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-91"><a href="introduction.html#cb11-91" aria-hidden="true" tabindex="-1"></a><span class="co"># Blue plot</span></span>
+<span id="cb11-92"><a href="introduction.html#cb11-92" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">1.75</span>, <span class="fl">2.80</span>)</span>
+<span id="cb11-93"><a href="introduction.html#cb11-93" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">1.75</span>, <span class="fl">2.60</span>, <span class="st">"Line</span><span class="ch">\n</span><span class="st">(line plot)"</span>)</span>
+<span id="cb11-94"><a href="introduction.html#cb11-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-95"><a href="introduction.html#cb11-95" aria-hidden="true" tabindex="-1"></a><span class="co"># Red plot</span></span>
+<span id="cb11-96"><a href="introduction.html#cb11-96" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">1.20</span>, <span class="fl">0.60</span>)</span>
+<span id="cb11-97"><a href="introduction.html#cb11-97" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">1.20</span>, <span class="fl">0.40</span>, <span class="st">"Line</span><span class="ch">\n</span><span class="st">(line plot)"</span>)</span>
+<span id="cb11-98"><a href="introduction.html#cb11-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-99"><a href="introduction.html#cb11-99" aria-hidden="true" tabindex="-1"></a><span class="co"># Scatter plot</span></span>
+<span id="cb11-100"><a href="introduction.html#cb11-100" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">3.20</span>, <span class="fl">1.75</span>)</span>
+<span id="cb11-101"><a href="introduction.html#cb11-101" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">3.20</span>, <span class="fl">1.55</span>, <span class="st">"Markers</span><span class="ch">\n</span><span class="st">(scatter plot)"</span>)</span>
+<span id="cb11-102"><a href="introduction.html#cb11-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-103"><a href="introduction.html#cb11-103" aria-hidden="true" tabindex="-1"></a><span class="co"># Grid</span></span>
+<span id="cb11-104"><a href="introduction.html#cb11-104" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">3.00</span>, <span class="fl">3.00</span>)</span>
+<span id="cb11-105"><a href="introduction.html#cb11-105" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">3.00</span>, <span class="fl">2.80</span>, <span class="st">"Grid"</span>)</span>
+<span id="cb11-106"><a href="introduction.html#cb11-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-107"><a href="introduction.html#cb11-107" aria-hidden="true" tabindex="-1"></a><span class="co"># Legend</span></span>
+<span id="cb11-108"><a href="introduction.html#cb11-108" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">3.70</span>, <span class="fl">3.80</span>)</span>
+<span id="cb11-109"><a href="introduction.html#cb11-109" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">3.70</span>, <span class="fl">3.60</span>, <span class="st">"Legend"</span>)</span>
+<span id="cb11-110"><a href="introduction.html#cb11-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-111"><a href="introduction.html#cb11-111" aria-hidden="true" tabindex="-1"></a><span class="co"># Axes</span></span>
+<span id="cb11-112"><a href="introduction.html#cb11-112" aria-hidden="true" tabindex="-1"></a>circle(<span class="fl">0.5</span>, <span class="fl">0.5</span>)</span>
+<span id="cb11-113"><a href="introduction.html#cb11-113" aria-hidden="true" tabindex="-1"></a>text(<span class="fl">0.5</span>, <span class="fl">0.3</span>, <span class="st">"Axes"</span>)</span>
+<span id="cb11-114"><a href="introduction.html#cb11-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-115"><a href="introduction.html#cb11-115" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure</span></span>
+<span id="cb11-116"><a href="introduction.html#cb11-116" aria-hidden="true" tabindex="-1"></a>circle(<span class="op">-</span><span class="fl">0.3</span>, <span class="fl">0.65</span>)</span>
+<span id="cb11-117"><a href="introduction.html#cb11-117" aria-hidden="true" tabindex="-1"></a>text(<span class="op">-</span><span class="fl">0.3</span>, <span class="fl">0.45</span>, <span class="st">"Figure"</span>)</span>
+<span id="cb11-118"><a href="introduction.html#cb11-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-119"><a href="introduction.html#cb11-119" aria-hidden="true" tabindex="-1"></a>color <span class="op">=</span> <span class="st">'blue'</span></span>
+<span id="cb11-120"><a href="introduction.html#cb11-120" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="st">'Spines'</span>, xy<span class="op">=</span>(<span class="fl">4.0</span>, <span class="fl">0.35</span>), xycoords<span class="op">=</span><span class="st">'data'</span>,</span>
+<span id="cb11-121"><a href="introduction.html#cb11-121" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(<span class="fl">3.3</span>, <span class="fl">0.5</span>), textcoords<span class="op">=</span><span class="st">'data'</span>,</span>
+<span id="cb11-122"><a href="introduction.html#cb11-122" aria-hidden="true" tabindex="-1"></a>            weight<span class="op">=</span><span class="st">'bold'</span>, color<span class="op">=</span>color,</span>
+<span id="cb11-123"><a href="introduction.html#cb11-123" aria-hidden="true" tabindex="-1"></a>            arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">'-&gt;'</span>,</span>
+<span id="cb11-124"><a href="introduction.html#cb11-124" aria-hidden="true" tabindex="-1"></a>                            connectionstyle<span class="op">=</span><span class="st">"arc3"</span>,</span>
+<span id="cb11-125"><a href="introduction.html#cb11-125" aria-hidden="true" tabindex="-1"></a>                            color<span class="op">=</span>color))</span>
+<span id="cb11-126"><a href="introduction.html#cb11-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-127"><a href="introduction.html#cb11-127" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="st">''</span>, xy<span class="op">=</span>(<span class="fl">3.15</span>, <span class="fl">0.0</span>), xycoords<span class="op">=</span><span class="st">'data'</span>,</span>
+<span id="cb11-128"><a href="introduction.html#cb11-128" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(<span class="fl">3.45</span>, <span class="fl">0.45</span>), textcoords<span class="op">=</span><span class="st">'data'</span>,</span>
+<span id="cb11-129"><a href="introduction.html#cb11-129" aria-hidden="true" tabindex="-1"></a>            weight<span class="op">=</span><span class="st">'bold'</span>, color<span class="op">=</span>color,</span>
+<span id="cb11-130"><a href="introduction.html#cb11-130" aria-hidden="true" tabindex="-1"></a>            arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">'-&gt;'</span>,</span>
+<span id="cb11-131"><a href="introduction.html#cb11-131" aria-hidden="true" tabindex="-1"></a>                            connectionstyle<span class="op">=</span><span class="st">"arc3"</span>,</span>
+<span id="cb11-132"><a href="introduction.html#cb11-132" aria-hidden="true" tabindex="-1"></a>                            color<span class="op">=</span>color))</span>
+<span id="cb11-133"><a href="introduction.html#cb11-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-134"><a href="introduction.html#cb11-134" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">4.0</span>, <span class="op">-</span><span class="fl">0.4</span>, <span class="st">"Made with http://matplotlib.org"</span>,</span>
+<span id="cb11-135"><a href="introduction.html#cb11-135" aria-hidden="true" tabindex="-1"></a>        fontsize<span class="op">=</span><span class="dv">10</span>, ha<span class="op">=</span><span class="st">"right"</span>, color<span class="op">=</span><span class="st">'.5'</span>)</span>
+<span id="cb11-136"><a href="introduction.html#cb11-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-137"><a href="introduction.html#cb11-137" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <img src="01-introduction_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;">
 </div>
 <br>
@@ -245,45 +247,45 @@
 <p>Not precisely the kind of plots I am interested right now, all the kinds of business plots areve available in <code>matplotlib</code>, including the infamous <strong>pie chart</strong>.</p>
 <div class="decocode">
 <div style="background-color:#417FB1">
-<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="introduction.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb11-2"><a href="introduction.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb11-3"><a href="introduction.html#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="introduction.html#cb11-4" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">'ggplot'</span>)</span>
-<span id="cb11-5"><a href="introduction.html#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-6"><a href="introduction.html#cb11-6" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(ncols<span class="op">=</span><span class="dv">2</span>, nrows<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb11-7"><a href="introduction.html#cb11-7" aria-hidden="true" tabindex="-1"></a>ax1, ax2, ax3, ax4 <span class="op">=</span> axes.ravel()</span>
-<span id="cb11-8"><a href="introduction.html#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-9"><a href="introduction.html#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co"># scatter plot (Note: `plt.scatter` doesn't use default colors)</span></span>
-<span id="cb11-10"><a href="introduction.html#cb11-10" aria-hidden="true" tabindex="-1"></a>x, y <span class="op">=</span> np.random.normal(size<span class="op">=</span>(<span class="dv">2</span>, <span class="dv">200</span>))</span>
-<span id="cb11-11"><a href="introduction.html#cb11-11" aria-hidden="true" tabindex="-1"></a>ax1.plot(x, y, <span class="st">'o'</span>)</span>
-<span id="cb11-12"><a href="introduction.html#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-13"><a href="introduction.html#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="co"># sinusoidal lines with colors from default color cycle</span></span>
-<span id="cb11-14"><a href="introduction.html#cb11-14" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>np.pi</span>
-<span id="cb11-15"><a href="introduction.html#cb11-15" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, L)</span>
-<span id="cb11-16"><a href="introduction.html#cb11-16" aria-hidden="true" tabindex="-1"></a>ncolors <span class="op">=</span> <span class="bu">len</span>(plt.rcParams[<span class="st">'axes.prop_cycle'</span>])</span>
-<span id="cb11-17"><a href="introduction.html#cb11-17" aria-hidden="true" tabindex="-1"></a>shift <span class="op">=</span> np.linspace(<span class="dv">0</span>, L, ncolors, endpoint<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb11-18"><a href="introduction.html#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> s <span class="kw">in</span> shift:</span>
-<span id="cb11-19"><a href="introduction.html#cb11-19" aria-hidden="true" tabindex="-1"></a>    ax2.plot(x, np.sin(x <span class="op">+</span> s), <span class="st">'-'</span>)</span>
-<span id="cb11-20"><a href="introduction.html#cb11-20" aria-hidden="true" tabindex="-1"></a>ax2.margins(<span class="dv">0</span>)</span>
-<span id="cb11-21"><a href="introduction.html#cb11-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-22"><a href="introduction.html#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="co"># bar graphs</span></span>
-<span id="cb11-23"><a href="introduction.html#cb11-23" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">5</span>)</span>
-<span id="cb11-24"><a href="introduction.html#cb11-24" aria-hidden="true" tabindex="-1"></a>y1, y2 <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">25</span>, size<span class="op">=</span>(<span class="dv">2</span>, <span class="dv">5</span>))</span>
-<span id="cb11-25"><a href="introduction.html#cb11-25" aria-hidden="true" tabindex="-1"></a>width <span class="op">=</span> <span class="fl">0.25</span></span>
-<span id="cb11-26"><a href="introduction.html#cb11-26" aria-hidden="true" tabindex="-1"></a>ax3.bar(x, y1, width)</span>
-<span id="cb11-27"><a href="introduction.html#cb11-27" aria-hidden="true" tabindex="-1"></a>ax3.bar(x <span class="op">+</span> width, y2, width,</span>
-<span id="cb11-28"><a href="introduction.html#cb11-28" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="bu">list</span>(plt.rcParams[<span class="st">'axes.prop_cycle'</span>])[<span class="dv">2</span>][<span class="st">'color'</span>])</span>
-<span id="cb11-29"><a href="introduction.html#cb11-29" aria-hidden="true" tabindex="-1"></a>ax3.set_xticks(x <span class="op">+</span> width)</span>
-<span id="cb11-30"><a href="introduction.html#cb11-30" aria-hidden="true" tabindex="-1"></a>ax3.set_xticklabels([<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>, <span class="st">'d'</span>, <span class="st">'e'</span>])</span>
-<span id="cb11-31"><a href="introduction.html#cb11-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-32"><a href="introduction.html#cb11-32" aria-hidden="true" tabindex="-1"></a><span class="co"># circles with colors from default color cycle</span></span>
-<span id="cb11-33"><a href="introduction.html#cb11-33" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, color <span class="kw">in</span> <span class="bu">enumerate</span>(plt.rcParams[<span class="st">'axes.prop_cycle'</span>]):</span>
-<span id="cb11-34"><a href="introduction.html#cb11-34" aria-hidden="true" tabindex="-1"></a>    xy <span class="op">=</span> np.random.normal(size<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb11-35"><a href="introduction.html#cb11-35" aria-hidden="true" tabindex="-1"></a>    ax4.add_patch(plt.Circle(xy, radius<span class="op">=</span><span class="fl">0.3</span>, color<span class="op">=</span>color[<span class="st">'color'</span>]))</span>
-<span id="cb11-36"><a href="introduction.html#cb11-36" aria-hidden="true" tabindex="-1"></a>ax4.axis(<span class="st">'equal'</span>)</span>
-<span id="cb11-37"><a href="introduction.html#cb11-37" aria-hidden="true" tabindex="-1"></a>ax4.margins(<span class="dv">0</span>)</span>
-<span id="cb11-38"><a href="introduction.html#cb11-38" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="introduction.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb12-2"><a href="introduction.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb12-3"><a href="introduction.html#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="introduction.html#cb12-4" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">'ggplot'</span>)</span>
+<span id="cb12-5"><a href="introduction.html#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="introduction.html#cb12-6" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(ncols<span class="op">=</span><span class="dv">2</span>, nrows<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb12-7"><a href="introduction.html#cb12-7" aria-hidden="true" tabindex="-1"></a>ax1, ax2, ax3, ax4 <span class="op">=</span> axes.ravel()</span>
+<span id="cb12-8"><a href="introduction.html#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="introduction.html#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co"># scatter plot (Note: `plt.scatter` doesn't use default colors)</span></span>
+<span id="cb12-10"><a href="introduction.html#cb12-10" aria-hidden="true" tabindex="-1"></a>x, y <span class="op">=</span> np.random.normal(size<span class="op">=</span>(<span class="dv">2</span>, <span class="dv">200</span>))</span>
+<span id="cb12-11"><a href="introduction.html#cb12-11" aria-hidden="true" tabindex="-1"></a>ax1.plot(x, y, <span class="st">'o'</span>)</span>
+<span id="cb12-12"><a href="introduction.html#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-13"><a href="introduction.html#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="co"># sinusoidal lines with colors from default color cycle</span></span>
+<span id="cb12-14"><a href="introduction.html#cb12-14" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>np.pi</span>
+<span id="cb12-15"><a href="introduction.html#cb12-15" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, L)</span>
+<span id="cb12-16"><a href="introduction.html#cb12-16" aria-hidden="true" tabindex="-1"></a>ncolors <span class="op">=</span> <span class="bu">len</span>(plt.rcParams[<span class="st">'axes.prop_cycle'</span>])</span>
+<span id="cb12-17"><a href="introduction.html#cb12-17" aria-hidden="true" tabindex="-1"></a>shift <span class="op">=</span> np.linspace(<span class="dv">0</span>, L, ncolors, endpoint<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb12-18"><a href="introduction.html#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> s <span class="kw">in</span> shift:</span>
+<span id="cb12-19"><a href="introduction.html#cb12-19" aria-hidden="true" tabindex="-1"></a>    ax2.plot(x, np.sin(x <span class="op">+</span> s), <span class="st">'-'</span>)</span>
+<span id="cb12-20"><a href="introduction.html#cb12-20" aria-hidden="true" tabindex="-1"></a>ax2.margins(<span class="dv">0</span>)</span>
+<span id="cb12-21"><a href="introduction.html#cb12-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-22"><a href="introduction.html#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="co"># bar graphs</span></span>
+<span id="cb12-23"><a href="introduction.html#cb12-23" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">5</span>)</span>
+<span id="cb12-24"><a href="introduction.html#cb12-24" aria-hidden="true" tabindex="-1"></a>y1, y2 <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">25</span>, size<span class="op">=</span>(<span class="dv">2</span>, <span class="dv">5</span>))</span>
+<span id="cb12-25"><a href="introduction.html#cb12-25" aria-hidden="true" tabindex="-1"></a>width <span class="op">=</span> <span class="fl">0.25</span></span>
+<span id="cb12-26"><a href="introduction.html#cb12-26" aria-hidden="true" tabindex="-1"></a>ax3.bar(x, y1, width)</span>
+<span id="cb12-27"><a href="introduction.html#cb12-27" aria-hidden="true" tabindex="-1"></a>ax3.bar(x <span class="op">+</span> width, y2, width,</span>
+<span id="cb12-28"><a href="introduction.html#cb12-28" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="bu">list</span>(plt.rcParams[<span class="st">'axes.prop_cycle'</span>])[<span class="dv">2</span>][<span class="st">'color'</span>])</span>
+<span id="cb12-29"><a href="introduction.html#cb12-29" aria-hidden="true" tabindex="-1"></a>ax3.set_xticks(x <span class="op">+</span> width)</span>
+<span id="cb12-30"><a href="introduction.html#cb12-30" aria-hidden="true" tabindex="-1"></a>ax3.set_xticklabels([<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>, <span class="st">'d'</span>, <span class="st">'e'</span>])</span>
+<span id="cb12-31"><a href="introduction.html#cb12-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-32"><a href="introduction.html#cb12-32" aria-hidden="true" tabindex="-1"></a><span class="co"># circles with colors from default color cycle</span></span>
+<span id="cb12-33"><a href="introduction.html#cb12-33" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, color <span class="kw">in</span> <span class="bu">enumerate</span>(plt.rcParams[<span class="st">'axes.prop_cycle'</span>]):</span>
+<span id="cb12-34"><a href="introduction.html#cb12-34" aria-hidden="true" tabindex="-1"></a>    xy <span class="op">=</span> np.random.normal(size<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb12-35"><a href="introduction.html#cb12-35" aria-hidden="true" tabindex="-1"></a>    ax4.add_patch(plt.Circle(xy, radius<span class="op">=</span><span class="fl">0.3</span>, color<span class="op">=</span>color[<span class="st">'color'</span>]))</span>
+<span id="cb12-36"><a href="introduction.html#cb12-36" aria-hidden="true" tabindex="-1"></a>ax4.axis(<span class="st">'equal'</span>)</span>
+<span id="cb12-37"><a href="introduction.html#cb12-37" aria-hidden="true" tabindex="-1"></a>ax4.margins(<span class="dv">0</span>)</span>
+<span id="cb12-38"><a href="introduction.html#cb12-38" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <img src="01-introduction_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;">
 </div>
 <br>
@@ -296,35 +298,35 @@
 <p>Strip charts are the favorites for plotting real time data, from sensors, or from any other internet source.</p>
 <div class="decocode">
 <div style="background-color:#417FB1">
-<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="introduction.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/lines_bars_and_markers/cohere.html#sphx-glr-gallery-lines-bars-and-markers-cohere-py</span></span>
-<span id="cb12-2"><a href="introduction.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb12-3"><a href="introduction.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb12-4"><a href="introduction.html#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="introduction.html#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Fixing random state for reproducibility</span></span>
-<span id="cb12-6"><a href="introduction.html#cb12-6" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">19680801</span>)</span>
-<span id="cb12-7"><a href="introduction.html#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-8"><a href="introduction.html#cb12-8" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> <span class="fl">0.01</span></span>
-<span id="cb12-9"><a href="introduction.html#cb12-9" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">30</span>, dt)</span>
-<span id="cb12-10"><a href="introduction.html#cb12-10" aria-hidden="true" tabindex="-1"></a>nse1 <span class="op">=</span> np.random.randn(<span class="bu">len</span>(t))                 <span class="co"># white noise 1</span></span>
-<span id="cb12-11"><a href="introduction.html#cb12-11" aria-hidden="true" tabindex="-1"></a>nse2 <span class="op">=</span> np.random.randn(<span class="bu">len</span>(t))                 <span class="co"># white noise 2</span></span>
-<span id="cb12-12"><a href="introduction.html#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-13"><a href="introduction.html#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Two signals with a coherent part at 10Hz and a random part</span></span>
-<span id="cb12-14"><a href="introduction.html#cb12-14" aria-hidden="true" tabindex="-1"></a>s1 <span class="op">=</span> np.sin(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> <span class="dv">10</span> <span class="op">*</span> t) <span class="op">+</span> nse1</span>
-<span id="cb12-15"><a href="introduction.html#cb12-15" aria-hidden="true" tabindex="-1"></a>s2 <span class="op">=</span> np.sin(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> <span class="dv">10</span> <span class="op">*</span> t) <span class="op">+</span> nse2</span>
-<span id="cb12-16"><a href="introduction.html#cb12-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-17"><a href="introduction.html#cb12-17" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">1</span>)</span>
-<span id="cb12-18"><a href="introduction.html#cb12-18" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].plot(t, s1, t, s2)</span>
-<span id="cb12-19"><a href="introduction.html#cb12-19" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_xlim(<span class="dv">0</span>, <span class="dv">2</span>)</span>
-<span id="cb12-20"><a href="introduction.html#cb12-20" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_xlabel(<span class="st">'time'</span>)</span>
-<span id="cb12-21"><a href="introduction.html#cb12-21" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_ylabel(<span class="st">'s1 and s2'</span>)</span>
-<span id="cb12-22"><a href="introduction.html#cb12-22" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].grid(<span class="va">True</span>)</span>
-<span id="cb12-23"><a href="introduction.html#cb12-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-24"><a href="introduction.html#cb12-24" aria-hidden="true" tabindex="-1"></a>cxy, f <span class="op">=</span> axs[<span class="dv">1</span>].cohere(s1, s2, <span class="dv">256</span>, <span class="fl">1.</span> <span class="op">/</span> dt)</span>
-<span id="cb12-25"><a href="introduction.html#cb12-25" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_ylabel(<span class="st">'coherence'</span>)</span>
-<span id="cb12-26"><a href="introduction.html#cb12-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-27"><a href="introduction.html#cb12-27" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
-<span id="cb12-28"><a href="introduction.html#cb12-28" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="introduction.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/gallery/lines_bars_and_markers/cohere.html#sphx-glr-gallery-lines-bars-and-markers-cohere-py</span></span>
+<span id="cb13-2"><a href="introduction.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb13-3"><a href="introduction.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb13-4"><a href="introduction.html#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="introduction.html#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Fixing random state for reproducibility</span></span>
+<span id="cb13-6"><a href="introduction.html#cb13-6" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">19680801</span>)</span>
+<span id="cb13-7"><a href="introduction.html#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="introduction.html#cb13-8" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> <span class="fl">0.01</span></span>
+<span id="cb13-9"><a href="introduction.html#cb13-9" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">30</span>, dt)</span>
+<span id="cb13-10"><a href="introduction.html#cb13-10" aria-hidden="true" tabindex="-1"></a>nse1 <span class="op">=</span> np.random.randn(<span class="bu">len</span>(t))                 <span class="co"># white noise 1</span></span>
+<span id="cb13-11"><a href="introduction.html#cb13-11" aria-hidden="true" tabindex="-1"></a>nse2 <span class="op">=</span> np.random.randn(<span class="bu">len</span>(t))                 <span class="co"># white noise 2</span></span>
+<span id="cb13-12"><a href="introduction.html#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="introduction.html#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Two signals with a coherent part at 10Hz and a random part</span></span>
+<span id="cb13-14"><a href="introduction.html#cb13-14" aria-hidden="true" tabindex="-1"></a>s1 <span class="op">=</span> np.sin(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> <span class="dv">10</span> <span class="op">*</span> t) <span class="op">+</span> nse1</span>
+<span id="cb13-15"><a href="introduction.html#cb13-15" aria-hidden="true" tabindex="-1"></a>s2 <span class="op">=</span> np.sin(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> <span class="dv">10</span> <span class="op">*</span> t) <span class="op">+</span> nse2</span>
+<span id="cb13-16"><a href="introduction.html#cb13-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-17"><a href="introduction.html#cb13-17" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">1</span>)</span>
+<span id="cb13-18"><a href="introduction.html#cb13-18" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].plot(t, s1, t, s2)</span>
+<span id="cb13-19"><a href="introduction.html#cb13-19" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_xlim(<span class="dv">0</span>, <span class="dv">2</span>)</span>
+<span id="cb13-20"><a href="introduction.html#cb13-20" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_xlabel(<span class="st">'time'</span>)</span>
+<span id="cb13-21"><a href="introduction.html#cb13-21" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_ylabel(<span class="st">'s1 and s2'</span>)</span>
+<span id="cb13-22"><a href="introduction.html#cb13-22" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].grid(<span class="va">True</span>)</span>
+<span id="cb13-23"><a href="introduction.html#cb13-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-24"><a href="introduction.html#cb13-24" aria-hidden="true" tabindex="-1"></a>cxy, f <span class="op">=</span> axs[<span class="dv">1</span>].cohere(s1, s2, <span class="dv">256</span>, <span class="fl">1.</span> <span class="op">/</span> dt)</span>
+<span id="cb13-25"><a href="introduction.html#cb13-25" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_ylabel(<span class="st">'coherence'</span>)</span>
+<span id="cb13-26"><a href="introduction.html#cb13-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-27"><a href="introduction.html#cb13-27" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb13-28"><a href="introduction.html#cb13-28" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <img src="01-introduction_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;">
 </div>
 <br>
@@ -337,20 +339,20 @@
 <p>Although in data science 3D plots are not recommended, if there is a compelling case where a 3D plot explains a discovery better than a 2D plot, then, it should be okay and justified. But the rule is <em>do not abuse of 3D</em>. What you are trying to convey is information per square centimeter of graphics.</p>
 <div class="decocode">
 <div style="background-color:#417FB1">
-<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="introduction.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/2.0.2/examples/mplot3d/contour3d_demo.html</span></span>
-<span id="cb13-2"><a href="introduction.html#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="introduction.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> axes3d</span>
-<span id="cb13-4"><a href="introduction.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb13-5"><a href="introduction.html#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> cm</span>
-<span id="cb13-6"><a href="introduction.html#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-7"><a href="introduction.html#cb13-7" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
-<span id="cb13-8"><a href="introduction.html#cb13-8" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>, projection<span class="op">=</span><span class="st">'3d'</span>)</span>
-<span id="cb13-9"><a href="introduction.html#cb13-9" aria-hidden="true" tabindex="-1"></a>X, Y, Z <span class="op">=</span> axes3d.get_test_data(<span class="fl">0.05</span>)</span>
-<span id="cb13-10"><a href="introduction.html#cb13-10" aria-hidden="true" tabindex="-1"></a>cset <span class="op">=</span> ax.contour(X, Y, Z, cmap<span class="op">=</span>cm.coolwarm)</span>
-<span id="cb13-11"><a href="introduction.html#cb13-11" aria-hidden="true" tabindex="-1"></a>ax.clabel(cset, fontsize<span class="op">=</span><span class="dv">9</span>, inline<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb13-12"><a href="introduction.html#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-13"><a href="introduction.html#cb13-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="introduction.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://matplotlib.org/2.0.2/examples/mplot3d/contour3d_demo.html</span></span>
+<span id="cb14-2"><a href="introduction.html#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="introduction.html#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> axes3d</span>
+<span id="cb14-4"><a href="introduction.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb14-5"><a href="introduction.html#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> cm</span>
+<span id="cb14-6"><a href="introduction.html#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="introduction.html#cb14-7" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb14-8"><a href="introduction.html#cb14-8" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>, projection<span class="op">=</span><span class="st">'3d'</span>)</span>
+<span id="cb14-9"><a href="introduction.html#cb14-9" aria-hidden="true" tabindex="-1"></a>X, Y, Z <span class="op">=</span> axes3d.get_test_data(<span class="fl">0.05</span>)</span>
+<span id="cb14-10"><a href="introduction.html#cb14-10" aria-hidden="true" tabindex="-1"></a>cset <span class="op">=</span> ax.contour(X, Y, Z, cmap<span class="op">=</span>cm.coolwarm)</span>
+<span id="cb14-11"><a href="introduction.html#cb14-11" aria-hidden="true" tabindex="-1"></a>ax.clabel(cset, fontsize<span class="op">=</span><span class="dv">9</span>, inline<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb14-12"><a href="introduction.html#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="introduction.html#cb14-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <img src="01-introduction_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;">
 </div>
 <br>

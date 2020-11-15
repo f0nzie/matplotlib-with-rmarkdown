@@ -6,10 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Preface | Matplotlib with Rmarkdown</title>
 <meta name="author" content="Alfonso R. Reyes">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.2"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.5/header-attrs.js"></script><script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.2"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.5.3/header-attrs.js"></script><script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.5.3/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.5.3/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.2.9000/tabs.js"></script><script src="libs/bs3compat-0.2.2.9000/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script><!-- CSS -->
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script><!-- CSS --><link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/toc.css">
+<link rel="stylesheet" href="fontawesome/css/all.css">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -51,33 +53,78 @@
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><!--bookdown:title:end--><!--bookdown:title:start--><div id="preface" class="section level1 unnumbered">
 <h1>Preface<a class="anchor" aria-label="anchor" href="#preface"><i class="fas fa-link"></i></a>
 </h1>
-<p><em>Last update: Thu Nov 5 19:22:01 2020 -0600 (5124cef)</em></p>
-<p>The goal of this minimal book is thoroughly testing that Python <code>matplotlib</code> notebooks in <strong>Rmarkdown</strong> work seamlessly from within <code>RStudio</code>. Making <code>matplotlib</code> run from within RStudio using the R package <code>reticulate</code> and <strong>Python Anaconda</strong> has improved a lot. The package <code>reticulate</code> and RStudio have gone through a thorough transformation in the past few months. Enough to say that it’s an accepted fact today that Python and R are ready to work along for the benefit of data science, machine learning and artificial intelligence.</p>
-<p>What has provoked this transition is the realization within the R community that porting the machine learning libraries, such <strong>TensorFlow</strong> and <strong>PyTorch</strong>, from Python to R is turning in a tedious, repetitive and redundant task. I had this feeling personally as I was developing <strong>rTorch</strong>, which is writing wrappers in R to the already existing PyTorch functions. The hard work is writing a new function in R routing to its corresponding function in PyTorch. This requires class and type validation, stick to the original length of arguments, converting R objects to Python, or PyTorch, objects, test that the conversion was correct, and finally return the R object. With so many functions in these machine libraries, and the dynamic change of versions, it is hard to keep up. Why not rather write the machine learning algorithm directly in Python within Rmarkdown blocks?</p>
-<p>I have been testing different ways of making this task reproducible and repeatable with several Python libraries, such as numpy, pandas, scipy, and others. One of the hardest to get satisfactory results is <strong>matplotlib</strong>, due to the inline plotting within the document. In the past matplotlib was causing crashes in RStudio, or simply, didn’t show any plot because incompatibilities in th visualization layers. So annoying and frustrating to giving you incentive enough to write your own R wrappers to Python machine learning packages. Today, the situation has changed drastically. RStudio has taken the decision of making R and Python ecosystems to live harmoniously together. The new upcoming RStudio 1.4 -which preview version I have been testing-, really delivers R and Python super-powers. And best of all in great reproducible Rmarkdown!</p>
+<p><em>Last update: Sun Nov 15 08:58:01 2020 -0600 (f0075e5)</em></p>
+<p>The goal of this minimal book is thoroughly testing that Python <code>matplotlib</code> notebooks in <strong>Rmarkdown</strong> work seamlessly from within <code>RStudio</code>. Making <code>matplotlib</code> run from within RStudio using the R package <code>reticulate</code> and <strong>Python Anaconda</strong> has improved a lot. The package <code>reticulate</code> and RStudio have gone through a complete transformation in the past few months. Enough to say that it’s an accepted fact today that Python and R are ready to work along for the benefit of data science, machine learning and artificial intelligence.</p>
+<div id="motivation" class="section level2 unnumbered">
+<h2>Motivation<a class="anchor" aria-label="anchor" href="#motivation"><i class="fas fa-link"></i></a>
+</h2>
+<p>What has provoked this transition is the realization within the R community that porting the machine learning libraries, such <strong>TensorFlow</strong> and <strong>PyTorch</strong>, from Python to R is turning in a tedious, repetitive and redundant task.</p>
+<p>I had this feeling personally as I was developing <strong>rTorch</strong>, which is writing wrappers in R to the already existing PyTorch functions. The hard work is writing a new function in R routing to its corresponding function in PyTorch. This requires class and type validation, stick to the original length of arguments, converting R objects to Python, or PyTorch, objects, test that the conversion was correct, and finally return the R object. With so many functions in these machine libraries, and the dynamic change of versions, it is hard to keep up. Why not rather write the machine learning algorithm directly in Python within Rmarkdown blocks?</p>
+<p>I have been testing different ways of making this task reproducible and repeatable with several Python libraries, such as numpy, pandas, scipy, and others. One of the hardest to get satisfactory results is <strong>matplotlib</strong>, due to the inline plotting within the document. In the past matplotlib was causing crashes in RStudio, or simply, didn’t show any plot because incompatibilities in th visualization layers. So annoying and frustrating to giving you incentive enough to write your own R wrappers to Python machine learning packages. Today, the situation has changed drastically. RStudio has taken the decision of making R and Python ecosystems to live harmoniously together. The new upcoming <em>RStudio 1.4</em> -which preview version I have been testing-, really delivers R and Python super-powers. And best of all, in great reproducible Rmarkdown!</p>
+</div>
 <div id="method" class="section level2 unnumbered">
 <h2>Method<a class="anchor" aria-label="anchor" href="#method"><i class="fas fa-link"></i></a>
 </h2>
 <div id="r-engine" class="section level3 unnumbered">
 <h3>R engine<a class="anchor" aria-label="anchor" href="#r-engine"><i class="fas fa-link"></i></a>
 </h3>
-<p>Since I combine code from different sources (<code>R</code>, <code>Python</code>, and <code>Bash</code>), I have added some colorization to the code chunks when I use a code engine. Here is an example of using the R engine. {-=""}</p>
+<p>Since I combine code from different sources (<code>R</code>, <code>Python</code>, and <code>Bash</code>), I have added some custom colorization to the code chunks when I use a particular code engine. Here is an example of using the R engine. {-=""}</p>
 <div class="decocode">
 <div style="background-color:#4C78DB">
-<p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i> <b>R</b></span></p>
+<p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i><b>R</b></span></p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rstudio/reticulate">reticulate</a></span><span class="op">)</span>
 <span class="fu">reticulate</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/reticulate/man/use_python.html">use_condaenv</a></span><span class="op">(</span><span class="st">"r-python"</span><span class="op">)</span></code></pre></div>
 </div>
 <br>
 </div>
-<p>What we are doing is calling the R package reticulate, which makes possible the communication between Python and R.</p>
+<p>What we are doing is calling the R package <strong>reticulate</strong>, which makes possible the communication between Python and R.</p>
 <p>The way you will enter this block of code is pretty straightforward; you just indicate the engine you want, in this, case <code>r</code>, like this:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="index.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb2-2"><a href="index.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="in">library(reticulate)</span></span>
 <span id="cb2-3"><a href="index.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="in">reticulate::use_condaenv("r-python")</span></span>
 <span id="cb2-4"><a href="index.html#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
 <p>There is even a shortcut in RStudio to add the R block automatically for you: <code>Ctrl</code> <code>Alt</code> <code>I</code>.</p>
+<p>To add color and icon to this R block, add the parameter <code>decorate=TRUE</code>. This function hook resides in the file <code>R/deco_hook.R</code>. Of course, you can modify the colors or icons for the engines, or add your own. This is how hook looks like:</p>
+<div class="decocode">
+<div style="background-color:#4C78DB">
+<p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i><b>R</b></span></p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/">knitr</a></span><span class="op">)</span>
+
+<span class="va">knit_hooks</span><span class="op">$</span><span class="fu">set</span><span class="op">(</span>decorate <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">before</span>, <span class="va">options</span><span class="op">)</span> <span class="op">{</span>
+  <span class="kw">if</span> <span class="op">(</span><span class="va">before</span><span class="op">)</span> <span class="op">{</span>
+     <span class="kw">if</span> <span class="op">(</span><span class="va">options</span><span class="op">$</span><span class="va">engine</span> <span class="op">==</span> <span class="st">"python"</span><span class="op">)</span> <span class="op">{</span>
+       <span class="va">label</span> <span class="op">&lt;-</span> <span class="st">"&lt;b&gt;Python&lt;/b&gt;"</span>
+       <span class="va">bc</span> <span class="op">&lt;-</span> <span class="st">"#417FB1"</span>
+       <span class="va">sz</span> <span class="op">&lt;-</span> <span class="st">"90%"</span>
+       <span class="va">tc</span> <span class="op">&lt;-</span> <span class="st">"#FFD94C"</span>
+       <span class="va">icon</span> <span class="op">&lt;-</span> <span class="st">"&lt;i class=\"fab fa-python\"&gt;&lt;/i&gt;  "</span>
+     <span class="op">}</span> <span class="kw">else</span> <span class="kw">if</span> <span class="op">(</span><span class="va">options</span><span class="op">$</span><span class="va">engine</span> <span class="op">==</span> <span class="st">"R"</span><span class="op">)</span> <span class="op">{</span>
+       <span class="va">label</span> <span class="op">&lt;-</span> <span class="st">"&lt;b&gt;R&lt;/b&gt;"</span>
+       <span class="va">bc</span> <span class="op">&lt;-</span> <span class="st">"#4C78DB"</span>
+       <span class="va">sz</span> <span class="op">&lt;-</span> <span class="st">"90%"</span>
+       <span class="va">tc</span> <span class="op">&lt;-</span> <span class="st">"#ffffff"</span>
+       <span class="va">icon</span> <span class="op">&lt;-</span> <span class="st">"&lt;i class=\"fab fa-r-project\"&gt;&lt;/i&gt;  "</span>
+     <span class="op">}</span> <span class="kw">else</span> <span class="kw">if</span> <span class="op">(</span><span class="va">options</span><span class="op">$</span><span class="va">engine</span> <span class="op">==</span> <span class="st">"bash"</span><span class="op">)</span> <span class="op">{</span>
+       <span class="va">label</span> <span class="op">&lt;-</span> <span class="st">"&lt;b&gt;Shell&lt;/b&gt;"</span>
+       <span class="va">bc</span> <span class="op">&lt;-</span> <span class="st">"#000000"</span>
+       <span class="va">sz</span> <span class="op">&lt;-</span> <span class="st">"90%"</span>
+       <span class="va">tc</span> <span class="op">&lt;-</span> <span class="st">"#ffffff"</span>
+       <span class="va">icon</span> <span class="op">&lt;-</span> <span class="st">"&lt;i class=\"fas fa-terminal\"&gt;&lt;/i&gt;  "</span>
+     <span class="op">}</span>
+    <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"&lt;div class=decocode&gt;"</span>,
+           <span class="st">"&lt;div style=\"background-color:"</span>, <span class="va">bc</span>, <span class="st">"\"&gt;"</span>,
+           <span class="st">"&lt;span style=\"font-size:"</span>, <span class="va">sz</span>, <span class="st">";color:"</span>, <span class="va">tc</span>, <span class="st">"\"&gt;"</span>,
+           <span class="va">icon</span>, <span class="va">label</span>, <span class="st">"&lt;/span&gt;"</span>, <span class="st">"\n"</span><span class="op">)</span>
+  <span class="op">}</span> <span class="kw">else</span> <span class="op">{</span>
+    <span class="st">"&lt;/div&gt;&lt;br&gt;&lt;/div&gt;"</span>
+  <span class="op">}</span>
+<span class="op">}</span><span class="op">)</span> </code></pre></div>
+</div>
+<br>
+</div>
+<p>You see that we are using the knitr engine name as the condition for the formatting block.</p>
 </div>
 <div id="bash-engine" class="section level3 unnumbered">
 <h3>Bash engine<a class="anchor" aria-label="anchor" href="#bash-engine"><i class="fas fa-link"></i></a>
@@ -86,52 +133,27 @@
 <div class="decocode">
 <div style="background-color:#000000">
 <p><span style="font-size:90%;color:#ffffff"><i class="fas fa-terminal"></i> <b>Shell</b></span></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="index.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"list all conda environments available"</span></span>
-<span id="cb3-2"><a href="index.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/anaconda3/etc/profile.d/conda.sh</span>
-<span id="cb3-3"><a href="index.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate r-python</span>
-<span id="cb3-4"><a href="index.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env list</span>
-<span id="cb3-5"><a href="index.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"working from the terminal"</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="index.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"list all conda environments available"</span></span>
+<span id="cb4-2"><a href="index.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/anaconda3/etc/profile.d/conda.sh</span>
+<span id="cb4-3"><a href="index.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate r-python</span>
+<span id="cb4-4"><a href="index.html#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env list</span>
+<span id="cb4-5"><a href="index.html#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"working from the terminal"</span></span></code></pre></div>
 <pre><code>#:&gt; list all conda environments available
 #:&gt; bash: line 1: /home/msfz751/anaconda3/etc/profile.d/conda.sh: No such file or directory
-#:&gt; 
-#:&gt; CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
-#:&gt; To initialize your shell, run
-#:&gt; 
-#:&gt;     $ conda init &lt;SHELL_NAME&gt;
-#:&gt; 
-#:&gt; Currently supported shells are:
-#:&gt;   - bash
-#:&gt;   - fish
-#:&gt;   - tcsh
-#:&gt;   - xonsh
-#:&gt;   - zsh
-#:&gt;   - powershell
-#:&gt; 
-#:&gt; See 'conda init --help' for more information and options.
-#:&gt; 
-#:&gt; IMPORTANT: You may need to close and restart your shell after running 'conda init'.
-#:&gt; 
-#:&gt; 
-#:&gt; # conda environments:
-#:&gt; #
-#:&gt; base                  *  /home/msfz751/miniconda3
-#:&gt; man_ccia                 /home/msfz751/miniconda3/envs/man_ccia
-#:&gt; pybook                   /home/msfz751/miniconda3/envs/pybook
-#:&gt; r-python                 /home/msfz751/miniconda3/envs/r-python
-#:&gt; r-tensorflow             /home/msfz751/miniconda3/envs/r-tensorflow
-#:&gt; 
+#:&gt; bash: line 2: conda: command not found
+#:&gt; bash: line 3: conda: command not found
 #:&gt; working from the terminal</code></pre>
 </div>
 <br>
 </div>
 <p>To set the block as bash, we enter it like this:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb5-1"><a href="index.html#cb5-1" aria-hidden="true" tabindex="-1"></a> <span class="in">```{bash}</span></span>
-<span id="cb5-2"><a href="index.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="in">echo "list all conda environments available"</span></span>
-<span id="cb5-3"><a href="index.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="in">source ~/anaconda3/etc/profile.d/conda.sh</span></span>
-<span id="cb5-4"><a href="index.html#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="in">conda activate r-python</span></span>
-<span id="cb5-5"><a href="index.html#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="in">conda env list</span></span>
-<span id="cb5-6"><a href="index.html#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="in">echo "working from the terminal"</span></span>
-<span id="cb5-7"><a href="index.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="index.html#cb6-1" aria-hidden="true" tabindex="-1"></a> <span class="in">```{bash}</span></span>
+<span id="cb6-2"><a href="index.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="in">echo "list all conda environments available"</span></span>
+<span id="cb6-3"><a href="index.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="in">source ~/anaconda3/etc/profile.d/conda.sh</span></span>
+<span id="cb6-4"><a href="index.html#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="in">conda activate r-python</span></span>
+<span id="cb6-5"><a href="index.html#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="in">conda env list</span></span>
+<span id="cb6-6"><a href="index.html#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="in">echo "working from the terminal"</span></span>
+<span id="cb6-7"><a href="index.html#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
 <p>And the block will execute your commands as you were in the terminal.</p>
 </div>
 <div id="python-engine" class="section level3 unnumbered">
@@ -141,23 +163,23 @@
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i> <b>Python</b></span></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="index.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb6-2"><a href="index.html#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="index.html#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.plot([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>])</span>
-<span id="cb6-4"><a href="index.html#cb6-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'some numbers'</span>)</span>
-<span id="cb6-5"><a href="index.html#cb6-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="index.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb7-2"><a href="index.html#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="index.html#cb7-3" aria-hidden="true" tabindex="-1"></a>plt.plot([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>])</span>
+<span id="cb7-4"><a href="index.html#cb7-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'some numbers'</span>)</span>
+<span id="cb7-5"><a href="index.html#cb7-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <img src="index_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;">
 </div>
 <br>
 </div>
 <p>As you may be expecting it follows the same pattern when we want to use a Python engine. You just have to indicate it after three backticks, curly brace opened, <code>python</code>, and a curly brace closed: ```<code>{python}</code>. You end the Python block with other three backticks. That’s it.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="index.html#cb7-1" aria-hidden="true" tabindex="-1"></a> <span class="in">```{python}</span></span>
-<span id="cb7-2"><a href="index.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="in">import matplotlib.pyplot as plt</span></span>
-<span id="cb7-3"><a href="index.html#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="index.html#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="in">plt.plot([1, 2, 3, 4])</span></span>
-<span id="cb7-5"><a href="index.html#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="in">plt.ylabel('some numbers')</span></span>
-<span id="cb7-6"><a href="index.html#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="in">plt.show()</span></span>
-<span id="cb7-7"><a href="index.html#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="index.html#cb8-1" aria-hidden="true" tabindex="-1"></a> <span class="in">```{python}</span></span>
+<span id="cb8-2"><a href="index.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="in">import matplotlib.pyplot as plt</span></span>
+<span id="cb8-3"><a href="index.html#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="index.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="in">plt.plot([1, 2, 3, 4])</span></span>
+<span id="cb8-5"><a href="index.html#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="in">plt.ylabel('some numbers')</span></span>
+<span id="cb8-6"><a href="index.html#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="in">plt.show()</span></span>
+<span id="cb8-7"><a href="index.html#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
 
 </div>
 </div>
@@ -169,6 +191,7 @@
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#preface">Preface</a></li>
+<li><a class="nav-link" href="#motivation">Motivation</a></li>
 <li>
 <a class="nav-link" href="#method">Method</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#r-engine">R engine</a></li>

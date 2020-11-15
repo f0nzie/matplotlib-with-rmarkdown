@@ -1,6 +1,5 @@
 library(knitr)
 
-
 knit_hooks$set(decorate = function(before, options) {
   if (before) {
      if (options$engine == "python") {
@@ -8,32 +7,27 @@ knit_hooks$set(decorate = function(before, options) {
        bc <- "#417FB1"
        sz <- "90%"
        tc <- "#FFD94C"
-       icon <- "<i class=\"fab fa-python\"></i>  "
-                      
-  
+       icon <- "<i class=\"fab fa-python\"></i>"
      } else if (options$engine == "R") {
        label <- "<b>R</b>"
        bc <- "#4C78DB"
        sz <- "90%"
        tc <- "#ffffff"
-       icon <- "<i class=\"fab fa-r-project\"></i>  "
-       
+       icon <- "<i class=\"fab fa-r-project\"></i>"
      } else if (options$engine == "bash") {
        label <- "<b>Shell</b>"
        bc <- "#000000"
        sz <- "90%"
        tc <- "#ffffff"
-       icon <- "<i class=\"fas fa-terminal\"></i>  "
-       
+       icon <- "<i class=\"fas fa-terminal\"></i>"
      }
     paste0("<div class=decocode>",
            "<div style=\"background-color:", bc, "\">",
-           "<span style=\"font-size:", sz, ";color:", tc, "\">",
-           icon, label, "</span>", "\n")
+           "<span style=\"font-size:", sz, ";color:", tc, "\">", icon,  
+           label, "</span>")
   } else {
     "</div><br></div>"
   }
-  
 }) 
 
 
