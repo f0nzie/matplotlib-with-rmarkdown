@@ -2,7 +2,7 @@
 
 _Last update: Thu Nov 5 19:22:01 2020 -0600 (5124cef)_
 
-<div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i>  <b>R</b></span>
+<div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i><b>R</b></span>
 
 ```r
 library(reticulate)
@@ -14,7 +14,7 @@ reticulate::use_condaenv("r-python")
 
 ## Functions
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 # https://www.geeksforgeeks.org/plot-mathematical-expressions-in-python-using-matplotlib/
@@ -56,7 +56,7 @@ plt.show()
 
 ## Functions with Latex labels
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 # https://www.kaggle.com/sskiing/matplotlib-showcase-examples
@@ -104,7 +104,7 @@ plt.show()
 
 ## Multiple functions in the same plot
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 import matplotlib.pyplot as plt
@@ -139,7 +139,7 @@ plt.show()
 ## Overlapping functions
 We use `subplot` to arrange the two functions. Observe that the y-axis is the same in both functions.
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 # https://www.python-course.eu/matplotlib_multiple_figures.php
@@ -162,7 +162,7 @@ plt.show()
 ## Surface functions
 
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 # http://www.scipy-lectures.org/intro/matplotlib/auto_examples/plot_plot3d_ex.html
@@ -188,7 +188,7 @@ plt.show()
 
 
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 # https://matplotlib.org/gallery/mplot3d/offset.html#sphx-glr-gallery-mplot3d-offset-py
@@ -216,7 +216,7 @@ plt.show()
 
 
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 # https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/surface3d_radial.py
@@ -250,7 +250,7 @@ plt.show()
 
 ## 3D wireframe
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 # https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/wire3d.py
@@ -274,7 +274,7 @@ plt.show()
 
 ## 3D contour plot
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 # https://matplotlib.org/2.0.2/examples/mplot3d/contour3d_demo.html
@@ -297,7 +297,7 @@ plt.show()
 ## Machine Learning
 This is just one sample of discovering patterns with machine learning.
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 import numpy as np

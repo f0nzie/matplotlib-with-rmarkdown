@@ -2,7 +2,7 @@
 
 _Last update: Thu Nov 5 19:22:01 2020 -0600 (5124cef)_
 
-<div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i>  <b>R</b></span>
+<div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i><b>R</b></span>
 
 ```r
 library(reticulate)
@@ -15,7 +15,7 @@ reticulate::use_condaenv("r-python")
 
 This is one of the simplest of examples: plotting the sine of a random numpy array.
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 import matplotlib.pyplot as plt
@@ -39,7 +39,7 @@ plt.show()
 
 I love this plot because it helps to formulate the right question when you are looking for online assistance. Sooner of later you will be in need to customize the $x$ or $y$ axis ticks in such a way that present specific data points and skip the defaults. Or, get rid of so many x axis labels that superimposing one over each other.
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 # https://matplotlib.org/gallery/showcase/anatomy.html#sphx-glr-gallery-showcase-anatomy-py
@@ -187,7 +187,7 @@ plt.show()
 
 Not precisely the kind of plots I am interested right now, all the kinds of business plots areve available in `matplotlib`, including the infamous **pie chart**.
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 import numpy as np
@@ -236,7 +236,7 @@ plt.show()
 
 Strip charts are the favorites for plotting real time data, from sensors, or from any other internet source.
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 # https://matplotlib.org/gallery/lines_bars_and_markers/cohere.html#sphx-glr-gallery-lines-bars-and-markers-cohere-py
@@ -275,7 +275,7 @@ plt.show()
 
 Although in data science 3D plots are not recommended, if there is a compelling case where a 3D plot explains a discovery better than a 2D plot, then, it should be okay and justified. But the rule is *do not abuse of 3D*. What you are trying to convey is information per square centimeter of graphics.
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 # https://matplotlib.org/2.0.2/examples/mplot3d/contour3d_demo.html

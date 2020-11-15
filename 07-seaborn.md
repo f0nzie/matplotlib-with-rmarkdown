@@ -3,7 +3,7 @@
 _Last update: Thu Nov 5 19:22:01 2020 -0600 (5124cef)_
 
 
-<div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i>  <b>R</b></span>
+<div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i><b>R</b></span>
 
 ```r
 library(reticulate)
@@ -14,7 +14,7 @@ use_condaenv("r-python", required = TRUE)
 
 ## Error bands
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 # https://seaborn.pydata.org/examples/errorband_lineplots.html
@@ -38,7 +38,7 @@ plt.show()
 
 ## Boxplots
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 # https://seaborn.pydata.org/examples/horizontal_boxplot.html
@@ -72,7 +72,7 @@ plt.show()
 
 ## Facets
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 # https://seaborn.pydata.org/examples/timeseries_facets.html
@@ -113,7 +113,7 @@ plt.show()
 
 <img src="07-seaborn_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 import numpy as np
@@ -138,7 +138,7 @@ plt.show()
 
 ## Functions
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 from __future__ import print_function, division
@@ -158,7 +158,7 @@ plt.show()
 
 ## Scatter plot matrix
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 # https://seaborn.pydata.org/examples/scatterplot_matrix.html

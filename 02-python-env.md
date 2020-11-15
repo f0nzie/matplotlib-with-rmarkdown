@@ -29,7 +29,7 @@ If you want want to create a conda virtual environment, then, you will have many
 
 In this example, `conda` will build an environment using the Python version `3.7`. If the version is not specified, `conda` will install the default.
 
-<div class=decocode><div style="background-color:#000000"><span style="font-size:90%;color:#ffffff"><i class="fas fa-terminal"></i>  <b>Shell</b></span>
+<div class=decocode><div style="background-color:#000000"><span style="font-size:90%;color:#ffffff"><i class="fas fa-terminal"></i><b>Shell</b></span>
 
 ```bash
 conda create --name python_env python=3.7
@@ -41,7 +41,7 @@ conda create --name python_env python=3.7
 
 Here, we leave `conda` to find a suitable combination of package versions to build this environment.
 
-<div class=decocode><div style="background-color:#000000"><span style="font-size:90%;color:#ffffff"><i class="fas fa-terminal"></i>  <b>Shell</b></span>
+<div class=decocode><div style="background-color:#000000"><span style="font-size:90%;color:#ffffff"><i class="fas fa-terminal"></i><b>Shell</b></span>
 
 ```bash
 conda create --name python_book python=3.7 pandas numpy scipy scikit-learn nltk matplotlib seaborn plotnine ipython lxml -y
@@ -55,7 +55,7 @@ The last option `-y` means that it will install without asking *yes* or *no*.
 
 This recipe is more strict. You are looking for a precise package versions, which you know worked, and run without conflicts or bugs.
 
-<div class=decocode><div style="background-color:#000000"><span style="font-size:90%;color:#ffffff"><i class="fas fa-terminal"></i>  <b>Shell</b></span>
+<div class=decocode><div style="background-color:#000000"><span style="font-size:90%;color:#ffffff"><i class="fas fa-terminal"></i><b>Shell</b></span>
 
 ```bash
 conda create -n plot_env python=3.7 numpy=1.19 matplotlib=3.3 pandas=1.1 seaborn=0.11
@@ -67,7 +67,7 @@ conda create -n plot_env python=3.7 numpy=1.19 matplotlib=3.3 pandas=1.1 seaborn
 
 Load the `reticulate` library.
 
-<div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i>  <b>R</b></span>
+<div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i><b>R</b></span>
 
 ```r
 library(reticulate)
@@ -77,7 +77,7 @@ library(reticulate)
 
 Load the Python environment
 
-<div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i>  <b>R</b></span>
+<div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i><b>R</b></span>
 
 ```r
 use_condaenv("r-python")
@@ -87,7 +87,7 @@ use_condaenv("r-python")
 
 Environments available and current settings
 
-<div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i>  <b>R</b></span>
+<div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i><b>R</b></span>
 
 ```r
 py_config()
@@ -103,7 +103,6 @@ py_config()
 #:> 
 #:> python versions found: 
 #:>  /home/msfz751/miniconda3/envs/r-python/bin/python
-#:>  /home/msfz751/miniconda3/bin/python3
 #:>  /usr/bin/python3
 #:>  /usr/bin/python
 #:>  /home/msfz751/miniconda3/envs/man_ccia/bin/python
@@ -116,7 +115,7 @@ py_config()
 
 Ask if Python is available to R:
 
-<div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i>  <b>R</b></span>
+<div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i><b>R</b></span>
 
 ```r
 reticulate::py_available()
@@ -132,7 +131,7 @@ reticulate::py_available()
 
 Once the environment is loaded, then our Python code chunks will just run:
 
-<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i>  <b>Python</b></span>
+<div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
 # https://github.com/bendichter/brokenaxes
