@@ -63,12 +63,13 @@
 }
 
 .decocode {
-  margin: 10px 5px 15px;
+  margin: 2px 2px 0px;
   border-radius: 5px;
   overflow-x: auto;
+  overflow-y: auto;
 }
 
 .decocode * {
-    padding: 5px;
+    padding: 4px;
 }
  
