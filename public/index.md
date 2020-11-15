@@ -14,11 +14,11 @@ description: "This is a minimal example of using the bookdown package to write a
 
 # Preface {.unnumbered}
 
-*Last update: Sun Nov 15 08:58:01 2020 -0600 (f0075e5)*
+*Last update: Sun Nov 15 15:14:11 2020 -0600 (608e2bf)*
 
 The goal of this minimal book is thoroughly testing that Python `matplotlib` notebooks in **Rmarkdown** work seamlessly from within `RStudio`. Making `matplotlib` run from within RStudio using the R package `reticulate` and **Python Anaconda** has improved a lot. The package `reticulate` and RStudio have gone through a complete transformation in the past few months. Enough to say that it's an accepted fact today that Python and R are ready to work along for the benefit of data science, machine learning and artificial intelligence.
 
-## Motivation  {-}
+## Motivation {.unnumbered}
 
 What has provoked this transition is the realization within the R community that porting the machine learning libraries, such **TensorFlow** and **PyTorch**, from Python to R is turning in a tedious, repetitive and redundant task.
 
@@ -52,7 +52,7 @@ reticulate::use_condaenv("r-python")
 ```
 ````
 
-There is even a shortcut in RStudio to add the R block automatically for you: `Ctrl` `Alt` `I`.
+There is even a shortcut in RStudio to add the R block automatically for you: <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>I</kbd>.
 
 To add color and icon to this R block, add the parameter `decorate=TRUE`. This function hook resides in the file `R/deco_hook.R`. Of course, you can modify the colors or icons for the engines, or add your own. This is how hook looks like:
 
