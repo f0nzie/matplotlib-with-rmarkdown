@@ -1,4 +1,5 @@
 bookdown::bs4_book:
+  css: [css/style.css, css/toc.css, fontawesome/css/all.css]
   theme:
     # primary: "#982a31"
     primary: "#3c99ca"
