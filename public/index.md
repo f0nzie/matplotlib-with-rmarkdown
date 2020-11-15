@@ -1,7 +1,7 @@
 ---
 title: "Matplotlib with Rmarkdown"
 author: "Alfonso R. Reyes"
-date: "2020-11-05"
+date: "2020-11-15"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -14,7 +14,7 @@ description: "This is a minimal example of using the bookdown package to write a
 
 # Preface {.unnumbered}
 
-_Last update: Thu Nov 5 14:04:38 2020 -0600 (afafa56)_
+_Last update: Thu Nov 5 19:22:01 2020 -0600 (5124cef)_
 
 The goal of this minimal book is thoroughly testing that Python `matplotlib` works seamlessly from within `RStudio`. Making `matplotlib` run from within RStudio using the R package `reticulate` and **Python Anaconda** has improved a lot. The package `reticulate` and RStudio have gone through a thorough transformation in the past few months. Enough to say that it's an accepted fact today that Python and R are ready to work along for the benefit of data science, machine learning and artificial intelligence.
 
@@ -86,7 +86,9 @@ echo "working from the terminal"
 #:> #
 #:> base                  *  /home/msfz751/miniconda3
 #:> man_ccia                 /home/msfz751/miniconda3/envs/man_ccia
+#:> pybook                   /home/msfz751/miniconda3/envs/pybook
 #:> r-python                 /home/msfz751/miniconda3/envs/r-python
+#:> r-tensorflow             /home/msfz751/miniconda3/envs/r-tensorflow
 #:> 
 #:> working from the terminal
 ```
