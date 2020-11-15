@@ -1,3 +1,11 @@
+bookdown::bs4_book:
+  theme:
+    # primary: "#982a31"
+    primary: "#3234c1"
+    fg: "#2b2121"
+    bg: "#ffffff"
+  repo: https://github.com//f0nzie/matplotlib-with-rmarkdown
+
 bookdown::gitbook:
   css: [css/style.css, css/toc.css, fontawesome/css/all.css]
   highlight: kate
@@ -12,6 +20,7 @@ bookdown::gitbook:
       github: yes
       facebook: no
       twitter: no
+      
 # bookdown::pdf_book:
 #   includes:
 #     in_header: preamble.tex
