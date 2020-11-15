@@ -1,6 +1,6 @@
 # Python environments
 
-_Last update: Thu Nov 5 14:04:38 2020 -0600 (afafa56)_
+_Last update: Thu Nov 5 19:22:01 2020 -0600 (5124cef)_
 
 ## Why virtual environments?
 
@@ -103,9 +103,12 @@ py_config()
 #:> 
 #:> python versions found: 
 #:>  /home/msfz751/miniconda3/envs/r-python/bin/python
+#:>  /home/msfz751/miniconda3/bin/python3
 #:>  /usr/bin/python3
 #:>  /usr/bin/python
 #:>  /home/msfz751/miniconda3/envs/man_ccia/bin/python
+#:>  /home/msfz751/miniconda3/envs/pybook/bin/python
+#:>  /home/msfz751/miniconda3/envs/r-tensorflow/bin/python
 #:>  /home/msfz751/miniconda3/bin/python
 ```
 

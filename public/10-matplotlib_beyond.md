@@ -1,6 +1,6 @@
 # Beyond `matplotlib`
 
-_Last update: Thu Nov 5 14:04:38 2020 -0600 (afafa56)_
+_Last update: Thu Nov 5 19:22:01 2020 -0600 (5124cef)_
 
 
 <div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i>  <b>R</b></span>
@@ -189,12 +189,14 @@ print(X.head())
 ```
 
 ```
-#:>    season  year  month  hour  holiday  weekday  workingday  weather  temp  feelslike  humidity  windspeed
-#:> 0       1     0      1     0        0        6           0        1  0.24     0.2879      0.81        0.0
-#:> 1       1     0      1     1        0        6           0        1  0.22     0.2727      0.80        0.0
-#:> 2       1     0      1     2        0        6           0        1  0.22     0.2727      0.80        0.0
-#:> 3       1     0      1     3        0        6           0        1  0.24     0.2879      0.75        0.0
-#:> 4       1     0      1     4        0        6           0        1  0.24     0.2879      0.75        0.0
+#:>    season  year  month  hour  holiday  ...  weather  temp  feelslike  humidity  windspeed
+#:> 0       1     0      1     0        0  ...        1  0.24     0.2879      0.81        0.0
+#:> 1       1     0      1     1        0  ...        1  0.22     0.2727      0.80        0.0
+#:> 2       1     0      1     2        0  ...        1  0.22     0.2727      0.80        0.0
+#:> 3       1     0      1     3        0  ...        1  0.24     0.2879      0.75        0.0
+#:> 4       1     0      1     4        0  ...        1  0.24     0.2879      0.75        0.0
+#:> 
+#:> [5 rows x 12 columns]
 ```
 
 </div><br></div>
