@@ -1,7 +1,7 @@
 bookdown::bs4_book:
   theme:
     # primary: "#982a31"
-    primary: "#3234c1"
+    primary: "#3c99ca"
     fg: "#2b2121"
     bg: "#ffffff"
   repo: https://github.com//f0nzie/matplotlib-with-rmarkdown
