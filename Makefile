@@ -27,11 +27,19 @@ else
 endif
 
 
+
 # knit the book and then open it in the browser
-.PHONY: gitbook1 gitbook2
+.PHONY: bs4_book gitbook1 gitbook2
+bs4_book: build_bs4_book open_book
+	
 gitbook1: build_book1 open_book
 
 gitbook2: build_book2 open_book
+
+
+build_bs4_book:
+	export RSTUDIO_PANDOC="/usr/lib/rstudio/bin/pandoc";\
+	Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::bs4_book")'
 
 # use rstudio pandoc
 # this rule sets the PANDOC environment variable from the shell
