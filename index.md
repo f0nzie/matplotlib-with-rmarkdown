@@ -14,7 +14,7 @@ description: "This is a minimal example of using the bookdown package to write a
 
 # Preface {.unnumbered}
 
-*Last update: Sun Nov 15 15:14:11 2020 -0600 (608e2bf)*
+*Last update: Sun Nov 15 15:27:51 2020 -0600 (bbd8f7c)*
 
 The goal of this minimal book is thoroughly testing that Python `matplotlib` notebooks in **Rmarkdown** work seamlessly from within `RStudio`. Making `matplotlib` run from within RStudio using the R package `reticulate` and **Python Anaconda** has improved a lot. The package `reticulate` and RStudio have gone through a complete transformation in the past few months. Enough to say that it's an accepted fact today that Python and R are ready to work along for the benefit of data science, machine learning and artificial intelligence.
 
@@ -104,7 +104,7 @@ This chunk of code with the engine set to `bash` will list all the `conda` envir
 
 ```bash
 echo "list all conda environments available"
-source ~/anaconda3/etc/profile.d/conda.sh
+source ~/miniconda3/etc/profile.d/conda.sh
 conda activate r-python
 conda env list
 echo "working from the terminal"
@@ -112,9 +112,14 @@ echo "working from the terminal"
 
 ```
 #:> list all conda environments available
-#:> bash: line 1: /home/msfz751/anaconda3/etc/profile.d/conda.sh: No such file or directory
-#:> bash: line 2: conda: command not found
-#:> bash: line 3: conda: command not found
+#:> # conda environments:
+#:> #
+#:> base                     /home/msfz751/miniconda3
+#:> man_ccia                 /home/msfz751/miniconda3/envs/man_ccia
+#:> pybook                   /home/msfz751/miniconda3/envs/pybook
+#:> r-python              *  /home/msfz751/miniconda3/envs/r-python
+#:> r-tensorflow             /home/msfz751/miniconda3/envs/r-tensorflow
+#:> 
 #:> working from the terminal
 ```
 
