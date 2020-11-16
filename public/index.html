@@ -53,7 +53,7 @@
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><!--bookdown:title:end--><!--bookdown:title:start--><div id="preface" class="section level1 unnumbered">
 <h1>Preface<a class="anchor" aria-label="anchor" href="#preface"><i class="fas fa-link"></i></a>
 </h1>
-<p><em>Last update: Sun Nov 15 15:14:11 2020 -0600 (608e2bf)</em></p>
+<p><em>Last update: Sun Nov 15 15:27:51 2020 -0600 (bbd8f7c)</em></p>
 <p>The goal of this minimal book is thoroughly testing that Python <code>matplotlib</code> notebooks in <strong>Rmarkdown</strong> work seamlessly from within <code>RStudio</code>. Making <code>matplotlib</code> run from within RStudio using the R package <code>reticulate</code> and <strong>Python Anaconda</strong> has improved a lot. The package <code>reticulate</code> and RStudio have gone through a complete transformation in the past few months. Enough to say that it’s an accepted fact today that Python and R are ready to work along for the benefit of data science, machine learning and artificial intelligence.</p>
 <div id="motivation" class="section level2 unnumbered">
 <h2>Motivation<a class="anchor" aria-label="anchor" href="#motivation"><i class="fas fa-link"></i></a>
@@ -134,14 +134,19 @@
 <div style="background-color:#000000">
 <p><span style="font-size:90%;color:#ffffff"><i class="fas fa-terminal"></i> <b>Shell</b></span></p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="index.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"list all conda environments available"</span></span>
-<span id="cb4-2"><a href="index.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/anaconda3/etc/profile.d/conda.sh</span>
+<span id="cb4-2"><a href="index.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/miniconda3/etc/profile.d/conda.sh</span>
 <span id="cb4-3"><a href="index.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate r-python</span>
 <span id="cb4-4"><a href="index.html#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env list</span>
 <span id="cb4-5"><a href="index.html#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"working from the terminal"</span></span></code></pre></div>
 <pre><code>#:&gt; list all conda environments available
-#:&gt; bash: line 1: /home/msfz751/anaconda3/etc/profile.d/conda.sh: No such file or directory
-#:&gt; bash: line 2: conda: command not found
-#:&gt; bash: line 3: conda: command not found
+#:&gt; # conda environments:
+#:&gt; #
+#:&gt; base                     /home/msfz751/miniconda3
+#:&gt; man_ccia                 /home/msfz751/miniconda3/envs/man_ccia
+#:&gt; pybook                   /home/msfz751/miniconda3/envs/pybook
+#:&gt; r-python              *  /home/msfz751/miniconda3/envs/r-python
+#:&gt; r-tensorflow             /home/msfz751/miniconda3/envs/r-tensorflow
+#:&gt; 
 #:&gt; working from the terminal</code></pre>
 </div>
 <br>

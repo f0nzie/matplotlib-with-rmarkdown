@@ -94,7 +94,7 @@ This chunk of code with the engine set to `bash` will list all the `conda` envir
 
 ```{bash, decorate=TRUE, results = "markdown", collapse=FALSE}
 echo "list all conda environments available"
-source ~/anaconda3/etc/profile.d/conda.sh
+source ~/miniconda3/etc/profile.d/conda.sh
 conda activate r-python
 conda env list
 echo "working from the terminal"
@@ -105,7 +105,7 @@ To set the block as bash, we enter it like this:
 ```` {.markdown}
 `r ' '````{bash}
 echo "list all conda environments available"
-source ~/anaconda3/etc/profile.d/conda.sh
+source ~/miniconda3/etc/profile.d/conda.sh
 conda activate r-python
 conda env list
 echo "working from the terminal"
