@@ -1,6 +1,7 @@
 bookdown::bs4_book:
   css: [css/style.css, css/toc.css, fontawesome/css/all.css]
   theme:
+    highlight: kate
     # primary: "#982a31"
     primary: "#3c99ca"
     fg: "#2b2121"
