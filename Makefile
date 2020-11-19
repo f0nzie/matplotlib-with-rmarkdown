@@ -91,7 +91,7 @@ clean: tidy
 		find $(OUTPUT_DIR) -maxdepth 1 -name \*.tex -delete
 		find $(FIGURE_DIR) -maxdepth 1 -name \*.png -delete ;\
 		$(RM) -rf $(BOOKDOWN_FILES_DIRS)
-		if [ -f ${MAIN} ]; then rm -rf ${MAIN};fi ;\
+		if [ -f ${MAIN_RMD} ]; then rm -rf ${MAIN_RMD};fi ;\
 		if [ -f ${LIBRARY} ]; then rm ${LIBRARY};fi ;\
 		if [ -d ${PUBLISH_BOOK_DIR} ]; then rm -rf ${PUBLISH_BOOK_DIR};fi
 		if [ -d ${CHECKPOINTS} ]; then rm -rf ${CHECKPOINTS};fi
