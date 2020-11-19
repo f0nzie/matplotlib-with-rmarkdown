@@ -67,20 +67,18 @@ ifeq ($(OSFLAG), WINDOWS)
 endif
 
 
-# create conda environment
-create_env:
-	source ${HOME}/${CONDA_TYPE}/etc/profile.d/conda.sh ;\
-	conda deactivate
-	conda remove --name ${CONDA_ENV} --all -y
-	conda env create -f ${ENV_RECIPE}
+# knit the book and then open it in the browser
+.PHONY: bs4_book gitbook1 gitbook2
+bs4_book: conda_activate bs4book_render open_book conda_deactivate
+	
+git_book: conda_activate gitbook_render open_book conda_deactivate
 
-remove_env:
-	source ${HOME}/${CONDA_TYPE}/etc/profile.d/conda.sh ;\
-	conda deactivate
-	conda remove --name ${CONDA_ENV} --all -y
+gitbook2: build_book2 open_book
 
 
-push:
+
+
+git_push:
 	git push ;\
 	git subtree push --prefix public origin gh-pages	
 
