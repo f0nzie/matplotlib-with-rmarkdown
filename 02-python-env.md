@@ -3,6 +3,7 @@
 _Last update: Thu Nov 5 19:22:01 2020 -0600 (5124cef)_
 
 ## Why virtual environments?
+To get repeatable and reproducible results when running Python code in Rmarkdownthere is nothing better than creating a Python environment.
 
 There are several ways of running Python code. In this minimal book, we will see two of them:
 
@@ -13,7 +14,7 @@ Both work similarly in the sense of providing an isolated, fresh Python environm
 
 ## Python virtual environment and R
 
-Although, it is not absolutely necessary to create a virtual environment to run Rmarkdown Python notebooks, it is highly recommended because you will be able to run a selected analysis, over and over, without paying too much attention to updates or upgrades in the hosting operating system. This means that you could freeze in time a virtual environment, without disturbing it with software updates.
+Although, it is not absolutely necessary to create a virtual environment to run Rmarkdown Python notebooks, it is highly recommended because you will be able to run a selected analysis, over and over, without paying too much attention to updates or upgrades in the hosting operating system or packages updates. This means that you could freeze in time a virtual environment, without disturbing it with software updates.
 
 This virtual environment should be able to be re-created from a text file with a minimum set of instructions, or a list of packages, or recipe, that bring a fresh Python environment, few months from now. Both, methods of creating Python virtual environments, `conda` and `virtualenv` use a text file with a recipe to do just that.
 
@@ -103,11 +104,14 @@ py_config()
 #:> 
 #:> python versions found: 
 #:>  /home/msfz751/miniconda3/envs/r-python/bin/python
+#:>  /home/msfz751/miniconda3/bin/python3
 #:>  /usr/bin/python3
 #:>  /usr/bin/python
 #:>  /home/msfz751/miniconda3/envs/man_ccia/bin/python
 #:>  /home/msfz751/miniconda3/envs/pybook/bin/python
+#:>  /home/msfz751/miniconda3/envs/r-ptech/bin/python
 #:>  /home/msfz751/miniconda3/envs/r-tensorflow/bin/python
+#:>  /home/msfz751/miniconda3/envs/r-torch/bin/python
 #:>  /home/msfz751/miniconda3/bin/python
 ```
 
@@ -159,7 +163,7 @@ plt.show()
 
 <img src="02-python-env_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
-The code, you would have to type, would look like this:
+The code, you would have to type in the `Rmarkdown` code block, would look like this:
 
 ```` {.markdown}
  ```{python}

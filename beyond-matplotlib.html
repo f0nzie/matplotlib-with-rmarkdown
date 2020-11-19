@@ -58,7 +58,7 @@
 <div class="decocode">
 <div style="background-color:#4C78DB">
 <p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i><b>R</b></span></p>
-<div class="sourceCode" id="cb83"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb84"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rstudio/reticulate">reticulate</a></span><span class="op">)</span>
 <span class="fu">reticulate</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/reticulate/man/use_python.html">use_condaenv</a></span><span class="op">(</span><span class="st">"r-python"</span><span class="op">)</span></code></pre></div>
 </div>
@@ -75,19 +75,20 @@
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span></p>
-<div class="sourceCode" id="cb84"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb84-1"><a href="beyond-matplotlib.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/bendichter/brokenaxes/blob/master/examples/plot_usage.py</span></span>
-<span id="cb84-2"><a href="beyond-matplotlib.html#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb84-3"><a href="beyond-matplotlib.html#cb84-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> brokenaxes <span class="im">import</span> brokenaxes</span>
-<span id="cb84-4"><a href="beyond-matplotlib.html#cb84-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb84-5"><a href="beyond-matplotlib.html#cb84-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb84-6"><a href="beyond-matplotlib.html#cb84-6" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">2</span>))</span>
-<span id="cb84-7"><a href="beyond-matplotlib.html#cb84-7" aria-hidden="true" tabindex="-1"></a>bax <span class="op">=</span> brokenaxes(xlims<span class="op">=</span>((<span class="dv">0</span>, <span class="fl">.1</span>), (<span class="fl">.4</span>, <span class="fl">.7</span>)), ylims<span class="op">=</span>((<span class="op">-</span><span class="dv">1</span>, <span class="fl">.7</span>), (<span class="fl">.79</span>, <span class="dv">1</span>)), hspace<span class="op">=</span><span class="fl">.05</span>)</span>
-<span id="cb84-8"><a href="beyond-matplotlib.html#cb84-8" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">100</span>)</span>
-<span id="cb84-9"><a href="beyond-matplotlib.html#cb84-9" aria-hidden="true" tabindex="-1"></a>bax.plot(x, np.sin(<span class="dv">10</span> <span class="op">*</span> x), label<span class="op">=</span><span class="st">'sin'</span>)</span>
-<span id="cb84-10"><a href="beyond-matplotlib.html#cb84-10" aria-hidden="true" tabindex="-1"></a>bax.plot(x, np.cos(<span class="dv">10</span> <span class="op">*</span> x), label<span class="op">=</span><span class="st">'cos'</span>)</span>
-<span id="cb84-11"><a href="beyond-matplotlib.html#cb84-11" aria-hidden="true" tabindex="-1"></a>bax.legend(loc<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb84-12"><a href="beyond-matplotlib.html#cb84-12" aria-hidden="true" tabindex="-1"></a>bax.set_xlabel(<span class="st">'time'</span>)</span>
-<span id="cb84-13"><a href="beyond-matplotlib.html#cb84-13" aria-hidden="true" tabindex="-1"></a>bax.set_ylabel(<span class="st">'value'</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb85"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb85-1"><a href="beyond-matplotlib.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/bendichter/brokenaxes/blob/master/examples/plot_usage.py</span></span>
+<span id="cb85-2"><a href="beyond-matplotlib.html#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb85-3"><a href="beyond-matplotlib.html#cb85-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> brokenaxes <span class="im">import</span> brokenaxes</span>
+<span id="cb85-4"><a href="beyond-matplotlib.html#cb85-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb85-5"><a href="beyond-matplotlib.html#cb85-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-6"><a href="beyond-matplotlib.html#cb85-6" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">2</span>))</span>
+<span id="cb85-7"><a href="beyond-matplotlib.html#cb85-7" aria-hidden="true" tabindex="-1"></a>bax <span class="op">=</span> brokenaxes(xlims<span class="op">=</span>((<span class="dv">0</span>, <span class="fl">.1</span>), (<span class="fl">.4</span>, <span class="fl">.7</span>)), ylims<span class="op">=</span>((<span class="op">-</span><span class="dv">1</span>, <span class="fl">.7</span>), (<span class="fl">.79</span>, <span class="dv">1</span>)), hspace<span class="op">=</span><span class="fl">.05</span>)</span>
+<span id="cb85-8"><a href="beyond-matplotlib.html#cb85-8" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">100</span>)</span>
+<span id="cb85-9"><a href="beyond-matplotlib.html#cb85-9" aria-hidden="true" tabindex="-1"></a>bax.plot(x, np.sin(<span class="dv">10</span> <span class="op">*</span> x), label<span class="op">=</span><span class="st">'sin'</span>)</span>
+<span id="cb85-10"><a href="beyond-matplotlib.html#cb85-10" aria-hidden="true" tabindex="-1"></a>bax.plot(x, np.cos(<span class="dv">10</span> <span class="op">*</span> x), label<span class="op">=</span><span class="st">'cos'</span>)</span>
+<span id="cb85-11"><a href="beyond-matplotlib.html#cb85-11" aria-hidden="true" tabindex="-1"></a>bax.legend(loc<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb85-12"><a href="beyond-matplotlib.html#cb85-12" aria-hidden="true" tabindex="-1"></a>bax.set_xlabel(<span class="st">'time'</span>)</span>
+<span id="cb85-13"><a href="beyond-matplotlib.html#cb85-13" aria-hidden="true" tabindex="-1"></a>bax.set_ylabel(<span class="st">'value'</span>)</span>
+<span id="cb85-14"><a href="beyond-matplotlib.html#cb85-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <img src="10-matplotlib_beyond_files/figure-html/ba-usage-1.png" width="90%" style="display: block; margin: auto;">
 </div>
 <br>
@@ -100,20 +101,20 @@
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span></p>
-<div class="sourceCode" id="cb85"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb85-1"><a href="beyond-matplotlib.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/bendichter/brokenaxes/blob/master/examples/plot_subplots.py</span></span>
-<span id="cb85-2"><a href="beyond-matplotlib.html#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> brokenaxes <span class="im">import</span> brokenaxes</span>
-<span id="cb85-3"><a href="beyond-matplotlib.html#cb85-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.gridspec <span class="im">import</span> GridSpec</span>
-<span id="cb85-4"><a href="beyond-matplotlib.html#cb85-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb85-5"><a href="beyond-matplotlib.html#cb85-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb85-6"><a href="beyond-matplotlib.html#cb85-6" aria-hidden="true" tabindex="-1"></a>sps1, sps2 <span class="op">=</span> GridSpec(<span class="dv">2</span>,<span class="dv">1</span>)</span>
-<span id="cb85-7"><a href="beyond-matplotlib.html#cb85-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb85-8"><a href="beyond-matplotlib.html#cb85-8" aria-hidden="true" tabindex="-1"></a>bax <span class="op">=</span> brokenaxes(xlims<span class="op">=</span>((<span class="fl">.1</span>, <span class="fl">.3</span>),(<span class="fl">.7</span>, <span class="fl">.8</span>)), subplot_spec<span class="op">=</span>sps1)</span>
-<span id="cb85-9"><a href="beyond-matplotlib.html#cb85-9" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">100</span>)</span>
-<span id="cb85-10"><a href="beyond-matplotlib.html#cb85-10" aria-hidden="true" tabindex="-1"></a>bax.plot(x, np.sin(x<span class="op">*</span><span class="dv">30</span>), ls<span class="op">=</span><span class="st">':'</span>, color<span class="op">=</span><span class="st">'m'</span>)</span>
-<span id="cb85-11"><a href="beyond-matplotlib.html#cb85-11" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.poisson(<span class="dv">3</span>, <span class="dv">1000</span>)</span>
-<span id="cb85-12"><a href="beyond-matplotlib.html#cb85-12" aria-hidden="true" tabindex="-1"></a>bax <span class="op">=</span> brokenaxes(xlims<span class="op">=</span>((<span class="dv">0</span>, <span class="fl">2.5</span>), (<span class="dv">3</span>, <span class="dv">6</span>)), subplot_spec<span class="op">=</span>sps2)</span>
-<span id="cb85-13"><a href="beyond-matplotlib.html#cb85-13" aria-hidden="true" tabindex="-1"></a>bax.hist(x, histtype<span class="op">=</span><span class="st">'bar'</span>)</span>
-<span id="cb85-14"><a href="beyond-matplotlib.html#cb85-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb86-1"><a href="beyond-matplotlib.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/bendichter/brokenaxes/blob/master/examples/plot_subplots.py</span></span>
+<span id="cb86-2"><a href="beyond-matplotlib.html#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> brokenaxes <span class="im">import</span> brokenaxes</span>
+<span id="cb86-3"><a href="beyond-matplotlib.html#cb86-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.gridspec <span class="im">import</span> GridSpec</span>
+<span id="cb86-4"><a href="beyond-matplotlib.html#cb86-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb86-5"><a href="beyond-matplotlib.html#cb86-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb86-6"><a href="beyond-matplotlib.html#cb86-6" aria-hidden="true" tabindex="-1"></a>sps1, sps2 <span class="op">=</span> GridSpec(<span class="dv">2</span>,<span class="dv">1</span>)</span>
+<span id="cb86-7"><a href="beyond-matplotlib.html#cb86-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb86-8"><a href="beyond-matplotlib.html#cb86-8" aria-hidden="true" tabindex="-1"></a>bax <span class="op">=</span> brokenaxes(xlims<span class="op">=</span>((<span class="fl">.1</span>, <span class="fl">.3</span>),(<span class="fl">.7</span>, <span class="fl">.8</span>)), subplot_spec<span class="op">=</span>sps1)</span>
+<span id="cb86-9"><a href="beyond-matplotlib.html#cb86-9" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">100</span>)</span>
+<span id="cb86-10"><a href="beyond-matplotlib.html#cb86-10" aria-hidden="true" tabindex="-1"></a>bax.plot(x, np.sin(x<span class="op">*</span><span class="dv">30</span>), ls<span class="op">=</span><span class="st">':'</span>, color<span class="op">=</span><span class="st">'m'</span>)</span>
+<span id="cb86-11"><a href="beyond-matplotlib.html#cb86-11" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.poisson(<span class="dv">3</span>, <span class="dv">1000</span>)</span>
+<span id="cb86-12"><a href="beyond-matplotlib.html#cb86-12" aria-hidden="true" tabindex="-1"></a>bax <span class="op">=</span> brokenaxes(xlims<span class="op">=</span>((<span class="dv">0</span>, <span class="fl">2.5</span>), (<span class="dv">3</span>, <span class="dv">6</span>)), subplot_spec<span class="op">=</span>sps2)</span>
+<span id="cb86-13"><a href="beyond-matplotlib.html#cb86-13" aria-hidden="true" tabindex="-1"></a>bax.hist(x, histtype<span class="op">=</span><span class="st">'bar'</span>)</span>
+<span id="cb86-14"><a href="beyond-matplotlib.html#cb86-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-2-1.png" width="90%" style="display: block; margin: auto;">
 </div>
 <br>
@@ -126,29 +127,29 @@
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span></p>
-<div class="sourceCode" id="cb86"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb86-1"><a href="beyond-matplotlib.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/bendichter/brokenaxes/blob/master/examples/plot_logscales.py</span></span>
-<span id="cb86-2"><a href="beyond-matplotlib.html#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Log scales</span></span>
-<span id="cb86-3"><a href="beyond-matplotlib.html#cb86-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ==========</span></span>
-<span id="cb86-4"><a href="beyond-matplotlib.html#cb86-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Brokenaxe compute automatically the correct layout for a 1:1 scale. However, for</span></span>
-<span id="cb86-5"><a href="beyond-matplotlib.html#cb86-5" aria-hidden="true" tabindex="-1"></a><span class="co"># logarithmic scales, the 1:1 scale has to be adapted. This is done via the</span></span>
-<span id="cb86-6"><a href="beyond-matplotlib.html#cb86-6" aria-hidden="true" tabindex="-1"></a><span class="co"># `yscale` or `xscale` arguments.</span></span>
-<span id="cb86-7"><a href="beyond-matplotlib.html#cb86-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb86-8"><a href="beyond-matplotlib.html#cb86-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> brokenaxes <span class="im">import</span> brokenaxes</span>
-<span id="cb86-9"><a href="beyond-matplotlib.html#cb86-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb86-10"><a href="beyond-matplotlib.html#cb86-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb86-11"><a href="beyond-matplotlib.html#cb86-11" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">5</span>))</span>
-<span id="cb86-12"><a href="beyond-matplotlib.html#cb86-12" aria-hidden="true" tabindex="-1"></a>bax <span class="op">=</span> brokenaxes(xlims<span class="op">=</span>((<span class="dv">1</span>, <span class="dv">500</span>), (<span class="dv">600</span>, <span class="dv">10000</span>)),</span>
-<span id="cb86-13"><a href="beyond-matplotlib.html#cb86-13" aria-hidden="true" tabindex="-1"></a>         ylims<span class="op">=</span>((<span class="dv">1</span>, <span class="dv">500</span>), (<span class="dv">600</span>, <span class="dv">10000</span>)),</span>
-<span id="cb86-14"><a href="beyond-matplotlib.html#cb86-14" aria-hidden="true" tabindex="-1"></a>         hspace<span class="op">=</span><span class="fl">.15</span>, xscale<span class="op">=</span><span class="st">'log'</span>, yscale<span class="op">=</span><span class="st">'log'</span>)</span>
-<span id="cb86-15"><a href="beyond-matplotlib.html#cb86-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb86-16"><a href="beyond-matplotlib.html#cb86-16" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.logspace(<span class="fl">0.0</span>, <span class="dv">4</span>, <span class="dv">100</span>)</span>
-<span id="cb86-17"><a href="beyond-matplotlib.html#cb86-17" aria-hidden="true" tabindex="-1"></a>bax.loglog(x, x, label<span class="op">=</span><span class="st">'$y=x=10^</span><span class="sc">{0}</span><span class="st">$ to $10^</span><span class="sc">{4}</span><span class="st">$'</span>)</span>
-<span id="cb86-18"><a href="beyond-matplotlib.html#cb86-18" aria-hidden="true" tabindex="-1"></a>bax.legend(loc<span class="op">=</span><span class="st">'best'</span>)</span>
-<span id="cb86-19"><a href="beyond-matplotlib.html#cb86-19" aria-hidden="true" tabindex="-1"></a>bax.grid(axis<span class="op">=</span><span class="st">'both'</span>, which<span class="op">=</span><span class="st">'major'</span>, ls<span class="op">=</span><span class="st">'-'</span>)</span>
-<span id="cb86-20"><a href="beyond-matplotlib.html#cb86-20" aria-hidden="true" tabindex="-1"></a>bax.grid(axis<span class="op">=</span><span class="st">'both'</span>, which<span class="op">=</span><span class="st">'minor'</span>, ls<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.4</span>)</span>
-<span id="cb86-21"><a href="beyond-matplotlib.html#cb86-21" aria-hidden="true" tabindex="-1"></a>bax.set_xlabel(<span class="st">'x'</span>)</span>
-<span id="cb86-22"><a href="beyond-matplotlib.html#cb86-22" aria-hidden="true" tabindex="-1"></a>bax.set_ylabel(<span class="st">'y'</span>)</span>
-<span id="cb86-23"><a href="beyond-matplotlib.html#cb86-23" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb87"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb87-1"><a href="beyond-matplotlib.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/bendichter/brokenaxes/blob/master/examples/plot_logscales.py</span></span>
+<span id="cb87-2"><a href="beyond-matplotlib.html#cb87-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Log scales</span></span>
+<span id="cb87-3"><a href="beyond-matplotlib.html#cb87-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ==========</span></span>
+<span id="cb87-4"><a href="beyond-matplotlib.html#cb87-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Brokenaxe compute automatically the correct layout for a 1:1 scale. However, for</span></span>
+<span id="cb87-5"><a href="beyond-matplotlib.html#cb87-5" aria-hidden="true" tabindex="-1"></a><span class="co"># logarithmic scales, the 1:1 scale has to be adapted. This is done via the</span></span>
+<span id="cb87-6"><a href="beyond-matplotlib.html#cb87-6" aria-hidden="true" tabindex="-1"></a><span class="co"># `yscale` or `xscale` arguments.</span></span>
+<span id="cb87-7"><a href="beyond-matplotlib.html#cb87-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb87-8"><a href="beyond-matplotlib.html#cb87-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> brokenaxes <span class="im">import</span> brokenaxes</span>
+<span id="cb87-9"><a href="beyond-matplotlib.html#cb87-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb87-10"><a href="beyond-matplotlib.html#cb87-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb87-11"><a href="beyond-matplotlib.html#cb87-11" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">5</span>))</span>
+<span id="cb87-12"><a href="beyond-matplotlib.html#cb87-12" aria-hidden="true" tabindex="-1"></a>bax <span class="op">=</span> brokenaxes(xlims<span class="op">=</span>((<span class="dv">1</span>, <span class="dv">500</span>), (<span class="dv">600</span>, <span class="dv">10000</span>)),</span>
+<span id="cb87-13"><a href="beyond-matplotlib.html#cb87-13" aria-hidden="true" tabindex="-1"></a>         ylims<span class="op">=</span>((<span class="dv">1</span>, <span class="dv">500</span>), (<span class="dv">600</span>, <span class="dv">10000</span>)),</span>
+<span id="cb87-14"><a href="beyond-matplotlib.html#cb87-14" aria-hidden="true" tabindex="-1"></a>         hspace<span class="op">=</span><span class="fl">.15</span>, xscale<span class="op">=</span><span class="st">'log'</span>, yscale<span class="op">=</span><span class="st">'log'</span>)</span>
+<span id="cb87-15"><a href="beyond-matplotlib.html#cb87-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb87-16"><a href="beyond-matplotlib.html#cb87-16" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.logspace(<span class="fl">0.0</span>, <span class="dv">4</span>, <span class="dv">100</span>)</span>
+<span id="cb87-17"><a href="beyond-matplotlib.html#cb87-17" aria-hidden="true" tabindex="-1"></a>bax.loglog(x, x, label<span class="op">=</span><span class="st">'$y=x=10^</span><span class="sc">{0}</span><span class="st">$ to $10^</span><span class="sc">{4}</span><span class="st">$'</span>)</span>
+<span id="cb87-18"><a href="beyond-matplotlib.html#cb87-18" aria-hidden="true" tabindex="-1"></a>bax.legend(loc<span class="op">=</span><span class="st">'best'</span>)</span>
+<span id="cb87-19"><a href="beyond-matplotlib.html#cb87-19" aria-hidden="true" tabindex="-1"></a>bax.grid(axis<span class="op">=</span><span class="st">'both'</span>, which<span class="op">=</span><span class="st">'major'</span>, ls<span class="op">=</span><span class="st">'-'</span>)</span>
+<span id="cb87-20"><a href="beyond-matplotlib.html#cb87-20" aria-hidden="true" tabindex="-1"></a>bax.grid(axis<span class="op">=</span><span class="st">'both'</span>, which<span class="op">=</span><span class="st">'minor'</span>, ls<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.4</span>)</span>
+<span id="cb87-21"><a href="beyond-matplotlib.html#cb87-21" aria-hidden="true" tabindex="-1"></a>bax.set_xlabel(<span class="st">'x'</span>)</span>
+<span id="cb87-22"><a href="beyond-matplotlib.html#cb87-22" aria-hidden="true" tabindex="-1"></a>bax.set_ylabel(<span class="st">'y'</span>)</span>
+<span id="cb87-23"><a href="beyond-matplotlib.html#cb87-23" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;">
 </div>
 <br>
@@ -161,77 +162,77 @@
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span></p>
-<div class="sourceCode" id="cb87"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb87-1"><a href="beyond-matplotlib.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/bendichter/brokenaxes/blob/master/examples/plot_different_scales.py</span></span>
-<span id="cb87-2"><a href="beyond-matplotlib.html#cb87-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Different scales with brokenaxes</span></span>
-<span id="cb87-3"><a href="beyond-matplotlib.html#cb87-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ================================</span></span>
-<span id="cb87-4"><a href="beyond-matplotlib.html#cb87-4" aria-hidden="true" tabindex="-1"></a><span class="co"># This example shows how to customize the scales and the ticks of each broken</span></span>
-<span id="cb87-5"><a href="beyond-matplotlib.html#cb87-5" aria-hidden="true" tabindex="-1"></a><span class="co"># axes.</span></span>
-<span id="cb87-6"><a href="beyond-matplotlib.html#cb87-6" aria-hidden="true" tabindex="-1"></a><span class="co">#############################################################################</span></span>
-<span id="cb87-7"><a href="beyond-matplotlib.html#cb87-7" aria-hidden="true" tabindex="-1"></a><span class="co"># brokenaxes lets you choose the aspect ratio of each sub-axes thanks to the</span></span>
-<span id="cb87-8"><a href="beyond-matplotlib.html#cb87-8" aria-hidden="true" tabindex="-1"></a><span class="co"># `height_ratios` and `width_ratios` to over-pass the default 1:1 scale for all</span></span>
-<span id="cb87-9"><a href="beyond-matplotlib.html#cb87-9" aria-hidden="true" tabindex="-1"></a><span class="co"># axes. However, by default the ticks spacing are still identical for all axes.</span></span>
-<span id="cb87-10"><a href="beyond-matplotlib.html#cb87-10" aria-hidden="true" tabindex="-1"></a><span class="co"># In this example, we present how to customize the ticks of your brokenaxes.</span></span>
-<span id="cb87-11"><a href="beyond-matplotlib.html#cb87-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb87-12"><a href="beyond-matplotlib.html#cb87-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb87-13"><a href="beyond-matplotlib.html#cb87-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> brokenaxes <span class="im">import</span> brokenaxes</span>
-<span id="cb87-14"><a href="beyond-matplotlib.html#cb87-14" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.ticker <span class="im">as</span> ticker</span>
-<span id="cb87-15"><a href="beyond-matplotlib.html#cb87-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb87-16"><a href="beyond-matplotlib.html#cb87-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_plot():</span>
-<span id="cb87-17"><a href="beyond-matplotlib.html#cb87-17" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">5</span><span class="op">*</span><span class="dv">2</span><span class="op">*</span>np.pi, <span class="dv">300</span>)</span>
-<span id="cb87-18"><a href="beyond-matplotlib.html#cb87-18" aria-hidden="true" tabindex="-1"></a>    y1 <span class="op">=</span> np.sin(x)<span class="op">*</span><span class="dv">100</span></span>
-<span id="cb87-19"><a href="beyond-matplotlib.html#cb87-19" aria-hidden="true" tabindex="-1"></a>    y2 <span class="op">=</span> np.sin(x<span class="op">+</span>np.pi)<span class="op">*</span><span class="dv">5</span> <span class="op">+</span> <span class="dv">90</span></span>
-<span id="cb87-20"><a href="beyond-matplotlib.html#cb87-20" aria-hidden="true" tabindex="-1"></a>    y3 <span class="op">=</span> <span class="dv">30</span><span class="op">*</span>np.exp(<span class="op">-</span>x) <span class="op">-</span> <span class="dv">50</span></span>
-<span id="cb87-21"><a href="beyond-matplotlib.html#cb87-21" aria-hidden="true" tabindex="-1"></a>    y4 <span class="op">=</span> <span class="dv">90</span> <span class="op">+</span> (<span class="dv">1</span><span class="op">-</span>np.exp(<span class="dv">6</span><span class="op">/</span>x))</span>
-<span id="cb87-22"><a href="beyond-matplotlib.html#cb87-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb87-23"><a href="beyond-matplotlib.html#cb87-23" aria-hidden="true" tabindex="-1"></a>    bax <span class="op">=</span> brokenaxes(</span>
-<span id="cb87-24"><a href="beyond-matplotlib.html#cb87-24" aria-hidden="true" tabindex="-1"></a>        ylims<span class="op">=</span>[(<span class="op">-</span><span class="dv">100</span>, <span class="dv">0</span>), (<span class="dv">80</span>, <span class="dv">100</span>)],</span>
-<span id="cb87-25"><a href="beyond-matplotlib.html#cb87-25" aria-hidden="true" tabindex="-1"></a>        xlims<span class="op">=</span>[(<span class="dv">0</span>, <span class="dv">5</span>), (<span class="dv">10</span>, <span class="dv">30</span>)],</span>
-<span id="cb87-26"><a href="beyond-matplotlib.html#cb87-26" aria-hidden="true" tabindex="-1"></a>        height_ratios<span class="op">=</span>[<span class="dv">1</span>, <span class="dv">3</span>],</span>
-<span id="cb87-27"><a href="beyond-matplotlib.html#cb87-27" aria-hidden="true" tabindex="-1"></a>        width_ratios<span class="op">=</span>[<span class="dv">3</span>, <span class="dv">5</span>]</span>
-<span id="cb87-28"><a href="beyond-matplotlib.html#cb87-28" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb87-29"><a href="beyond-matplotlib.html#cb87-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb87-30"><a href="beyond-matplotlib.html#cb87-30" aria-hidden="true" tabindex="-1"></a>    bax.plot(x, y1, label<span class="op">=</span><span class="st">"Big sin"</span>)</span>
-<span id="cb87-31"><a href="beyond-matplotlib.html#cb87-31" aria-hidden="true" tabindex="-1"></a>    bax.plot(x, y2, label<span class="op">=</span><span class="st">"Small sin"</span>)</span>
-<span id="cb87-32"><a href="beyond-matplotlib.html#cb87-32" aria-hidden="true" tabindex="-1"></a>    bax.plot(x, y3, label<span class="op">=</span><span class="st">"Exponential 1"</span>)</span>
-<span id="cb87-33"><a href="beyond-matplotlib.html#cb87-33" aria-hidden="true" tabindex="-1"></a>    bax.plot(x, y4, <span class="st">'--'</span>, label<span class="op">=</span><span class="st">"Exponential 2"</span>)</span>
-<span id="cb87-34"><a href="beyond-matplotlib.html#cb87-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb87-35"><a href="beyond-matplotlib.html#cb87-35" aria-hidden="true" tabindex="-1"></a>    bax.legend(loc<span class="op">=</span><span class="st">"lower right"</span>)</span>
-<span id="cb87-36"><a href="beyond-matplotlib.html#cb87-36" aria-hidden="true" tabindex="-1"></a>    bax.set_title(<span class="st">"Example for different scales for the x and y axis"</span>)</span>
-<span id="cb87-37"><a href="beyond-matplotlib.html#cb87-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb87-38"><a href="beyond-matplotlib.html#cb87-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> bax</span>
-<span id="cb87-39"><a href="beyond-matplotlib.html#cb87-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb87-40"><a href="beyond-matplotlib.html#cb87-40" aria-hidden="true" tabindex="-1"></a><span class="co">#############################################################################</span></span>
-<span id="cb87-41"><a href="beyond-matplotlib.html#cb87-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the AutoLocator() ticker</span></span>
-<span id="cb87-42"><a href="beyond-matplotlib.html#cb87-42" aria-hidden="true" tabindex="-1"></a><span class="co"># ----------------------------</span></span>
-<span id="cb87-43"><a href="beyond-matplotlib.html#cb87-43" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
-<span id="cb87-44"><a href="beyond-matplotlib.html#cb87-44" aria-hidden="true" tabindex="-1"></a>bax <span class="op">=</span> make_plot()</span>
-<span id="cb87-45"><a href="beyond-matplotlib.html#cb87-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb87-46"><a href="beyond-matplotlib.html#cb87-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Then, we get the different axes created and set the ticks according to the</span></span>
-<span id="cb87-47"><a href="beyond-matplotlib.html#cb87-47" aria-hidden="true" tabindex="-1"></a><span class="co"># axe x and y limits.</span></span>
-<span id="cb87-48"><a href="beyond-matplotlib.html#cb87-48" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(bax.last_row):</span>
-<span id="cb87-49"><a href="beyond-matplotlib.html#cb87-49" aria-hidden="true" tabindex="-1"></a>    ax.xaxis.set_major_locator(ticker.AutoLocator())</span>
-<span id="cb87-50"><a href="beyond-matplotlib.html#cb87-50" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">'xscale </span><span class="sc">{i}</span><span class="st">'</span>.<span class="bu">format</span>(i<span class="op">=</span>i))</span>
-<span id="cb87-51"><a href="beyond-matplotlib.html#cb87-51" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(bax.first_col):</span>
-<span id="cb87-52"><a href="beyond-matplotlib.html#cb87-52" aria-hidden="true" tabindex="-1"></a>    ax.yaxis.set_major_locator(ticker.AutoLocator())</span>
-<span id="cb87-53"><a href="beyond-matplotlib.html#cb87-53" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'yscale </span><span class="sc">{i}</span><span class="st">'</span>.<span class="bu">format</span>(i<span class="op">=</span>i))</span>
-<span id="cb87-54"><a href="beyond-matplotlib.html#cb87-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb87-55"><a href="beyond-matplotlib.html#cb87-55" aria-hidden="true" tabindex="-1"></a><span class="co">##############################################################################</span></span>
-<span id="cb87-56"><a href="beyond-matplotlib.html#cb87-56" aria-hidden="true" tabindex="-1"></a><span class="co"># .. note:: It is not necessary to loop through all the axes since they all</span></span>
-<span id="cb87-57"><a href="beyond-matplotlib.html#cb87-57" aria-hidden="true" tabindex="-1"></a><span class="co">#      share the same x and y limits in a given column or row.</span></span>
-<span id="cb87-58"><a href="beyond-matplotlib.html#cb87-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb87-59"><a href="beyond-matplotlib.html#cb87-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb87-60"><a href="beyond-matplotlib.html#cb87-60" aria-hidden="true" tabindex="-1"></a><span class="co">##############################################################################</span></span>
-<span id="cb87-61"><a href="beyond-matplotlib.html#cb87-61" aria-hidden="true" tabindex="-1"></a><span class="co"># Manually set the ticks</span></span>
-<span id="cb87-62"><a href="beyond-matplotlib.html#cb87-62" aria-hidden="true" tabindex="-1"></a><span class="co"># ----------------------</span></span>
-<span id="cb87-63"><a href="beyond-matplotlib.html#cb87-63" aria-hidden="true" tabindex="-1"></a><span class="co"># Since brokenaxes return normal matplotlib axes, you could also set them</span></span>
-<span id="cb87-64"><a href="beyond-matplotlib.html#cb87-64" aria-hidden="true" tabindex="-1"></a><span class="co"># manually.</span></span>
-<span id="cb87-65"><a href="beyond-matplotlib.html#cb87-65" aria-hidden="true" tabindex="-1"></a>fig2 <span class="op">=</span> plt.figure()</span>
-<span id="cb87-66"><a href="beyond-matplotlib.html#cb87-66" aria-hidden="true" tabindex="-1"></a>bax <span class="op">=</span> make_plot()</span>
-<span id="cb87-67"><a href="beyond-matplotlib.html#cb87-67" aria-hidden="true" tabindex="-1"></a>bax.first_col[<span class="dv">0</span>].set_yticks([<span class="dv">80</span>, <span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">95</span>, <span class="dv">100</span>])</span>
-<span id="cb87-68"><a href="beyond-matplotlib.html#cb87-68" aria-hidden="true" tabindex="-1"></a>bax.first_col[<span class="dv">1</span>].set_yticks([<span class="op">-</span><span class="dv">100</span>, <span class="op">-</span><span class="dv">50</span>, <span class="dv">0</span>])</span>
-<span id="cb87-69"><a href="beyond-matplotlib.html#cb87-69" aria-hidden="true" tabindex="-1"></a>bax.last_row[<span class="dv">0</span>].set_xticks([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
-<span id="cb87-70"><a href="beyond-matplotlib.html#cb87-70" aria-hidden="true" tabindex="-1"></a>bax.last_row[<span class="dv">1</span>].set_xticks([<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>])</span>
-<span id="cb87-71"><a href="beyond-matplotlib.html#cb87-71" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb88"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb88-1"><a href="beyond-matplotlib.html#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/bendichter/brokenaxes/blob/master/examples/plot_different_scales.py</span></span>
+<span id="cb88-2"><a href="beyond-matplotlib.html#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Different scales with brokenaxes</span></span>
+<span id="cb88-3"><a href="beyond-matplotlib.html#cb88-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ================================</span></span>
+<span id="cb88-4"><a href="beyond-matplotlib.html#cb88-4" aria-hidden="true" tabindex="-1"></a><span class="co"># This example shows how to customize the scales and the ticks of each broken</span></span>
+<span id="cb88-5"><a href="beyond-matplotlib.html#cb88-5" aria-hidden="true" tabindex="-1"></a><span class="co"># axes.</span></span>
+<span id="cb88-6"><a href="beyond-matplotlib.html#cb88-6" aria-hidden="true" tabindex="-1"></a><span class="co">#############################################################################</span></span>
+<span id="cb88-7"><a href="beyond-matplotlib.html#cb88-7" aria-hidden="true" tabindex="-1"></a><span class="co"># brokenaxes lets you choose the aspect ratio of each sub-axes thanks to the</span></span>
+<span id="cb88-8"><a href="beyond-matplotlib.html#cb88-8" aria-hidden="true" tabindex="-1"></a><span class="co"># `height_ratios` and `width_ratios` to over-pass the default 1:1 scale for all</span></span>
+<span id="cb88-9"><a href="beyond-matplotlib.html#cb88-9" aria-hidden="true" tabindex="-1"></a><span class="co"># axes. However, by default the ticks spacing are still identical for all axes.</span></span>
+<span id="cb88-10"><a href="beyond-matplotlib.html#cb88-10" aria-hidden="true" tabindex="-1"></a><span class="co"># In this example, we present how to customize the ticks of your brokenaxes.</span></span>
+<span id="cb88-11"><a href="beyond-matplotlib.html#cb88-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb88-12"><a href="beyond-matplotlib.html#cb88-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb88-13"><a href="beyond-matplotlib.html#cb88-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> brokenaxes <span class="im">import</span> brokenaxes</span>
+<span id="cb88-14"><a href="beyond-matplotlib.html#cb88-14" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.ticker <span class="im">as</span> ticker</span>
+<span id="cb88-15"><a href="beyond-matplotlib.html#cb88-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-16"><a href="beyond-matplotlib.html#cb88-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_plot():</span>
+<span id="cb88-17"><a href="beyond-matplotlib.html#cb88-17" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">5</span><span class="op">*</span><span class="dv">2</span><span class="op">*</span>np.pi, <span class="dv">300</span>)</span>
+<span id="cb88-18"><a href="beyond-matplotlib.html#cb88-18" aria-hidden="true" tabindex="-1"></a>    y1 <span class="op">=</span> np.sin(x)<span class="op">*</span><span class="dv">100</span></span>
+<span id="cb88-19"><a href="beyond-matplotlib.html#cb88-19" aria-hidden="true" tabindex="-1"></a>    y2 <span class="op">=</span> np.sin(x<span class="op">+</span>np.pi)<span class="op">*</span><span class="dv">5</span> <span class="op">+</span> <span class="dv">90</span></span>
+<span id="cb88-20"><a href="beyond-matplotlib.html#cb88-20" aria-hidden="true" tabindex="-1"></a>    y3 <span class="op">=</span> <span class="dv">30</span><span class="op">*</span>np.exp(<span class="op">-</span>x) <span class="op">-</span> <span class="dv">50</span></span>
+<span id="cb88-21"><a href="beyond-matplotlib.html#cb88-21" aria-hidden="true" tabindex="-1"></a>    y4 <span class="op">=</span> <span class="dv">90</span> <span class="op">+</span> (<span class="dv">1</span><span class="op">-</span>np.exp(<span class="dv">6</span><span class="op">/</span>x))</span>
+<span id="cb88-22"><a href="beyond-matplotlib.html#cb88-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-23"><a href="beyond-matplotlib.html#cb88-23" aria-hidden="true" tabindex="-1"></a>    bax <span class="op">=</span> brokenaxes(</span>
+<span id="cb88-24"><a href="beyond-matplotlib.html#cb88-24" aria-hidden="true" tabindex="-1"></a>        ylims<span class="op">=</span>[(<span class="op">-</span><span class="dv">100</span>, <span class="dv">0</span>), (<span class="dv">80</span>, <span class="dv">100</span>)],</span>
+<span id="cb88-25"><a href="beyond-matplotlib.html#cb88-25" aria-hidden="true" tabindex="-1"></a>        xlims<span class="op">=</span>[(<span class="dv">0</span>, <span class="dv">5</span>), (<span class="dv">10</span>, <span class="dv">30</span>)],</span>
+<span id="cb88-26"><a href="beyond-matplotlib.html#cb88-26" aria-hidden="true" tabindex="-1"></a>        height_ratios<span class="op">=</span>[<span class="dv">1</span>, <span class="dv">3</span>],</span>
+<span id="cb88-27"><a href="beyond-matplotlib.html#cb88-27" aria-hidden="true" tabindex="-1"></a>        width_ratios<span class="op">=</span>[<span class="dv">3</span>, <span class="dv">5</span>]</span>
+<span id="cb88-28"><a href="beyond-matplotlib.html#cb88-28" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb88-29"><a href="beyond-matplotlib.html#cb88-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-30"><a href="beyond-matplotlib.html#cb88-30" aria-hidden="true" tabindex="-1"></a>    bax.plot(x, y1, label<span class="op">=</span><span class="st">"Big sin"</span>)</span>
+<span id="cb88-31"><a href="beyond-matplotlib.html#cb88-31" aria-hidden="true" tabindex="-1"></a>    bax.plot(x, y2, label<span class="op">=</span><span class="st">"Small sin"</span>)</span>
+<span id="cb88-32"><a href="beyond-matplotlib.html#cb88-32" aria-hidden="true" tabindex="-1"></a>    bax.plot(x, y3, label<span class="op">=</span><span class="st">"Exponential 1"</span>)</span>
+<span id="cb88-33"><a href="beyond-matplotlib.html#cb88-33" aria-hidden="true" tabindex="-1"></a>    bax.plot(x, y4, <span class="st">'--'</span>, label<span class="op">=</span><span class="st">"Exponential 2"</span>)</span>
+<span id="cb88-34"><a href="beyond-matplotlib.html#cb88-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-35"><a href="beyond-matplotlib.html#cb88-35" aria-hidden="true" tabindex="-1"></a>    bax.legend(loc<span class="op">=</span><span class="st">"lower right"</span>)</span>
+<span id="cb88-36"><a href="beyond-matplotlib.html#cb88-36" aria-hidden="true" tabindex="-1"></a>    bax.set_title(<span class="st">"Example for different scales for the x and y axis"</span>)</span>
+<span id="cb88-37"><a href="beyond-matplotlib.html#cb88-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-38"><a href="beyond-matplotlib.html#cb88-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> bax</span>
+<span id="cb88-39"><a href="beyond-matplotlib.html#cb88-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-40"><a href="beyond-matplotlib.html#cb88-40" aria-hidden="true" tabindex="-1"></a><span class="co">#############################################################################</span></span>
+<span id="cb88-41"><a href="beyond-matplotlib.html#cb88-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the AutoLocator() ticker</span></span>
+<span id="cb88-42"><a href="beyond-matplotlib.html#cb88-42" aria-hidden="true" tabindex="-1"></a><span class="co"># ----------------------------</span></span>
+<span id="cb88-43"><a href="beyond-matplotlib.html#cb88-43" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
+<span id="cb88-44"><a href="beyond-matplotlib.html#cb88-44" aria-hidden="true" tabindex="-1"></a>bax <span class="op">=</span> make_plot()</span>
+<span id="cb88-45"><a href="beyond-matplotlib.html#cb88-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-46"><a href="beyond-matplotlib.html#cb88-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Then, we get the different axes created and set the ticks according to the</span></span>
+<span id="cb88-47"><a href="beyond-matplotlib.html#cb88-47" aria-hidden="true" tabindex="-1"></a><span class="co"># axe x and y limits.</span></span>
+<span id="cb88-48"><a href="beyond-matplotlib.html#cb88-48" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(bax.last_row):</span>
+<span id="cb88-49"><a href="beyond-matplotlib.html#cb88-49" aria-hidden="true" tabindex="-1"></a>    ax.xaxis.set_major_locator(ticker.AutoLocator())</span>
+<span id="cb88-50"><a href="beyond-matplotlib.html#cb88-50" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">'xscale </span><span class="sc">{i}</span><span class="st">'</span>.<span class="bu">format</span>(i<span class="op">=</span>i))</span>
+<span id="cb88-51"><a href="beyond-matplotlib.html#cb88-51" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(bax.first_col):</span>
+<span id="cb88-52"><a href="beyond-matplotlib.html#cb88-52" aria-hidden="true" tabindex="-1"></a>    ax.yaxis.set_major_locator(ticker.AutoLocator())</span>
+<span id="cb88-53"><a href="beyond-matplotlib.html#cb88-53" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'yscale </span><span class="sc">{i}</span><span class="st">'</span>.<span class="bu">format</span>(i<span class="op">=</span>i))</span>
+<span id="cb88-54"><a href="beyond-matplotlib.html#cb88-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-55"><a href="beyond-matplotlib.html#cb88-55" aria-hidden="true" tabindex="-1"></a><span class="co">##############################################################################</span></span>
+<span id="cb88-56"><a href="beyond-matplotlib.html#cb88-56" aria-hidden="true" tabindex="-1"></a><span class="co"># .. note:: It is not necessary to loop through all the axes since they all</span></span>
+<span id="cb88-57"><a href="beyond-matplotlib.html#cb88-57" aria-hidden="true" tabindex="-1"></a><span class="co">#      share the same x and y limits in a given column or row.</span></span>
+<span id="cb88-58"><a href="beyond-matplotlib.html#cb88-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-59"><a href="beyond-matplotlib.html#cb88-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-60"><a href="beyond-matplotlib.html#cb88-60" aria-hidden="true" tabindex="-1"></a><span class="co">##############################################################################</span></span>
+<span id="cb88-61"><a href="beyond-matplotlib.html#cb88-61" aria-hidden="true" tabindex="-1"></a><span class="co"># Manually set the ticks</span></span>
+<span id="cb88-62"><a href="beyond-matplotlib.html#cb88-62" aria-hidden="true" tabindex="-1"></a><span class="co"># ----------------------</span></span>
+<span id="cb88-63"><a href="beyond-matplotlib.html#cb88-63" aria-hidden="true" tabindex="-1"></a><span class="co"># Since brokenaxes return normal matplotlib axes, you could also set them</span></span>
+<span id="cb88-64"><a href="beyond-matplotlib.html#cb88-64" aria-hidden="true" tabindex="-1"></a><span class="co"># manually.</span></span>
+<span id="cb88-65"><a href="beyond-matplotlib.html#cb88-65" aria-hidden="true" tabindex="-1"></a>fig2 <span class="op">=</span> plt.figure()</span>
+<span id="cb88-66"><a href="beyond-matplotlib.html#cb88-66" aria-hidden="true" tabindex="-1"></a>bax <span class="op">=</span> make_plot()</span>
+<span id="cb88-67"><a href="beyond-matplotlib.html#cb88-67" aria-hidden="true" tabindex="-1"></a>bax.first_col[<span class="dv">0</span>].set_yticks([<span class="dv">80</span>, <span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">95</span>, <span class="dv">100</span>])</span>
+<span id="cb88-68"><a href="beyond-matplotlib.html#cb88-68" aria-hidden="true" tabindex="-1"></a>bax.first_col[<span class="dv">1</span>].set_yticks([<span class="op">-</span><span class="dv">100</span>, <span class="op">-</span><span class="dv">50</span>, <span class="dv">0</span>])</span>
+<span id="cb88-69"><a href="beyond-matplotlib.html#cb88-69" aria-hidden="true" tabindex="-1"></a>bax.last_row[<span class="dv">0</span>].set_xticks([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
+<span id="cb88-70"><a href="beyond-matplotlib.html#cb88-70" aria-hidden="true" tabindex="-1"></a>bax.last_row[<span class="dv">1</span>].set_xticks([<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>])</span>
+<span id="cb88-71"><a href="beyond-matplotlib.html#cb88-71" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;">
 </div>
 <br>
@@ -249,29 +250,27 @@
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span></p>
-<div class="sourceCode" id="cb88"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb88-1"><a href="beyond-matplotlib.html#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://www.scikit-yb.org/en/latest/quickstart.html</span></span>
-<span id="cb88-2"><a href="beyond-matplotlib.html#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb88-3"><a href="beyond-matplotlib.html#cb88-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> yellowbrick.datasets <span class="im">import</span> load_bikeshare</span>
-<span id="cb88-4"><a href="beyond-matplotlib.html#cb88-4" aria-hidden="true" tabindex="-1"></a>X, y <span class="op">=</span> load_bikeshare()</span>
-<span id="cb88-5"><a href="beyond-matplotlib.html#cb88-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(X.head())</span></code></pre></div>
-<pre><code>#:&gt;    season  year  month  hour  ...  temp  feelslike  humidity  windspeed
-#:&gt; 0       1     0      1     0  ...  0.24     0.2879      0.81        0.0
-#:&gt; 1       1     0      1     1  ...  0.22     0.2727      0.80        0.0
-#:&gt; 2       1     0      1     2  ...  0.22     0.2727      0.80        0.0
-#:&gt; 3       1     0      1     3  ...  0.24     0.2879      0.75        0.0
-#:&gt; 4       1     0      1     4  ...  0.24     0.2879      0.75        0.0
-#:&gt; 
-#:&gt; [5 rows x 12 columns]</code></pre>
+<div class="sourceCode" id="cb89"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb89-1"><a href="beyond-matplotlib.html#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://www.scikit-yb.org/en/latest/quickstart.html</span></span>
+<span id="cb89-2"><a href="beyond-matplotlib.html#cb89-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb89-3"><a href="beyond-matplotlib.html#cb89-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> yellowbrick.datasets <span class="im">import</span> load_bikeshare</span>
+<span id="cb89-4"><a href="beyond-matplotlib.html#cb89-4" aria-hidden="true" tabindex="-1"></a>X, y <span class="op">=</span> load_bikeshare()</span>
+<span id="cb89-5"><a href="beyond-matplotlib.html#cb89-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(X.head())</span></code></pre></div>
+<pre><code>#:&gt;    season  year  month  hour  holiday  weekday  workingday  weather  temp  feelslike  humidity  windspeed
+#:&gt; 0       1     0      1     0        0        6           0        1  0.24     0.2879      0.81        0.0
+#:&gt; 1       1     0      1     1        0        6           0        1  0.22     0.2727      0.80        0.0
+#:&gt; 2       1     0      1     2        0        6           0        1  0.22     0.2727      0.80        0.0
+#:&gt; 3       1     0      1     3        0        6           0        1  0.24     0.2879      0.75        0.0
+#:&gt; 4       1     0      1     4        0        6           0        1  0.24     0.2879      0.75        0.0</code></pre>
 </div>
 <br>
 </div>
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span></p>
-<div class="sourceCode" id="cb90"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb90-1"><a href="beyond-matplotlib.html#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> yellowbrick.features <span class="im">import</span> Rank2D</span>
-<span id="cb90-2"><a href="beyond-matplotlib.html#cb90-2" aria-hidden="true" tabindex="-1"></a>visualizer <span class="op">=</span> Rank2D(algorithm<span class="op">=</span><span class="st">"pearson"</span>)</span>
-<span id="cb90-3"><a href="beyond-matplotlib.html#cb90-3" aria-hidden="true" tabindex="-1"></a>visualizer.fit_transform(X)</span>
-<span id="cb90-4"><a href="beyond-matplotlib.html#cb90-4" aria-hidden="true" tabindex="-1"></a>visualizer.show()</span></code></pre></div>
+<div class="sourceCode" id="cb91"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb91-1"><a href="beyond-matplotlib.html#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> yellowbrick.features <span class="im">import</span> Rank2D</span>
+<span id="cb91-2"><a href="beyond-matplotlib.html#cb91-2" aria-hidden="true" tabindex="-1"></a>visualizer <span class="op">=</span> Rank2D(algorithm<span class="op">=</span><span class="st">"pearson"</span>)</span>
+<span id="cb91-3"><a href="beyond-matplotlib.html#cb91-3" aria-hidden="true" tabindex="-1"></a>visualizer.fit_transform(X)</span>
+<span id="cb91-4"><a href="beyond-matplotlib.html#cb91-4" aria-hidden="true" tabindex="-1"></a>visualizer.show()</span></code></pre></div>
 <img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;"><img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-6-2.png" width="90%" style="display: block; margin: auto;">
 </div>
 <br>
@@ -284,11 +283,11 @@
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span></p>
-<div class="sourceCode" id="cb91"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb91-1"><a href="beyond-matplotlib.html#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://www.scikit-yb.org/en/latest//quickstart-2.py</span></span>
-<span id="cb91-2"><a href="beyond-matplotlib.html#cb91-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> yellowbrick.features <span class="im">import</span> JointPlotVisualizer</span>
-<span id="cb91-3"><a href="beyond-matplotlib.html#cb91-3" aria-hidden="true" tabindex="-1"></a>visualizer <span class="op">=</span> JointPlotVisualizer(columns<span class="op">=</span>[<span class="st">'temp'</span>, <span class="st">'feelslike'</span>])</span>
-<span id="cb91-4"><a href="beyond-matplotlib.html#cb91-4" aria-hidden="true" tabindex="-1"></a>visualizer.fit_transform(X, y)</span>
-<span id="cb91-5"><a href="beyond-matplotlib.html#cb91-5" aria-hidden="true" tabindex="-1"></a>visualizer.show()</span></code></pre></div>
+<div class="sourceCode" id="cb92"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb92-1"><a href="beyond-matplotlib.html#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://www.scikit-yb.org/en/latest//quickstart-2.py</span></span>
+<span id="cb92-2"><a href="beyond-matplotlib.html#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> yellowbrick.features <span class="im">import</span> JointPlotVisualizer</span>
+<span id="cb92-3"><a href="beyond-matplotlib.html#cb92-3" aria-hidden="true" tabindex="-1"></a>visualizer <span class="op">=</span> JointPlotVisualizer(columns<span class="op">=</span>[<span class="st">'temp'</span>, <span class="st">'feelslike'</span>])</span>
+<span id="cb92-4"><a href="beyond-matplotlib.html#cb92-4" aria-hidden="true" tabindex="-1"></a>visualizer.fit_transform(X, y)</span>
+<span id="cb92-5"><a href="beyond-matplotlib.html#cb92-5" aria-hidden="true" tabindex="-1"></a>visualizer.show()</span></code></pre></div>
 <img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-7-1.png" width="90%" style="display: block; margin: auto;"><img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-7-2.png" width="90%" style="display: block; margin: auto;">
 </div>
 <br>
@@ -301,19 +300,19 @@
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span></p>
-<div class="sourceCode" id="cb92"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb92-1"><a href="beyond-matplotlib.html#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://www.scikit-yb.org/en/latest//quickstart-3.py</span></span>
-<span id="cb92-2"><a href="beyond-matplotlib.html#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> yellowbrick.regressor <span class="im">import</span> ResidualsPlot</span>
-<span id="cb92-3"><a href="beyond-matplotlib.html#cb92-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
-<span id="cb92-4"><a href="beyond-matplotlib.html#cb92-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
-<span id="cb92-5"><a href="beyond-matplotlib.html#cb92-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb92-6"><a href="beyond-matplotlib.html#cb92-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create training and test sets</span></span>
-<span id="cb92-7"><a href="beyond-matplotlib.html#cb92-7" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(</span>
-<span id="cb92-8"><a href="beyond-matplotlib.html#cb92-8" aria-hidden="true" tabindex="-1"></a>    X, y, test_size<span class="op">=</span><span class="fl">0.1</span></span>
-<span id="cb92-9"><a href="beyond-matplotlib.html#cb92-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb92-10"><a href="beyond-matplotlib.html#cb92-10" aria-hidden="true" tabindex="-1"></a>visualizer <span class="op">=</span> ResidualsPlot(LinearRegression())</span>
-<span id="cb92-11"><a href="beyond-matplotlib.html#cb92-11" aria-hidden="true" tabindex="-1"></a>visualizer.fit(X_train, y_train)</span>
-<span id="cb92-12"><a href="beyond-matplotlib.html#cb92-12" aria-hidden="true" tabindex="-1"></a>visualizer.score(X_test, y_test)</span>
-<span id="cb92-13"><a href="beyond-matplotlib.html#cb92-13" aria-hidden="true" tabindex="-1"></a>visualizer.show()</span></code></pre></div>
+<div class="sourceCode" id="cb93"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb93-1"><a href="beyond-matplotlib.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://www.scikit-yb.org/en/latest//quickstart-3.py</span></span>
+<span id="cb93-2"><a href="beyond-matplotlib.html#cb93-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> yellowbrick.regressor <span class="im">import</span> ResidualsPlot</span>
+<span id="cb93-3"><a href="beyond-matplotlib.html#cb93-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb93-4"><a href="beyond-matplotlib.html#cb93-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb93-5"><a href="beyond-matplotlib.html#cb93-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb93-6"><a href="beyond-matplotlib.html#cb93-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create training and test sets</span></span>
+<span id="cb93-7"><a href="beyond-matplotlib.html#cb93-7" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(</span>
+<span id="cb93-8"><a href="beyond-matplotlib.html#cb93-8" aria-hidden="true" tabindex="-1"></a>    X, y, test_size<span class="op">=</span><span class="fl">0.1</span></span>
+<span id="cb93-9"><a href="beyond-matplotlib.html#cb93-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb93-10"><a href="beyond-matplotlib.html#cb93-10" aria-hidden="true" tabindex="-1"></a>visualizer <span class="op">=</span> ResidualsPlot(LinearRegression())</span>
+<span id="cb93-11"><a href="beyond-matplotlib.html#cb93-11" aria-hidden="true" tabindex="-1"></a>visualizer.fit(X_train, y_train)</span>
+<span id="cb93-12"><a href="beyond-matplotlib.html#cb93-12" aria-hidden="true" tabindex="-1"></a>visualizer.score(X_test, y_test)</span>
+<span id="cb93-13"><a href="beyond-matplotlib.html#cb93-13" aria-hidden="true" tabindex="-1"></a>visualizer.show()</span></code></pre></div>
 <img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-8-1.png" width="90%" style="display: block; margin: auto;"><img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-8-2.png" width="90%" style="display: block; margin: auto;">
 </div>
 <br>
@@ -326,14 +325,14 @@
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span></p>
-<div class="sourceCode" id="cb93"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb93-1"><a href="beyond-matplotlib.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> yellowbrick.classifier <span class="im">import</span> discrimination_threshold</span>
-<span id="cb93-2"><a href="beyond-matplotlib.html#cb93-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
-<span id="cb93-3"><a href="beyond-matplotlib.html#cb93-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> yellowbrick.datasets <span class="im">import</span> load_spam</span>
-<span id="cb93-4"><a href="beyond-matplotlib.html#cb93-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb93-5"><a href="beyond-matplotlib.html#cb93-5" aria-hidden="true" tabindex="-1"></a>X, y <span class="op">=</span> load_spam()</span>
-<span id="cb93-6"><a href="beyond-matplotlib.html#cb93-6" aria-hidden="true" tabindex="-1"></a>visualizer <span class="op">=</span> discrimination_threshold(</span>
-<span id="cb93-7"><a href="beyond-matplotlib.html#cb93-7" aria-hidden="true" tabindex="-1"></a>    LogisticRegression(multi_class<span class="op">=</span><span class="st">"auto"</span>, solver<span class="op">=</span><span class="st">"liblinear"</span>), X, y</span>
-<span id="cb93-8"><a href="beyond-matplotlib.html#cb93-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb94"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb94-1"><a href="beyond-matplotlib.html#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> yellowbrick.classifier <span class="im">import</span> discrimination_threshold</span>
+<span id="cb94-2"><a href="beyond-matplotlib.html#cb94-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
+<span id="cb94-3"><a href="beyond-matplotlib.html#cb94-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> yellowbrick.datasets <span class="im">import</span> load_spam</span>
+<span id="cb94-4"><a href="beyond-matplotlib.html#cb94-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb94-5"><a href="beyond-matplotlib.html#cb94-5" aria-hidden="true" tabindex="-1"></a>X, y <span class="op">=</span> load_spam()</span>
+<span id="cb94-6"><a href="beyond-matplotlib.html#cb94-6" aria-hidden="true" tabindex="-1"></a>visualizer <span class="op">=</span> discrimination_threshold(</span>
+<span id="cb94-7"><a href="beyond-matplotlib.html#cb94-7" aria-hidden="true" tabindex="-1"></a>    LogisticRegression(multi_class<span class="op">=</span><span class="st">"auto"</span>, solver<span class="op">=</span><span class="st">"liblinear"</span>), X, y</span>
+<span id="cb94-8"><a href="beyond-matplotlib.html#cb94-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;">
 </div>
 <br>
@@ -346,13 +345,13 @@
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span></p>
-<div class="sourceCode" id="cb94"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb94-1"><a href="beyond-matplotlib.html#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://www.scikit-yb.org/en/latest//oneliners-17.py</span></span>
-<span id="cb94-2"><a href="beyond-matplotlib.html#cb94-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> yellowbrick.datasets <span class="im">import</span> load_nfl</span>
-<span id="cb94-3"><a href="beyond-matplotlib.html#cb94-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> MiniBatchKMeans</span>
-<span id="cb94-4"><a href="beyond-matplotlib.html#cb94-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> yellowbrick.cluster <span class="im">import</span> intercluster_distance</span>
-<span id="cb94-5"><a href="beyond-matplotlib.html#cb94-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb94-6"><a href="beyond-matplotlib.html#cb94-6" aria-hidden="true" tabindex="-1"></a>X, y <span class="op">=</span> load_nfl()</span>
-<span id="cb94-7"><a href="beyond-matplotlib.html#cb94-7" aria-hidden="true" tabindex="-1"></a>visualizer <span class="op">=</span> intercluster_distance(MiniBatchKMeans(<span class="dv">5</span>, random_state<span class="op">=</span><span class="dv">777</span>), X)</span></code></pre></div>
+<div class="sourceCode" id="cb95"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb95-1"><a href="beyond-matplotlib.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://www.scikit-yb.org/en/latest//oneliners-17.py</span></span>
+<span id="cb95-2"><a href="beyond-matplotlib.html#cb95-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> yellowbrick.datasets <span class="im">import</span> load_nfl</span>
+<span id="cb95-3"><a href="beyond-matplotlib.html#cb95-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> MiniBatchKMeans</span>
+<span id="cb95-4"><a href="beyond-matplotlib.html#cb95-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> yellowbrick.cluster <span class="im">import</span> intercluster_distance</span>
+<span id="cb95-5"><a href="beyond-matplotlib.html#cb95-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb95-6"><a href="beyond-matplotlib.html#cb95-6" aria-hidden="true" tabindex="-1"></a>X, y <span class="op">=</span> load_nfl()</span>
+<span id="cb95-7"><a href="beyond-matplotlib.html#cb95-7" aria-hidden="true" tabindex="-1"></a>visualizer <span class="op">=</span> intercluster_distance(MiniBatchKMeans(<span class="dv">5</span>, random_state<span class="op">=</span><span class="dv">777</span>), X)</span></code></pre></div>
 <img src="10-matplotlib_beyond_files/figure-html/unnamed-chunk-10-1.png" width="90%" style="display: block; margin: auto;">
 </div>
 <br>
@@ -402,7 +401,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matplotlib with Rmarkdown</strong>" was written by Alfonso R. Reyes. It was last built on 2020-11-15.</p>
+    <p>"<strong>Matplotlib with Rmarkdown</strong>" was written by Alfonso R. Reyes. It was last built on 2020-11-19.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

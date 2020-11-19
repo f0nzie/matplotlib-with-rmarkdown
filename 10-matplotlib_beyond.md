@@ -33,6 +33,7 @@ bax.plot(x, np.cos(10 * x), label='cos')
 bax.legend(loc=3)
 bax.set_xlabel('time')
 bax.set_ylabel('value')
+plt.show()
 ```
 
 <img src="10-matplotlib_beyond_files/figure-html/ba-usage-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
@@ -189,14 +190,12 @@ print(X.head())
 ```
 
 ```
-#:>    season  year  month  hour  ...  temp  feelslike  humidity  windspeed
-#:> 0       1     0      1     0  ...  0.24     0.2879      0.81        0.0
-#:> 1       1     0      1     1  ...  0.22     0.2727      0.80        0.0
-#:> 2       1     0      1     2  ...  0.22     0.2727      0.80        0.0
-#:> 3       1     0      1     3  ...  0.24     0.2879      0.75        0.0
-#:> 4       1     0      1     4  ...  0.24     0.2879      0.75        0.0
-#:> 
-#:> [5 rows x 12 columns]
+#:>    season  year  month  hour  holiday  weekday  workingday  weather  temp  feelslike  humidity  windspeed
+#:> 0       1     0      1     0        0        6           0        1  0.24     0.2879      0.81        0.0
+#:> 1       1     0      1     1        0        6           0        1  0.22     0.2727      0.80        0.0
+#:> 2       1     0      1     2        0        6           0        1  0.22     0.2727      0.80        0.0
+#:> 3       1     0      1     3        0        6           0        1  0.24     0.2879      0.75        0.0
+#:> 4       1     0      1     4        0        6           0        1  0.24     0.2879      0.75        0.0
 ```
 
 </div><br></div>

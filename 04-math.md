@@ -161,7 +161,6 @@ plt.show()
 
 ## Surface functions
 
-
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
 ```python
@@ -214,7 +213,7 @@ plt.show()
 
 <img src="04-math_files/figure-html/sqrt-cos-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
-
+This is the typical example that you find in all `Matlab` books and tutorials.
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
