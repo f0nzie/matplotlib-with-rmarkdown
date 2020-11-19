@@ -8,41 +8,104 @@ reticulate::use_condaenv("r-python")
 ```
 
 
-## Solving Laplace
+## Solve Computational Physics Problems
 
-```{python}
+```{python, decorate=TRUE}
+# https://www.codeproject.com/Articles/1087025/Using-Python-to-Solve-Computational-Physics-Proble
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Set maximum iteration
+maxIter = 500
+
+# Set Dimension and delta
+lenX = lenY = 20 #we set it rectangular
+delta = 1
+
+# Boundary condition
+Ttop = 100
+Tbottom = 0
+Tleft = 0
+Tright = 30
+
+# Initial guess of interior grid
+Tguess = 30
+
+# Set colour interpolation and colour map.
+# You can try set it to 10, or 100 to see the difference
+# You can also try: colourMap = plt.cm.coolwarm
+colorinterpolation = 50
+colourMap = plt.cm.jet
+
+# Set meshgrid
+X, Y = np.meshgrid(np.arange(0, lenX), np.arange(0, lenY))
+
+# Set array size and set the interior value with Tguess
+T = np.empty((lenX, lenY))
+T.fill(Tguess)
+
+# Set Boundary condition
+T[(lenY-1):, :] = Ttop
+T[:1, :] = Tbottom
+T[:, (lenX-1):] = Tright
+T[:, :1] = Tleft
+
+# Iteration (We assume that the iteration is convergence in maxIter = 500)
+print("Please wait for a moment")
+for iteration in range(0, maxIter):
+    for i in range(1, lenX-1, delta):
+        for j in range(1, lenY-1, delta):
+            T[i, j] = 0.25 * (T[i+1][j] + T[i-1][j] + T[i][j+1] + T[i][j-1])
+
+print("Iteration finished")
+
+# Configure the contour
+plt.title("Contour of Temperature")
+plt.contourf(X, Y, T, colorinterpolation, cmap=colourMap)
+
+# Set Colorbar
+plt.colorbar()
+
+# Show the result in the plot window
+plt.show()
+```
+
+## Find electric potential in a square wire
+
+```{python, decorate=TRUE}
 # https://www.eidos.ic.i.u-tokyo.ac.jp/~tau/lecture/computational_physics/docs/computational_physics.pdf
-# Page 
+# Page 404. Figure 17.1
 # Solve Laplace equation
 from numpy import * 
-import matplotlib.pylab as p;
+import matplotlib.pylab as lab
+import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 print("Initializing")
-Nmax = 100; Niter = 70; V = zeros((Nmax, Nmax), float)          # float maybe Float
+Nmax = 100; Niter = 70; V = zeros((Nmax, Nmax), float) # float maybe Float
 
 print("Working hard, wait for the figure while I count to 60")
-for k in range(0, Nmax-1):  V[k,0] = 100.0                      # line at 100V
+for k in range(0, Nmax-1):  V[k,0] = 100.0      # line at 100V
 
-for iter in range(Niter):                                       # iterations over algorithm
-    if iter%10 == 0: print( iter)
+for iter in range(Niter):                       # iterations over algorithm
+    if iter % 10 == 0: print(iter)
     for i in range(1, Nmax-2):
         for j in range(1,Nmax-2): V[i,j] = 0.25 * (V[i+1,j] + V[i-1,j] + V[i,j+1] + V[i,j-1])
-x = range(0, Nmax-1, 2); y = range(0, 50, 2)               # plot every other point
-X, Y = p.meshgrid(x,y)
+x = range(0, Nmax-1, 2); y = range(0, 50, 2)     # plot every other point
+X, Y = lab.meshgrid(x, y)
 
-def functz(V):                                        # Function returns V(x, y)
+def functz(V):                                    # Function returns V(x, y)
     z = V[X,Y]
     return z
 
 Z = functz(V)
-fig = p.figure()                                       # Create figures
-ax = Axes3D(fig)                                       # plot axe
-ax.plot_wireframe(X, Y, Z, color = 'r')                # red wireframe
-ax.set_xlabel('X')                                     # label axes
+fig = lab.figure()                          # Create figures
+ax = Axes3D(fig)                            # plot axes
+ax.plot_wireframe(X, Y, Z, color = 'r')     # red wireframe
+ax.set_xlabel('X')                          # label axes
 ax.set_ylabel('Y')
 ax.set_zlabel('Potential')
-p.show()                                               # display fig, close shell to quit
+lab.show()                                  # display fig, close shell to quit
 ```
 
 
