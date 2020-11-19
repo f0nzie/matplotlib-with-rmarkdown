@@ -25,25 +25,54 @@ else
         OSFLAG = OSX
     endif
 endif
+# conda exists? Works in Linux
+ifeq (,$(shell which conda))
+    HAS_CONDA=False
+else
+    HAS_CONDA=True
+	CONDA_BASE_DIR=$(shell conda info --base)
+    MY_ENV_DIR=$(CONDA_BASE_DIR)/envs/$(CONDA_ENV)
+    CONDA_ACTIVATE=source $$(conda info --base)/etc/profile.d/conda.sh ; conda activate ; conda activate
+endif
 
 
+# create conda environment
+conda_create:
+	source ${HOME}/${CONDA_TYPE}/etc/profile.d/conda.sh ;\
+	conda deactivate
+	conda remove --name ${CONDA_ENV} --all -y
+	conda env create -f ${ENV_RECIPE}
 
-# knit the book and then open it in the browser
-.PHONY: bs4_book gitbook1 gitbook2
-bs4_book: build_bs4_book open_book
-	
-gitbook1: build_book1 open_book
+conda_remove:
+	source ${HOME}/${CONDA_TYPE}/etc/profile.d/conda.sh ;\
+	conda deactivate
+	conda remove --name ${CONDA_ENV} --all -y
 
-gitbook2: build_book2 open_book
+# activate conda only if environment exists
+conda_activate:
+ifeq (True,$(HAS_CONDA))
+ifneq ("$(wildcard $(MY_ENV_DIR))","") 
+	source ${HOME}/${CONDA_TYPE}/etc/profile.d/conda.sh ;\
+	conda activate $(CONDA_ENV)
+else
+	@echo ">>> Detected conda, but $(CONDA_ENV) is missing in $(CONDA_BASE_DIR). Install conda first ..."
+endif
+else
+	@echo ">>> Install conda first."
+	exit
+endif
 
+conda_deactivate:
+	source ${HOME}/${CONDA_TYPE}/etc/profile.d/conda.sh ;\
+	conda deactivate
 
-build_bs4_book:
+bs4book_render:
 	export RSTUDIO_PANDOC="/usr/lib/rstudio/bin/pandoc";\
 	Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::bs4_book")'
 
 # use rstudio pandoc
 # this rule sets the PANDOC environment variable from the shell
-build_book1:
+gitbook_render:
 	export RSTUDIO_PANDOC="/usr/lib/rstudio/bin/pandoc";\
 	Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::gitbook")'
 
@@ -54,7 +83,6 @@ build_book2:
 	Sys.setenv(RSTUDIO_PANDOC='/usr/lib/rstudio/bin/pandoc');\
 	bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
 	
-
 open_book:
 ifeq ($(OSFLAG), OSX)
     @open -a firefox  $(PUBLISH_BOOK_DIR)/index.html
