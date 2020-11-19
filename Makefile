@@ -108,3 +108,14 @@ tidy:
 		find $(OUTPUT_DIR) -maxdepth 1 -name \*.ckpt -delete
 		find $(OUTPUT_DIR) -maxdepth 1 -name \*.nb.html -delete	
 
+
+# provide some essential info about the tikz files
+.PHONY: info
+info:
+	@echo "OS is:" $(OSFLAG)
+	@echo "Bookdown publication folder:" $(PUBLISH_BOOK_DIR)
+	@echo "Has Conda?:" ${HAS_CONDA}
+	@echo "Conda environment:" ${CONDA_ENV}
+	@echo "Conda Base  Dir:" ${CONDA_BASE_DIR}
+	@echo "Environment Dir:" ${MY_ENV_DIR}
+	
