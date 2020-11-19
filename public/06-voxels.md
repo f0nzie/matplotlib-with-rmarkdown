@@ -6,7 +6,8 @@ _Last update: Thu Nov 5 19:22:01 2020 -0600 (5124cef)_
 
 ```r
 library(reticulate)
-reticulate::use_condaenv("r-python")
+# reticulate::use_condaenv("r-python")
+reticulate::use_condaenv("pybook")
 ```
 
 </div><br></div>

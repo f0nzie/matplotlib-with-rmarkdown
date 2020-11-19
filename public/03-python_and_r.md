@@ -4,7 +4,7 @@ _Last update: Thu Nov 5 19:22:01 2020 -0600 (5124cef)_
 
 ## From R to Python, back to R
 
--   Always load the Python environment with the packages you need.
+1. Always load the Python environment with the packages you need.
 
 <div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i><b>R</b></span>
 
@@ -63,3 +63,5 @@ plot(py$autos_py)          # plot a Python data object
 <img src="03-python_and_r_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
 ## From Python to R, back to Python
+
+

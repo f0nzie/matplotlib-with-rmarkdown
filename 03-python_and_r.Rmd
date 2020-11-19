@@ -4,7 +4,7 @@ _Last update: `r system("git log -1 --format=\"%ad (%h)\" -- 03-python_and_r.Rmd
 
 ## From R to Python, back to R
 
--   Always load the Python environment with the packages you need.
+1. Always load the Python environment with the packages you need.
 
 ```{r, decorate=TRUE}
 library(reticulate)
@@ -43,3 +43,5 @@ plot(py$autos_py)          # plot a Python data object
 ```
 
 ## From Python to R, back to Python
+
+

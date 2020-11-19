@@ -1,6 +1,8 @@
 # Introduction
 
-_Last update: Thu Nov 5 19:22:01 2020 -0600 (5124cef)_
+*Last update: Thu Nov 5 19:22:01 2020 -0600 (5124cef)*
+
+Remember that in the previous chapter we said that the best way of obtaining reproducible results writing Python code in Rmarkdown is creating stand-alone Python environments. The next code block is written in R and what is doing with `reticulate::use_condaenv("r-python")`, is activating the Python environment `r-python` to be used in Rmarkdown. Later we will see how to create these environments.
 
 <div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i><b>R</b></span>
 
@@ -13,7 +15,7 @@ reticulate::use_condaenv("r-python")
 
 ## "Hello world"
 
-This is one of the simplest of examples: plotting the sine of a random numpy array.
+The environment `r-python` already has the basic Python libraries, among them `numpy` and `matplotlib`. This is one of the simplest of examples: plotting the sine of a random `numpy` array.
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 

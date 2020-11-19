@@ -59,6 +59,7 @@
 <h2>
 <span class="header-section-number">2.1</span> Why virtual environments?<a class="anchor" aria-label="anchor" href="#why-virtual-environments"><i class="fas fa-link"></i></a>
 </h2>
+<p>To get repeatable and reproducible results when running Python code in Rmarkdownthere is nothing better than creating a Python environment.</p>
 <p>There are several ways of running Python code. In this minimal book, we will see two of them:</p>
 <ul>
 <li>
@@ -72,7 +73,7 @@
 <h2>
 <span class="header-section-number">2.2</span> Python virtual environment and R<a class="anchor" aria-label="anchor" href="#python-virtual-environment-and-r"><i class="fas fa-link"></i></a>
 </h2>
-<p>Although, it is not absolutely necessary to create a virtual environment to run Rmarkdown Python notebooks, it is highly recommended because you will be able to run a selected analysis, over and over, without paying too much attention to updates or upgrades in the hosting operating system. This means that you could freeze in time a virtual environment, without disturbing it with software updates.</p>
+<p>Although, it is not absolutely necessary to create a virtual environment to run Rmarkdown Python notebooks, it is highly recommended because you will be able to run a selected analysis, over and over, without paying too much attention to updates or upgrades in the hosting operating system or packages updates. This means that you could freeze in time a virtual environment, without disturbing it with software updates.</p>
 <p>This virtual environment should be able to be re-created from a text file with a minimum set of instructions, or a list of packages, or recipe, that bring a fresh Python environment, few months from now. Both, methods of creating Python virtual environments, <code>conda</code> and <code>virtualenv</code> use a text file with a recipe to do just that.</p>
 <p>In <code>conda</code> there is the file <code>environment.yml</code>. In <code>virtualenv</code>, that file is named <code>requirements.txt</code>. But you could use any name you want. These names are just standard, and if you find them them in a repository, it mean less pain in reproducing the experiment.</p>
 </div>
@@ -160,11 +161,14 @@
 #:&gt; 
 #:&gt; python versions found: 
 #:&gt;  /home/msfz751/miniconda3/envs/r-python/bin/python
+#:&gt;  /home/msfz751/miniconda3/bin/python3
 #:&gt;  /usr/bin/python3
 #:&gt;  /usr/bin/python
 #:&gt;  /home/msfz751/miniconda3/envs/man_ccia/bin/python
 #:&gt;  /home/msfz751/miniconda3/envs/pybook/bin/python
+#:&gt;  /home/msfz751/miniconda3/envs/r-ptech/bin/python
 #:&gt;  /home/msfz751/miniconda3/envs/r-tensorflow/bin/python
+#:&gt;  /home/msfz751/miniconda3/envs/r-torch/bin/python
 #:&gt;  /home/msfz751/miniconda3/bin/python</code></pre>
 </div>
 <br>
@@ -213,7 +217,7 @@
 </div>
 <br>
 </div>
-<p>The code, you would have to type, would look like this:</p>
+<p>The code, you would have to type in the <code>Rmarkdown</code> code block, would look like this:</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb25-1"><a href="python-environments.html#cb25-1" aria-hidden="true" tabindex="-1"></a> <span class="in">```{python}</span></span>
 <span id="cb25-2"><a href="python-environments.html#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="in">import matplotlib</span></span>
 <span id="cb25-3"><a href="python-environments.html#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="in">import matplotlib.pyplot as plt</span></span>
@@ -279,7 +283,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matplotlib with Rmarkdown</strong>" was written by Alfonso R. Reyes. It was last built on 2020-11-15.</p>
+    <p>"<strong>Matplotlib with Rmarkdown</strong>" was written by Alfonso R. Reyes. It was last built on 2020-11-19.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -4,7 +4,8 @@ _Last update: `r system("git log -1 --format=\"%ad (%h)\" -- 06-voxels.Rmd", int
 
 ```{r, decorate=TRUE}
 library(reticulate)
-reticulate::use_condaenv("r-python")
+# reticulate::use_condaenv("r-python")
+reticulate::use_condaenv("pybook")
 ```
 
 ## Radial

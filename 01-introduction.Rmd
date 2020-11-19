@@ -1,6 +1,8 @@
 # Introduction
 
-_Last update: `r system("git log -1 --format=\"%ad (%h)\" -- 01-introduction.Rmd", intern = TRUE)`_
+*Last update: `r system("git log -1 --format=\"%ad (%h)\" -- 01-introduction.Rmd", intern = TRUE)`*
+
+Remember that in the previous chapter we said that the best way of obtaining reproducible results writing Python code in Rmarkdown is creating stand-alone Python environments. The next code block is written in R and what is doing with `reticulate::use_condaenv("r-python")`, is activating the Python environment `r-python` to be used in Rmarkdown. Later we will see how to create these environments.
 
 ```{r, decorate=TRUE}
 library(reticulate)
@@ -9,7 +11,7 @@ reticulate::use_condaenv("r-python")
 
 ## "Hello world"
 
-This is one of the simplest of examples: plotting the sine of a random numpy array.
+The environment `r-python` already has the basic Python libraries, among them `numpy` and `matplotlib`. This is one of the simplest of examples: plotting the sine of a random `numpy` array.
 
 ```{python, decorate=TRUE}
 import matplotlib.pyplot as plt

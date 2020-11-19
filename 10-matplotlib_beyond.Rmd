@@ -27,6 +27,7 @@ bax.plot(x, np.cos(10 * x), label='cos')
 bax.legend(loc=3)
 bax.set_xlabel('time')
 bax.set_ylabel('value')
+plt.show()
 ```
 
 ### Subplots

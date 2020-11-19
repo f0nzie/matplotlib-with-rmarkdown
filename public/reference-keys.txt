@@ -26,7 +26,8 @@ d-wireframe
 d-contour-plot
 machine-learning
 scientific
-solving-laplace
+solve-computational-physics-problems
+find-electric-potential-in-a-square-wire
 eigenvalue-problems
 computational-physics
 triangulation-and-delauney-maps

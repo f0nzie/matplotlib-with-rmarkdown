@@ -1,19 +1,34 @@
 # Makefile written by Alfonso R. Reyes
+# Python Jupyter \
+ PYTHON_ENV_DIR = \
+ START_NOTEBOOK = \
+ CHECKPOINTS =        # do we want to delete the Jupyter checkpoints folder? Specify folder \
+ bookdown \
+ BOOKDOWN_FILES = _bookdown_files \
+ BOOKDOWN_FILES_DIRS = _bookdown_files    # remove folder(s) for clean rule \
+ OUTPUT_DIR = .                           # parent folder for output \
+ PUBLISH_BOOK_DIR = public                # remove folder for clean rule \
+ FIGURE_DIR =         # do we have a folder for figure files? Specify folder \
+ LIBRARY =            # do we have a temp folder with JS libraries? Specify folder \
+ MAIN_RMD = rtorch-minimal-book.Rmd      # get rid off main.Rmd when cleaning 
+
 SHELL := /bin/bash
+# Python Jupyter
+PYTHON_ENV_DIR = 
+START_NOTEBOOK = 
+CHECKPOINTS =        # do we want to delete the Jupyter checkpoints folder? Specify folder
+# bookdown
 BOOKDOWN_FILES_DIRS = _bookdown_files
 OUTPUT_DIR = .
 PUBLISH_BOOK_DIR = public
-PYTHON_ENV_DIR = 
+FIGURE_DIR =
+LIBRARY =
+MAIN_RMD = matplotlib-with-rmarkdown.Rmd
+# conda
 CONDA_ENV = r-python
 CONDA_TYPE = miniconda3
 ENV_RECIPE = environment.yml
-START_NOTEBOOK = 
-FIGURE_DIR = 
-LIBRARY = 
-CHECKPOINTS = 
-MAIN = matplotlib-with-rmarkdown.Rmd
 # Detect operating system. Sort of tricky for Windows because of MSYS, cygwin, MGWIN
-OSFLAG :=
 ifeq ($(OS), Windows_NT)
     OSFLAG = WINDOWS
 else

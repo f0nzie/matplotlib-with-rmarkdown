@@ -145,7 +145,6 @@ plt.show()
 
 ## Surface functions
 
-
 ```{python, decorate=TRUE}
 # http://www.scipy-lectures.org/intro/matplotlib/auto_examples/plot_plot3d_ex.html
 import numpy as np
@@ -192,7 +191,7 @@ ax.set_zlim(0, 2)
 plt.show()
 ```
 
-
+This is the typical example that you find in all `Matlab` books and tutorials.
 
 ```{python, hat-fun, decorate=TRUE}
 # https://github.com/matplotlib/matplotlib/blob/master/examples/mplot3d/surface3d_radial.py
