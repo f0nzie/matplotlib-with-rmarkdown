@@ -16,7 +16,7 @@ SHELL := /bin/bash
 # Python Jupyter
 PYTHON_ENV_DIR = 
 START_NOTEBOOK = 
-CHECKPOINTS =        # do we want to delete the Jupyter checkpoints folder? Specify folder
+CHECKPOINTS =
 # bookdown
 BOOKDOWN_FILES_DIRS = _bookdown_files
 OUTPUT_DIR = .
@@ -25,7 +25,7 @@ FIGURE_DIR =
 LIBRARY =
 MAIN_RMD = matplotlib-with-rmarkdown.Rmd
 # conda
-CONDA_ENV = r-python
+CONDA_ENV_NAME = r-python
 CONDA_TYPE = miniconda3
 ENV_RECIPE = environment.yml
 # Detect operating system. Sort of tricky for Windows because of MSYS, cygwin, MGWIN
@@ -46,7 +46,7 @@ ifeq (,$(shell which conda))
 else
     HAS_CONDA=True
 	CONDA_BASE_DIR=$(shell conda info --base)
-    MY_ENV_DIR=$(CONDA_BASE_DIR)/envs/$(CONDA_ENV)
+    MY_ENV_DIR=$(CONDA_BASE_DIR)/envs/$(CONDA_ENV_NAME)
     CONDA_ACTIVATE=source $$(conda info --base)/etc/profile.d/conda.sh ; conda activate ; conda activate
 endif
 # conda environment exists?
@@ -59,26 +59,27 @@ endif
 endif
 
 
+
 # create conda environment
 conda_create:
 	source ${HOME}/${CONDA_TYPE}/etc/profile.d/conda.sh ;\
 	conda deactivate
-	conda remove --name ${CONDA_ENV} --all -y
+	conda remove --name ${CONDA_ENV_NAME} --all -y
 	conda env create -f ${ENV_RECIPE}
 
 conda_remove:
 	source ${HOME}/${CONDA_TYPE}/etc/profile.d/conda.sh ;\
 	conda deactivate
-	conda remove --name ${CONDA_ENV} --all -y
+	conda remove --name ${CONDA_ENV_NAME} --all -y
 
 # activate conda only if environment exists
 conda_activate:
 ifeq (True,$(HAS_CONDA))
 ifneq ("$(wildcard $(MY_ENV_DIR))","") 
 	source ${HOME}/${CONDA_TYPE}/etc/profile.d/conda.sh ;\
-	conda activate $(CONDA_ENV)
+	conda activate $(CONDA_ENV_NAME)
 else
-	@echo ">>> Detected conda, but $(CONDA_ENV) is missing in $(CONDA_BASE_DIR). Install conda first ..."
+	@echo ">>> Detected conda, but $(CONDA_ENV_NAME) is missing in $(CONDA_BASE_DIR). Install conda first ..."
 endif
 else
 	@echo ">>> Install conda first."
@@ -137,7 +138,7 @@ git_push:
 
 .PHONY: clean
 clean: tidy
-		find $(OUTPUT_DIR) -maxdepth 1 -name \*.tex -delete
+		find $(OUTPUT_DIR) -maxdepth 1 -name \*.tex -not -name 'preamble.tex' -delete
 		find $(FIGURE_DIR) -maxdepth 1 -name \*.png -delete ;\
 		$(RM) -rf $(BOOKDOWN_FILES_DIRS)
 		if [ -f ${MAIN_RMD} ]; then rm -rf ${MAIN_RMD};fi ;\
@@ -156,6 +157,7 @@ tidy:
 		find $(OUTPUT_DIR) -maxdepth 1 -name \*.rds -delete
 		find $(OUTPUT_DIR) -maxdepth 1 -name \*.ckpt -delete
 		find $(OUTPUT_DIR) -maxdepth 1 -name \*.nb.html -delete	
+		find $(OUTPUT_DIR) -maxdepth 1 -name _main.Rmd -delete
 
 
 # provide some essential info about the tikz files
@@ -164,7 +166,10 @@ info:
 	@echo "OS is:" $(OSFLAG)
 	@echo "Bookdown publication folder:" $(PUBLISH_BOOK_DIR)
 	@echo "Has Conda?:" ${HAS_CONDA}
-	@echo "Conda environment:" ${CONDA_ENV}
+	@echo "Conda environment:" ${CONDA_ENV_NAME}
 	@echo "Conda Base  Dir:" ${CONDA_BASE_DIR}
 	@echo "Environment Dir:" ${MY_ENV_DIR}
+	@echo "Conda environment:" ${CONDA_ENV_NAME}
+	@echo "Does Environment *${CONDA_ENV_NAME}* exist?" ${HAS_ENVIRONMENT}
+	@echo "Active Conda environment:" ${CONDA_DEFAULT_ENV}
 	
