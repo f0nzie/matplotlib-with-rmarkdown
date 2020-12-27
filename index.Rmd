@@ -48,7 +48,7 @@ reticulate::use_condaenv("r-python")
 ```
 ````
 
-There is a shortcut in RStudio to add the R block for you: <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>I</kbd>. Also, you could customize your own shortcuts for other type of engines. For instance, I added \<kbd\>Ctrl\</kbd\> \<kbd\>Alt\</kbd\> \<kbd\>P\</kbd\> for Python.
+There is a shortcut in RStudio to add an R block or chunk for you: <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>I</kbd>. Also, you could customize your own shortcuts for other type of engines. For instance, I added <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>P</kbd> for creating a Python code chunk.
 
 ### Bash engine {.unnumbered}
 
@@ -104,7 +104,7 @@ plt.show()
 
 Because I want the block with some background color, and a label, I am again adding the parameter `decorate=TRUE`.
 
-## Colorizing the code blocks {-}
+## Colorizing the code blocks {.unnumbered}
 
 To add color and icon to this R block, add the parameter `decorate=TRUE`. This function hook resides in the file `R/deco_hook.R`. Of course, you can modify the colors or icons for the engines, or add your own. This is how hook looks like:
 

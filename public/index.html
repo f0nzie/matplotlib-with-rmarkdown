@@ -53,7 +53,7 @@
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><!--bookdown:title:end--><!--bookdown:title:start--><div id="preface" class="section level1 unnumbered">
 <h1>Preface<a class="anchor" aria-label="anchor" href="#preface"><i class="fas fa-link"></i></a>
 </h1>
-<p><em>Last update: Sun Nov 15 19:01:35 2020 -0600 (8ea830c)</em></p>
+<p><em>Last update: Thu Nov 19 17:18:10 2020 -0600 (af4f095)</em></p>
 <p>The goal of this minimal book is thoroughly testing that Python <code>matplotlib</code> notebooks in <strong>Rmarkdown</strong> work seamlessly from within <code>RStudio</code>. Making <code>matplotlib</code> run from within RStudio using the R package <code>reticulate</code> and <strong>Python Anaconda</strong> is not trivial. Python <code>matplotlib</code> has always been a challenge running it as part of Rmarkdown notebooks in RStudio, causing crashes, or simply, not showing any plot because of a bug in the visualization layers. But lately RStudio has improved a lot! The package <code>reticulate</code> and <code>RStudio</code> have gone through a complete transformation in the past few months. Enough to say, it’s an accepted fact today that Python and R are ready to work along for the benefit of reproducible data science, machine learning and artificial intelligence.</p>
 <div id="motivation" class="section level2 unnumbered">
 <h2>Motivation<a class="anchor" aria-label="anchor" href="#motivation"><i class="fas fa-link"></i></a>
@@ -84,7 +84,7 @@
 <span id="cb2-2"><a href="index.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="in">library(reticulate)</span></span>
 <span id="cb2-3"><a href="index.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="in">reticulate::use_condaenv("r-python")</span></span>
 <span id="cb2-4"><a href="index.html#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
-<p>There is a shortcut in RStudio to add the R block for you: <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>I</kbd>. Also, you could customize your own shortcuts for other type of engines. For instance, I added &lt;kbd&gt;Ctrl&lt;/kbd&gt; &lt;kbd&gt;Alt&lt;/kbd&gt; &lt;kbd&gt;P&lt;/kbd&gt; for Python.</p>
+<p>There is a shortcut in RStudio to add an R block or chunk for you: <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>I</kbd>. Also, you could customize your own shortcuts for other type of engines. For instance, I added <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>P</kbd> for creating a Python code chunk.</p>
 </div>
 <div id="bash-engine" class="section level3 unnumbered">
 <h3>Bash engine<a class="anchor" aria-label="anchor" href="#bash-engine"><i class="fas fa-link"></i></a>
@@ -104,6 +104,7 @@
 #:&gt; base                     /home/msfz751/miniconda3
 #:&gt; man_ccia                 /home/msfz751/miniconda3/envs/man_ccia
 #:&gt; pybook                   /home/msfz751/miniconda3/envs/pybook
+#:&gt; python_book              /home/msfz751/miniconda3/envs/python_book
 #:&gt; r-ptech                  /home/msfz751/miniconda3/envs/r-ptech
 #:&gt; r-python              *  /home/msfz751/miniconda3/envs/r-python
 #:&gt; r-tensorflow             /home/msfz751/miniconda3/envs/r-tensorflow
@@ -230,7 +231,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matplotlib with Rmarkdown</strong>" was written by Alfonso R. Reyes. It was last built on 2020-11-19.</p>
+    <p>"<strong>Matplotlib with Rmarkdown</strong>" was written by Alfonso R. Reyes. It was last built on 2020-12-27.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
