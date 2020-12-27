@@ -1,6 +1,6 @@
 # Python environments
 
-_Last update: Thu Nov 5 19:22:01 2020 -0600 (5124cef)_
+_Last update: Thu Nov 19 17:20:43 2020 -0600 (49b93b1)_
 
 ## Why virtual environments?
 To get repeatable and reproducible results when running Python code in Rmarkdownthere is nothing better than creating a Python environment.
@@ -109,6 +109,7 @@ py_config()
 #:>  /usr/bin/python
 #:>  /home/msfz751/miniconda3/envs/man_ccia/bin/python
 #:>  /home/msfz751/miniconda3/envs/pybook/bin/python
+#:>  /home/msfz751/miniconda3/envs/python_book/bin/python
 #:>  /home/msfz751/miniconda3/envs/r-ptech/bin/python
 #:>  /home/msfz751/miniconda3/envs/r-tensorflow/bin/python
 #:>  /home/msfz751/miniconda3/envs/r-torch/bin/python

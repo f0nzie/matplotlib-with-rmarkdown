@@ -1,6 +1,6 @@
 # Introduction
 
-*Last update: Thu Nov 5 19:22:01 2020 -0600 (5124cef)*
+*Last update: Thu Nov 19 17:20:43 2020 -0600 (49b93b1)*
 
 Remember that in the previous chapter we said that the best way of obtaining reproducible results writing Python code in Rmarkdown is creating stand-alone Python environments. The next code block is written in R and what is doing with `reticulate::use_condaenv("r-python")`, is activating the Python environment `r-python` to be used in Rmarkdown. Later we will see how to create these environments.
 

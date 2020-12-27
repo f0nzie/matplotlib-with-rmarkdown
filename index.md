@@ -1,7 +1,7 @@
 ---
 title: "Matplotlib with Rmarkdown"
 author: "Alfonso R. Reyes"
-date: "2020-11-19"
+date: "2020-12-27"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -14,7 +14,7 @@ description: "This is a minimal example of using the bookdown package to write a
 
 # Preface {.unnumbered}
 
-*Last update: Sun Nov 15 19:01:35 2020 -0600 (8ea830c)*
+*Last update: Thu Nov 19 17:18:10 2020 -0600 (af4f095)*
 
 The goal of this minimal book is thoroughly testing that Python `matplotlib` notebooks in **Rmarkdown** work seamlessly from within `RStudio`. Making `matplotlib` run from within RStudio using the R package `reticulate` and **Python Anaconda** is not trivial. Python `matplotlib` has always been a challenge running it as part of Rmarkdown notebooks in RStudio, causing crashes, or simply, not showing any plot because of a bug in the visualization layers. But lately RStudio has improved a lot! The package `reticulate` and `RStudio` have gone through a complete transformation in the past few months. Enough to say, it's an accepted fact today that Python and R are ready to work along for the benefit of reproducible data science, machine learning and artificial intelligence.
 
@@ -52,7 +52,7 @@ reticulate::use_condaenv("r-python")
 ```
 ````
 
-There is a shortcut in RStudio to add the R block for you: <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>I</kbd>. Also, you could customize your own shortcuts for other type of engines. For instance, I added \<kbd\>Ctrl\</kbd\> \<kbd\>Alt\</kbd\> \<kbd\>P\</kbd\> for Python.
+There is a shortcut in RStudio to add an R block or chunk for you: <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>I</kbd>. Also, you could customize your own shortcuts for other type of engines. For instance, I added <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>P</kbd> for creating a Python code chunk.
 
 ### Bash engine {.unnumbered}
 
@@ -75,6 +75,7 @@ echo "working from the terminal"
 #:> base                     /home/msfz751/miniconda3
 #:> man_ccia                 /home/msfz751/miniconda3/envs/man_ccia
 #:> pybook                   /home/msfz751/miniconda3/envs/pybook
+#:> python_book              /home/msfz751/miniconda3/envs/python_book
 #:> r-ptech                  /home/msfz751/miniconda3/envs/r-ptech
 #:> r-python              *  /home/msfz751/miniconda3/envs/r-python
 #:> r-tensorflow             /home/msfz751/miniconda3/envs/r-tensorflow
@@ -131,7 +132,7 @@ plt.show()
 
 Because I want the block with some background color, and a label, I am again adding the parameter `decorate=TRUE`.
 
-## Colorizing the code blocks {-}
+## Colorizing the code blocks {.unnumbered}
 
 To add color and icon to this R block, add the parameter `decorate=TRUE`. This function hook resides in the file `R/deco_hook.R`. Of course, you can modify the colors or icons for the engines, or add your own. This is how hook looks like:
 
