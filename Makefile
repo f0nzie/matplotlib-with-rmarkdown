@@ -131,7 +131,7 @@ gitbook2: build_book2 open_book
 
 
 git_push:
-	git push ;\
+	git push
 	git subtree push --prefix public origin gh-pages	
 
 
