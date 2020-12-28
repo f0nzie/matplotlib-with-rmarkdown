@@ -1,16 +1,17 @@
 # Python environments
 
-_Last update: Thu Nov 19 17:20:43 2020 -0600 (49b93b1)_
+*Last update: Thu Nov 19 17:20:43 2020 -0600 (49b93b1)*
 
 ## Why virtual environments?
-To get repeatable and reproducible results when running Python code in Rmarkdownthere is nothing better than creating a Python environment.
+
+To get repeatable and reproducible results when running Python code in Rmarkdown there is nothing better than creating a Python environment.
 
 There are several ways of running Python code. In this minimal book, we will see two of them:
 
 -   `conda` environments, and
 -   GNU Python `virtualenv`
 
-Both work similarly in the sense of providing an isolated, fresh Python environment with selected packages, without much interference of the existing Python in the operating system. Virtual environments, docker containers, and virtual machines are few of the several ways of virtualizing Python environments. This all in pursue of reproducibility, or a workspace that could replicate the same results of previous analysis without the issues provoked by missing dependencies, libraries, or the operating own system environment variables.
+Both work similarly, in the sense of providing an isolated, fresh Python environment with selected packages, without much interference of the existing Python in the operating system. Virtual environments, docker containers, and virtual machines are few of the several ways of virtualizing Python environments. This all in pursue of reproducibility: a workspace that could replicate the same results of previous analysis without the issues provoked by missing dependencies, libraries, or the operating system own environment variables.
 
 ## Python virtual environment and R
 
@@ -66,7 +67,7 @@ conda create -n plot_env python=3.7 numpy=1.19 matplotlib=3.3 pandas=1.1 seaborn
 
 ## Running Python from R
 
-Load the `reticulate` library.
+Load the `reticulate` library:
 
 <div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i><b>R</b></span>
 
@@ -76,7 +77,7 @@ library(reticulate)
 
 </div><br></div>
 
-Load the Python environment
+Load the Python environment:
 
 <div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i><b>R</b></span>
 
@@ -86,7 +87,7 @@ use_condaenv("r-python")
 
 </div><br></div>
 
-Environments available and current settings
+Environments available and current settings:
 
 <div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i><b>R</b></span>
 
@@ -192,7 +193,7 @@ plt.show()
 ```
 ````
 
-Remember. You open a Python block in Rmarkdown with
+Remember. You open a Python block in Rmarkdown with:
 
 ``` {.markdown}
  ```{python}

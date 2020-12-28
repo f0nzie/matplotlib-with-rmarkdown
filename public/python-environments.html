@@ -59,7 +59,7 @@
 <h2>
 <span class="header-section-number">2.1</span> Why virtual environments?<a class="anchor" aria-label="anchor" href="#why-virtual-environments"><i class="fas fa-link"></i></a>
 </h2>
-<p>To get repeatable and reproducible results when running Python code in Rmarkdownthere is nothing better than creating a Python environment.</p>
+<p>To get repeatable and reproducible results when running Python code in Rmarkdown there is nothing better than creating a Python environment.</p>
 <p>There are several ways of running Python code. In this minimal book, we will see two of them:</p>
 <ul>
 <li>
@@ -67,7 +67,7 @@
 <li>GNU Python <code>virtualenv</code>
 </li>
 </ul>
-<p>Both work similarly in the sense of providing an isolated, fresh Python environment with selected packages, without much interference of the existing Python in the operating system. Virtual environments, docker containers, and virtual machines are few of the several ways of virtualizing Python environments. This all in pursue of reproducibility, or a workspace that could replicate the same results of previous analysis without the issues provoked by missing dependencies, libraries, or the operating own system environment variables.</p>
+<p>Both work similarly, in the sense of providing an isolated, fresh Python environment with selected packages, without much interference of the existing Python in the operating system. Virtual environments, docker containers, and virtual machines are few of the several ways of virtualizing Python environments. This all in pursue of reproducibility: a workspace that could replicate the same results of previous analysis without the issues provoked by missing dependencies, libraries, or the operating system own environment variables.</p>
 </div>
 <div id="python-virtual-environment-and-r" class="section level2" number="2.2">
 <h2>
@@ -128,7 +128,7 @@
 <h2>
 <span class="header-section-number">2.4</span> Running Python from R<a class="anchor" aria-label="anchor" href="#running-python-from-r"><i class="fas fa-link"></i></a>
 </h2>
-<p>Load the <code>reticulate</code> library.</p>
+<p>Load the <code>reticulate</code> library:</p>
 <div class="decocode">
 <div style="background-color:#4C78DB">
 <p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i><b>R</b></span></p>
@@ -137,7 +137,7 @@
 </div>
 <br>
 </div>
-<p>Load the Python environment</p>
+<p>Load the Python environment:</p>
 <div class="decocode">
 <div style="background-color:#4C78DB">
 <p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i><b>R</b></span></p>
@@ -146,7 +146,7 @@
 </div>
 <br>
 </div>
-<p>Environments available and current settings</p>
+<p>Environments available and current settings:</p>
 <div class="decocode">
 <div style="background-color:#4C78DB">
 <p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i><b>R</b></span></p>
@@ -242,7 +242,7 @@
 <span id="cb25-21"><a href="python-environments.html#cb25-21" aria-hidden="true" tabindex="-1"></a><span class="in">bax.set_ylabel('y')</span></span>
 <span id="cb25-22"><a href="python-environments.html#cb25-22" aria-hidden="true" tabindex="-1"></a><span class="in">plt.show()</span></span>
 <span id="cb25-23"><a href="python-environments.html#cb25-23" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
-<p>Remember. You open a Python block in Rmarkdown with</p>
+<p>Remember. You open a Python block in Rmarkdown with:</p>
 <div class="sourceCode" id="cb26"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb26-1"><a href="python-environments.html#cb26-1" aria-hidden="true" tabindex="-1"></a> <span class="in">```{python}</span></span></code></pre></div>
 <p>and close it with:</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb27-1"><a href="python-environments.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>

@@ -1,24 +1,28 @@
 # Sharing data objects
 
-_Last update: `r system("git log -1 --format=\"%ad (%h)\" -- 03-python_and_r.Rmd", intern = TRUE)`_
+*Last update: `r system("git log -1 --format=\"%ad (%h)\" -- 03-python_and_r.Rmd", intern = TRUE)`*
+
+One of the advantages of running R and Python code chunks in the same document is that we can share object and variables between the environment of both programming languages. There are functions at what R excels, and functions that run better at Python. We take the best of both worlds.
+
+We can share object from R in Python, or share Python objects in R.
 
 ## From R to Python, back to R
 
-1. Always load the Python environment with the packages you need.
+1.  Always load the Python environment with the packages you need.
 
 ```{r, decorate=TRUE}
 library(reticulate)
 use_condaenv("r-python")
 ```
 
-1.  Load the dataset in R and assign it to an R object. Let's call it `autos`:
+2.  Load the dataset in R and assign it to an R object. Let's call it `autos`:
 
 ```{r, decorate=TRUE}
 # R chunk
 autos = cars       # assign cars to autos
 ```
 
-2.  Read the R object from Python by adding the prefix `r.` before the name of the R object `autos`. Then, assign it to a Python object that we will name `autos_py`.
+3.  Read the R object from Python by adding the prefix `r.` before the name of the R object `autos`. Then, assign it to a Python object that we will name `autos_py`.
 
 ```{python, collapse = TRUE, decorate=TRUE}
 # Python chunk
@@ -28,14 +32,14 @@ import pandas
 autos_py = r.autos    # assign to a Python object
 ```
 
-3.  Make a calculation between two columns in the dataset (distance and speed), and assign it to a new column in the dataset with `autos_py['time']`.
+4.  Make a calculation between two columns in the dataset (distance and speed), and assign it to a new column in the dataset with `autos_py['time']`.
 
 ```{python, decorate=TRUE}
 # Python chunk
 autos_py['time'] = autos_py['dist'] / autos_py['speed']   # calculate on variables
 ```
 
-4.  From R, read the Python object `py$autos_py` and plot the dataset with the new column `time`, that you obtained in Python. Observe that we added the prefix `py$` in front of the Python object `autos_py`:
+5.  From R, read the Python object `py$autos_py` and plot the dataset with the new column `time`, that you obtained in Python. Observe that we added the prefix `py$` in front of the Python object `autos_py`:
 
 ```{r, decorate=TRUE, fig.asp=1}
 # R chunk
@@ -43,5 +47,3 @@ plot(py$autos_py)          # plot a Python data object
 ```
 
 ## From Python to R, back to Python
-
-

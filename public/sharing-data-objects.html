@@ -55,6 +55,8 @@
 <span class="header-section-number">Ch. 3</span> Sharing data objects<a class="anchor" aria-label="anchor" href="#sharing-data-objects"><i class="fas fa-link"></i></a>
 </h1>
 <p><em>Last update: Thu Nov 19 17:20:43 2020 -0600 (49b93b1)</em></p>
+<p>One of the advantages of running R and Python code chunks in the same document is that we can share object and variables between the environment of both programming languages. There are functions at what R excels, and functions that run better at Python. We take the best of both worlds.</p>
+<p>We can share object from R in Python, or share Python objects in R.</p>
 <div id="from-r-to-python-back-to-r" class="section level2" number="3.1">
 <h2>
 <span class="header-section-number">3.1</span> From R to Python, back to R<a class="anchor" aria-label="anchor" href="#from-r-to-python-back-to-r"><i class="fas fa-link"></i></a>
@@ -71,7 +73,7 @@
 </div>
 <br>
 </div>
-<ol style="list-style-type: decimal">
+<ol start="2" style="list-style-type: decimal">
 <li>Load the dataset in R and assign it to an R object. Let’s call it <code>autos</code>:</li>
 </ol>
 <div class="decocode">
@@ -83,7 +85,7 @@
 </div>
 <br>
 </div>
-<ol start="2" style="list-style-type: decimal">
+<ol start="3" style="list-style-type: decimal">
 <li>Read the R object from Python by adding the prefix <code>r.</code> before the name of the R object <code>autos</code>. Then, assign it to a Python object that we will name <code>autos_py</code>.</li>
 </ol>
 <div class="decocode">
@@ -97,7 +99,7 @@
 </div>
 <br>
 </div>
-<ol start="3" style="list-style-type: decimal">
+<ol start="4" style="list-style-type: decimal">
 <li>Make a calculation between two columns in the dataset (distance and speed), and assign it to a new column in the dataset with <code>autos_py['time']</code>.</li>
 </ol>
 <div class="decocode">
@@ -108,7 +110,7 @@
 </div>
 <br>
 </div>
-<ol start="4" style="list-style-type: decimal">
+<ol start="5" style="list-style-type: decimal">
 <li>From R, read the Python object <code>py$autos_py</code> and plot the dataset with the new column <code>time</code>, that you obtained in Python. Observe that we added the prefix <code>py$</code> in front of the Python object <code>autos_py</code>:</li>
 </ol>
 <div class="decocode">

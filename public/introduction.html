@@ -55,7 +55,7 @@
 <span class="header-section-number">Ch. 1</span> Introduction<a class="anchor" aria-label="anchor" href="#introduction"><i class="fas fa-link"></i></a>
 </h1>
 <p><em>Last update: Thu Nov 19 17:20:43 2020 -0600 (49b93b1)</em></p>
-<p>Remember that in the previous chapter we said that the best way of obtaining reproducible results writing Python code in Rmarkdown is creating stand-alone Python environments. The next code block is written in R and what is doing with <code><a href="https://rdrr.io/pkg/reticulate/man/use_python.html">reticulate::use_condaenv("r-python")</a></code>, is activating the Python environment <code>r-python</code> to be used in Rmarkdown. Later we will see how to create these environments.</p>
+<p>Remember that in the previous chapter we said that the best way of obtaining reproducible results writing Python code in Rmarkdown is creating stand-alone Python environments. The next code block is written in R and what is doing with <code><a href="https://rdrr.io/pkg/reticulate/man/use_python.html">reticulate::use_condaenv("r-python")</a></code>, is activating the Python environment <code>r-python</code> to be used by Python to build the notebooks written in Rmarkdown . Later we will see how to create these environments.</p>
 <div class="decocode">
 <div style="background-color:#4C78DB">
 <p><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i><b>R</b></span></p>
@@ -95,7 +95,7 @@
 <h2>
 <span class="header-section-number">1.2</span> The parts of a plot<a class="anchor" aria-label="anchor" href="#the-parts-of-a-plot"><i class="fas fa-link"></i></a>
 </h2>
-<p>I love this plot because it helps to formulate the right question when you are looking for online assistance. Sooner of later you will be in need to customize the <span class="math inline">\(x\)</span> or <span class="math inline">\(y\)</span> axis ticks in such a way that present specific data points and skip the defaults. Or, get rid of so many x axis labels that superimposing one over each other.</p>
+<p>I love this plot because it helps to formulate the right question when you are looking for online assistance. Sooner of later, you will be in need to customize the <span class="math inline">\(x\)</span> or <span class="math inline">\(y\)</span> axis ticks in such a way that present specific data points and skip the defaults. Or, get rid of so many $x$ axis labels that are superimposing one over each other.</p>
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span></p>
@@ -243,9 +243,9 @@
 </div>
 <div id="can-do-business-plots-too" class="section level2" number="1.3">
 <h2>
-<span class="header-section-number">1.3</span> Can do business plots too<a class="anchor" aria-label="anchor" href="#can-do-business-plots-too"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.3</span> Can do business plots too …<a class="anchor" aria-label="anchor" href="#can-do-business-plots-too"><i class="fas fa-link"></i></a>
 </h2>
-<p>Not precisely the kind of plots I am interested right now, all the kinds of business plots areve available in <code>matplotlib</code>, including the infamous <strong>pie chart</strong>.</p>
+<p>Not precisely the kind of plots I am interested in right now, all the kinds of business plots are available in <code>matplotlib</code>, including the infamous <strong>pie chart</strong>.</p>
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span></p>
@@ -294,7 +294,7 @@
 </div>
 <div id="and-real-time" class="section level2" number="1.4">
 <h2>
-<span class="header-section-number">1.4</span> And real time<a class="anchor" aria-label="anchor" href="#and-real-time"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.4</span> And real time …<a class="anchor" aria-label="anchor" href="#and-real-time"><i class="fas fa-link"></i></a>
 </h2>
 <p>Strip charts are the favorites for plotting real time data, from sensors, or from any other internet source.</p>
 <div class="decocode">
@@ -335,9 +335,9 @@
 </div>
 <div id="and-also-3d" class="section level2" number="1.5">
 <h2>
-<span class="header-section-number">1.5</span> And also 3D<a class="anchor" aria-label="anchor" href="#and-also-3d"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.5</span> And also 3D …<a class="anchor" aria-label="anchor" href="#and-also-3d"><i class="fas fa-link"></i></a>
 </h2>
-<p>Although in data science 3D plots are not recommended, if there is a compelling case where a 3D plot explains a discovery better than a 2D plot, then, it should be okay and justified. But the rule is <em>do not abuse of 3D</em>. What you are trying to convey is information per square centimeter of graphics.</p>
+<p>Although in data science 3D plots are not recommended, if there is a compelling case where a 3D plot explains a discovery better than a 2D plot, then, it should be okay and justified. But the rule is <em>not abusing of 3D</em>. What you are trying to convey is information per square centimeter of graphics.</p>
 <div class="decocode">
 <div style="background-color:#417FB1">
 <p><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span></p>
@@ -370,9 +370,9 @@
 <li><a class="nav-link" href="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
 <li><a class="nav-link" href="#hello-world"><span class="header-section-number">1.1</span> “Hello world”</a></li>
 <li><a class="nav-link" href="#the-parts-of-a-plot"><span class="header-section-number">1.2</span> The parts of a plot</a></li>
-<li><a class="nav-link" href="#can-do-business-plots-too"><span class="header-section-number">1.3</span> Can do business plots too</a></li>
-<li><a class="nav-link" href="#and-real-time"><span class="header-section-number">1.4</span> And real time</a></li>
-<li><a class="nav-link" href="#and-also-3d"><span class="header-section-number">1.5</span> And also 3D</a></li>
+<li><a class="nav-link" href="#can-do-business-plots-too"><span class="header-section-number">1.3</span> Can do business plots too …</a></li>
+<li><a class="nav-link" href="#and-real-time"><span class="header-section-number">1.4</span> And real time …</a></li>
+<li><a class="nav-link" href="#and-also-3d"><span class="header-section-number">1.5</span> And also 3D …</a></li>
 </ul>
 
       <div class="book-extra">
