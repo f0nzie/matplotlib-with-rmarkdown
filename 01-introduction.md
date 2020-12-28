@@ -2,7 +2,7 @@
 
 *Last update: Thu Nov 19 17:20:43 2020 -0600 (49b93b1)*
 
-Remember that in the previous chapter we said that the best way of obtaining reproducible results writing Python code in Rmarkdown is creating stand-alone Python environments. The next code block is written in R and what is doing with `reticulate::use_condaenv("r-python")`, is activating the Python environment `r-python` to be used in Rmarkdown. Later we will see how to create these environments.
+Remember that in the previous chapter we said that the best way of obtaining reproducible results writing Python code in Rmarkdown is creating stand-alone Python environments. The next code block is written in R and what is doing with `reticulate::use_condaenv("r-python")`, is activating the Python environment `r-python` to be used by Python to build the notebooks written in Rmarkdown . Later we will see how to create these environments.
 
 <div class=decocode><div style="background-color:#4C78DB"><span style="font-size:90%;color:#ffffff"><i class="fab fa-r-project"></i><b>R</b></span>
 
@@ -39,7 +39,7 @@ plt.show()
 
 ## The parts of a plot
 
-I love this plot because it helps to formulate the right question when you are looking for online assistance. Sooner of later you will be in need to customize the $x$ or $y$ axis ticks in such a way that present specific data points and skip the defaults. Or, get rid of so many x axis labels that superimposing one over each other.
+I love this plot because it helps to formulate the right question when you are looking for online assistance. Sooner of later, you will be in need to customize the $x$ or $y$ axis ticks in such a way that present specific data points and skip the defaults. Or, get rid of so many \$x\$ axis labels that are superimposing one over each other.
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
@@ -185,9 +185,9 @@ plt.show()
 
 <img src="01-introduction_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
-## Can do business plots too
+## Can do business plots too ...
 
-Not precisely the kind of plots I am interested right now, all the kinds of business plots areve available in `matplotlib`, including the infamous **pie chart**.
+Not precisely the kind of plots I am interested in right now, all the kinds of business plots are available in `matplotlib`, including the infamous **pie chart**.
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 
@@ -234,7 +234,7 @@ plt.show()
 
 <img src="01-introduction_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
-## And real time
+## And real time ...
 
 Strip charts are the favorites for plotting real time data, from sensors, or from any other internet source.
 
@@ -273,9 +273,9 @@ plt.show()
 
 <img src="01-introduction_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></div><br></div>
 
-## And also 3D
+## And also 3D ...
 
-Although in data science 3D plots are not recommended, if there is a compelling case where a 3D plot explains a discovery better than a 2D plot, then, it should be okay and justified. But the rule is *do not abuse of 3D*. What you are trying to convey is information per square centimeter of graphics.
+Although in data science 3D plots are not recommended, if there is a compelling case where a 3D plot explains a discovery better than a 2D plot, then, it should be okay and justified. But the rule is *not abusing of 3D*. What you are trying to convey is information per square centimeter of graphics.
 
 <div class=decocode><div style="background-color:#417FB1"><span style="font-size:90%;color:#FFD94C"><i class="fab fa-python"></i><b>Python</b></span>
 

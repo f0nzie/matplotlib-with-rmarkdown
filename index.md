@@ -14,7 +14,7 @@ description: "This is a minimal example of using the bookdown package to write a
 
 # Preface {.unnumbered}
 
-*Last update: Thu Nov 19 17:18:10 2020 -0600 (af4f095)*
+*Last update: Sun Dec 27 17:54:31 2020 -0600 (c3c8899)*
 
 The goal of this minimal book is thoroughly testing that Python `matplotlib` notebooks in **Rmarkdown** work seamlessly from within `RStudio`. Making `matplotlib` run from within RStudio using the R package `reticulate` and **Python Anaconda** is not trivial. Python `matplotlib` has always been a challenge running it as part of Rmarkdown notebooks in RStudio, causing crashes, or simply, not showing any plot because of a bug in the visualization layers. But lately RStudio has improved a lot! The package `reticulate` and `RStudio` have gone through a complete transformation in the past few months. Enough to say, it's an accepted fact today that Python and R are ready to work along for the benefit of reproducible data science, machine learning and artificial intelligence.
 
